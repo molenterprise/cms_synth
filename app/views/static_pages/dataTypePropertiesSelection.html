@@ -1,7 +1,7 @@
 <table>
     <tbody>
-        <tr ng-repeat="item in step.window.items">
-            <td ng-repeat="prop in step.solution.selectedProperties">
+        <tr ng-repeat="option in step.window.options | limitTo:step.window.options.length/2">
+            <td ng-repeat="prop in step.solution.selectedProperties | limitTo:">
             	<div ng-repeat="value in step.selectProperty(prop,item).value">{{value}}</div>
             </td>
         </tr>
