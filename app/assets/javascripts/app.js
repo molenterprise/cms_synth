@@ -66,7 +66,7 @@
             headerText: title,
             bodyText: msg,
           /*  close: function (result) { //revisar para definir el no
-           */
+           
 			        	step = {
 				    		currentWindow: this.currentWindow.id,
 				    		//title: this.currentWindow.title, //debug
