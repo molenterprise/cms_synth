@@ -1,0 +1,21 @@
+<% provide(:title, 'Add ontology') %>
+<h1>Ontology</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@ontology) do |f| %>
+    
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :prefix %>
+      <%= f.text_field :prefix %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.submit "Create ontology", class: "btn btn-large btn-primary" %>
+    <% end %>
+    
+    <%= link_to 'Back', ontologies_path %>
+  </div>
+</div>

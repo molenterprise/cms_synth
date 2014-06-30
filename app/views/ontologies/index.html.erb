@@ -1,0 +1,9 @@
+<% provide(:title, 'Ontologies') %>
+<h1>Ontologies</h1>
+
+<ul class="ontologies">
+  <%= render @ontologies %>
+</ul>
+
+<%= link_to 'Add Ontology', new_ontology_path, class: "btn btn-large btn-primary"%>
+<%= link_to 'Create application', "#", class: "btn btn-large btn-primary"%>
