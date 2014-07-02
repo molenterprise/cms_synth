@@ -36,6 +36,6 @@ class OntologiesController < ApplicationController
   private
 
     def user_params
-      params.require(:ontology).permit(:prefix, :address)
+      params.require(:ontology).permit(:name, :description, :prefix, :address)
     end
 end

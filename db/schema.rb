@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140629215443) do
+ActiveRecord::Schema.define(version: 20140702183414) do
 
   create_table "ontologies", force: true do |t|
     t.string   "prefix"
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
   end
 
   add_index "ontologies", ["prefix"], name: "index_ontologies_on_prefix", unique: true
