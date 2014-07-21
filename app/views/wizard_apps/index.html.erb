@@ -1,0 +1,27 @@
+<h1>Listing wizard_apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ontology</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wizard_apps.each do |wizard_app| %>
+      <tr>
+        <td><%= wizard_app.name %></td>
+        <td><%= wizard_app.ontology_id %></td>
+        <td><%= link_to 'Show', wizard_app %></td>
+        <td><%= link_to 'Edit', edit_wizard_app_path(wizard_app) %></td>
+        <td><%= link_to 'Destroy', wizard_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wizard app', new_wizard_app_path %>
