@@ -33,6 +33,10 @@ class OntologiesController < ApplicationController
     end
   end
   
+  def select
+    @ontologies = Ontology.all
+  end
+  
   private
 
     def user_params

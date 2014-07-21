@@ -1,0 +1,14 @@
+<% provide(:title, 'Add ontology') %>
+<h1>Add Ontology</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_tag(select_ontology_path, method: "get") do %>
+    
+    <%= select_tag "ontology_value", options_from_collection_for_select(@ontologies, :prefix, :name) %>
+    
+    <% end %>
+    
+    <%= link_to 'Back', ontologies_path %>
+  </div>
+</div>
