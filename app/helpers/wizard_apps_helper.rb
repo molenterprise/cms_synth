@@ -1,0 +1,2 @@
+module WizardAppsHelper
+end

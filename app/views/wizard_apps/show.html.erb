@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wizard_app.name %>
+</p>
+
+<p>
+  <strong>Ontology:</strong>
+  <%= @wizard_app.ontology_id %>
+</p>
+
+<%= link_to 'Edit', edit_wizard_app_path(@wizard_app) %> |
+<%= link_to 'Back', wizard_apps_path %>
