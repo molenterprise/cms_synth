@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722034754) do
+ActiveRecord::Schema.define(version: 20140723033046) do
 
   create_table "ontologies", force: true do |t|
     t.string   "prefix"
@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(version: 20140722034754) do
     t.integer  "ontology_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "wizard_step_options", force: true do |t|
+    t.string   "message"
+    t.integer  "wizard_step_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "next_wizard_step_id"
+  end
+
+  create_table "wizard_steps", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "back"
   end
 
 end
