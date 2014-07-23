@@ -1,0 +1,11 @@
+<%= form_tag(finish_wizard_steps_path, method: "get") do %>
+  <div class="field">
+    <%= @wizardStep.title %><br>
+  </div>
+  
+  <div class="field">
+  	<%= select(:id, :id, @wizardStep.wizard_step_options.collect { |o| [ o.message, o.next_wizard_step_id ] }) %><br>
+  </div>
+  
+  <%= submit_tag("Next Step", class: "btn btn-large btn-primary") %>
+<% end %>

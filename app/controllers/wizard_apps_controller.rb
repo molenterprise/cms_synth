@@ -26,14 +26,11 @@ class WizardAppsController < ApplicationController
   def create
     @wizard_app = WizardApp.new(wizard_app_params)
 
-    respond_to do |format|
-      if @wizard_app.save
-        format.html { redirect_to @wizard_app, notice: 'Wizard app was successfully created.' }
-        format.json { render :show, status: :created, location: @wizard_app }
-      else
-        format.html { render :new }
-        format.json { render json: @wizard_app.errors, status: :unprocessable_entity }
-      end
+    if @wizard_app.save
+      #redirect_to @wizard_app, notice: 'Wizard app was successfully created.'
+      redirect_to controller: "wizard_step", action: "start", id: 1
+    else
+      render :new 
     end
   end
 
