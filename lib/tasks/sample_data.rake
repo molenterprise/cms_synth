@@ -23,24 +23,15 @@ end
 
 def make_wizard
   @wizardStep1 = WizardStep.create!(title: "What do you want to do?")
-  
   @wizardStep2 = WizardStep.create!(title: "And now. What else?", back: @wizardStep1)
-  
   @reallyStep = WizardStep.create!(title: "Are you sure?", back: @wizardStep2)
   
-  WizardStepOption.create!(message: "Option 1", wizard_step: @wizardStep1, next_wizard_step_id: @wizardStep2.id)
-  
-  WizardStepOption.create!(message: "Option 2", wizard_step: @wizardStep1, next_wizard_step_id: @wizardStep2.id)
-  
-  WizardStepOption.create!(message: "Option 3", wizard_step: @wizardStep1, next_wizard_step_id: @reallyStep.id)
-  
-  WizardStepOption.create!(message: "Option 4", wizard_step: @wizardStep2, next_wizard_step_id: @reallyStep.id)
-  
-  WizardStepOption.create!(message: "Option 5", wizard_step: @wizardStep2, next_wizard_step_id: @reallyStep.id)
-  
-  WizardStepOption.create!(message: "Option 6", wizard_step: @wizardStep2, next_wizard_step_id: @reallyStep.id)
-  
-  WizardStepOption.create!(message: "Yes", wizard_step: @reallyStep, next_wizard_step_id: @wizardStep1.id)
-  
-  WizardStepOption.create!(message: "No", wizard_step: @reallyStep, next_wizard_step_id: @wizardStep2.id)
+  WizardStepOption.create!(message: "Option 1", wizard_step: @wizardStep1, next_wizard_step: @wizardStep1)
+  WizardStepOption.create!(message: "Option 2", wizard_step: @wizardStep1, next_wizard_step: @wizardStep1)
+  WizardStepOption.create!(message: "Option 3", wizard_step: @wizardStep1, next_wizard_step: @reallyStep)
+  WizardStepOption.create!(message: "Option 4", wizard_step: @wizardStep2, next_wizard_step: @reallyStep)
+  WizardStepOption.create!(message: "Option 5", wizard_step: @wizardStep2, next_wizard_step: @reallyStep)
+  WizardStepOption.create!(message: "Option 6", wizard_step: @wizardStep2, next_wizard_step: @reallyStep)
+  WizardStepOption.create!(message: "Yes", wizard_step: @reallyStep, next_wizard_step: @wizardStep1)
+  WizardStepOption.create!(message: "No", wizard_step: @reallyStep, next_wizard_step: @wizardStep2)
 end
