@@ -4,7 +4,7 @@
   </div>
   
   <div class="field">
-  	<%= select(:id, :id, @wizardStep.wizard_step_options.collect { |o| [ o.message, o.next_wizard_step_id ] }) %><br>
+  	<%= select(:id, :id, @wizardStep.wizard_step_options.collect { |o| [ o.message, o.next_wizard_step.id ] }) %><br>
   </div>
   
   <%= submit_tag("Next Step", class: "btn btn-large btn-primary") %>
