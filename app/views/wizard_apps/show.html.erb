@@ -28,7 +28,7 @@
   </div>
   <div class="field">
   	<%= f.label :class_id %><br>
-    <%= f.select :class_id, @domain_classes { |klass| [ klass.uri, klass.compact_uri ] } %><br>
+    <%= f.select :class_id, @domain_classes.collect { |klass| [ klass.uri, klass.compact_uri ] } %><br>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-large btn-primary"%>
