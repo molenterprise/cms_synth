@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   match '/help',   to: 'static_pages#help',    via: 'get'
   
   root  'ontologies#index', id:1
+  match '/index',    to: 'static_pages#index',    via: 'get'
 end

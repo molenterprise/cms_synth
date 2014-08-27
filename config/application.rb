@@ -27,6 +27,9 @@ module CmsSynth
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
+    #adapter = ConnectionPool.add_data_source(:type => :sparql, :results => :sparql_xml, :engine => :virtuoso, :url ="http://dbpedia.org/sparql")
+    #adapter.enabled = true
+    
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

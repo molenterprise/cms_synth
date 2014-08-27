@@ -10,6 +10,12 @@ class WizardAppsController < ApplicationController
   # GET /wizard_apps/1
   # GET /wizard_apps/1.json
   def show
+    #ActiveRDF::Namespace.register(:swc, "http://data.semanticweb.org/ns/swc/ontology")
+    
+    excluded_namespaces = [:xsd, :rdf, :rdfs, :owl, :shdm, :swui, :symph, :void]
+    @domain_classes = (RDFS::Class.find_all(options).reject{ |c| excluded_namespaces.include?(ActiveRDF::Namespace.prefix(c))  } +
+    OWL::Class.find_all(options).reject{ |c| excluded_namespaces.include?(ActiveRDF::Namespace.prefix(c))  }).uniq
+    
   end
 
   # GET /wizard_apps/new
