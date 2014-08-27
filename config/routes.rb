@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   
   root  'ontologies#index', id:1
   match '/index',    to: 'static_pages#index',    via: 'get'
+  
+  match '/window',    to: 'static_pages#windows',    via: 'get'
 end
