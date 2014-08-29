@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
+<html ng-app="wizard">
 	<head>
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
@@ -7,48 +7,32 @@
 		<script data-turbolinks-track="true" src="/assets/app.js"></script>
 	</head>
 
-	<body ng-controller="StoreController as store">
-		<!--  Store Header  -->
+	<body ng-controller="WizardController as step">
+		<!--  Wizard Header  -->
 		<header>
-			<h1 class="text-center">{{store.window.title}}</h1>
+			<h1 class="text-center">{{step.window.title}}</h1>
 		</header>
 
 		<!--  Products Container  -->
 		<div class="list-group">
 			<!--  Product Container  -->
-			<h3>{{store.window.message}}</h3>
+			<h3>{{step.window.message}}</h3>
 
-			<form name="reviewForm" ng-submit="store.changeWindow()">
-				<div ng-show="store.isType('select')">
-					<select ng-model="store.solution" ng-options="opt.key as opt.text for opt in store.window.options"></select>
+			<form name="reviewForm" ng-submit="step.changeWindow()">
+				
+				<div ng-show="step.isType('select')">
+					<select-nomenclator-chooser></select-nomenclator-chooser>
 				</div>
-				<!-- Single button -->
-				<div class="btn-group" dropdown is-open="store.status.isopen">
-					<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-						Button dropdown <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li ng-repeat="opt in store.window.options">
-							<a href>{{opt.text}}</a>
-						</li>
-					</ul>
+				
+				<div ng-show="step.isType('radio')">
+					<radio-nomenclator-chooser></radio-nomenclator-chooser>
 				</div>
-
-				<div ng-show="store.isType('radio')">
-					<div class="list-group" ng-repeat="opt in store.window.options">
-						<input type="radio" ng-model="store.solution" value="{{opt.key}}">
-						{{opt.text}}
-						<br/>
-					</div>
-				</div>
-				<br/>
+				
 				<fieldset class="form-group">
-					<a class="btn btn-primary" ng-hide="store.userSequence.length == 0" ng-click="store.back()">Back</a>
+					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
 					<input type="submit" class="btn btn-primary pull-right" value="Next" />
 				</fieldset>
 			</form>
-			<!--{{store.userSequence}}
-			{{store.solution}}-->
 		</div>
 	</body>
 </html>

@@ -1,9 +1,9 @@
 (function() {
-  var app = angular.module('gemStore', ['ui.bootstrap']);
+  var app = angular.module('wizard', ['ui.bootstrap']);
 
-  app.controller('StoreController', function(){
+  app.controller('WizardController', function(){
     
-    this.window = gems[0];
+    this.window = wizard[0];
     
     this.solution = 0;
     
@@ -40,9 +40,9 @@
     
     
     this.selectWindow = function(index){
-    	for (i = 0; i < gems.length; i++) {
-		    if(gems[i].id == index){
-		    	this.window = gems[i];
+    	for (i = 0; i < wizard.length; i++) {
+		    if(wizard[i].id == index){
+		    	this.window = wizard[i];
 		    	break;
 		    }
 		}
@@ -50,7 +50,21 @@
     
   });
 
-  var gems = [
+  app.directive('radioNomenclatorChooser', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'radio-nomenclator-chooser.html'
+	};
+  });
+  
+  app.directive('selectNomenclatorChooser', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'select-nomenclator-chooser.html'
+	};
+  });
+  
+  var wizard = [
   	{
   	  id: 1,
       title: 'Red',
