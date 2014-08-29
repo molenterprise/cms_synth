@@ -8,11 +8,7 @@
     this.solution = 0;
     
     this.userSequence = [];
-    
-    this.status = {
-			isopen : false
-		};
-    
+                 
     this.isType = function(val){
     	return this.window.type == val;
     };
@@ -67,7 +63,20 @@
   app.directive('selectNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'select-nomenclator-chooser.html'
+		templateUrl: 'select-nomenclator-chooser.html',
+		controller: function(){
+			
+			this.status = {
+				isopen : false
+			};
+			
+			this.setOption = function(controller, key){
+		    	controller.solution = key;
+		    	this.status.isopen = !this.status.isopen;
+    		};
+
+		},
+		controllerAs: 'chooserCtrl'
 	};
   });
   

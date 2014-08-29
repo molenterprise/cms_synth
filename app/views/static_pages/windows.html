@@ -22,7 +22,7 @@
 				
 				<div ng-show="step.isType('select')">
 					<select-nomenclator-chooser></select-nomenclator-chooser>
-				</div>
+				</div>	
 				
 				<div ng-show="step.isType('radio')">
 					<radio-nomenclator-chooser></radio-nomenclator-chooser>
@@ -38,5 +38,6 @@
 				</fieldset>
 			</form>
 		</div>
+		{{step.solution}}
 	</body>
 </html>
