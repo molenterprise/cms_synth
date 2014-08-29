@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('gemStore', ['ui.bootstrap']);
+  var app = angular.module('gemStore', []);
 
   app.controller('StoreController', function(){
     
