@@ -8,11 +8,7 @@
     this.solution = 0;
     
     this.userSequence = [];
-    
-    this.status = {
-			isopen : false
-		};
-    
+          
     this.isType = function(val){
     	return this.window.type == val;
     };
