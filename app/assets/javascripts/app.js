@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('gemStore', []);
+  var app = angular.module('gemStore', ['ui.bootstrap']);
 
   app.controller('StoreController', function(){
     
@@ -8,6 +8,10 @@
     this.solution = 0;
     
     this.userSequence = [];
+    
+    this.status = {
+			isopen : false
+		};
     
     this.isType = function(val){
     	return this.window.type == val;

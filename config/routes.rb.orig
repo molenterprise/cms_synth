@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   
   root  'ontologies#index', id:1
   match '/index',    to: 'static_pages#index',    via: 'get'
-  match '/nomenclatorChooser',    to: 'static_pages#nomenclatorChooser',    via: 'get'
+<<<<<<< HEAD
+  
   match '/window',    to: 'static_pages#windows',    via: 'get'
+=======
+  match '/nomenclatorChooser',    to: 'static_pages#nomenclatorChooser',    via: 'get'
+>>>>>>> nomenclatorChooser
 end
