@@ -25,11 +25,11 @@
 				<!-- Single button -->
 				<div class="btn-group" dropdown is-open="store.status.isopen">
 					<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-						Button dropdown <span class="caret"></span>
+						{{store.window.options[store.solution].text}} <span class="caret"></span>
 					</button>
-					<ul class="dropdown-menu" role="menu" ng-model="store.solution" ng-value="opt.key">
+					<ul class="dropdown-menu" role="menu" >
 						<li ng-repeat="opt in store.window.options">
-							<a href>{{opt.text}}</a>
+							<a href ng-click="store.setOption(opt.key)">{{opt.text}}</a>
 						</li>
 					</ul>
 				</div>

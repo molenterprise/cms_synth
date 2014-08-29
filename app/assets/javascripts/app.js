@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('gemStore', []);
+  var app = angular.module('gemStore', ['ui.bootstrap']);
 
   app.controller('StoreController', function(){
     
@@ -47,6 +47,12 @@
 		    }
 		}
     };
+    
+    this.setOption = function(key){
+    	this.solution = key;
+    	this.status.isopen = !this.status.isopen;
+    };
+    
     
   });
 
