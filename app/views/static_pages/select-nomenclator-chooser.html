@@ -1,11 +1,11 @@
 <!-- Single button -->
-<div class="btn-group" dropdown is-open="step.status.isopen">
+<div class="btn-group" dropdown is-open="chooserCtrl.status.isopen" >
 	<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
 		{{step.window.options[step.solution].text}} <span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu" >
 		<li ng-repeat="opt in step.window.options">
-			<a href ng-click="step.setOption(opt.key)">{{opt.text}}</a>
+			<a href ng-click="chooserCtrl.setOption(step, opt.key)">{{opt.text}}</a>
 		</li>
 	</ul>
 </div>
