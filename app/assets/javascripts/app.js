@@ -9,6 +9,10 @@
     
     this.userSequence = [];
     
+    this.status = {
+			isopen : false
+		};
+    
     this.isType = function(val){
     	return this.window.type == val;
     };

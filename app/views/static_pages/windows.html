@@ -27,7 +27,7 @@
 					<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
 						Button dropdown <span class="caret"></span>
 					</button>
-					<ul class="dropdown-menu" role="menu">
+					<ul class="dropdown-menu" role="menu" ng-model="store.solution" ng-value="opt.key">
 						<li ng-repeat="opt in store.window.options">
 							<a href>{{opt.text}}</a>
 						</li>
