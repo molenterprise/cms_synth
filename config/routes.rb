@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   match '/index',    to: 'static_pages#index',    via: 'get'
   match '/nomenclatorChooser',    to: 'static_pages#nomenclatorChooser',    via: 'get'
   match '/window',    to: 'static_pages#windows',    via: 'get'
+  
+  #controls
+  match '/radio-nomenclator-chooser',    to: 'static_pages#radio-nomenclator-chooser',    via: 'get'
+  match '/select-nomenclator-chooser',    to: 'static_pages#select-nomenclator-chooser',    via: 'get'
 end
