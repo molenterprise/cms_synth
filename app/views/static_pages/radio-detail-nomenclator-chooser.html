@@ -1,0 +1,18 @@
+<div class="list-group">
+	<div ng-repeat="item in step.window.details[step.solution].items">
+		<div ng-repeat="prop in item">
+			<img ng-src="{{prop.msg}}" ng-show="prop.type == 'img'"></img>
+			<label ng-show="prop.type == 'text'">{{prop.msg}}</label>
+		</div>
+	</div>
+	<br>
+</div>
+
+<h4>{{step.window.details[step.solution].title}}</h4>
+<section>
+	<ul class="nav nav-pills”>
+		<li class="list-group-item" ng-repeat="opt in step.window.options">
+			<input type="radio" ng-model="step.solution" value="{{opt.key}}">{{opt.text}}
+		</li>
+	</ul>
+</section>

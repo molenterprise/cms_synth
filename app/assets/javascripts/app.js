@@ -57,6 +57,13 @@
 	};
   });
   
+  app.directive('radioDetailNomenclatorChooser', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'radio-detail-nomenclator-chooser.html'
+	};
+  });
+  
   app.directive('selectNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
@@ -64,15 +71,35 @@
 	};
   });
   
+  
   var wizard = [
   	{
   	  id: 1,
       title: 'Red',
-      type: 'radio',
+      type: 'radioDetail',
       message: 'Wizard 1',
       options: [
-        {key: 0, text:"Red", next: 1},{key: 1, text:"Blue", next: 2},{key: 2, text:"Green", next: 3} 
-      ]
+        {key: 0, text:"Red", next: 1},{key: 1, text:"Blue", next: 2} 
+      ],
+      details:
+      	[
+	      {
+	      	title: 'what do you want to choose?',
+	      	items: [
+	      		[{type: 'img', msg: "/assets/checkbox-checked.png"}, {type: 'text', msg: "Option 1.1"}, {type: 'text', msg: "Option 1.2"}],
+	      		[{type: 'img', msg: "/assets/checkbox.png"}, {type: 'text', msg: "Option 2.1"}, {type: 'text', msg: "Option 2.2"}],
+	      		[{type: 'img', msg: "/assets/checkbox-checked.png"}, {type: 'text', msg: "Option 3.1"}, {type: 'text', msg: "Option 3.2"}]
+	      	]
+	      },
+	      {
+	      	title: 'what do you want to choose?',
+	      	items: [
+	      		[{type: 'text', msg: "Property 1 Property 2"}],
+	      		[{type: 'text', msg: "Property 3 Property 4"}],
+	      		[{type: 'text', msg: "Property 5 Property 6"}]
+	      	]
+	      },
+	    ]
     },
     {
   	  id: 2,

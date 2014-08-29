@@ -28,6 +28,10 @@
 					<radio-nomenclator-chooser></radio-nomenclator-chooser>
 				</div>
 				
+				<div ng-show="step.isType('radioDetail')">
+					<radio-detail-nomenclator-chooser></radio-detail-nomenclator-chooser>
+				</div>
+				
 				<fieldset class="form-group">
 					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
 					<input type="submit" class="btn btn-primary pull-right" value="Next" />
