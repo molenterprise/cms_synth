@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="wizard">
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script data-turbolinks-track="true" src="/assets/app.js"></script>
+	</head>
+
+	<body>
+		<!--  Wizard Header  -->
+		<header>
+			<h1 class="text-center">Add Ontology</h1>
+		</header>
+
+		<div class="list-group">
+			<h3>Add Ontology</h3>
+
+			<form name="ontologyForm" ng-submit="step.changeWindow()">
+				<label>Name:</label>
+				<input type=text>Schema.org</input>
+				<div ng-show="step.isType('select')">
+					<select-nomenclator-chooser></select-nomenclator-chooser>
+				</div>	
+				
+				<div ng-show="step.isType('radio')">
+					<radio-nomenclator-chooser></radio-nomenclator-chooser>
+				</div>
+				
+				<fieldset class="form-group">
+					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
+					<input type="submit" class="btn btn-primary pull-right" value="Next" />
+				</fieldset>
+			</form>
+		</div>
+		{{step.solution}}
+	</body>
+</html>
