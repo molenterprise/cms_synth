@@ -14,25 +14,56 @@
 		</header>
 
 		<div class="list-group">
-			<h3>Add Ontology</h3>
-
-			<form name="ontologyForm" ng-submit="step.changeWindow()">
-				<label>Name:</label>
-				<input type=text>Schema.org</input>
-				<div ng-show="step.isType('select')">
-					<select-nomenclator-chooser></select-nomenclator-chooser>
-				</div>	
 				
-				<div ng-show="step.isType('radio')">
-					<radio-nomenclator-chooser></radio-nomenclator-chooser>
+			<form name="ontologyForm" class="form-horizontal" ng-submit="step.changeWindow()">
+				<div class="control-group">
+					<label class="control-label " for="inputEmail">Name:</label>
+					<div class="controls">
+						<input type="text" value="Schema.org">
+					</div>
 				</div>
-				
+				<div class="control-group">
+					<label class="control-label" >Description:</label>
+					<div class="controls">
+						<textarea>Schema.org is a set of extensible schemas that enable webmasters to markup</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputPassword">File:</label>
+					<div class="controls">
+						<input id="lefile" type="file" style="display:none">					
+						<div class="input-append">
+							<input id="photoCover" class="input-large" type="text">
+							<a class="btn" onclick="$('input[id=lefile]').click();">Browse</a>
+						</div>
+						
+						<script type="text/javascript">
+							$('input[id=lefile]').change(function() {
+								$('#photoCover').val($(this).val());
+							});
+						</script>
+					</div>					
+					<label class="controls" ng-show="photoCover.value.length == 0">No file selected</label>
+				</div>
+				<div class="control-group">
+						<label class="control-label">or</label>
+				</div>				
+				<div class="control-group controls-row">
+					<label class="control-label" >Prefix:</label>
+					<div class="controls">
+						<input type="text" class="span2" value="schm">
+					</div>
+					<label class="control-label" for="inputPassword">Uri:</label>
+					
+					<input type="url" class="span5" value="https://schema.org/">
+					
+				</div>
 				<fieldset class="form-group">
 					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
 					<input type="submit" class="btn btn-primary pull-right" value="Next" />
 				</fieldset>
 			</form>
+			
 		</div>
-		{{step.solution}}
 	</body>
 </html>
