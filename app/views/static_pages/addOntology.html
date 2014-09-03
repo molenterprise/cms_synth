@@ -13,7 +13,7 @@
 			<h1 class="text-center">Add Ontology</h1>
 		</header>
 
-		<div class="list-group">
+		<div class="list-group" ng-controller="WizardController as ctrl">
 				
 			<form name="ontologyForm" class="form-horizontal" ng-submit="step.changeWindow()">
 				<div class="control-group">
@@ -43,7 +43,7 @@
 							});
 						</script>
 					</div>					
-					<label class="controls" ng-show="photoCover.value.length == 0">No file selected</label>
+					<label class="controls" ng-show="ctrl.isEmpty(document.forms["ontologyForm"]["photoCover"].value)">No file selected</label>
 				</div>
 				<div class="control-group">
 						<label class="control-label">or</label>

@@ -3,7 +3,7 @@
 
   app.controller('WizardController', function(){
     
-    this.window = wizard[0];
+ //   this.window = windows[0];
     
     this.solution = 0;
     
@@ -44,6 +44,10 @@
 		}
     };
     
+    this.isEmpty = function(str){
+    	return (!str || 0 === str.length);    	
+    };
+    
   });
 
   app.directive('radioNomenclatorChooser', function(){
@@ -80,52 +84,11 @@
 	};
   });
   
-  
-  var wizard = [
-  	{
-  	  id: 1,
-      title: 'Red',
-      type: 'radioDetail',
-      message: 'Wizard 1',
-      options: [
-        {key: 0, text:"Red", next: 1},{key: 1, text:"Blue", next: 2} 
-      ],
-      details:
-      	[
-	      {
-	      	title: 'what do you want to choose?',
-	      	items: [
-	      		[{type: 'img', msg: "/assets/checkbox-checked.png"}, {type: 'text', msg: "Option 1.1"}, {type: 'text', msg: "Option 1.2"}],
-	      		[{type: 'img', msg: "/assets/checkbox.png"}, {type: 'text', msg: "Option 2.1"}, {type: 'text', msg: "Option 2.2"}],
-	      		[{type: 'img', msg: "/assets/checkbox-checked.png"}, {type: 'text', msg: "Option 3.1"}, {type: 'text', msg: "Option 3.2"}]
-	      	]
-	      },
-	      {
-	      	title: 'what do you want to choose?',
-	      	items: [
-	      		[{type: 'text', msg: "Property 1 Property 2"}],
-	      		[{type: 'text', msg: "Property 3 Property 4"}],
-	      		[{type: 'text', msg: "Property 5 Property 6"}]
-	      	]
-	      },
-	    ]
-    },
-    {
-  	  id: 2,
-      title: 'Blue',
-      type: 'select',
-      message: 'Wizard 2',
-      options: [
-        {key: 0, text:"Red", next: 1},{key: 1, text:"Blue", next: 2},{key: 2, text:"Green", next: 3}
-      ]
-    },
-    {
-  	  id: 3,
-      title: 'Green',
-      type: 'radio',
-      message: 'Wizard 3',
-      options: [
-        {key: 0, text:"Red", next: 1},{key: 1, text:"Blue", next: 2},{key: 2, text:"Green", next: 3} 
-      ]
-    }];
+  app.controller('windowsController', ['$http', function($http){
+  	var step = this;
+  	step.window = [];
+  	$http.get('../../config/windows.json').success(function(data){
+  		step.window = data[0];
+  	});
+  }]);
 })();
