@@ -42,11 +42,8 @@
 		    	break;
 		    }
 		}
-    };
-    
-    this.isEmpty = function(str){
-    	return (!str || 0 === str.length);    	
-    };
+    };   
+ 
     
   });
 
@@ -84,11 +81,17 @@
 	};
   });
   
-  app.controller('windowsController', ['$http', function($http){
+  app.controller('WindowsController', ['$http', function($http){
+  	this.ontology = "";
   	var step = this;
   	step.window = [];
+  	step.ontology = "";
   	$http.get('../../config/windows.json').success(function(data){
   		step.window = data[0];
   	});
+  	
+  	this.isEmpty = function(str){
+    	return (!str || 0 === str.length);    	
+    };
   }]);
 })();

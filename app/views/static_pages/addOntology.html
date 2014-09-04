@@ -13,9 +13,9 @@
 			<h1 class="text-center">Add Ontology</h1>
 		</header>
 
-		<div class="list-group" ng-controller="WizardController as ctrl">
+		<div class="list-group" >
 				
-			<form name="ontologyForm" class="form-horizontal" ng-submit="step.changeWindow()">
+			<form name="ontologyForm" class="form-horizontal" ng-submit="step.changeWindow()" ng-controller="WindowsController as ctrl">
 				<div class="control-group">
 					<label class="control-label " for="inputEmail">Name:</label>
 					<div class="controls">
@@ -33,9 +33,11 @@
 					<div class="controls">
 						<input id="lefile" type="file" style="display:none">					
 						<div class="input-append">
-							<input id="photoCover" class="input-large" type="text">
+							<input id="photoCover" class="input-large" type="text" ng-model="ctrl.ontology">
 							<a class="btn" onclick="$('input[id=lefile]').click();">Browse</a>
+							{{ctrl.ontology}}
 						</div>
+						
 						
 						<script type="text/javascript">
 							$('input[id=lefile]').change(function() {
@@ -43,7 +45,7 @@
 							});
 						</script>
 					</div>					
-					<label class="controls" ng-show="ctrl.isEmpty(document.forms["ontologyForm"]["photoCover"].value)">No file selected</label>
+					<label class="controls" ng-show="ctrl.isEmpty(ctrl.ontology)">No file selected</label>
 				</div>
 				<div class="control-group">
 						<label class="control-label">or</label>
