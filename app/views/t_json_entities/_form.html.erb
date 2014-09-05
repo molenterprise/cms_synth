@@ -1,0 +1,25 @@
+<%= form_for(@t_json_entity) do |f| %>
+  <% if @t_json_entity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@t_json_entity.errors.count, "error") %> prohibited this t_json_entity from being saved:</h2>
+
+      <ul>
+      <% @t_json_entity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :ontology_id %><br>
+    <%= f.number_field :ontology_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

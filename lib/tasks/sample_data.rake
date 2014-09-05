@@ -3,6 +3,7 @@ namespace :db do
   task populate: :environment do
     make_ontologies
     make_wizard
+    make_json
   end
 end
 
@@ -34,4 +35,10 @@ def make_wizard
   WizardStepOption.create!(message: "Option 6", wizard_step: @wizardStep2, next_wizard_step: @reallyStep)
   WizardStepOption.create!(message: "Yes", wizard_step: @reallyStep, next_wizard_step: @wizardStep1)
   WizardStepOption.create!(message: "No", wizard_step: @reallyStep, next_wizard_step: @wizardStep2)
+end
+
+
+def make_json
+  TJsonEntity.create(name: "abc")
+  TJsonEntity.create(name: "def")
 end

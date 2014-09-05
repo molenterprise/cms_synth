@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @t_json_entity.name %>
+</p>
+
+<p>
+  <strong>Ontology:</strong>
+  <%= @t_json_entity.ontology_id %>
+</p>
+
+<%= link_to 'Edit', edit_t_json_entity_path(@t_json_entity) %> |
+<%= link_to 'Back', t_json_entities_path %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :t_json_entities
+
   resources :wizard_apps, except: [:destroy]
 
   resources :ontologies, except: [:destroy, :show]

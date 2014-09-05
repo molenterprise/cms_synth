@@ -1,0 +1,27 @@
+<h1>Listing t_json_entities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ontology</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @t_json_entities.each do |t_json_entity| %>
+      <tr>
+        <td><%= t_json_entity.name %></td>
+        <td><%= t_json_entity.ontology_id %></td>
+        <td><%= link_to 'Show', t_json_entity %></td>
+        <td><%= link_to 'Edit', edit_t_json_entity_path(t_json_entity) %></td>
+        <td><%= link_to 'Destroy', t_json_entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New T json entity', new_t_json_entity_path %>
