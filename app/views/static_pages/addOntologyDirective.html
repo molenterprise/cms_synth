@@ -1,0 +1,54 @@
+<div class="list-group" >
+				
+			<form name="ontologyForm" class="form-horizontal" ng-submit="step.changeWindow()" ng-controller="WindowsController as ctrl">
+				<div class="control-group">
+					<label class="control-label " for="inputEmail">Name:</label>
+					<div class="controls">
+						<input type="text" value="Schema.org">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" >Description:</label>
+					<div class="controls">
+						<textarea>Schema.org is a set of extensible schemas that enable webmasters to markup</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputPassword">File:</label>
+					<div class="controls">
+						<input id="lefile" type="file" style="display:none">					
+						<div class="input-append">
+							<input id="photoCover" class="input-large" type="text" ng-model="ctrl.ontology">
+							<a class="btn" onclick="$('input[id=lefile]').click();">Browse</a>
+							{{ctrl.ontology}}
+						</div>
+						
+						
+						<script type="text/javascript">
+							$('input[id=lefile]').change(function() {
+								$('#photoCover').val($(this).val());
+							});
+						</script>
+					</div>					
+					<label class="controls" ng-show="ctrl.isEmpty(ctrl.ontology)">No file selected</label>
+				</div>
+				<div class="control-group">
+						<label class="control-label">or</label>
+				</div>				
+				<div class="control-group controls-row">
+					<label class="control-label" >Prefix:</label>
+					<div class="controls">
+						<input type="text" class="span2" value="schm">
+					</div>
+					<label class="control-label" for="inputPassword">Uri:</label>
+					
+					<input type="url" class="span5" value="https://schema.org/">
+					
+				</div>
+				<fieldset class="form-group">
+					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
+					<input type="submit" class="btn btn-primary pull-right" value="Next" />
+				</fieldset>
+			</form>
+			
+		</div>

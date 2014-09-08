@@ -27,8 +27,8 @@
     		solution: this.solution
     	};
     	this.userSequence.push(step);
-    	if (this.window.type == "unique") /// nuevo
-    		document.location = "windows";
+    /*	if (this.window.type == "unique") /// nuevo
+    		document.location = "windows"; */
     	this.selectWindow(this.window.options[this.solution].next);
     	
     	this.solution = 0;
@@ -46,7 +46,7 @@
     
     
     this.selectWindow = function(index){
-    	if(index = -1) document.location = "addOntology.html";
+    //	if(index = -1) document.location = "addOntology.html";
     	for (i = 0; i < wizard.length; i++) {
 		    if(wizard[i].id == index){	
 		    	this.window = wizard[i];
@@ -94,6 +94,13 @@
 	};
   });
   
+  app.directive('addOntology', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'addOntologyDirective.html'
+	};
+  });
+  
   app.controller('WindowsController', ['$http', function($http){
   	this.ontology = "";
   	var step = this;
@@ -115,7 +122,7 @@
       type: 'radioDetail',
       message: 'Ontologies',
       options: [
-        {key: 0, text:"Add Ontology", next: -1},{key: 1, text:"Create Application", next: 2} 
+        {key: 0, text:"Add Ontology", next: 2},{key: 1, text:"Create Application", next: 2} 
       ],
       details:
       	[
