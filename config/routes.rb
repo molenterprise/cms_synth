@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   match '/radio-nomenclator-chooser',    to: 'static_pages#radio-nomenclator-chooser',    via: 'get'
   match '/radio-detail-nomenclator-chooser',    to: 'static_pages#radio-detail-nomenclator-chooser',    via: 'get'
   match '/select-nomenclator-chooser',    to: 'static_pages#select-nomenclator-chooser',    via: 'get'
+  match '/add-ontology',    to: 'static_pages#add-ontology',    via: 'get'
 end

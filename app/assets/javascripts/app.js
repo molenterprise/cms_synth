@@ -50,8 +50,8 @@
     	for (i = 0; i < wizard.length; i++) {
 		    if(wizard[i].id == index){	
 		    	this.window = wizard[i];
-		    	if(wizard[i].type == "unique")	 
-		    		document.location = wizard[i].message;
+		    /*	if(wizard[i].type == "unique")	 
+		    		document.location = wizard[i].message; */
 		    	break;
 		    }
 		}
@@ -74,6 +74,13 @@
 	};
   });
   
+  app.directive('addOntology', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'add-ontology.html'
+	};
+  });
+  
   app.directive('selectNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
@@ -91,13 +98,6 @@
 
 		},
 		controllerAs: 'chooserCtrl'
-	};
-  });
-  
-  app.directive('addOntology', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'addOntologyDirective.html'
 	};
   });
   
@@ -148,19 +148,66 @@
   	  id: 2,
       title: 'Add Ontology',
       type: 'unique',
-      message: 'addOntology.html',
+      message: '',
       options: [
         {key: 0, next: 3} 
       ]
     },
     {
   	  id: 3,
-      title: 'Green',
-      type: 'radio',
-      message: 'Wizard 3',
+      title: 'Select the main Ontology you want to use',
+      type: 'select',
+      message: 'Ontology',
       options: [
-        {key: 0, text:"Red", next: 1},{key: 1, text:"Blue", next: 2},{key: 2, text:"Green", next: 3} 
+        {key: 0, text:"foaf", next: 4},{key: 1, text:"skos", next: 4},{key: 2, text:"swrc", next: 4},{key: 3, text:"schm", next: 4} 
       ]
+    },
+    {
+  	  id: 4,
+      title: 'What do you want to show from swrc ontology?',
+      type: 'select',
+      message: 'Class',
+      options: [
+        {key: 0, text:"swrc:Article", next: 5},{key: 1, text:"swrc:Book", next: 5},{key: 2, text:"swrc:Conference", next: 5},{key: 3, text:"swrc:Event", next: 5} 
+      ]
+    },
+    {
+  	  id: 5,
+      title: 'What do you want to do?',
+      type: 'radio',
+      message: '',
+      options: [
+        {key: 0, text:"Show a list of Events to be chosen", next: 6},{key: 1, text:"Show the detail of an Event", next: 5},{key: 2, text:"Define a computation using an Event", next: 5} 
+      ]
+    },
+    {
+  	  id: 6,
+      title: '',
+      type: 'radioDetail',
+      message: 'Events',
+      options: [
+        {key: 0, text:"one Event?", next: 6},{key: 1, text:"more than one Event?", next: 6} 
+      ],
+      modal: "texto",
+      details:
+      	[
+	      {
+	      	title: 'Do you want to choose',
+	      	items: [
+	      		[{type: 'text', msg: "Posters Display"}],
+	      		[{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
+	      		[{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
+	      	]
+	      },
+	      {
+	      	title: 'Do you want to choose',
+	      	items: [
+	      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Posters Display"}],
+	      		[{type: 'img', msg: "/assets/checkbox.png"},{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
+	      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
+	      	]
+	      },
+	    ]
     }];
     
 })();
