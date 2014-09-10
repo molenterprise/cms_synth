@@ -36,6 +36,10 @@
 					<add-ontology></add-ontology>
 				</div>
 				
+				<div ng-show="step.isType('selectedProperties')">
+					<selected-properties></selected-properties>
+				</div>
+				
 				<fieldset class="form-group">
 					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
 					<input type="submit" class="btn btn-primary pull-right" value="Next" />

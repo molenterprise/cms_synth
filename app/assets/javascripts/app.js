@@ -10,7 +10,9 @@
   		step.window = data[0];
   	});
     */
-    this.window = wizard[0];
+  //  this.window = wizard[0];
+  
+    this.window = wizard[6];
     
     this.solution = 0;
     
@@ -78,6 +80,13 @@
 	return {
 		restrict: 'E',
 		templateUrl: 'add-ontology.html'
+	};
+  });
+  
+  app.directive('selectedProperties', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'selected-properties.html'
 	};
   });
   
@@ -186,7 +195,7 @@
       type: 'radioDetail',
       message: 'Events',
       options: [
-        {key: 0, text:"one Event?", next: 6},{key: 1, text:"more than one Event?", next: 6} 
+        {key: 0, text:"one Event?", next: 7},{key: 1, text:"more than one Event?", next: 7} 
       ],
       modal: "texto",
       details:
@@ -208,6 +217,35 @@
 	      	]
 	      },
 	    ]
-    }];
+    },
+    {
+  	  id: 7,
+      title: '',
+      type: 'selectedProperties',
+      message: 'Selected properties',
+      items: [
+	      		[
+		      			 {id: 0, name: "label", value:"Posters Display"}, 
+			      		 {id: 1, name: "start", value:"2011-01-01 10:00"}, 
+			      		 {id: 2, name: "end", value:"2011-01-01 18:00"},
+			      		 {id: 3, name: "summary", value:"Posters Display"},
+			      		 {id: 4, name: "where", value:"Auditorium"},
+			      		 {id: 5, name: "Documents", value: {type: "array", items: ["A Demo Search Engine for Products",
+			      		 									 "A Tool for Fast Indexing and Querying of Graphs",
+			      		 									 "A User-Tunable Approach to Marketplace Search"]}}
+	      	    ],
+	      	    [
+	      	    	 {id: 0, name: "label", value:"Demo: Adapting a Map Query..."}, 
+		      		 {id: 1, name: "start", value:"03/30/2011  0:00"}, 
+		      		 {id: 2, name: "end", value:"03/30/2011  2:00"},
+		      		 {id: 3, name: "summary", value:"Demo: Adapting"},
+		      		 {id: 4, name: "where", value:"Auditorium"},
+		      		 {id: 5, name: "Documents", value: {type: "array", items: ["Accelerating Instant Question...",
+		      		 									 "Adapting a Map Query Interface for..."]}}
+	      	    ]
+	      	],
+	  selectedProperties: [0, 5, 4, 1]
+    }
+    ];
     
 })();

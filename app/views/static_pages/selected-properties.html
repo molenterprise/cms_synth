@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th ng-repeat="prop in step.window.items[0]">{{prop.name}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in step.window.items">
+            <td ng-repeat="prop in item">
+            	<span ng-hide="prop.value.type == 'array'">{{prop.value}}</span> 
+            	<div ng-show="prop.value.type == 'array'" ng-repeat="value in prop.value.items">{{value}}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!--
+  <div class="list-group" >
+	<div ng-repeat="prop in step.window.items[0]" class="halign">
+			<h2>{{prop.name}}</h2>
+	</div>
+	<div ng-repeat="item in step.window.items">
+		<div ng-repeat="prop in item" class="halign" >
+			<label>{{prop.value}}</label>
+		</div>
+	</div>
+	<br>
+</div>  -->
