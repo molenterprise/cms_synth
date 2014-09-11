@@ -12,9 +12,13 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[6];
+    this.window = wizard[0];
     
-    this.solution = 0;
+    this.solution = { 
+    					selectedOption: 0,
+    					selectedProperties: [0, 5, 4, 1]
+    	
+    				};
     
     this.userSequence = [];
                  
@@ -31,9 +35,9 @@
     	this.userSequence.push(step);
     /*	if (this.window.type == "unique") /// nuevo
     		document.location = "windows"; */
-    	this.selectWindow(this.window.options[this.solution].next);
+    	this.selectWindow(this.window.options[this.solution.selectedOption].next);
     	
-    	this.solution = 0;
+    	this.solution.selectedOption = 0;
     	
     	
     };
@@ -57,8 +61,15 @@
 		    	break;
 		    }
 		}
-    };   
- 
+    };  
+		
+		this.selectProperty = function(id, arr) {
+			for ( i = 0; i < arr.length; i++) {
+				if (arr[i].id == id)
+					return arr[i];
+			}
+			return null;
+		};
     
   });
 
@@ -101,9 +112,17 @@
 			};
 			
 			this.setOption = function(controller, key){
-		    	controller.solution = key;
+		    	controller.solution.selectedOption = key;
 		    	this.status.isopen = !this.status.isopen;
     		};
+    		
+    		this.selectOption = function(key, arr) {
+			for ( i = 0; i < arr.length; i++) {
+				if (arr[i].key == key)
+					return arr[i];
+			}
+			return null;
+		};
 
 		},
 		controllerAs: 'chooserCtrl'
@@ -225,26 +244,25 @@
       message: 'Selected properties',
       items: [
 	      		[
-		      			 {id: 0, name: "label", value:"Posters Display"}, 
-			      		 {id: 1, name: "start", value:"2011-01-01 10:00"}, 
-			      		 {id: 2, name: "end", value:"2011-01-01 18:00"},
-			      		 {id: 3, name: "summary", value:"Posters Display"},
-			      		 {id: 4, name: "where", value:"Auditorium"},
-			      		 {id: 5, name: "Documents", value: {type: "array", items: ["A Demo Search Engine for Products",
+		      			 {id: 0, name: "label", value:["Posters Display"]}, 
+			      		 {id: 1, name: "start", value:["2011-01-01 10:00"]}, 
+			      		 {id: 2, name: "end", value:["2011-01-01 18:00"]},
+			      		 {id: 3, name: "summary", value:["Posters Display"]},
+			      		 {id: 4, name: "where", value:["Auditorium"]},
+			      		 {id: 5, name: "Documents", value: ["A Demo Search Engine for Products",
 			      		 									 "A Tool for Fast Indexing and Querying of Graphs",
-			      		 									 "A User-Tunable Approach to Marketplace Search"]}}
+			      		 									 "A User-Tunable Approach to Marketplace Search"]}
 	      	    ],
 	      	    [
-	      	    	 {id: 0, name: "label", value:"Demo: Adapting a Map Query..."}, 
-		      		 {id: 1, name: "start", value:"03/30/2011  0:00"}, 
-		      		 {id: 2, name: "end", value:"03/30/2011  2:00"},
-		      		 {id: 3, name: "summary", value:"Demo: Adapting"},
-		      		 {id: 4, name: "where", value:"Auditorium"},
-		      		 {id: 5, name: "Documents", value: {type: "array", items: ["Accelerating Instant Question...",
-		      		 									 "Adapting a Map Query Interface for..."]}}
+	      	    	 {id: 0, name: "label", value:["Demo: Adapting a Map Query..."]}, 
+		      		 {id: 1, name: "start", value:["03/30/2011  0:00"]}, 
+		      		 {id: 2, name: "end", value:["03/30/2011  2:00"]},
+		      		 {id: 3, name: "summary", value:["Demo: Adapting"]},
+		      		 {id: 4, name: "where", value:["Auditorium"]},
+		      		 {id: 5, name: "Documents", value:["Accelerating Instant Question...",
+		      		 									 "Adapting a Map Query Interface for..."]}
 	      	    ]
-	      	],
-	  selectedProperties: [0, 5, 4, 1]
+	      	]
     }
     ];
     
