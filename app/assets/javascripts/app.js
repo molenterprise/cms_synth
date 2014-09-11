@@ -225,12 +225,12 @@
       message: 'Selected properties',
       items: [
 	      		[
-		      			 {id: 0, name: "label", value:"Posters Display"}, 
-			      		 {id: 1, name: "start", value:"2011-01-01 10:00"}, 
-			      		 {id: 2, name: "end", value:"2011-01-01 18:00"},
-			      		 {id: 3, name: "summary", value:"Posters Display"},
-			      		 {id: 4, name: "where", value:"Auditorium"},
-			      		 {id: 5, name: "Documents", value: {type: "array", items: ["A Demo Search Engine for Products",
+		      		{id: 0, name: "label", value:"Posters Display"}, 
+			    	{id: 1, name: "start", value:"2011-01-01 10:00"}, 
+			    	{id: 2, name: "end", value:"2011-01-01 18:00"},
+			    	{id: 3, name: "summary", value:"Posters Display"},
+			    	{id: 4, name: "where", value:"Auditorium"},
+			    	{id: 5, name: "Documents", value: {type: "array", items: ["A Demo Search Engine for Products",
 			      		 									 "A Tool for Fast Indexing and Querying of Graphs",
 			      		 									 "A User-Tunable Approach to Marketplace Search"]}}
 	      	    ],
