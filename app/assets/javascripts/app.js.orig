@@ -12,11 +12,12 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[6];
+    this.window = wizard[0];
     
     this.solution = { 
     					selectedOption: 0,
     					selectedProperties: [0, 5, 4, 1]
+    	
     				};
     
     this.userSequence = [];
@@ -29,8 +30,7 @@
     	step = {
     		window: this.window.id,
     		//title: this.window.title, //debug
-    		selectedOption: this.solution.selectedOption,
-    		selectedProperties: this.solution.selectedProperties
+    		solution: this.solution
     	};
     	this.userSequence.push(step);
     /*	if (this.window.type == "unique") /// nuevo
@@ -46,8 +46,7 @@
     	if(this.userSequence.length > 0){
     		step = this.userSequence.pop();
     		this.selectWindow(step.window);
-    		this.solution.selectedOption = step.selectedOption;
-    		this.solution.selectedProperties = step.selectedProperties;
+    		this.solution = step.solution;
     	}
     };
     
@@ -151,7 +150,7 @@
       type: 'radioDetail',
       message: 'Ontologies',
       options: [
-        {key: 0, text:"Add Ontology", next: 2},{key: 1, text:"Create Application", next: 3} 
+        {key: 0, text:"Add Ontology", next: 2},{key: 1, text:"Create Application", next: 2} 
       ],
       details:
       	[
@@ -179,7 +178,7 @@
       type: 'unique',
       message: '',
       options: [
-        {key: 0, next: 1} 
+        {key: 0, next: 3} 
       ]
     },
     {
@@ -241,27 +240,27 @@
     {
   	  id: 7,
       title: '',
-      type: 'radio',
-      message: 'Which type of attributes you want to show in the Event list?',
-      options: [
-        {key: 0, text:"Direct attributes of an Event", next: 9},{key: 1, text:"Attributes of other classes related to Event", next: 9},{key: 2, text:"Computed Attributes", next: 9} 
-      ]
-    },
-    {
-  	  id: 8,
-      title: '',
       type: 'selectedProperties',
       message: 'Selected properties',
       items: [
 	      		[
-					{id: 0, name: "label", value:["Posters Display"]}, 
-			    	{id: 1, name: "start", value:["2011-01-01 10:00"]}, 
-			    	{id: 2, name: "end", value:["2011-01-01 18:00"]},
-			    	{id: 3, name: "summary", value:["Posters Display"]},
-			    	{id: 4, name: "where", value:["Auditorium"]},
-			    	{id: 5, name: "Documents", value: ["A Demo Search Engine for Products",
-			      		 								"A Tool for Fast Indexing and Querying of Graphs",
-			      		 								"A User-Tunable Approach to Marketplace Search"]}
+<<<<<<< HEAD
+		      		{id: 0, name: "label", value:"Posters Display"}, 
+			    	{id: 1, name: "start", value:"2011-01-01 10:00"}, 
+			    	{id: 2, name: "end", value:"2011-01-01 18:00"},
+			    	{id: 3, name: "summary", value:"Posters Display"},
+			    	{id: 4, name: "where", value:"Auditorium"},
+			    	{id: 5, name: "Documents", value: {type: "array", items: ["A Demo Search Engine for Products",
+=======
+		      			 {id: 0, name: "label", value:["Posters Display"]}, 
+			      		 {id: 1, name: "start", value:["2011-01-01 10:00"]}, 
+			      		 {id: 2, name: "end", value:["2011-01-01 18:00"]},
+			      		 {id: 3, name: "summary", value:["Posters Display"]},
+			      		 {id: 4, name: "where", value:["Auditorium"]},
+			      		 {id: 5, name: "Documents", value: ["A Demo Search Engine for Products",
+>>>>>>> c4f8b72fd83d17bced518e8c7e017b92b3193262
+			      		 									 "A Tool for Fast Indexing and Querying of Graphs",
+			      		 									 "A User-Tunable Approach to Marketplace Search"]}
 	      	    ],
 	      	    [
 	      	    	 {id: 0, name: "label", value:["Demo: Adapting a Map Query..."]}, 
