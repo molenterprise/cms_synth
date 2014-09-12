@@ -248,6 +248,15 @@
       ]
     },
     {
+  	  id: 7,
+      title: 'Select what you want to show',
+      type: 'checkbox',
+      message: 'Following this example which attributes you want to show in the Event list',
+      options: [
+        {key: 0, text:"label", next: 9},{key: 1, text:"start", next: 9},{key: 2, text:"end", next: 9},{key: 3, text:"summary", next: 9} 
+      ]
+    },
+    {
   	  id: 8,
       title: '',
       type: 'selectedProperties',
