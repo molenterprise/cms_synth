@@ -12,12 +12,14 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[6];
+    this.window = wizard[7];
     
     this.solution = { 
     					selectedOption: 0,
     					selectedProperties: [0, 5, 4, 1]
     				};
+    this.selectedPropertiesTest = [0, 1, 3];
+    this.selectedPropertiesControl = wizard[8];
     
     this.userSequence = [];
                  
@@ -99,6 +101,13 @@
 	return {
 		restrict: 'E',
 		templateUrl: 'selected-properties.html'
+	};
+  });
+  
+  app.directive('dataTypePropertySelection', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'data-type-property-selection.html'
 	};
   });
   
@@ -248,7 +257,7 @@
       ]
     },
     {
-  	  id: 7,
+  	  id: 8,
       title: 'Select what you want to show',
       type: 'checkbox',
       message: 'Following this example which attributes you want to show in the Event list',
@@ -257,7 +266,7 @@
       ]
     },
     {
-  	  id: 8,
+  	  id: 9,
       title: '',
       type: 'selectedProperties',
       message: 'Selected properties',
