@@ -5,6 +5,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
 		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
 		<script data-turbolinks-track="true" src="/assets/app.js"></script>
+		<script data-turbolinks-track="true" src="/assets/checklist-model.js"></script>
 	</head>
 
 	<body ng-controller="WizardController as step">
@@ -41,13 +42,14 @@
 				</div>
 				
 				<div ng-show="step.isType('checkbox')">
-				<!--	<data-type-property-selection></data-type-property-selection> -->
-					    <div class="col-md-6" ng-repeat="option in step.window.options">
-					    	<input type="checkbox" checklist-model="step.selectedPropertiesTest" checklist-value="option.key">{{option.text}}
-					    </div> 
-					    <pre>{{step.selectedPropertiesTest}}</pre>
-					    
-				<!--	    <selected-properties></selected-properties> -->
+					<datatype-property-selection></datatype-property-selection> 
+					<div class="col-md-6" ng-repeat="option in step.window.options">
+						<input type="checkbox" checklist-model="step.solution.selectedProperties" checklist-value="option.key">{{option.text}}
+					</div> 
+					{{step.solution.selectedProperties}}
+					<h3>{{step.selectedPropertiesControl.message}}</h3>
+					<selected-properties></selected-properties>
+					
 				</div>
 				
 				<fieldset class="form-group">

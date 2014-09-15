@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('wizard', ['ui.bootstrap']);
+  var app = angular.module('wizard', ['ui.bootstrap', 'checklist-model']);
 
   app.controller('WizardController', function(){
   	
@@ -12,13 +12,12 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[7];
+    this.window = wizard[6];
     
     this.solution = { 
     					selectedOption: 0,
     					selectedProperties: [0, 5, 4, 1]
-    				};
-    this.selectedPropertiesTest = [0, 1, 3];
+    			}; 
     this.selectedPropertiesControl = wizard[8];
     
     this.userSequence = [];
@@ -104,10 +103,10 @@
 	};
   });
   
-  app.directive('dataTypePropertySelection', function(){
+  app.directive('datatypePropertySelection', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'data-type-property-selection.html'
+		templateUrl: 'datatype-property-selection.html'
 	};
   });
   
@@ -253,16 +252,16 @@
       type: 'radio',
       message: 'Which type of attributes you want to show in the Event list?',
       options: [
-        {key: 0, text:"Direct attributes of an Event", next: 9},{key: 1, text:"Attributes of other classes related to Event", next: 9},{key: 2, text:"Computed Attributes", next: 9} 
+        {key: 0, text:"Direct attributes of an Event", next: 8},{key: 1, text:"Attributes of other classes related to Event", next: 9},{key: 2, text:"Computed Attributes", next: 9} 
       ]
     },
     {
   	  id: 8,
-      title: 'Select what you want to show',
+      title: 'Following this example which attributes you want to show in the Event list',
       type: 'checkbox',
-      message: 'Following this example which attributes you want to show in the Event list',
+      message: 'Add Event properties',
       options: [
-        {key: 0, text:"label", next: 9},{key: 1, text:"start", next: 9},{key: 2, text:"end", next: 9},{key: 3, text:"summary", next: 9} 
+        {key: 0, text:"label", next: 7},{key: 1, text:"start", next: 7},{key: 2, text:"end", next: 7},{key: 3, text:"summary", next: 7} 
       ]
     },
     {
