@@ -286,6 +286,16 @@
 		      		 									 "Adapting a Map Query Interface for..."]}
 	      	    ]
 	      	]
+    },
+    {
+  	  id: 9,
+      title: 'Select what you want to show',
+      type: 'select',
+      message: 'relatedCollections',
+      options: [
+        {key: 0, text:"Article", next: 5}, {key: 1, text:"Book", next: 5}, {key: 2, text:"Conference", next: 5},
+        {key: 3, text:"Event", next: 5}, {key: 4, text:"Person", next: 5}, {key: 3, text:"Document", next: 5} 
+      ]
     }
     ];
     
