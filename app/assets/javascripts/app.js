@@ -18,7 +18,6 @@
     					selectedOption: 0,
     					selectedProperties: [0, 5, 4, 1]
     			}; 
-    this.selectedPropertiesControl = wizard[8];
     
     this.userSequence = [];
                  
@@ -65,13 +64,15 @@
 		}
     };  
 		
-		this.selectProperty = function(id, arr) {
+	this.selectProperty = function(id, arr) {
+		if(arr != null){
 			for ( i = 0; i < arr.length; i++) {
 				if (arr[i].id == id)
 					return arr[i];
 			}
-			return null;
-		};
+		}
+		return "";
+	};
     
   });
 
@@ -260,15 +261,10 @@
       title: 'Following this example which attributes you want to show in the Event list',
       type: 'checkbox',
       message: 'Add Event properties',
-      options: [
+      properties: [
         {key: 0, text:"label", next: 7},{key: 1, text:"start", next: 7},{key: 2, text:"end", next: 7},{key: 3, text:"summary", next: 7} 
-      ]
-    },
-    {
-  	  id: 9,
-      title: '',
-      type: 'selectedProperties',
-      message: 'Selected properties',
+      ],
+      message1: 'Selected properties',
       items: [
 	      		[
 					{id: 0, name: "label", value:["Posters Display"]}, 
