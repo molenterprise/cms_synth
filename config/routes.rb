@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   match '/select-nomenclator-chooser',    to: 'static_pages#select-nomenclator-chooser',    via: 'get'
   match '/add-ontology',    to: 'static_pages#add-ontology',    via: 'get'
   match '/selected-properties',    to: 'static_pages#selected-properties',    via: 'get'
+  match '/datatype-property-selection',    to: 'static_pages#datatype-property-selection',    via: 'get'
 end

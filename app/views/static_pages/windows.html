@@ -1,63 +1,44 @@
-<!DOCTYPE html>
-<html ng-app="wizard">
-	<head>
-		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
-		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
-		<script data-turbolinks-track="true" src="/assets/app.js"></script>
-		<script data-turbolinks-track="true" src="/assets/checklist-model.js"></script>
-	</head>
 
-	<body ng-controller="WizardController as step">
-		<!--  Wizard Header  -->
-		<header>
-			<h1 class="text-center">{{step.window.title}}</h1>
-		</header>
+	<!--  Wizard Header  -->
+	<header>
+		<h1 class="text-center">{{step.window.title}}</h1>
+	</header>
 
-		<!--  Products Container  -->
-		<div class="list-group">
-			<!--  Product Container  -->
-			<h3>{{step.window.message}}</h3>
+	<!--  Products Container  -->
+	<div class="list-group">
+		<!--  Product Container  -->
+		<h3>{{step.window.message}}</h3>
 
-			<form name="reviewForm" ng-submit="step.changeWindow()">
-				
-				<div ng-show="step.isType('select')">
-					<select-nomenclator-chooser></select-nomenclator-chooser>
-				</div>	
-				
-				<div ng-show="step.isType('radio')">
-					<radio-nomenclator-chooser></radio-nomenclator-chooser>
-				</div>
-				
-				<div ng-show="step.isType('radioDetail')">
-					<radio-detail-nomenclator-chooser></radio-detail-nomenclator-chooser>
-				</div>
-				
-				<div ng-show="step.isType('unique')">
-					<add-ontology></add-ontology>
-				</div>
-				
-				<div ng-show="step.isType('selectedProperties')">
-					<selected-properties></selected-properties>
-				</div>
-				
-				<div ng-show="step.isType('checkbox')">
-					<datatype-property-selection></datatype-property-selection> 
-					<div class="col-md-6" ng-repeat="option in step.window.options">
-						<input type="checkbox" checklist-model="step.solution.selectedProperties" checklist-value="option.key">{{option.text}}
-					</div> 
-					{{step.solution.selectedProperties}}
-					<h3>{{step.selectedPropertiesControl.message}}</h3>
-					<selected-properties></selected-properties>
-					
-				</div>
-				
-				<fieldset class="form-group">
-					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
-					<input type="submit" class="btn btn-primary pull-right" value="Next" />
-				</fieldset>
-			</form>
-		</div>
-	<!--	{{step.solution}} -->
-	</body>
-</html>
+		<form name="reviewForm" ng-submit="step.changeWindow()">
+			
+			<div ng-show="step.isType('select')">
+				<select-nomenclator-chooser></select-nomenclator-chooser>
+			</div>	
+			
+			<div ng-show="step.isType('radio')">
+				<radio-nomenclator-chooser></radio-nomenclator-chooser>
+			</div>
+			
+			<div ng-show="step.isType('radioDetail')">
+				<radio-detail-nomenclator-chooser></radio-detail-nomenclator-chooser>
+			</div>
+			
+			<div ng-show="step.isType('unique')">
+				<add-ontology></add-ontology>
+			</div>
+			
+			<div ng-show="step.isType('selectedProperties')">
+				<selected-properties></selected-properties>
+			</div>
+			
+			<div ng-show="step.isType('checkbox')">
+				<datatype-property-selection></datatype-property-selection>
+			</div>
+			
+			<fieldset class="form-group">
+				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
+				<input type="submit" class="btn btn-primary pull-right" value="Next" />
+			</fieldset>
+		</form>
+	</div>
+<!--	{{step.solution}} -->
