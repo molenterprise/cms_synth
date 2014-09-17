@@ -291,11 +291,66 @@
   	  id: 9,
       title: 'Select what you want to show',
       type: 'select',
-      message: 'relatedCollections',
+      message: "Event \t related collections",
       options: [
-        {key: 0, text:"Article", next: 5}, {key: 1, text:"Book", next: 5}, {key: 2, text:"Conference", next: 5},
-        {key: 3, text:"Event", next: 5}, {key: 4, text:"Person", next: 5}, {key: 3, text:"Document", next: 5} 
+        {key: 0, text:"Article", next: 10}, {key: 1, text:"Book", next: 10}, {key: 2, text:"Conference", next: 10},
+        {key: 3, text:"Event", next: 10}, {key: 4, text:"Person", next: 10}, {key: 5, text:"Document", next: 10} 
       ]
+    },
+    {
+  	  id: 10,
+      title: 'Select the path',
+      type: 'paths',
+      message: 'Suggested paths',
+      paths: [
+      			["Event", "Person"],
+      			["Event", "Document", "Person"]
+      		 ],   
+      details: [
+			      {
+			      	title: 'Do you want to choose',
+			      	items: [
+			      		[{type: 'text', msg: "Posters Display"}],
+			      		[{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
+			      		[{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
+			      	]
+			      },
+			      {
+			      	title: 'Do you want to choose',
+			      	items: [
+			      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Posters Display"}],
+			      		[{type: 'img', msg: "/assets/checkbox.png"},{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
+			      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
+			      	]
+			      },
+			   ]
+    },
+    {
+  	  id: 11,
+      title: 'Select the path',
+      type: 'paths',
+      message: 'Suggested paths',
+      paths:[
+      			["Event", "Person"],
+      			["Event", "Document", "Person"]
+      		],     
+      propertySets: [
+      					[//path1
+	      					[// propertyset1
+	        					{key: 0, text:"organizer", next: 7}
+	      			  		]
+      			  		],
+      			  		[//path2
+	      					[// propertyset1
+	        					{key: 0, text:"hasOpeningDocument", next: 7},
+	        					{key: 1, text:"hasClosingDocument", next: 7}
+	      			  		],
+	      			  		[// propertyset2
+	        					{key: 0, text:"presenter", next: 7},
+	        					{key: 1, text:"author", next: 7}
+	      			  		]
+      			  		]
+      			  	]
     }
     ];
     
