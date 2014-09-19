@@ -12,7 +12,7 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[9];
+    this.window = wizard[10];
     
     this.solution = { 
     					selectedOption: 0,
@@ -22,6 +22,7 @@
     this.iteration = 0;
     
     this.userSequence = [];
+    this.solution.selectedOptions = new int[wizard[10].propertySets[this.solution.selectedOption].length]; 
                  
     this.isType = function(val){
     	return this.window.type == val;
@@ -173,7 +174,7 @@
 					}
 				}
 				return "";
-		};
+			};
 
 		},
 		controllerAs: 'chooserCtrlPath'
