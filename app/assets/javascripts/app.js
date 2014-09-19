@@ -12,7 +12,7 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[6];
+    this.window = wizard[10];
     
     this.solution = { 
     					selectedOption: 0,
@@ -303,27 +303,12 @@
       type: 'paths',
       message: 'Suggested paths',
       paths: [
-      			["Event", "Person"],
-      			["Event", "Document", "Person"]
-      		 ],   
-      details: [
-			      {
-			      	title: 'Do you want to choose',
-			      	items: [
-			      		[{type: 'text', msg: "Posters Display"}],
-			      		[{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
-			      		[{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
-			      	]
-			      },
-			      {
-			      	title: 'Do you want to choose',
-			      	items: [
-			      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Posters Display"}],
-			      		[{type: 'img', msg: "/assets/checkbox.png"},{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
-			      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
-			      	]
-			      },
-			   ]
+      			{key: 0, path: ["Event", "Person"], examples: [{type: 'text', msg: "Event1 - organizer - Tim Berners Lee"}]},
+      			{key: 1, path: ["Event", "Document", "Person"], 
+      			examples: [{type: 'text', msg: "Event1 - hasOpeningDocument:presenter - Milena"},
+			      		   {type: 'text', msg: "Event1 - hasOpeningDocument:author - Jaisse"},
+			      		   {type: 'text', msg: "Event2 - hasClosingDocument:advisor - Schwabe"}]}
+      		 ]
     },
     {
   	  id: 11,
