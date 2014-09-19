@@ -12,12 +12,14 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[6];
+    this.window = wizard[9];
     
     this.solution = { 
     					selectedOption: 0,
-    					selectedProperties: [0, 5, 4, 1]
-    			}; 
+    					selectedProperties: [0, 5, 4, 1],
+    					selectedOptions: []
+    				}; 
+    this.iteration = 0;
     
     this.userSequence = [];
                  
@@ -111,6 +113,13 @@
 	};
   });
   
+  app.directive('radioBottomDetail', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'radio-bottom-detail.html'
+	};
+  });
+  
   app.directive('selectNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
@@ -127,15 +136,47 @@
     		};
     		
     		this.selectOption = function(key, arr) {
-			for ( i = 0; i < arr.length; i++) {
-				if (arr[i].key == key)
-					return arr[i];
-			}
-			return null;
+    			if(arr != null){
+					for ( i = 0; i < arr.length; i++) {
+						if (arr[i].key == key)
+							return arr[i];
+					}
+				}
+				return "";
 		};
 
 		},
 		controllerAs: 'chooserCtrl'
+	};
+  });
+  
+  app.directive('selectNomenclatorChooserForPath', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'select-nomenclator-chooser-for-path.html',
+		controller: function(){
+			
+			this.status = {
+				isopen : false
+			};
+			
+			this.setOption = function(controller, key){
+		    	controller.solution.selectedOptions[controller.iteration] = key;
+		    	this.status.isopen = !this.status.isopen;
+    		};
+    		
+    		this.selectOption = function(key, arr) {
+    			if(arr != null){
+					for ( i = 0; i < arr.length; i++) {
+						if (arr[i].key == key)
+							return arr[i];
+					}
+				}
+				return "";
+		};
+
+		},
+		controllerAs: 'chooserCtrlPath'
 	};
   });
   
@@ -303,37 +344,23 @@
       type: 'paths',
       message: 'Suggested paths',
       paths: [
-      			["Event", "Person"],
-      			["Event", "Document", "Person"]
-      		 ],   
-      details: [
-			      {
-			      	title: 'Do you want to choose',
-			      	items: [
-			      		[{type: 'text', msg: "Posters Display"}],
-			      		[{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
-			      		[{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
-			      	]
-			      },
-			      {
-			      	title: 'Do you want to choose',
-			      	items: [
-			      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Posters Display"}],
-			      		[{type: 'img', msg: "/assets/checkbox.png"},{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
-			      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
-			      	]
-			      },
-			   ]
+      			{key: 0, pathItems: ["Event", "Person"], examples: ["Event1 - organizer - Tim Berners Lee"]},
+      			{key: 1, pathItems: ["Event", "Document", "Person"], examples: ["Event1 - hasOpeningDocument:presenter - Milena",
+      																			"Event1 - hasOpeningDocument:author - Jaisse",
+      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
+      		 ]
     },
     {
   	  id: 11,
-      title: 'Select the path',
-      type: 'paths',
-      message: 'Suggested paths',
-      paths:[
-      			["Event", "Person"],
-      			["Event", "Document", "Person"]
-      		],     
+      title: 'Select the relationships',
+      type: 'path',
+      message: 'Suggested path',
+      paths: [
+      			{key: 0, pathItems: ["Event", "Person"], examples: ["Event1 - organizer - Tim Berners Lee"]},
+      			{key: 1, pathItems: ["Event", "Document", "Person"], examples: ["Event1 - hasOpeningDocument:presenter - Milena",
+      																			"Event1 - hasOpeningDocument:author - Jaisse",
+      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
+      		 ], 
       propertySets: [
       					[//path1
 	      					[// propertyset1

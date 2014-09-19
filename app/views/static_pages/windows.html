@@ -35,6 +35,10 @@
 				<datatype-property-selection></datatype-property-selection>
 			</div>
 			
+			<div ng-show="step.isType('paths')">
+				<radio-bottom-detail></radio-bottom-detail>
+			</div>
+			
 			<fieldset class="form-group">
 				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
 				<input type="submit" class="btn btn-primary pull-right" value="Next" />
