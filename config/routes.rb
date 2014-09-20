@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   match '/add-ontology',    to: 'static_pages#add-ontology',    via: 'get'
   match '/selected-properties',    to: 'static_pages#selected-properties',    via: 'get'
   match '/datatype-property-selection',    to: 'static_pages#datatype-property-selection',    via: 'get'
+  match '/radio-bottom-detail',    to: 'static_pages#radio-bottom-detail',    via: 'get'
 end

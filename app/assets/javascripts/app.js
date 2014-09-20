@@ -16,10 +16,13 @@
     
     this.solution = { 
     					selectedOption: 0,
-    					selectedProperties: [0, 5, 4, 1]
-    			}; 
+    					selectedProperties: [0, 5, 4, 1],
+    					selectedOptions: []
+    				}; 
+    this.iteration = 0;
     
     this.userSequence = [];
+    this.solution.selectedOptions = new int[wizard[10].propertySets[this.solution.selectedOption].length]; 
                  
     this.isType = function(val){
     	return this.window.type == val;
@@ -111,6 +114,13 @@
 	};
   });
   
+  app.directive('radioBottomDetail', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'radio-bottom-detail.html'
+	};
+  });
+  
   app.directive('selectNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
@@ -127,15 +137,47 @@
     		};
     		
     		this.selectOption = function(key, arr) {
-			for ( i = 0; i < arr.length; i++) {
-				if (arr[i].key == key)
-					return arr[i];
-			}
-			return null;
+    			if(arr != null){
+					for ( i = 0; i < arr.length; i++) {
+						if (arr[i].key == key)
+							return arr[i];
+					}
+				}
+				return "";
 		};
 
 		},
 		controllerAs: 'chooserCtrl'
+	};
+  });
+  
+  app.directive('selectNomenclatorChooserForPath', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'select-nomenclator-chooser-for-path.html',
+		controller: function(){
+			
+			this.status = {
+				isopen : false
+			};
+			
+			this.setOption = function(controller, key){
+		    	controller.solution.selectedOptions[controller.iteration] = key;
+		    	this.status.isopen = !this.status.isopen;
+    		};
+    		
+    		this.selectOption = function(key, arr) {
+    			if(arr != null){
+					for ( i = 0; i < arr.length; i++) {
+						if (arr[i].key == key)
+							return arr[i];
+					}
+				}
+				return "";
+			};
+
+		},
+		controllerAs: 'chooserCtrlPath'
 	};
   });
   
@@ -303,22 +345,31 @@
       type: 'paths',
       message: 'Suggested paths',
       paths: [
+<<<<<<< HEAD
       			{key: 0, path: ["Event", "Person"], examples: [{type: 'text', msg: "Event1 - organizer - Tim Berners Lee"}]},
       			{key: 1, path: ["Event", "Document", "Person"], 
       			examples: [{type: 'text', msg: "Event1 - hasOpeningDocument:presenter - Milena"},
 			      		   {type: 'text', msg: "Event1 - hasOpeningDocument:author - Jaisse"},
 			      		   {type: 'text', msg: "Event2 - hasClosingDocument:advisor - Schwabe"}]}
+=======
+      			{key: 0, pathItems: ["Event", "Person"], examples: ["Event1 - organizer - Tim Berners Lee"]},
+      			{key: 1, pathItems: ["Event", "Document", "Person"], examples: ["Event1 - hasOpeningDocument:presenter - Milena",
+      																			"Event1 - hasOpeningDocument:author - Jaisse",
+      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
+>>>>>>> 16f5da5699196492506f277ddda36308191d57f7
       		 ]
     },
     {
   	  id: 11,
-      title: 'Select the path',
-      type: 'paths',
-      message: 'Suggested paths',
-      paths:[
-      			["Event", "Person"],
-      			["Event", "Document", "Person"]
-      		],     
+      title: 'Select the relationships',
+      type: 'path',
+      message: 'Suggested path',
+      paths: [
+      			{key: 0, pathItems: ["Event", "Person"], examples: ["Event1 - organizer - Tim Berners Lee"]},
+      			{key: 1, pathItems: ["Event", "Document", "Person"], examples: ["Event1 - hasOpeningDocument:presenter - Milena",
+      																			"Event1 - hasOpeningDocument:author - Jaisse",
+      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
+      		 ], 
       propertySets: [
       					[//path1
 	      					[// propertyset1
