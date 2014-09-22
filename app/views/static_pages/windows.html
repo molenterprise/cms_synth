@@ -1,13 +1,13 @@
 
 	<!--  Wizard Header  -->
 	<header>
-		<h1 class="text-center">{{step.window.title}}</h1>
+		<h1 class="text-center">{{step.currentWindow.title}}</h1>
 	</header>
 
 	<!--  Products Container  -->
 	<div class="list-group">
 		<!--  Product Container  -->
-		<h3>{{step.window.message}}</h3>
+		<h3>{{step.currentWindow.message}}</h3>
 		
 		<form name="reviewForm" ng-submit="step.changeWindow()">
 			
