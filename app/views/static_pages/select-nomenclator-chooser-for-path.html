@@ -1,11 +1,14 @@
 <!-- Single button -->
-<div class="btn-group" dropdown is-open="chooserCtrlPath.status.isopen">
-	<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-		{{chooserCtrlPath.selectOption(step.solution.selectedOptions[step.iteration], step.window.propertySets[step.solution.selectedOption][step.iteration]).text}} <span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" role="menu" >
-		<li ng-repeat="opt in step.window.propertySets[step.solution.selectedOption][step.iteration]">
-			<a href ng-click="chooserCtrlPath.setOption(step, opt.key)">{{opt.text}}</a>
-		</li>
-	</ul>
+<div ng-repeat="propSet in step.solution.selectedOptions track by $index">
+	<div class="btn-group" dropdown is-open="chooserCtrlPath.status.isopen">
+		<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+			{{chooserCtrlPath.selectOption(step.solution.selectedOptions[$index],
+				 step.window.propertySets[step.solution.selectedOption][$index]).text}} <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" >
+			<li ng-repeat="opt in step.window.propertySets[step.solution.selectedOption][$index]">
+				<a href ng-click="chooserCtrlPath.setOption(step, opt.key, $index)">{{opt.text}}</a>
+			</li>
+		</ul>
+	</div>
 </div>

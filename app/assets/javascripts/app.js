@@ -15,14 +15,18 @@
     this.window = wizard[10];
     
     this.solution = { 
-    					selectedOption: 0,
+    					selectedOption: 1,
     					selectedProperties: [0, 5, 4, 1],
     					selectedOptions: []
     				}; 
-    this.iteration = 0;
     
     this.userSequence = [];
-    this.solution.selectedOptions = new int[wizard[10].propertySets[this.solution.selectedOption].length]; 
+    this.solution.selectedOptions = new Array(wizard[10].propertySets[this.solution.selectedOption].length); 
+    
+    for(i=0; i<this.solution.selectedOptions.length; i++)
+    {
+    	this.solution.selectedOptions[i] = 0;
+    }
                  
     this.isType = function(val){
     	return this.window.type == val;
@@ -161,8 +165,8 @@
 				isopen : false
 			};
 			
-			this.setOption = function(controller, key){
-		    	controller.solution.selectedOptions[controller.iteration] = key;
+			this.setOption = function(controller, key, index){
+		    	controller.solution.selectedOptions[index] = key;
 		    	this.status.isopen = !this.status.isopen;
     		};
     		
@@ -379,7 +383,16 @@
 	      			  		]
       			  		]
       			  	]
-    }
+    },
+     {
+  	  id: 12,
+      title: 'Computed attribute',
+      type: 'computedAttribute',
+      message: 'New attribute',
+      options: [
+        {key: 0, next: 1} 
+      ]
+    },
     ];
     
 })();

@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   match '/selected-properties',    to: 'static_pages#selected-properties',    via: 'get'
   match '/datatype-property-selection',    to: 'static_pages#datatype-property-selection',    via: 'get'
   match '/radio-bottom-detail',    to: 'static_pages#radio-bottom-detail',    via: 'get'
+  match '/select-nomenclator-chooser-for-path',    to: 'static_pages#select-nomenclator-chooser-for-path',    via: 'get'
 end
