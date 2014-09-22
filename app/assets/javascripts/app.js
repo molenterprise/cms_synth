@@ -12,11 +12,11 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[10];
+    this.window = wizard[11];
     
     this.solution = { 
-    					selectedOption: 1,
-    					selectedProperties: [0, 5, 4, 1],
+    					selectedOption: 0,
+    					selectedProperties: [0, 4, 1],
     					selectedOptions: []
     				}; 
     
@@ -33,6 +33,9 @@
     };
     
     this.changeWindow = function(){
+    	if(this.window.needNextProcessing){
+    		eval(this.window.expToEval);
+		}
     	step = {
     		window: this.window.id,
     		//title: this.window.title, //debug
@@ -125,6 +128,13 @@
 	};
   });
   
+  app.directive('computedAttributes', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'computed-attributes.html'
+	};
+  });
+  
   app.directive('selectNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
@@ -164,6 +174,8 @@
 			this.status = {
 				isopen : false
 			};
+			
+			this.computedAttr_name;
 			
 			this.setOption = function(controller, key, index){
 		    	controller.solution.selectedOptions[index] = key;
@@ -317,8 +329,8 @@
 			    	{id: 1, name: "start", value:["2011-01-01 10:00"]}, 
 			    	{id: 2, name: "end", value:["2011-01-01 18:00"]},
 			    	{id: 3, name: "summary", value:["Posters Display"]},
-			    	{id: 4, name: "where", value:["Auditorium"]},
-			    	{id: 5, name: "Documents", value: ["A Demo Search Engine for Products",
+			    //	{id: 4, name: "where", value:["Auditorium"]},
+			    	{id: 4, name: "Documents", value: ["A Demo Search Engine for Products",
 			      		 								"A Tool for Fast Indexing and Querying of Graphs",
 			      		 								"A User-Tunable Approach to Marketplace Search"]}
 	      	    ],
@@ -327,8 +339,8 @@
 		      		 {id: 1, name: "start", value:["03/30/2011  0:00"]}, 
 		      		 {id: 2, name: "end", value:["03/30/2011  2:00"]},
 		      		 {id: 3, name: "summary", value:["Demo: Adapting"]},
-		      		 {id: 4, name: "where", value:["Auditorium"]},
-		      		 {id: 5, name: "Documents", value:["Accelerating Instant Question...",
+		      		// {id: 4, name: "where", value:["Auditorium"]},
+		      		 {id: 4, name: "Documents", value:["Accelerating Instant Question...",
 		      		 									 "Adapting a Map Query Interface for..."]}
 	      	    ]
 	      	]
@@ -388,11 +400,34 @@
   	  id: 12,
       title: 'Computed attribute',
       type: 'computedAttribute',
+      needNextProcessing: true,
       message: 'New attribute',
+      message1: 'Selected properties',
       options: [
-        {key: 0, next: 1} 
-      ]
-    },
+        {key: 0, next: 12} 
+      ],
+      items: [
+	      		[
+					{id: 0, name: "label", value:["Posters Display"]}, 
+			    	{id: 1, name: "start", value:["2011-01-01 10:00"]}, 
+			    	{id: 2, name: "end", value:["2011-01-01 18:00"]},
+			    	{id: 3, name: "summary", value:["Posters Display"]},
+			  //  	{id: 4, name: "where", value:["Auditorium"]},
+			    	{id: 4, name: "Documents", value: ["A Demo Search Engine for Products",
+			      		 								"A Tool for Fast Indexing and Querying of Graphs",
+			      		 								"A User-Tunable Approach to Marketplace Search"]}
+	      	    ],
+	      	    [
+	      	    	 {id: 0, name: "label", value:["Demo: Adapting a Map Query..."]}, 
+		      		 {id: 1, name: "start", value:["03/30/2011  0:00"]}, 
+		      		 {id: 2, name: "end", value:["03/30/2011  2:00"]},
+		      		 {id: 3, name: "summary", value:["Demo: Adapting"]},
+		      		// {id: 4, name: "where", value:["Auditorium"]},
+		      		 {id: 4, name: "Documents", value:["Accelerating Instant Question...",
+		      		 									"Adapting a Map Query Interface for..."]}
+	      	    ]
+	      	]
+    }
     ];
     
 })();
