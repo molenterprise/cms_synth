@@ -12,10 +12,10 @@
     */
   //  this.window = wizard[0];
   
-    this.window = wizard[11];
+    this.window = wizard[10];
     
     this.solution = { 
-    					selectedOption: 0,
+    					selectedOption: 1,
     					selectedProperties: [0, 4, 1],
     					selectedOptions: []
     				}; 
@@ -177,7 +177,9 @@
 			
 			this.setOption = function(controller, key, index){
 		    	controller.solution.selectedOptions[index] = key;
+		    	console.log(this.status[index]);
 		    	this.status[index] = !this.status[index];
+		    	console.log(this.status[index]);
     		};
     		
     		this.selectOption = function(key, arr) {
