@@ -21,7 +21,7 @@
     				}; 
     
     this.userSequence = [];
-    this.solution.selectedOptions = new Array(wizard[10].propertySets[this.solution.selectedOption].length); 
+    this.solution.selectedOptions = [new Array(this.window.propertySets[this.solution.selectedOption].length)]; 
     
     for(i=0; i<this.solution.selectedOptions.length; i++)
     {
