@@ -1,48 +1,54 @@
 (function() {
   var app = angular.module('wizard', ['ui.bootstrap', 'checklist-model']);
 
-  app.controller('WizardController', function(){
-  	
-  	/*var step = this;
-  	step.window = [];
-  	$http.get('../../config/windows.json').success(function(data){
-  		step.windows = data;
-  		step.window = data[0];
-  	});
-    */
-  //  this.window = wizard[0];
+  app.controller('WizardController', ['$http', function($http){
   
-    this.window = wizard[10];
+  	var me = this;
+  
+    me.wizard = [];
+    me.currentWindow = [];
+    me.solution = {};
+    me.userSequence = [];
+    me.solution.selectedOptions =[];
+  
+  	$http.get('/definition').success(function(data){
+  		me.wizard = data;
+  		
+  		me.currentWindow = me.wizard[10];
+  		
+  		console.log(me.currentWindow);
     
-    this.solution = { 
-    					selectedOption: 1,
-    					selectedProperties: [0, 5, 4, 1],
-    					selectedOptions: []
-    				}; 
-    
-    this.userSequence = [];
-    this.solution.selectedOptions = [new Array(this.window.propertySets[this.solution.selectedOption].length)]; 
-    
-    for(i=0; i<this.solution.selectedOptions.length; i++)
-    {
-    	this.solution.selectedOptions[i] = 0;
-    }
-                 
+	    me.solution = { 
+	    					selectedOption: 1,
+	    					selectedProperties: [0, 5, 4, 1],
+	    					selectedOptions: []
+	    				}; 
+	    
+	    me.userSequence = [];
+	    length = me.currentWindow.propertySets ? me.currentWindow.propertySets[me.solution.selectedOption].length : 0;
+	    me.solution.selectedOptions = [length]; 
+	    
+	    for( i = 0; i < length; i++)
+	    {
+	    	me.solution.selectedOptions[i] = 0;
+	    }
+  	});
+  
     this.isType = function(val){
-    	return this.window.type == val;
+    	return this.currentWindow.type == val;
     };
     
     this.changeWindow = function(){
     	step = {
-    		window: this.window.id,
-    		//title: this.window.title, //debug
+    		currentWindow: this.currentWindow.id,
+    		//title: this.currentWindow.title, //debug
     		selectedOption: this.solution.selectedOption,
     		selectedProperties: this.solution.selectedProperties
     	};
     	this.userSequence.push(step);
-    /*	if (this.window.type == "unique") /// nuevo
-    		document.location = "windows"; */
-    	this.selectWindow(this.window.options[this.solution.selectedOption].next);
+    /*	if (this.currentWindow.type == "unique") /// nuevo
+    		document.location = "currentWindows"; */
+    	this.selectWindow(this.currentWindow.options[this.solution.selectedOption].next);
     	
     	this.solution.selectedOption = 0;
     	
@@ -52,7 +58,7 @@
     this.back = function(){
     	if(this.userSequence.length > 0){
     		step = this.userSequence.pop();
-    		this.selectWindow(step.window);
+    		this.selectWindow(step.currentWindow);
     		this.solution.selectedOption = step.selectedOption;
     		this.solution.selectedProperties = step.selectedProperties;
     	}
@@ -63,7 +69,7 @@
     //	if(index = -1) document.location = "addOntology.html";
     	for (i = 0; i < wizard.length; i++) {
 		    if(wizard[i].id == index){	
-		    	this.window = wizard[i];
+		    	this.currentWindow = wizard[i];
 		    /*	if(wizard[i].type == "unique")	 
 		    		document.location = wizard[i].message; */
 		    	break;
@@ -81,7 +87,7 @@
 		return "";
 	};
     
-  });
+  }]);
 
   app.directive('radioNomenclatorChooser', function(){
 	return {
@@ -186,10 +192,10 @@
   app.controller('WindowsController', ['$http', function($http){
   	this.ontology = "";
   	var step = this;
-  	step.window = [];
+  	step.currentWindow = [];
   	step.ontology = "";
   	$http.get('../../config/windows.json').success(function(data){
-  		step.window = data[0];
+  		step.currentWindow = data[0];
   	});
   	
   	this.isEmpty = function(str){
@@ -205,201 +211,5 @@
     	return input;
   	};
   });
-  
-  var wizard = [
-  	{
-  	  id: 1,
-      title: 'Ontologies',
-      type: 'radioDetail',
-      message: 'Ontologies',
-      options: [
-        {key: 0, text:"Add Ontology", next: 2},{key: 1, text:"Create Application", next: 3} 
-      ],
-      details:
-      	[
-	      {
-	      	title: '',
-	      	items: [
-	      		[{type: 'text', msg: "foaf"}, {type: 'text', msg: "http://xmlns.com/foaf/0.1/"}],
-	      		[{type: 'text', msg: "skos"}, {type: 'text', msg: "http://www.w3.org/2004/02/skos/core#"}],
-	      		[{type: 'text', msg: "swc"}, {type: 'text', msg: "http://data.semanticweb.org/ns/swc/ontology#"}]
-	      	]
-	      },
-	      {
-	      	title: '',
-	      	items: [
-	      		[{type: 'text', msg: "foaf"}, {type: 'text', msg: "http://xmlns.com/foaf/0.1/"}],
-	      		[{type: 'text', msg: "skos"}, {type: 'text', msg: "http://www.w3.org/2004/02/skos/core#"}],
-	      		[{type: 'text', msg: "swc"}, {type: 'text', msg: "http://data.semanticweb.org/ns/swc/ontology#"}]
-	      	]
-	      },
-	    ]
-    },
-    {
-  	  id: 2,
-      title: 'Add Ontology',
-      type: 'unique',
-      message: '',
-      options: [
-        {key: 0, next: 1} 
-      ]
-    },
-    {
-  	  id: 3,
-      title: 'Select the main Ontology you want to use',
-      type: 'select',
-      message: 'Ontology',
-      options: [
-        {key: 0, text:"foaf", next: 4},{key: 1, text:"skos", next: 4},{key: 2, text:"swrc", next: 4},{key: 3, text:"schm", next: 4} 
-      ]
-    },
-    {
-  	  id: 4,
-      title: 'What do you want to show from swrc ontology?',
-      type: 'select',
-      message: 'Class',
-      options: [
-        {key: 0, text:"swrc:Article", next: 5},{key: 1, text:"swrc:Book", next: 5},{key: 2, text:"swrc:Conference", next: 5},{key: 3, text:"swrc:Event", next: 5} 
-      ]
-    },
-    {
-  	  id: 5,
-      title: 'What do you want to do?',
-      type: 'radio',
-      message: '',
-      options: [
-        {key: 0, text:"Show a list of Events to be chosen", next: 6},{key: 1, text:"Show the detail of an Event", next: 5},{key: 2, text:"Define a computation using an Event", next: 5} 
-      ]
-    },
-    {
-  	  id: 6,
-      title: '',
-      type: 'radioDetail',
-      message: 'Events',
-      options: [
-        {key: 0, text:"one Event?", next: 7},{key: 1, text:"more than one Event?", next: 7} 
-      ],
-      modal: "texto",
-      details:
-      	[
-	      {
-	      	title: 'Do you want to choose',
-	      	items: [
-	      		[{type: 'text', msg: "Posters Display"}],
-	      		[{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
-	      		[{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
-	      	]
-	      },
-	      {
-	      	title: 'Do you want to choose',
-	      	items: [
-	      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Posters Display"}],
-	      		[{type: 'img', msg: "/assets/checkbox.png"},{type: 'text', msg: "Demo: Adapting a Map Query Interface..."}],
-	      		[{type: 'img', msg: "/assets/checkbox-checked.png"},{type: 'text', msg: "Demo: Blognoon: Exploring a Topic in..."}]
-	      	]
-	      },
-	    ]
-    },
-    {
-  	  id: 7,
-      title: '',
-      type: 'radio',
-      message: 'Which type of attributes you want to show in the Event list?',
-      options: [
-        {key: 0, text:"Direct attributes of an Event", next: 8},{key: 1, text:"Attributes of other classes related to Event", next: 9},{key: 2, text:"Computed Attributes", next: 9} 
-      ]
-    },
-    {
-  	  id: 8,
-      title: 'Following this example which attributes you want to show in the Event list',
-      type: 'checkbox',
-      message: 'Add Event properties',
-      properties: [
-        {key: 0, text:"label", next: 7},{key: 1, text:"start", next: 7},{key: 2, text:"end", next: 7},{key: 3, text:"summary", next: 7} 
-      ],
-      message1: 'Selected properties',
-      items: [
-	      		[
-					{id: 0, name: "label", value:["Posters Display"]}, 
-			    	{id: 1, name: "start", value:["2011-01-01 10:00"]}, 
-			    	{id: 2, name: "end", value:["2011-01-01 18:00"]},
-			    	{id: 3, name: "summary", value:["Posters Display"]},
-			    	{id: 4, name: "where", value:["Auditorium"]},
-			    	{id: 5, name: "Documents", value: ["A Demo Search Engine for Products",
-			      		 								"A Tool for Fast Indexing and Querying of Graphs",
-			      		 								"A User-Tunable Approach to Marketplace Search"]}
-	      	    ],
-	      	    [
-	      	    	 {id: 0, name: "label", value:["Demo: Adapting a Map Query..."]}, 
-		      		 {id: 1, name: "start", value:["03/30/2011  0:00"]}, 
-		      		 {id: 2, name: "end", value:["03/30/2011  2:00"]},
-		      		 {id: 3, name: "summary", value:["Demo: Adapting"]},
-		      		 {id: 4, name: "where", value:["Auditorium"]},
-		      		 {id: 5, name: "Documents", value:["Accelerating Instant Question...",
-		      		 									 "Adapting a Map Query Interface for..."]}
-	      	    ]
-	      	]
-    },
-    {
-  	  id: 9,
-      title: 'Select what you want to show',
-      type: 'select',
-      message: "Event \t related collections",
-      options: [
-        {key: 0, text:"Article", next: 10}, {key: 1, text:"Book", next: 10}, {key: 2, text:"Conference", next: 10},
-        {key: 3, text:"Event", next: 10}, {key: 4, text:"Person", next: 10}, {key: 5, text:"Document", next: 10} 
-      ]
-    },
-    {
-  	  id: 10,
-      title: 'Select the path',
-      type: 'paths',
-      message: 'Suggested paths',
-      paths: [
-      			{key: 0, pathItems: ["Event", "Person"], examples: ["Event1 - organizer - Tim Berners Lee"]},
-      			{key: 1, pathItems: ["Event", "Document", "Person"], examples: ["Event1 - hasOpeningDocument:presenter - Milena",
-      																			"Event1 - hasOpeningDocument:author - Jaisse",
-      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
-      		 ]
-    },
-    {
-  	  id: 11,
-      title: 'Select the relationships',
-      type: 'path',
-      message: 'Suggested path',
-      paths: [
-      			{key: 0, pathItems: ["Event", "Person"], examples: ["Event1 - organizer - Tim Berners Lee"]},
-      			{key: 1, pathItems: ["Event", "Document", "Person"], examples: ["Event1 - hasOpeningDocument:presenter - Milena",
-      																			"Event1 - hasOpeningDocument:author - Jaisse",
-      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
-      		 ], 
-      propertySets: [
-      					[//path1
-	      					[// propertyset1
-	        					{key: 0, text:"organizer", next: 7}
-	      			  		]
-      			  		],
-      			  		[//path2
-	      					[// propertyset1
-	        					{key: 0, text:"hasOpeningDocument", next: 7},
-	        					{key: 1, text:"hasClosingDocument", next: 7}
-	      			  		],
-	      			  		[// propertyset2
-	        					{key: 0, text:"presenter", next: 7},
-	        					{key: 1, text:"author", next: 7}
-	      			  		]
-      			  		]
-      			  	]
-    },
-     {
-  	  id: 12,
-      title: 'Computed attribute',
-      type: 'computedAttribute',
-      message: 'New attribute',
-      options: [
-        {key: 0, next: 1} 
-      ]
-    },
-    ];
     
 })();
