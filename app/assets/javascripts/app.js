@@ -161,13 +161,11 @@
 		templateUrl: 'select-nomenclator-chooser-for-path.html',
 		controller: function(){
 			
-			this.status = {
-				isopen : false
-			};
+			this.status = [];
 			
 			this.setOption = function(controller, key, index){
 		    	controller.solution.selectedOptions[index] = key;
-		    	this.status.isopen = !this.status.isopen;
+		    	this.status[index] = !this.status[index];
     		};
     		
     		this.selectOption = function(key, arr) {
@@ -198,6 +196,15 @@
     	return (!str || 0 === str.length);    	
     };
   }]);
+  
+  app.filter('range', function() {
+  	return function(input, total) {
+    	total = parseInt(total);
+    	for (var i = 0; i < total; i++)
+      		input.push(i);
+    	return input;
+  	};
+  });
   
   var wizard = [
   	{
