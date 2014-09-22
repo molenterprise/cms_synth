@@ -1,10 +1,18 @@
 class WizardAppsController < ApplicationController
   before_action :set_wizard_app, only: [:show, :edit, :update, :destroy]
+  
+  
 
   # GET /wizard_apps
   # GET /wizard_apps.json
   def index
     @wizard_apps = WizardApp.all
+  end
+    
+  def wizarddefinition
+    file = File.join(Rails.root, 'app', 'assets', 'wizard_def', 'definition.json')
+    jfile = File.read(file)
+    render :json => jfile #{value: 1, window: 2}
   end
 
   # GET /wizard_apps/1
