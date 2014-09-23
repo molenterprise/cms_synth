@@ -10,9 +10,8 @@ class WizardAppsController < ApplicationController
   end
     
   def wizarddefinition
-    file = File.join(Rails.root, 'app', 'assets', 'wizard_def', 'definition.json')
-    jfile = File.read(file)
-    render :json => jfile #{value: 1, window: 2}
+    file = File.join(Rails.root, 'app', 'assets', 'wizard_def', "#{params[:id]}.json")
+    render :json => jfile = File.read(file)
   end
 
   # GET /wizard_apps/1

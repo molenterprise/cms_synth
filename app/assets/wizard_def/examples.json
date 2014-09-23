@@ -1,0 +1,70 @@
+{
+	"definition": [
+		{
+			"propertyName": "hasOpeningDoc",
+			"domain": ["Event"],
+			"range": ["Document"]
+		}, {
+			"propertyName": "hasClosingDoc",
+			"domain": ["Event"],
+			"range": ["Document"]
+		}, {
+			"propertyName": "presenter",
+			"domain": ["Document"],
+			"range": ["Person"]
+		}, {
+			"propertyName": "author",
+			"domain": ["Document"],
+			"range": ["Person"]
+		}, {
+			"propertyName": "advisor",
+			"domain": ["Document"],
+			"range": ["Person"]
+		}, {
+			"propertyName": "madeIn",
+			"domain": ["Document"],
+			"range": ["Country"]
+		}, {
+			"propertyName": "organizer",
+			"domain": ["Event"],
+			"range": ["Person"]
+		}
+	],
+	"triples": [
+		{
+			"subject": "Event1",
+			"predicate": "hasOpeningDoc",
+			"object": "DocA"
+		},
+		{
+			"subject": "Event2",
+			"predicate": "hasClosingDoc",
+			"object": "DocC"
+		},
+		{
+			"subject": "DocA",
+			"predicate": "presenter",
+			"object": "Albert"
+		},
+		{
+			"subject": "DocA",
+			"predicate": "author",
+			"object": "John Doe"
+		},
+		{
+			"subject": "DocC",
+			"predicate": "advisor",
+			"object": "Schawbe"
+		},
+		{
+			"subject": "DocA",
+			"predicate": "madeIn",
+			"object": "China"
+		},
+		{
+			"subject": "Event1",
+			"predicate": "organizer",
+			"object": "Tim Berners Lee"
+		}
+	]
+}

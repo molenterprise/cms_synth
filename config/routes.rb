@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :wizard_apps, except: [:destroy]
-  match '/definition',    to: 'wizard_apps#wizarddefinition',    via: 'get'
+  match '/def/:id',    to: 'wizard_apps#wizarddefinition',  via: 'get'
 
   resources :ontologies, except: [:destroy, :show]
   
