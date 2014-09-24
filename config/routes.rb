@@ -27,4 +27,5 @@ Rails.application.routes.draw do
   match '/radio-bottom-detail',    to: 'static_pages#radio-bottom-detail',    via: 'get'
   match '/select-nomenclator-chooser-for-path',    to: 'static_pages#select-nomenclator-chooser-for-path',    via: 'get'
   match '/computed-attributes',    to: 'static_pages#computed-attributes',    via: 'get'
+  match '/modal',    to: 'static_pages#modal',    via: 'get'
 end
