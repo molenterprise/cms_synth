@@ -1,6 +1,6 @@
 <div class="list-group" >
 	<div ng-repeat="item in step.currentWindow.details[step.solution.selectedOption].items">
-		<div ng-repeat="prop in item" class="halign" >
+		<div ng-repeat="prop in item" class="list-group-item-without-border halign" >
 			<img ng-src="{{prop.msg}}" ng-show="prop.type == 'img'"></img>
 			<label ng-show="prop.type == 'text'">{{prop.msg}}</label>
 		</div>

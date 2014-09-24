@@ -15,8 +15,6 @@
   		me.wizard = data;
   		
   		me.currentWindow = me.wizard.windows[0];
-  		
-  		console.log(me.currentWindow);
     
 	    me.solution = { 
 	    					selectedOption: 0,
