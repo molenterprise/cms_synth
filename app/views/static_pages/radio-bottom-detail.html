@@ -1,5 +1,5 @@
 <section>
-	<div class="list-group" ng-repeat="path in step.window.paths">
+	<div class="list-group" ng-repeat="path in step.currentWindow.paths">
 		<input type="radio" ng-model="step.solution.selectedOption" value="{{path.key}}">
 			<div class="halign" ng-repeat="pathItem in path.pathItems | limitTo:path.pathItems.length-1">
 				{{pathItem}} >&nbsp;
@@ -12,8 +12,7 @@
 </section>
 
 <div class="well">
-	<div ng-repeat="example in step.window.paths[step.solution.selectedOption].examples" >
+	<div ng-repeat="example in step.currentWindow.paths[step.solution.selectedOption].examples" >
 		{{example}}
 	</div>
 </div>
-

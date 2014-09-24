@@ -14,41 +14,41 @@
   	$http.get('/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard[10];
+  		me.currentWindow = me.wizard.windows[0];
   		
   		console.log(me.currentWindow);
     
 	    me.solution = { 
-	    					selectedOption: 1,
-	    					selectedProperties: [0, 5, 4, 1],
+	    					selectedOption: 0,
+	    					selectedProperties: [0, 5, 1],
 	    					selectedOptions: []
 	    				}; 
 	    
 	    me.userSequence = [];
-	    length = me.currentWindow.propertySets ? me.currentWindow.propertySets[me.solution.selectedOption].length : 0;
-	    me.solution.selectedOptions = [length]; 
+	   /* length = me.currentWindow.propertySets ? me.currentWindow.propertySets[me.solution.selectedOption].length : 0;
+	    me.solution.selectedOptions = [length]; */
 	    
-	    for( i = 0; i < length; i++)
+	    for( i = 0; i < 100; i++)
 	    {
 	    	me.solution.selectedOptions[i] = 0;
 	    }
   	});
-  
-    this.window = wizard[10];
-    					selectedOption: 1,
+  	
     this.isType = function(val){
     	return this.currentWindow.type == val;
     };
     
     this.changeWindow = function(){
-    	if(this.window.needNextProcessing){
-    		eval(this.window.expToEval);
+    	if(this.currentWindow.needNextProcessing){
+    		console.log(this.currentWindow.expToEval);
+    		eval(this.currentWindow.expToEval);
 		}
     	step = {
     		currentWindow: this.currentWindow.id,
     		//title: this.currentWindow.title, //debug
     		selectedOption: this.solution.selectedOption,
-    		selectedProperties: this.solution.selectedProperties
+    		selectedProperties: this.solution.selectedProperties,
+    		selectedOptions: this.solution.selectedOptions
     	};
     	this.userSequence.push(step);
     /*	if (this.currentWindow.type == "unique") /// nuevo
@@ -56,6 +56,7 @@
     	this.selectWindow(this.currentWindow.options[this.solution.selectedOption].next);
     	
     	this.solution.selectedOption = 0;
+    	//this.solution.selectedOptions = [0, 0]
     	
     	
     };
@@ -72,9 +73,9 @@
     
     this.selectWindow = function(index){
     //	if(index = -1) document.location = "addOntology.html";
-    	for (i = 0; i < wizard.length; i++) {
-		    if(wizard[i].id == index){	
-		    	this.currentWindow = wizard[i];
+    	for (i = 0; i < this.wizard.windows.length; i++) {
+		    if(this.wizard.windows[i].id == index){	
+		    	this.currentWindow = this.wizard.windows[i];
 		    /*	if(wizard[i].type == "unique")	 
 		    		document.location = wizard[i].message; */
 		    	break;
@@ -139,8 +140,13 @@
   app.directive('computedAttributes', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'computed-attributes.html'
-	};
+		templateUrl: 'computed-attributes.html',
+		controller: function(){
+			
+			this.computedAttr_name = "";
+		},
+		controllerAs: 'computedCtrl'
+  	};
   });
   
   app.directive('selectNomenclatorChooser', function(){
@@ -181,8 +187,6 @@
 			
 			this.status = [];
 			
-			this.computedAttr_name;
-			
 			this.setOption = function(controller, key, index){
 		    	controller.solution.selectedOptions[index] = key;
 		    	console.log(this.status[index]);
@@ -205,7 +209,7 @@
 	};
   });
   
-  app.controller('WindowsController', ['$http', function($http){
+ /* app.controller('WindowsController', ['$http', function($http){
   	this.ontology = "";
   	var step = this;
   	step.currentWindow = [];
@@ -217,7 +221,7 @@
   	this.isEmpty = function(str){
     	return (!str || 0 === str.length);    	
     };
-  }]);
+  }]); */
   
   app.filter('range', function() {
   	return function(input, total) {

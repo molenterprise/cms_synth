@@ -8,6 +8,7 @@
 	<div class="list-group">
 		<!--  Product Container  -->
 		<h3>{{step.currentWindow.message}}</h3>
+		Window: {{step.currentWindow.id}}
 		
 		<form name="reviewForm" ng-submit="step.changeWindow()">
 			
@@ -19,11 +20,18 @@
 				<radio-nomenclator-chooser></radio-nomenclator-chooser>
 			</div>
 			
+			<div ng-show="step.isType('radioSelectedProperties')">
+				<radio-nomenclator-chooser></radio-nomenclator-chooser>
+				<selected-properties></selected-properties>
+			</div>
+			
+			
+			
 			<div ng-show="step.isType('radioDetail')">
 				<radio-detail-nomenclator-chooser></radio-detail-nomenclator-chooser>
 			</div>
 			
-			<div ng-show="step.isType('unique')">
+			<div ng-show="step.isType('addOntology')">
 				<add-ontology></add-ontology>
 			</div>
 			
