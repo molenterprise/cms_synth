@@ -7,7 +7,7 @@
             backdrop: true,
             keyboard: true,
             modalFade: true,
-            templateUrl: '/app/partials/modal.html'
+            templateUrl: '/modal'
         };
 
         var modalOptions = {
@@ -51,7 +51,7 @@
 
     }]);    
   
-  app.controller('WizardController', ['$http', function($http){
+  app.controller('WizardController', ['$http', 'modalService', function($http, modalService){
   
   	var me = this;
   
@@ -65,8 +65,6 @@
   		me.wizard = data;
   		
   		me.currentWindow = me.wizard[10];
-  		
-  		console.log(me.currentWindow);
     
 	    me.solution = { 
 	    					selectedOption: 1,
@@ -109,12 +107,16 @@
     };
     
     this.confirmDialog = function(title, msg){
-        var msgbox = $dialog.messageBox(title, msg, [{label:'Yes, I\'m sure', result: 'yes'},{label:'Nope', result: 'no'}]);
-        msgbox.open().then(function(result){
-            if(result === 'yes') {
-              //code to delete here
-              console.log("deleting item " + item.name);
-            }
+        
+        var modalOptions = {
+            closeButtonText: 'No',
+            actionButtonText: 'Yes',
+            headerText: title,
+            bodyText: msg
+        };
+
+        modalService.showModal({}, modalOptions).then(function (result) {
+            
         });
     };
     
