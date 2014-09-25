@@ -56,7 +56,6 @@
     	this.solution.selectedOption = 0;
     	//this.solution.selectedOptions = [0, 0]
     	
-    	
     };
     
     this.confirmDialog = function(title, msg){
@@ -65,7 +64,20 @@
             closeButtonText: 'No',
             actionButtonText: 'Yes',
             headerText: title,
-            bodyText: msg
+            bodyText: msg,
+          /*  close: function (result) { //revisar para definir el no
+           */
+			        	step = {
+				    		currentWindow: this.currentWindow.id,
+				    		//title: this.currentWindow.title, //debug
+				    		selectedOption: this.solution.selectedOption,
+				    		selectedProperties: this.solution.selectedProperties,
+				    		selectedOptions: this.solution.selectedOptions
+			    		};
+			    		this.userSequence.push(step);
+			    		this.selectWindow(this.currentWindow.cancelModalNext);
+			    		this.solution.selectedOption = 0;
+        	}*/
         };
 
         modalService.showModal({}, modalOptions).then(function (result) {

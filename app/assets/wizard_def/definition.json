@@ -73,7 +73,8 @@
 			      "options": [
 			        {"key": 0, "text":"one Event?", "next": 7},{"key": 1, "text":"more than one Event?", "next": 7} 
 			      ],
-			      "modal": "texto",
+			      "modal": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "cancelModalNext": 1,
 			      "details":
 			      	[
 				      {
