@@ -1,0 +1,5 @@
+<div class="col-md-6" ng-repeat="property in step.window.properties">
+	<input type="checkbox" checklist-model="step.solution.selectedProperties" checklist-value="property.key">{{property.text}}
+</div>
+<h3>{{step.window.message1}}</h3>
+<selected-properties></selected-properties>
