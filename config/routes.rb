@@ -18,13 +18,14 @@ Rails.application.routes.draw do
   match '/addOntology',    to: 'static_pages#addOntology',    via: 'get'
   
   #controls
-  match '/radio-nomenclator-chooser',    to: 'static_pages#radio-nomenclator-chooser',    via: 'get'
-  match '/radio-detail-nomenclator-chooser',    to: 'static_pages#radio-detail-nomenclator-chooser',    via: 'get'
-  match '/select-nomenclator-chooser',    to: 'static_pages#select-nomenclator-chooser',    via: 'get'
-  match '/add-ontology',    to: 'static_pages#add-ontology',    via: 'get'
-  match '/selected-properties',    to: 'static_pages#selected-properties',    via: 'get'
-  match '/datatype-property-selection',    to: 'static_pages#datatype-property-selection',    via: 'get'
-  match '/radio-bottom-detail',    to: 'static_pages#radio-bottom-detail',    via: 'get'
-  match '/select-nomenclator-chooser-for-path',    to: 'static_pages#select-nomenclator-chooser-for-path',    via: 'get'
-  match '/computed-attributes',    to: 'static_pages#computed-attributes',    via: 'get'
+  match '/radio-nomenclator-chooser',    to: 'partial_pages#radio-nomenclator-chooser',    via: 'get'
+  match '/radio-detail-nomenclator-chooser',    to: 'partial_pages#radio-detail-nomenclator-chooser',    via: 'get'
+  match '/select-nomenclator-chooser',    to: 'partial_pages#select-nomenclator-chooser',    via: 'get'
+  match '/add-ontology',    to: 'partial_pages#add-ontology',    via: 'get'
+  match '/selected-properties',    to: 'partial_pages#selected-properties',    via: 'get'
+  match '/datatype-property-selection',    to: 'partial_pages#datatype-property-selection',    via: 'get'
+  match '/radio-bottom-detail',    to: 'partial_pages#radio-bottom-detail',    via: 'get'
+  match '/select-nomenclator-chooser-for-path',    to: 'partial_pages#select-nomenclator-chooser-for-path',    via: 'get'
+  match '/computed-attributes',    to: 'partial_pages#computed-attributes',    via: 'get'
+  match '/modal',    to: 'partial_pages#modal',    via: 'get'
 end

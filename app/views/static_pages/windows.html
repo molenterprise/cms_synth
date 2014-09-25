@@ -57,7 +57,8 @@
 			
 			<fieldset class="form-group">
 				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
-				<input type="submit" class="btn btn-primary pull-right" value="Next" />
+				<button class="btn btn-primary pull-right" type="button" ng-click="step.confirmDialog('Alert', 'question');">Next</button>
+				<!--<input type="submit" class="btn btn-primary pull-right" value="Next" />
 			</fieldset>
 		</form>
 	</div>
