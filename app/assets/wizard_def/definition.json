@@ -181,7 +181,7 @@
 					        	{"key": 0, "next": 8}, {"key": 1, "next": 8}
 					      	 ]
 			    },
-			     {
+			    {
 			  	  "id": 13,
 			      "title": "Computed attribute",
 			      "type": "computedAttribute",
@@ -190,6 +190,16 @@
 			      "message1": "Selected properties",
 			      "options": [
 			        {"key": 0, "next": 8} 
+			       ]
+			    },
+			    {
+			  	  "id": 14,
+			      "title": "Select where one should click to choose an Event",
+			      "type": "attributeForChoosing",
+			      "needNextProcessing": true,
+			      "message": "Events",
+			      "options": [
+			        {"key": 0, "next": 14} 
 			       ]
 			     }
 			],

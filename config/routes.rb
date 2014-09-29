@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   match '/select-nomenclator-chooser-for-path',    to: 'partial_pages#select-nomenclator-chooser-for-path',    via: 'get'
   match '/computed-attributes',    to: 'partial_pages#computed-attributes',    via: 'get'
   match '/modal',    to: 'partial_pages#modal',    via: 'get'
+  match '/radio-attribute-for-choosing',    to: 'partial_pages#radio-attribute-for-choosing',    via: 'get'
 end

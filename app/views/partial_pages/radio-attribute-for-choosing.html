@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+           <th ng-repeat="prop in step.solution.selectedProperties">
+           		<input type="text" value="{{step.selectProperty(prop, step.wizard.data.items[0]).name}}">
+           </th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+    		<td ng-repeat="prop in step.solution.selectedProperties">
+    			<div>
+		    		<input type="radio" >
+		    			{{step.selectProperty(prop,step.wizard.data.items[0]).value[0]}}
+		    		<!--	<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0]).value[0]">{{value}}</div> -->
+		    		</input> 
+		    		<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0]).value | limitTo: - (step.selectProperty(prop,step.wizard.data.items[0]).value.length - 1)">
+		    			{{value}}
+		    		</div>
+	    		</div>
+    		</td>
+    	</tr>
+	    <tr ng-repeat="item in step.wizard.data.items | limitTo: - (step.wizard.data.items.length - 1)">
+	            <td ng-repeat="prop in step.solution.selectedProperties">
+	            	<div ng-repeat="value in step.selectProperty(prop,item).value">{{value}}</div>
+	            </td>
+	    </tr>
+    </tbody>
+</table>

@@ -14,7 +14,7 @@
   	$http.get('/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[0];
+  		me.currentWindow = me.wizard.windows[13];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -171,6 +171,13 @@
 		},
 		controllerAs: 'computedCtrl'
   	};
+  });
+  
+   app.directive('radioAttributeForChoosing', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'radio-attribute-for-choosing.html'
+	};
   });
   
   app.directive('selectNomenclatorChooser', function(){
