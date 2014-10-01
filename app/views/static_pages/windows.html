@@ -56,10 +56,10 @@
 			<div ng-show="step.isType('attributeForChoosing')">
 				<radio-attribute-for-choosing></radio-attribute-for-choosing>
 			</div>
-			
+			<br/>
 			<fieldset class="form-group">
 				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
-				<button ng-show="step.currentWindow.modal" class="btn btn-primary pull-right" type="button" ng-click="step.confirmDialog('Alert', step.currentWindow.modal);">Next</button>
+				<button ng-show="step.currentWindow.modal" class="btn btn-primary pull-right" type="button" ng-click="step.confirmDialog('Alert', step.currentWindow.modal, this.solution.selectedOption);">Next</button>
 				<input ng-hide="step.currentWindow.modal" type="submit" class="btn btn-primary pull-right" value="Next" />
 			</fieldset>
 		</form>

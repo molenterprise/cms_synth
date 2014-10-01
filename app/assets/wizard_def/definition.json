@@ -7,7 +7,7 @@
 			      "type": "radioDetail",
 			      "message": "Ontologies",
 			      "options": [
-			        {"key": 0, "text":"Add Ontology", "next": 2},{"key": 1, "text":"Create Application", "next": 3} 
+			        {"key": 0, "text":"Create Application", "next": 3},{"key": 1, "text":"Add Ontology", "next": 2} 
 			      ],
 			      "details":
 			      	[

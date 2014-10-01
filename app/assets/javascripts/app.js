@@ -67,13 +67,13 @@
 	    return formatted;
 	};
     
-    this.confirmDialog = function(title, msg){
+    this.confirmDialog = function(title, msg, option){
         
         var modalOptions = {
             closeButtonText: 'No',
             actionButtonText: 'Yes',
             headerText: title,
-            bodyText: msg.format(this.solution.selectedOption)
+            bodyText: msg.format(option)
           /*  close: function (result) { //revisar para definir el no
            
 			        	step = {
