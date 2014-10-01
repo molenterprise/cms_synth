@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="wizard">
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+<<<<<<< HEAD
+	<script data-turbolinks-track="true" src="/assets/angular.js"></script>
+	<script data-turbolinks-track="true" src="/assets/ui-bootstrap-tpls-0.11.0.js"></script>
+	<script data-turbolinks-track="true" src="/assets/app.js"></script>
+	<script data-turbolinks-track="true" src="/assets/checklist-model.js"></script>
+=======
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+	<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+	<script data-turbolinks-track="true" type="text/javascript" src="/assets/app.js"></script>
+	<script data-turbolinks-track="true" type="text/javascript" src="/assets/checklist-model.js"></script>
+>>>>>>> rdftriples
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body ng-controller="WizardController as step">
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>
