@@ -10,7 +10,7 @@
     	<tr>
     		<td ng-repeat="prop in step.solution.selectedProperties">
     			<div>
-		    		<input type="radio" >
+		    		<input type="radio" ng-model="step.solution.selectedOption" value="{{step.selectProperty(prop,step.wizard.data.items[0]).name}}">
 		    			{{step.selectProperty(prop,step.wizard.data.items[0]).value[0]}}
 		    		<!--	<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0]).value[0]">{{value}}</div> -->
 		    		</input> 

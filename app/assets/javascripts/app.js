@@ -14,7 +14,7 @@
   	$http.get('/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[13];
+  		me.currentWindow = me.wizard.windows[0];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -58,13 +58,22 @@
     	
     };
     
+    String.prototype.format = function() {
+	    var formatted = this;
+	    for (var i = 0; i < arguments.length; i++) {
+	        var regexp = new RegExp('\\{'+i+'\\}', 'gi');
+	        formatted = formatted.replace(regexp, arguments[i]);
+	    }
+	    return formatted;
+	};
+    
     this.confirmDialog = function(title, msg){
         
         var modalOptions = {
             closeButtonText: 'No',
             actionButtonText: 'Yes',
             headerText: title,
-            bodyText: msg,
+            bodyText: msg.format(this.solution.selectedOption)
           /*  close: function (result) { //revisar para definir el no
            
 			        	step = {

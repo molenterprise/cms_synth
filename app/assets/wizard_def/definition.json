@@ -110,7 +110,10 @@
 			      "type": "radioSelectedProperties",
 			      "message": "Do you want to show more attributes in the Event list? Which type?",
 			      "options": [
-			        {"key": 0, "text":"Direct attributes of an Event", "next": 9},{"key": 1, "text":"Attributes of other classes related to Event", "next": 10},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 9},
+			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 10},
+			        {"key": 2, "text":"Computed Attributes", "next": 13},
+			        {"key": 3, "text":"No more", "next": 14}
 			      ]
 			    },
 			    {
@@ -198,6 +201,7 @@
 			      "type": "attributeForChoosing",
 			      "needNextProcessing": true,
 			      "message": "Events",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "options": [
 			        {"key": 0, "next": 14} 
 			       ]
