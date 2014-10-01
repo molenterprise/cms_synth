@@ -1,4 +1,4 @@
-<div ng-repeat="tracks in [] | track:'Event':'Person':step.example">
+<div ng-repeat="tracks in [] | track:'Event':'Person':step.example:step.isType('path')">
 	{{tracks}}
 </div>
 <div ng-repeat="propIndex in [] | range:step.solution.selectedOptions.length">

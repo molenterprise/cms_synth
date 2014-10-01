@@ -290,6 +290,8 @@
 	});
 
 	app.filter('track', function() {
+		
+		count = 0;
 
 		function properties(classFrom, rdf) {
 			result = [];
@@ -309,21 +311,52 @@
 			var props = properties(classFrom, rdf);
 			for (var i = 0; i < props.length; i++) {
 				var prop = props[i];
-				current.push(prop.propertyName);
-				console.info(prop.propertyName);
 				for (var j = 0; j < prop.range.length; j++) {
 					_class = prop.range[j];
+					current.push({"propertyName": prop.propertyName, "className": _class});
 					if (_class == classTo) {
-						input.push(current.slice(0));
+						//input.push(current.slice(0));
+						groupby(input, current);
 					}
 					track(_class, classTo, current, input, max - 1, rdf);
+					current.pop();
 				}
-				current.pop();
+			}
+		};
+		
+		function isTheSamePath(input, current)
+		{
+			if(input.length != current.length)
+				return false;
+			for (var i=0; i < input.length; i++) {
+			  if (input[i].className != current[i].className)
+			  	return false;
+			}
+			return true;
+		}
+		
+		function groupby(input, current) {
+			for (var i=0; i < input.length; i++) {
+			  if(isTheSamePath(input[i], current)){
+			  	for (var j=0; j < input[i].length; j++) {
+					if(input[i][j].propertiesNames.indexOf(current[j].propertyName) == -1)
+						input[i][j].propertiesNames.push(current[j].propertyName);
+					
+				 }
+				 return;
+			  }
+			}	
+			input.push([]);		 
+		  	for (var i=0; i < current.length; i++) {
+				input[input.length-1].push({"propertiesNames": [current[i].propertyName], "className": current[i].className}); 
 			}
 		};
 
-		return function(input, classFrom, classTo, rdf) {
+		return function(input, classFrom, classTo, rdf, isPath) {
 			input = [];
+			console.info('track ' + count++);
+			if(!isPath)
+				input.push("This is not a call of a path control");
 			if (!rdf)
 				input.push("rdf is undifined");
 			if (!classFrom)
@@ -331,9 +364,12 @@
 			if (!classTo)
 				input.push("classTo is undifined");
 			if (input.length == 0) {
+				console.info(classFrom);
+				console.info(classTo);
+				console.info(isPath);
+				console.info('track ' + count);
 				track(classFrom, classTo, [], input, 10, rdf);
 			}
-			console.info(input);
 			return input;
 		};
 
