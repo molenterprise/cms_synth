@@ -11,7 +11,7 @@
     me.userSequence = [];
     me.solution.selectedOptions =[];
   
-  	$http.get('/definition').success(function(data){
+  	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
   		me.currentWindow = me.wizard.windows[0];
@@ -31,6 +31,73 @@
 	    	me.solution.selectedOptions[i] = 0;
 	    }
   	});
+	
+	/*
+	$http.get('/def/examples').success(function(data) {
+		 me.example = data;
+	});
+	*/
+
+	me.example = {
+			"definition" : [{
+				"propertyName" : "hasOpeningDoc",
+				"domain" : ["Event"],
+				"range" : ["Document"]
+			}, {
+				"propertyName" : "hasClosingDoc",
+				"domain" : ["Event"],
+				"range" : ["Document"]
+			}, {
+				"propertyName" : "presenter",
+				"domain" : ["Document"],
+				"range" : ["Person"]
+			}, {
+				"propertyName" : "author",
+				"domain" : ["Document"],
+				"range" : ["Person"]
+			}, {
+				"propertyName" : "advisor",
+				"domain" : ["Document"],
+				"range" : ["Person"]
+			}, {
+				"propertyName" : "madeIn",
+				"domain" : ["Document"],
+				"range" : ["Country"]
+			}, {
+				"propertyName" : "organizer",
+				"domain" : ["Event"],
+				"range" : ["Person"]
+			}],
+			"triples" : [{
+				"subject" : "Event1",
+				"predicate" : "hasOpeningDoc",
+				"object" : "DocA"
+			}, {
+				"subject" : "Event2",
+				"predicate" : "hasClosingDoc",
+				"object" : "DocC"
+			}, {
+				"subject" : "DocA",
+				"predicate" : "presenter",
+				"object" : "Albert"
+			}, {
+				"subject" : "DocA",
+				"predicate" : "author",
+				"object" : "John Doe"
+			}, {
+				"subject" : "DocC",
+				"predicate" : "advisor",
+				"object" : "Schawbe"
+			}, {
+				"subject" : "DocA",
+				"predicate" : "madeIn",
+				"object" : "China"
+			}, {
+				"subject" : "Event1",
+				"predicate" : "organizer",
+				"object" : "Tim Berners Lee"
+			}]
+		};
   	
     this.isType = function(val){
     	return this.currentWindow.type == val;
@@ -320,6 +387,85 @@
             return $modal.open(tempModalDefaults).result;
         };
 
-    }]);    
+    }]);
 
+	app.filter('track', function() {
+	
+		function properties(classFrom, rdf) {
+			result = [];
+			for (var i = 0; i < rdf.definition.length; i++) {
+				property = rdf.definition[i];
+				for (var j = 0; j < property.domain.length; j++) {
+					if (property.domain[j] == classFrom)
+						result.push(property);
+				};
+			};
+			return result;
+		};	
+
+
+		function track(classFrom, classTo, current, input, max, rdf) {
+			if (max <= 0)
+				return;
+			var props = properties(classFrom, rdf);
+			for (var i = 0; i < props.length; i++) {
+				var prop = props[i];
+				for (var j = 0; j < prop.range.length; j++) {
+					_class = prop.range[j];
+					current.push({"propertyName": prop.propertyName, "className": _class});
+					if (_class == classTo) {
+						//input.push(current.slice(0));
+						groupby(input, current);
+					}
+					track(_class, classTo, current, input, max - 1, rdf);
+					current.pop();
+				}
+			}
+		};
+		
+		function isTheSamePath(input, current)
+		{
+			if(input.length != current.length)
+				return false;
+			for (var i=0; i < input.length; i++) {
+			  if (input[i].className != current[i].className)
+				return false;
+			}
+			return true;
+		}
+		
+		function groupby(input, current) {
+			for (var i=0; i < input.length; i++) {
+			  if(isTheSamePath(input[i], current)){
+				for (var j=0; j < input[i].length; j++) {
+					if(input[i][j].propertiesNames.indexOf(current[j].propertyName) == -1)
+						input[i][j].propertiesNames.push(current[j].propertyName);
+					
+				 }
+				 return;
+			  }
+			}	
+			input.push([]);		 
+			for (var i=0; i < current.length; i++) {
+				input[input.length-1].push({"propertiesNames": [current[i].propertyName], "className": current[i].className}); 
+			}
+		};
+
+		return function(input, classFrom, classTo, rdf, isPath) {
+			input = [];
+			if(!isPath)
+				input.push("This is not a call of a path control");
+			if (!rdf)
+				input.push("rdf is undifined");
+			if (!classFrom)
+				input.push("classFrom is undifined");
+			if (!classTo)
+				input.push("classTo is undifined");
+			if (input.length == 0) {
+				track(classFrom, classTo, [], input, 10, rdf);
+			}
+			return input;
+		};
+
+	});
 })();
