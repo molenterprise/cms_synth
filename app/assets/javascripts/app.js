@@ -14,12 +14,13 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[0];
+  		me.currentWindow = me.wizard.windows[9];
     
 	    me.solution = { 
 	    					selectedOption: 0,
 	    					selectedProperties: [0, 5, 1],
-	    					selectedOptions: []
+	    					selectedOptions: [],
+	    					mainClass: "" 
 	    				}; 
 	    
 	    me.userSequence = [];
@@ -191,6 +192,16 @@
 			}
 		}
 		return "";
+	};
+	
+	this.getRelatedCollectionName = function(previousWindowInfo) {
+		if(previousWindowInfo){
+			console.log(previousWindowInfo);
+			collectionId = previousWindowInfo.selectedOption;
+			previousWindowId = previousWindowInfo.currentWindow;
+			
+			return this.wizard.windows[previousWindowId-1].options[collectionId].text;
+		}
 	};
     
   }]);
@@ -451,7 +462,7 @@
 			}
 		};
 
-		return function(input, classFrom, classTo, rdf, isPath) {
+		return function(input, classFrom, classTo, rdf, isPath, selectedPath) {
 			input = [];
 			if(!isPath)
 				input.push("This is not a call of a path control");
@@ -464,8 +475,16 @@
 			if (input.length == 0) {
 				track(classFrom, classTo, [], input, 10, rdf);
 			}
+			if(selectedPath || selectedPath == 0)
+			{
+				console.log("es distinto de null" + selectedPath);
+				return input[selectedPath];
+			}
+			console.log("es null" + selectedPath);
 			return input;
 		};
+		
+		
 
 	});
 })();

@@ -1,4 +1,3 @@
-
  {
    "windows": [
 			  	{
@@ -53,7 +52,7 @@
 			      "type": "select",
 			      "message": "Class",
 			      "options": [
-			        {"key": 0, "text":"swrc:Article", "next": 5},{"key": 1, "text":"swrc:Book", "next": 5},{"key": 2, "text":"swrc:Conference", "next": 5},{"key": 3, "text":"swrc:Event", "next": 5} 
+			        {"key": 0, "text":"swrc:Article", "next": 4},{"key": 1, "text":"swrc:Book", "next": 4},{"key": 2, "text":"swrc:Conference", "next": 4},{"key": 3, "text":"swrc:Event", "next": 5} 
 			      ]
 			    },
 			    {
@@ -123,7 +122,10 @@
 			      "needNextProcessing": true,
 			      "message": "Add Event properties",
 			      "options":  [  
-							   	{"key": 0, "text":"label", "next": 8},{"key": 1, "text":"start", "next": 8},{"key": 2, "text":"end", "next": 8},{"key": 3, "text":"summary", "next": 8} 
+							   	{"key": 0, "text":"label", "next": 8},
+							   	{"key": 1, "text":"start", "next": 8},
+							   	{"key": 2, "text":"end", "next": 8},
+							   	{"key": 3, "text":"summary", "next": 8} 
 							  ],
 			      "message1": "Selected properties"
 			    },
@@ -143,10 +145,10 @@
 			      "type": "paths",
 			      "message": "Suggested paths",
 			      "paths": [
-			      			{"key": 0, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]},
-			      			{"key": 1, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
 			      																			"Event1 - hasOpeningDocument:author - João",
-			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
 			      		   ],
 			      "options": [
 					        	{"key": 0, "next": 12}, {"key": 1, "next": 12}
@@ -158,10 +160,10 @@
 			      "type": "path",
 			      "message": "Suggested path",
 			      "paths": [
-			      			{"key": 0, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]},
-			      			{"key": 1, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
 			      																			"Event1 - hasOpeningDocument:author - João",
-			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
 			      		 ], 
 			      "propertySets": [
 			      					[

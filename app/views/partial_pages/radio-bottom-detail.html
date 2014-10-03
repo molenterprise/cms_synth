@@ -1,11 +1,15 @@
+
 <section>
-	<div class="list-group" ng-repeat="path in step.currentWindow.paths">
-		<input type="radio" ng-model="step.solution.selectedOption" value="{{path.key}}">
-			<div class="halign" ng-repeat="pathItem in path.pathItems | limitTo:path.pathItems.length-1">
-				{{pathItem}} >&nbsp;
+	<div class="list-group" ng-repeat="path in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1]):step.example:step.isType('paths') track by $index">
+		<input type="radio" ng-model="step.solution.selectedOption" value="{{$index}}">
+			<div class="halign">
+				Event >&nbsp;
 			</div>
-			<div class="halign" >
-				{{path.pathItems[path.pathItems.length-1]}}
+			<div class="halign" ng-repeat="pathItem in path | limitTo:path.length-1 track by $index">
+				{{path[$index].className}} >&nbsp;
+			</div>
+			<div class="halign">
+				{{path[path.length-1].className}}
 			</div>
 		</input>
 	</div>
@@ -16,3 +20,4 @@
 		{{example}}
 	</div>
 </div>
+

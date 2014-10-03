@@ -1,4 +1,30 @@
 <div class="list-group">
+	<label class="control-label list-group-item-without-border halign">{{step.solution.mainClass}}</label>
+	<div class="list-group-item-without-border halign" ng-repeat="propertiesClass in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-2]):step.example:step.isType('path'):step.userSequence[step.userSequence.length-1].selectedOption track by $index">
+		{{propertiesSetIndex = $index; ""}}
+		<div class="btn-group" dropdown is-open="chooserCtrlPath.status[$index]">
+			<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+				{{propertiesClass.propertiesNames[step.solution.selectedOptions[$index]] }}<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" >
+				<li ng-repeat="optIndex in [] | range:propertiesClass.propertiesNames.length" >
+					
+					<a href ng-click="chooserCtrlPath.setOption(step, optIndex, propertiesSetIndex)">{{propertiesClass.propertiesNames[optIndex]}}</a>
+				</li>
+			</ul>
+		</div>
+		<label class="control-label list-group-item-without-border halign">{{ propertiesClass.className}}</label>
+	</div>
+</div>
+
+<div class="well">
+	<div ng-repeat="example in step.currentWindow.paths[step.userSequence[step.userSequence.length-1].selectedOption].examples" >
+		{{example}}
+	</div>
+</div>
+
+<!--
+<div class="list-group">
 	<label class="control-label list-group-item-without-border halign">{{step.currentWindow.paths[step.userSequence[step.userSequence.length-1].selectedOption].pathItems[0]}}</label>
 	<div class="list-group-item-without-border halign" ng-repeat="propIndex in [] | range:step.currentWindow.propertySets[step.userSequence[step.userSequence.length-1].selectedOption].length">
 		<div class="btn-group" dropdown is-open="chooserCtrlPath.status[propIndex]">
