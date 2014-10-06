@@ -4,12 +4,12 @@
 		{{propertiesSetIndex = $index; ""}}
 		<div class="btn-group" dropdown is-open="chooserCtrlPath.status[$index]">
 			<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
-				{{propertiesClass.propertiesNames[step.solution.selectedOptions[$index]] }}<span class="caret"></span>
+				{{propertiesClass.propertiesNames[step.solution.selectedOptions[propertiesSetIndex]] }}<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu" >
 				<li ng-repeat="optIndex in [] | range:propertiesClass.propertiesNames.length" >
 					
-					<a href ng-click="chooserCtrlPath.setOption(step, optIndex, propertiesSetIndex)">{{propertiesClass.propertiesNames[optIndex]}}</a>
+					<a ng-click="chooserCtrlPath.setOption(step, optIndex, propertiesSetIndex)">{{propertiesClass.propertiesNames[optIndex]}}</a>
 				</li>
 			</ul>
 		</div>

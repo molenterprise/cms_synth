@@ -203,11 +203,12 @@
 			      "type": "attributeForChoosing",
 			      "needNextProcessing": true,
 			      "message": "Events",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "options": [
 			        {"key": 0, "next": 14} 
 			       ]
-			     }
+			    }
 			],
 	"data": {
 		      "items": [

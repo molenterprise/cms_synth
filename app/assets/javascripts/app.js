@@ -14,11 +14,11 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[9];
+  		me.currentWindow = me.wizard.windows[0];
     
 	    me.solution = { 
 	    					selectedOption: 0,
-	    					selectedProperties: [0, 5, 1],
+	    					selectedProperties: [5, 0, 1],
 	    					selectedOptions: [],
 	    					mainClass: "" 
 	    				}; 
@@ -119,29 +119,23 @@
     	this.userSequence.push(step);
     /*	if (this.currentWindow.type == "unique") /// nuevo
     		document.location = "currentWindows"; */
+ //   		console.log("previous window " + this.currentWindow.id);
     	this.selectWindow(this.currentWindow.options[this.solution.selectedOption].next);
+ //   	console.log("current window " + this.currentWindow.id);
     	
     	this.solution.selectedOption = 0;
     	//this.solution.selectedOptions = [0, 0]
     	
     };
     
-    String.prototype.format = function() {
-	    var formatted = this;
-	    for (var i = 0; i < arguments.length; i++) {
-	        var regexp = new RegExp('\\{'+i+'\\}', 'gi');
-	        formatted = formatted.replace(regexp, arguments[i]);
-	    }
-	    return formatted;
-	};
-    
-    this.confirmDialog = function(title, msg, option){
+       
+    this.confirmDialog = function(title, msg){
         
         var modalOptions = {
             closeButtonText: 'No',
             actionButtonText: 'Yes',
             headerText: title,
-            bodyText: msg.format(option)
+            bodyText: msg
           /*  close: function (result) { //revisar para definir el no
            
 			        	step = {
@@ -196,11 +190,35 @@
 	
 	this.getRelatedCollectionName = function(previousWindowInfo) {
 		if(previousWindowInfo){
-			console.log(previousWindowInfo);
+			//console.log(previousWindowInfo);
 			collectionId = previousWindowInfo.selectedOption;
 			previousWindowId = previousWindowInfo.currentWindow;
 			
 			return this.wizard.windows[previousWindowId-1].options[collectionId].text;
+		}
+	};
+	
+	String.prototype.format = function() {
+	    var formatted = this;
+	    for (var i = 0; i < arguments.length; i++) {
+	        var regexp = new RegExp('\\{'+i+'\\}', 'gi');
+	        formatted = formatted.replace(regexp, arguments[i]);
+	    }
+	    return formatted;
+	};
+	
+	this.setModalParameterized = function(parameter, isModal) {
+		if(isModal){
+			this.currentWindow.modal = this.currentWindow.originalModal ? 
+										this.currentWindow.originalModal.format(parameter) : "";
+		}
+	};
+	
+	this.initSelectedOption = function(value, canInitialize) {
+		if(canInitialize){
+			console.info(canInitialize);
+			this.solution.selectedOption = value;
+			console.info(value);
 		}
 	};
     
@@ -216,6 +234,7 @@
   app.directive('radioDetailNomenclatorChooser', function(){
 	return {
 		restrict: 'E',
+		scope: true,
 		templateUrl: 'radio-detail-nomenclator-chooser.html'
 	};
   });
@@ -263,6 +282,7 @@
    app.directive('radioAttributeForChoosing', function(){
 	return {
 		restrict: 'E',
+		scope: true,
 		templateUrl: 'radio-attribute-for-choosing.html'
 	};
   });
@@ -307,9 +327,9 @@
 			
 			this.setOption = function(controller, key, index){
 		    	controller.solution.selectedOptions[index] = key;
-		    	console.log(this.status[index]);
+		    	//console.log(this.status[index]);
 		    	this.status[index] = !this.status[index];
-		    	console.log(this.status[index]);
+		    	//console.log(this.status[index]);
     		};
     		
     		this.selectOption = function(key, arr) {
@@ -477,10 +497,8 @@
 			}
 			if(selectedPath || selectedPath == 0)
 			{
-				console.log("es distinto de null" + selectedPath);
 				return input[selectedPath];
 			}
-			console.log("es null" + selectedPath);
 			return input;
 		};
 		
