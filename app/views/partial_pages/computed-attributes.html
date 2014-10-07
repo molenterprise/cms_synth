@@ -3,7 +3,7 @@
 		<div class="control-group">
 			<label class="control-label">Name:</label>
 			<div class="controls">
-				<input type="text" ng-model="computedCtrl.computedAttr_name">
+				<input type="text" ng-model="step.computedAttr_name">
 			</div>
 		</div>
 		<div class="control-group">
@@ -17,13 +17,6 @@ loc.nil? ? 'Auditorium' : loc.rdfs::label
 			</div>
 		</div>
 	</form>
-	{{step.currentWindow.expToEval = computedCtrl.computedAttr_name == "" || step.currentWindow.type != "computedAttribute"? "" :
-		"this.wizard.data.items.forEach(function(entry) { entry.push({id: entry.length, name: '" +
-				 computedCtrl.computedAttr_name +
-				  "', value:['Computed " +
-				   computedCtrl.computedAttr_name +
-				    " attribute']});});this.solution.selectedProperties.push(this.wizard.data.items[0].length-1);" 
-	}}
 	
 <h3>{{step.currentWindow.message1}}</h3>
 <selected-properties></selected-properties>

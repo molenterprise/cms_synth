@@ -10,6 +10,7 @@
     me.solution = {};
     me.userSequence = [];
     me.solution.selectedOptions =[];
+    me.computedAttr_name = "";
   
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
@@ -105,10 +106,7 @@
     };
     
     this.changeWindow = function(){
-    	if(this.currentWindow.needNextProcessing){
-    		console.log(this.currentWindow.expToEval);
-    		eval(this.currentWindow.expToEval);
-		}
+    	this.afterExecControl();
     	step = {
     		currentWindow: this.currentWindow.id,
     		//title: this.currentWindow.title, //debug
@@ -117,18 +115,36 @@
     		selectedOptions: this.solution.selectedOptions
     	};
     	this.userSequence.push(step);
-    /*	if (this.currentWindow.type == "unique") /// nuevo
-    		document.location = "currentWindows"; */
- //   		console.log("previous window " + this.currentWindow.id);
     	this.selectWindow(this.currentWindow.options[this.solution.selectedOption].next);
- //   	console.log("current window " + this.currentWindow.id);
-    	
     	this.solution.selectedOption = 0;
-    	//this.solution.selectedOptions = [0, 0]
+    	this.beforeExecControl();
     	
     };
     
-       
+    this.beforeExecControl = function(){
+    	if(this.isType('attributeForChoosing')){
+    		this.initSelectedOption(this.solution.selectedProperties[0], true); 
+    		this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data.items[0]).name, true);
+    	}else if(this.isType('computedAttribute')){
+    		this.computedAttr_name = "";
+    	}
+    };
+    
+    this.afterExecControl = function(){
+    	if(this.isType('computedAttribute')){
+    		if(this.computedAttr_name != "")
+    			var temp = this.computedAttr_name;
+				this.wizard.data.items.forEach(function(entry) {
+					entry.push({
+						"id": entry.length,
+						"name": temp,
+						"value": ["Computed " + temp + " attribute"]
+						});
+					});
+				  this.solution.selectedProperties.push(this.wizard.data.items[0].length-1); 
+    	}
+    };
+           
     this.confirmDialog = function(title, msg){
         
         var modalOptions = {
