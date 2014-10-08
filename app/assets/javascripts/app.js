@@ -127,7 +127,17 @@
     		this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data.items[0]).name, true);
     	}else if(this.isType('computedAttribute')){
     		this.computedAttr_name = "";
+    	}else if(this.isType('yesNoDetail')){
+    		this.solution.selectedProperties = [];
+    		for (var i=0; i < this.currentWindow.datatypeProperties.length; i++) {
+			  this.currentWindow.datatypeProperties[i];
+			  for (var j=0; j < this.wizard.data.items[0].length; j++) {
+				if(this.wizard.data.items[0][j].name == this.currentWindow.datatypeProperties[i])
+					this.solution.selectedProperties.push(this.wizard.data.items[0][j].id);
+			  };
+			};
     	}
+    	
     };
     
     this.afterExecControl = function(){
@@ -298,8 +308,28 @@
    app.directive('radioAttributeForChoosing', function(){
 	return {
 		restrict: 'E',
-		scope: true,
 		templateUrl: 'radio-attribute-for-choosing.html'
+	};
+  });
+  
+  app.directive('resourceDetail', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'resource-detail.html'
+	};
+  });
+  
+  app.directive('detailOtherAttributesYesno', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'detail-other-attributes-yesno.html'
+	};
+  });  
+  
+  app.directive('datatypePropertySelectionForDetail', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'datatype-property-selection-for-detail.html'
 	};
   });
   

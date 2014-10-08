@@ -1,0 +1,9 @@
+<div class="list-group" >
+	<div ng-repeat="prop in step.solution.selectedProperties" >
+		<b class="list-group-item-without-border halign col-md-2">{{step.selectProperty(prop,step.wizard.data.items[0]).name}}:</b>
+		<div class="list-group-item-without-border halign">
+			<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0]).value" >{{value}}</div>
+		</div>
+	</div>
+	<br>
+</div>

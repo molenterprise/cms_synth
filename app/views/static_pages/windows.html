@@ -29,6 +29,10 @@
 				<radio-detail-nomenclator-chooser></radio-detail-nomenclator-chooser>
 			</div>
 			
+			<div ng-show="step.isType('yesNoDetail')">
+				<detail-other-attributes-yesno></detail-other-attributes-yesno>
+			</div>
+			
 			<div ng-show="step.isType('addOntology')">
 				<add-ontology></add-ontology>
 			</div>
@@ -56,6 +60,11 @@
 			<div ng-show="step.isType('attributeForChoosing')">
 				<radio-attribute-for-choosing></radio-attribute-for-choosing>
 			</div>
+			
+			<div ng-show="step.isType('checkboxForDetail')">
+				<datatype-property-selection-for-detail></datatype-property-selection-for-detail>
+			</div>
+			
 			<br/>
 			<fieldset class="form-group">
 				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>

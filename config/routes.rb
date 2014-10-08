@@ -29,4 +29,7 @@ Rails.application.routes.draw do
   match '/computed-attributes',    to: 'partial_pages#computed-attributes',    via: 'get'
   match '/modal',    to: 'partial_pages#modal',    via: 'get'
   match '/radio-attribute-for-choosing',    to: 'partial_pages#radio-attribute-for-choosing',    via: 'get'
-end
+  match '/resource-detail',    to: 'partial_pages#resource-detail',    via: 'get'
+  match '/detail-other-attributes-yesno',    to: 'partial_pages#detail-other-attributes-yesno',    via: 'get'
+  match '/datatype-property-selection-for-detail',    to: 'partial_pages#datatype-property-selection-for-detail',    via: 'get'
+ end

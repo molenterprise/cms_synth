@@ -61,7 +61,7 @@
 			      "type": "radio",
 			      "message": "",
 			      "options": [
-			        {"key": 0, "text":"Show a list of Events to be chosen", "next": 6},{"key": 1, "text":"Show the detail of an Event", "next": 5},{"key": 2, "text":"Define a computation using an Event", "next": 5} 
+			        {"key": 0, "text":"Show a list of Events to be chosen", "next": 6},{"key": 1, "text":"Show the detail of an Event", "next": 15},{"key": 2, "text":"Define a computation using an Event", "next": 5} 
 			      ]
 			    },
 			    {
@@ -119,7 +119,6 @@
 			  	  "id": 9,
 			      "title": "Following this example which attributes you want to show in the Event list",
 			      "type": "checkbox",
-			      "needNextProcessing": true,
 			      "message": "Add Event properties",
 			      "options":  [  
 							   	{"key": 0, "text":"label", "next": 8},
@@ -208,6 +207,38 @@
 			      "options": [
 			        {"key": 0, "next": 14} 
 			       ]
+			    },
+			    {
+			  	  "id": 15,
+			      "title": "Event detail",
+			      "type": "yesNoDetail",
+			      "message1": "Do you want to show other attributes of an Event in the detail view?",
+			      "datatypeProperties": ["label", "summary"],
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 16},{"key": 1, "text":"No", "next": 16} 
+			      ]
+			    },
+			    {
+			  	  "id": 16,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Event detail?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},{"key": 1, "text":"Attributes of other classes related to Event", "next": 10},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			      ]
+			    },
+			    {
+			  	  "id": 17,
+			      "title": "Following this example which attributes you want to show in the Event detail",
+			      "type": "checkboxForDetail",
+			      "message": "Add Event properties",
+			      "options":  [  
+							   	{"key": 0, "text":"label", "next": 8},
+							   	{"key": 1, "text":"start", "next": 8},
+							   	{"key": 2, "text":"end", "next": 8},
+							   	{"key": 3, "text":"summary", "next": 8} 
+							  ],
+			      "message1": "Selected properties"
 			    }
 			],
 	"data": {
@@ -216,7 +247,7 @@
 								{"id": 0, "name": "label", "value":["Posters Display"]}, 
 						    	{"id": 1, "name": "start", "value":["2011-01-01 10:00"]}, 
 						    	{"id": 2, "name": "end", "value":["2011-01-01 18:00"]},
-						    	{"id": 3, "name": "summary", "value":["Posters Display"]},
+						    	{"id": 3, "name": "summary", "value":["Posters Display Summary"]},
 						    	{"id": 4, "name": "where", "value":["Auditorium"]},
 						    	{"id": 5, "name": "Documents", "value": ["A Demo Search Engine for Products",
 						      		 								"A Tool for Fast Indexing and Querying of Graphs",
@@ -226,7 +257,7 @@
 				      	    	 {"id": 0, "name": "label", "value":["Demo: Adapting a Map Query..."]}, 
 					      		 {"id": 1, "name": "start", "value":["03/30/2011  0:00"]}, 
 					      		 {"id": 2, "name": "end", "value":["03/30/2011  2:00"]},
-					      		 {"id": 3, "name": "summary", "value":["Demo: Adapting"]},
+					      		 {"id": 3, "name": "summary", "value":["Demo: Adapting Summary"]},
 					      		 {"id": 4, "name": "where", "value":["Auditorium"]},
 					      		 {"id": 5, "name": "Documents", "value":["Accelerating Instant Question...",
 					      		 									 "Adapting a Map Query Interface for..."]}

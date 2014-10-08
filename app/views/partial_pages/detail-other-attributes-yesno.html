@@ -1,0 +1,11 @@
+<resource-detail></resource-detail>
+
+<h4>{{step.currentWindow.message1}}</h4>
+<section>
+	<ul >
+		<li class="list-group-item-without-border halign" ng-repeat="opt in step.currentWindow.options" >
+			<input type="radio" ng-model="step.solution.selectedOption" value="{{opt.key}}">
+			{{opt.text}}
+		</li>
+	</ul>
+</section>
