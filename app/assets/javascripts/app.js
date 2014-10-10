@@ -319,19 +319,12 @@
 	};
   });
   
-  app.directive('detailOtherAttributesYesno', function(){
+  app.directive('questionOptions', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'detail-other-attributes-yesno.html'
+		templateUrl: 'question-options.html'
 	};
   });  
-  
-  app.directive('datatypePropertySelectionForDetail', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'datatype-property-selection-for-detail.html'
-	};
-  });
   
   app.directive('selectNomenclatorChooser', function(){
 	return {

@@ -30,7 +30,18 @@
 			</div>
 			
 			<div ng-show="step.isType('yesNoDetail')">
-				<detail-other-attributes-yesno></detail-other-attributes-yesno>
+				<resource-detail></resource-detail>
+				<question-options></question-options>
+			</div>
+			
+			<div ng-show="step.isType('yesNoDetail2')">
+				<resource-detail></resource-detail>
+				<question-options></question-options>
+			</div>
+			
+			<div ng-show="step.isType('yesNoList')">
+				<selected-properties></selected-properties>
+				<question-options></question-options>
 			</div>
 			
 			<div ng-show="step.isType('addOntology')">
@@ -43,6 +54,7 @@
 			
 			<div ng-show="step.isType('checkbox')">
 				<datatype-property-selection></datatype-property-selection>
+				<selected-properties></selected-properties>
 			</div>
 			
 			<div ng-show="step.isType('paths')">
@@ -62,7 +74,13 @@
 			</div>
 			
 			<div ng-show="step.isType('checkboxForDetail')">
-				<datatype-property-selection-for-detail></datatype-property-selection-for-detail>
+				<datatype-property-selection></datatype-property-selection>
+				<resource-detail></resource-detail>
+			</div>
+			
+			<div ng-show="step.isType('radioSelectedPropertiesForDetail')">
+				<radio-nomenclator-chooser></radio-nomenclator-chooser>
+				<resource-detail></resource-detail>
 			</div>
 			
 			<br/>

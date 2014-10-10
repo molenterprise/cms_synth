@@ -112,7 +112,7 @@
 			        {"key": 0, "text":"Direct attributes of an Event", "next": 9},
 			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 10},
 			        {"key": 2, "text":"Computed Attributes", "next": 13},
-			        {"key": 3, "text":"No more", "next": 14}
+			        {"key": 3, "text":"No more", "next": 24}
 			      ]
 			    },
 			    {
@@ -215,7 +215,7 @@
 			      "message1": "Do you want to show other attributes of an Event in the detail view?",
 			      "datatypeProperties": ["label", "summary"],
 			      "options": [
-			        {"key": 0, "text":"Yes", "next": 16},{"key": 1, "text":"No", "next": 16} 
+			        {"key": 0, "text":"Yes", "next": 16},{"key": 1, "text":"No", "next": 23} 
 			      ]
 			    },
 			    {
@@ -224,7 +224,7 @@
 			      "type": "radio",
 			      "message": "Which type of attributes you want to show in the Event detail?",
 			      "options": [
-			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},{"key": 1, "text":"Attributes of other classes related to Event", "next": 10},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},{"key": 1, "text":"Attributes of other classes related to Event", "next": 19},{"key": 2, "text":"Computed Attributes", "next": 22} 
 			      ]
 			    },
 			    {
@@ -233,12 +233,114 @@
 			      "type": "checkboxForDetail",
 			      "message": "Add Event properties",
 			      "options":  [  
-							   	{"key": 0, "text":"label", "next": 8},
-							   	{"key": 1, "text":"start", "next": 8},
-							   	{"key": 2, "text":"end", "next": 8},
-							   	{"key": 3, "text":"summary", "next": 8} 
+							   	{"key": 0, "text":"label", "next": 18},
+							   	{"key": 1, "text":"start", "next": 18},
+							   	{"key": 2, "text":"end", "next": 18},
+							   	{"key": 3, "text":"summary", "next": 18} 
 							  ],
 			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 18,
+			      "title": "",
+			      "type": "radioSelectedPropertiesForDetail",
+			      "message": "Do you want to show more attributes in the Event detail? Which type?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},
+			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 19},
+			        {"key": 2, "text":"Computed Attributes", "next": 22},
+			        {"key": 3, "text":"No more", "next": 23}
+			      ]
+			    },
+			    {
+			  	  "id": 19,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Event \t related collections",
+			      "options": [
+			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 20}, {"key": 2, "text":"Conference", "next": 20},
+			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 20}, {"key": 5, "text":"Document", "next": 20} 
+			      ]
+			    },
+			    {
+			  	  "id": 20,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		   ],
+			      "options": [
+					        	{"key": 0, "next": 21}, {"key": 1, "next": 21}
+					      	 ]
+			    },
+			    {
+			  	  "id": 21,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		 ], 
+			      "propertySets": [
+			      					[
+				      					[
+				        					{"key": 0, "text":"organizer"}
+				      			  		]
+			      			  		],
+			      			  		[
+				      					[
+				        					{"key": 0, "text":"hasOpeningDocument"},
+				        					{"key": 1, "text":"hasClosingDocument"}
+				      			  		],
+				      			  		[
+				        					{"key": 0, "text":"presenter"},
+				        					{"key": 1, "text":"author"}
+				      			  		]
+			      			  		]
+			      			  	],
+			      "options": [
+					        	{"key": 0, "next": 18}, {"key": 1, "next": 18}
+					      	 ]
+			    },
+			    {
+			  	  "id": 22,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "needNextProcessing": true,
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "options": [
+			        {"key": 0, "next": 18} 
+			       ]
+			    },
+			    {
+			  	  "id": 23,
+			      "title": "",
+			      "type": "yesNoDetail2",
+			      "message": "Event Detail",
+			      "message1": "Do you want to choose anything to navigate to other screen?",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 14},
+			        {"key": 1, "text":"No", "next": 16}
+			      ]
+			    },
+			    {
+			  	  "id": 24,
+			      "title": "",
+			      "type": "yesNoList",
+			      "message": "Event List",
+			      "message1": "Do you want to choose anything to navigate to other screen?",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 14},
+			        {"key": 1, "text":"No", "next": 16}
+			      ]
 			    }
 			],
 	"data": {
