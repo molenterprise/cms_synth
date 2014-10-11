@@ -83,6 +83,10 @@
 				<resource-detail></resource-detail>
 			</div>
 			
+			<div ng-show="step.isType('attributeForChoosingForDetail')">
+				<radio-attribute-for-choosing-detail></radio-attribute-for-choosing-detail>
+			</div>
+			
 			<br/>
 			<fieldset class="form-group">
 				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>

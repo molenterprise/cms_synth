@@ -32,5 +32,5 @@ Rails.application.routes.draw do
   match '/resource-detail',    to: 'partial_pages#resource-detail',    via: 'get'
   match '/detail-other-attributes-yesno',    to: 'partial_pages#detail-other-attributes-yesno',    via: 'get'
   match '/question-options',    to: 'partial_pages#question-options',    via: 'get'
-  
+  match '/radio-attribute-for-choosing-detail',    to: 'partial_pages#radio-attribute-for-choosing-detail',    via: 'get'
  end

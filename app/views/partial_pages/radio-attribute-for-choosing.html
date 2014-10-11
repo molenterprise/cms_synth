@@ -2,7 +2,7 @@
     <thead>
         <tr>
            <th ng-repeat="prop in step.solution.selectedProperties">
-           		<input type="text" value="{{step.selectProperty(prop, step.wizard.data.items[0]).name}}">
+           		<input type="text" value="{{step.selectProperty(prop, step.wizard.data.items[0], step.isType('attributeForChoosing')).name}}">
            </th>
         </tr>
     </thead>
@@ -10,10 +10,9 @@
     	<tr> 		
     		<td ng-repeat="prop in step.solution.selectedProperties" >
     			<div>
-    				{{p = step.selectProperty(prop,step.wizard.data.items[0]); ""}}
-		    		<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}" ng-change="step.setModalParameterized(p.name, true)">
+    				{{p = step.selectProperty(prop,step.wizard.data.items[0], step.isType('attributeForChoosing'), step.isType('attributeForChoosing')); ""}}
+		    		<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}" ng-change="step.setModalParameterized(p.name, step.isType('attributeForChoosing'))">
 		    			{{p.value[0]}}
-		    		<!--	<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0]).value[0]">{{value}}</div> -->
 		    		</input> 
 		    		<div ng-repeat="value in p.value | limitTo: - (p.value.length - 1)">
 		    			{{value}}
@@ -25,7 +24,7 @@
     		
 	    <tr ng-repeat="item in step.wizard.data.items | limitTo: - (step.wizard.data.items.length - 1)">
 	            <td ng-repeat="prop in step.solution.selectedProperties">
-	            	<div ng-repeat="value in step.selectProperty(prop,item).value">{{value}}</div>
+	            	<div ng-repeat="value in step.selectProperty(prop, item, step.isType('attributeForChoosing')).value">{{value}}</div>
 	            </td>
 	    </tr>
     </tbody>

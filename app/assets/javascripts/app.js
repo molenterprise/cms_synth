@@ -115,16 +115,18 @@
     		selectedOptions: this.solution.selectedOptions
     	};
     	this.userSequence.push(step);
-    	this.selectWindow(this.currentWindow.options[this.solution.selectedOption].next);
+    	
+    	nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
+    	this.selectWindow(this.currentWindow.options[nextValue].next);
     	this.solution.selectedOption = 0;
     	this.beforeExecControl();
     	
     };
     
     this.beforeExecControl = function(){
-    	if(this.isType('attributeForChoosing')){
+    	if(this.isType('attributeForChoosing') || this.isType('attributeForChoosingForDetail')){
     		this.initSelectedOption(this.solution.selectedProperties[0], true); 
-    		this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data.items[0]).name, true);
+    		this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data.items[0], true).name, true);
     	}else if(this.isType('computedAttribute')){
     		this.computedAttr_name = "";
     	}else if(this.isType('yesNoDetail')){
@@ -191,21 +193,23 @@
     	}
     };
     
-    
-    this.selectWindow = function(index){
+    this.getWindow = function(id){
     //	if(index = -1) document.location = "addOntology.html";
     	for (i = 0; i < this.wizard.windows.length; i++) {
-		    if(this.wizard.windows[i].id == index){	
-		    	this.currentWindow = this.wizard.windows[i];
-		    /*	if(wizard[i].type == "unique")	 
-		    		document.location = wizard[i].message; */
-		    	break;
+		    if(this.wizard.windows[i].id == id){	
+		    	return this.wizard.windows[i]
 		    }
 		}
+    };
+    
+    
+    this.selectWindow = function(id){
+    	
+    	this.currentWindow = this.getWindow(id);
     };  
 		
-	this.selectProperty = function(id, arr) {
-		if(arr != null){
+	this.selectProperty = function(id, arr, canExec) {
+		if(arr != null && canExec){
 			for ( i = 0; i < arr.length; i++) {
 				if (arr[i].id == id)
 					return arr[i];
@@ -214,14 +218,15 @@
 		return "";
 	};
 	
-	this.getRelatedCollectionName = function(previousWindowInfo) {
-		if(previousWindowInfo){
-			//console.log(previousWindowInfo);
-			collectionId = previousWindowInfo.selectedOption;
-			previousWindowId = previousWindowInfo.currentWindow;
-			
-			return this.wizard.windows[previousWindowId-1].options[collectionId].text;
-		}
+	this.getRelatedCollectionName = function(previousWindowInfo, canExec) {
+		if (canExec) {
+			if(previousWindowInfo){
+				//console.log(previousWindowInfo);
+				collectionId = previousWindowInfo.selectedOption;
+				previousWindowId = previousWindowInfo.currentWindow;
+				return this.getWindow(previousWindowId).options[collectionId].text;
+			}
+		};
 	};
 	
 	String.prototype.format = function() {
@@ -246,6 +251,16 @@
 			this.solution.selectedOption = value;
 			console.info(value);
 		}
+	};
+	
+	this.hasResourceDetail = function() {
+		return this.isType('yesNoDetail') || this.isType('yesNoDetail2') || this.isType('checkboxForDetail') || 
+			   this.isType('radioSelectedPropertiesForDetail'); 
+	};
+	
+	this.hasSelectedProperty = function() {
+		return this.isType('radioSelectedProperties') || this.isType('yesNoList') || this.isType('selectedProperties') || 
+			   this.isType('checkbox'); 
 	};
     
   }]);
@@ -323,6 +338,13 @@
 	return {
 		restrict: 'E',
 		templateUrl: 'question-options.html'
+	};
+  });  
+  
+  app.directive('radioAttributeForChoosingDetail', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'radio-attribute-for-choosing-detail.html'
 	};
   });  
   
