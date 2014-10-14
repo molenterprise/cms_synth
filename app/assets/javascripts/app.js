@@ -11,7 +11,8 @@
     me.userSequence = [];
     me.solution.selectedOptions =[];
     me.computedAttr_name = "";
-  
+    me.seqNextNavegation = [];
+      
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
@@ -155,6 +156,17 @@
 					});
 				  this.solution.selectedProperties.push(this.wizard.data.items[0].length-1); 
     	}
+    	else if(this.isType('attributeForChoosing')){
+    		this.seqNextNavegation.push(this.currentWindow.id);
+    	}
+    	else if(this.isType('yesNoDetail2')){  	
+    		if(this.solution.selectedOption.text == "Yes")	
+    			this.seqNextNavegation.push(this.currentWindow.id);
+    	    else if(this.seqNextNavegation.length > 0){
+    	    	nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
+    			this.currentWindow.options[nextValue].next = this.seqNextNavegation.pop();
+    		}
+    	}
     };
            
     this.confirmDialog = function(title, msg){
@@ -163,10 +175,10 @@
             closeButtonText: 'No',
             actionButtonText: 'Yes',
             headerText: title,
-            bodyText: msg
+            bodyText: msg,
           /*  close: function (result) { //revisar para definir el no
-           
-			        	step = {
+            	console.log("close");
+			     /*   	step = {
 				    		currentWindow: this.currentWindow.id,
 				    		//title: this.currentWindow.title, //debug
 				    		selectedOption: this.solution.selectedOption,
@@ -175,7 +187,7 @@
 			    		};
 			    		this.userSequence.push(step);
 			    		this.selectWindow(this.currentWindow.cancelModalNext);
-			    		this.solution.selectedOption = 0;
+			    		this.solution.selectedOption = 0; 
         	}*/
         };
 
@@ -260,7 +272,7 @@
 	
 	this.hasSelectedProperty = function() {
 		return this.isType('radioSelectedProperties') || this.isType('yesNoList') || this.isType('selectedProperties') || 
-			   this.isType('checkbox'); 
+			   this.isType('checkbox') || this.isType('computedAttribute'); 
 	};
     
   }]);

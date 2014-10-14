@@ -1,6 +1,12 @@
 <div class="list-group">
 	<label class="control-label list-group-item-without-border halign">{{step.solution.mainClass}}</label>
-	<div class="list-group-item-without-border halign" ng-repeat="propertiesClass in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-2]):step.example:step.isType('path'):step.userSequence[step.userSequence.length-1].selectedOption track by $index">
+	<div class="list-group-item-without-border halign" ng-repeat="propertiesClass in [] | 
+		track:
+			step.solution.mainClass:
+			step.getRelatedCollectionName(step.userSequence[step.userSequence.length-2], step.isType('path')):
+		 	step.example:
+		 	step.isType('path'):
+		 	step.userSequence[step.userSequence.length-1].selectedOption track by $index">
 		{{propertiesSetIndex = $index; ""}}
 		<div class="btn-group" dropdown is-open="chooserCtrlPath.status[$index]">
 			<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
