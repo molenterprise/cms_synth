@@ -1,6 +1,6 @@
 <div class="list-group" >
 	<div ng-repeat="prop in step.solution.selectedProperties" >
-		{{p = step.selectProperty(prop,step.wizard.data.items[0], step.isType('attributeForChoosingForDetail'); ""}}
+		{{p = step.selectProperty(prop, step.wizard.data.items[0], step.isType('attributeForChoosingForDetail')); ""}}		
 		<b class="list-group-item-without-border halign col-md-2">{{p.name}}:</b>
 		<div class="list-group-item-without-border halign">
 			<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}" ng-change="step.setModalParameterized(p.name, step.isType('attributeForChoosingForDetail'))">

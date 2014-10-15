@@ -43,7 +43,7 @@
 			      "type": "select",
 			      "message": "Ontology",
 			      "options": [
-			        {"key": 0, "text":"foaf", "next": 4},{"key": 1, "text":"skos", "next": 4},{"key": 2, "text":"swrc", "next": 4},{"key": 3, "text":"schm", "next": 4} 
+			        {"key": 0, "text":"foaf", "next": 27},{"key": 1, "text":"skos", "next": 4},{"key": 2, "text":"swrc", "next": 4},{"key": 3, "text":"schm", "next": 4} 
 			      ]
 			    },
 			    {
@@ -70,10 +70,8 @@
 			      "type": "radioDetail",
 			      "message": "Events",
 			      "options": [
-			        {"key": 0, "text":"one Event?", "next": 7},{"key": 1, "text":"more than one Event?", "next": 7} 
+			        {"key": 0, "text":"one Event?", "next": 30},{"key": 1, "text":"more than one Event?", "next": 31} 
 			      ],
-			      "modal": "Do you want to show other attributes of an Event than those shown in the example?",
-			      "cancelModalNext": 1,
 			      "details":
 			      	[
 				      {
@@ -205,7 +203,7 @@
 			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "options": [
-			        {"key": 0, "next": 4} 
+			        {"key": 0, "next": 3} 
 			       ]
 			    },
 			    {
@@ -323,23 +321,23 @@
 			    {
 			  	  "id": 23,
 			      "title": "",
-			      "type": "yesNoDetail2",
+			      "type": "loopDetail",
 			      "message": "Event Detail",
 			      "message1": "Do you want to choose anything to navigate to other screen?",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 25	},
-			        {"key": 1, "text":"No", "next": 16}
+			        {"key": 1, "text":"No", "next": 26}
 			      ]
 			    },
 			    {
 			  	  "id": 24,
 			      "title": "",
-			      "type": "yesNoList",
+			      "type": "loop",
 			      "message": "Event List",
 			      "message1": "Do you want to choose anything to navigate to other screen?",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 14},
-			        {"key": 1, "text":"No", "next": 16}
+			        {"key": 1, "text":"No", "next": 26}
 			      ]
 			    },
 			    {
@@ -351,8 +349,104 @@
 			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "options": [
-			        {"key": 0, "next": 4} 
+			        {"key": 0, "next": 3} 
 			       ]
+			    },
+			    {
+			  	  "id": 26,
+			      "title": "What do you want to do?",
+			      "type": "radio",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "text":"Go to the pages index", "next": 26},{"key": 1, "text":"Finish the application definition", "next": 26} 
+			      ]
+			    },
+			    {
+			  	  "id": 27,
+			      "title": "What do you want to show from foaf ontology?",
+			      "type": "select",
+			      "message": "Class",
+			      "options": [
+			        {"key": 0, "text":"foaf:Document", "next": 27},{"key": 1, "text":"foaf:Group", "next": 27},{"key": 2, "text":"foaf:Organization", "next": 27},
+			        {"key": 3, "text":"foaf:Person", "next": 28}, {"key": 3, "text":"foaf:Project", "next": 27} 
+			      ]
+			    },
+			    {
+			  	  "id": 28,
+			      "title": "What do you want to do?",
+			      "type": "radio",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "text":"Show a list of Persons to be chosen", "next": 29},{"key": 1, "text":"Show the detail of a Person", "next": 15},{"key": 2, "text":"Define a computation using a Person", "next": 28} 
+			      ]
+			    },
+			    {
+			  	  "id": 29,
+			      "title": "",
+			      "type": "radioDetail",
+			      "message": "Persons",
+			      "options": [
+			        {"key": 0, "text":"one Person?", "next": 7},{"key": 1, "text":"more than one Person?", "next": 7} 
+			      ],
+			      "modal": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "cancelModalNext": 1,
+			      "details":
+			      	[
+				      {
+				      	"title": "Do you want to choose",
+				      	"items": [
+				      		[{"type": "text", "msg": "Amit Madaan"}],
+				      		[{"type": "text", "msg": "Dhruv Mahajan"}],
+				      		[{"type": "text", "msg": "Subhajit Sanyal"}]
+				      	]
+				      },
+				      {
+				      	"title": "Do you want to choose",
+				      	"items": [
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Amit Madaan"}],
+				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Dhruv Mahajan"}],
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Subhajit Sanyal"}]
+				      	]
+				      }
+				    ]
+			    },
+			    {
+			  	  "id": 30,
+			      "title": "",
+			      "type": "radioDetail",
+			      "message": "Events",
+			      "message1": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "options": [
+			      	{"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
+			      ],
+			      "detail":
+				      {
+				      	"title": "Do you want to choose",
+				      	"items": [
+				      		[{"type": "text", "msg": "Posters Display"}],
+				      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+				      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      	]
+				      }
+			    },
+			    {
+			  	  "id": 31,
+			      "title": "",
+			      "type": "radioDetail",
+			      "message": "Events",
+			      "message1": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
+			      ],
+			      "detail":
+			      	{
+				      	"title": "Do you want to choose",
+				      	"items": [
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
+				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      	]
+				    }
 			    }
 			],
 	"data": {

@@ -156,13 +156,12 @@
 					});
 				  this.solution.selectedProperties.push(this.wizard.data.items[0].length-1); 
     	}
-    	else if(this.isType('attributeForChoosing')){
-    		this.seqNextNavegation.push(this.currentWindow.id);
-    	}
-    	else if(this.isType('yesNoDetail2')){  	
-    		if(this.solution.selectedOption.text == "Yes")	
+    	else if(this.isType('loopDetail') || this.isType('loop')){  	
+    		if(this.currentWindow.options[this.solution.selectedOption].text == "Yes"){	
+    			if(this.seqNextNavegation.length == 0) 
+    				this.seqNextNavegation.push(this.currentWindow.options[1].next);
     			this.seqNextNavegation.push(this.currentWindow.id);
-    	    else if(this.seqNextNavegation.length > 0){
+    	    } else if(this.seqNextNavegation.length > 0){
     	    	nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
     			this.currentWindow.options[nextValue].next = this.seqNextNavegation.pop();
     		}
@@ -266,12 +265,12 @@
 	};
 	
 	this.hasResourceDetail = function() {
-		return this.isType('yesNoDetail') || this.isType('yesNoDetail2') || this.isType('checkboxForDetail') || 
+		return this.isType('yesNoDetail') || this.isType('loopDetail') || this.isType('checkboxForDetail') || 
 			   this.isType('radioSelectedPropertiesForDetail'); 
 	};
 	
 	this.hasSelectedProperty = function() {
-		return this.isType('radioSelectedProperties') || this.isType('yesNoList') || this.isType('selectedProperties') || 
+		return this.isType('radioSelectedProperties') || this.isType('loop') || this.isType('selectedProperties') || 
 			   this.isType('checkbox') || this.isType('computedAttribute'); 
 	};
     
