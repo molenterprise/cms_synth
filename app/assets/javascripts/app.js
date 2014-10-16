@@ -16,7 +16,7 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[0];
+  		me.currentWindow = me.wizard.windows[35];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -283,11 +283,17 @@
 	};
   });
   
-  app.directive('radioDetailNomenclatorChooser', function(){
+  app.directive('infoDependingOnSelectedOption', function(){
 	return {
 		restrict: 'E',
-		scope: true,
-		templateUrl: 'radio-detail-nomenclator-chooser.html'
+		templateUrl: 'info-depending-on-selected-option.html'
+	};
+  });
+  
+  app.directive('infoToShow', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'info-to-show.html'
 	};
   });
   

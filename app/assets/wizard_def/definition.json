@@ -10,22 +10,16 @@
 			      ],
 			      "details":
 			      	[
-				      {
-				      	"title": "",
-				      	"items": [
+			      		[
+				      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
+				      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
+				      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
+				      	],
+					    [
 				      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
 				      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
 				      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
 				      	]
-				      },
-				      {
-				      	"title": "",
-				      	"items": [
-				      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
-				      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
-				      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
-				      	]
-				      }
 				    ]
 			    },
 			    {
@@ -69,27 +63,23 @@
 			      "title": "",
 			      "type": "radioDetail",
 			      "message": "Events",
+			      "message1": "Do you want to choose",
 			      "options": [
 			        {"key": 0, "text":"one Event?", "next": 30},{"key": 1, "text":"more than one Event?", "next": 31} 
 			      ],
 			      "details":
 			      	[
-				      {
-				      	"title": "Do you want to choose",
-				      	"items": [
+				      [
 				      		[{"type": "text", "msg": "Posters Display"}],
 				      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
 				      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
-				      	]
-				      },
-				      {
-				      	"title": "Do you want to choose",
-				      	"items": [
+				      ]
+				      ,
+				      [
 				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
 				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
 				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
-				      	]
-				      }
+				      ]
 				    ]
 			    },
 			    {
@@ -385,68 +375,119 @@
 			      "title": "",
 			      "type": "radioDetail",
 			      "message": "Persons",
+			      "message1": "Do you want to choose",
 			      "options": [
-			        {"key": 0, "text":"one Person?", "next": 7},{"key": 1, "text":"more than one Person?", "next": 7} 
+			        {"key": 0, "text":"one Person?", "next": 32},{"key": 1, "text":"more than one Person?", "next": 33} 
 			      ],
-			      "modal": "Do you want to show other attributes of a Person than those shown in the example?",
-			      "cancelModalNext": 1,
 			      "details":
 			      	[
-				      {
-				      	"title": "Do you want to choose",
-				      	"items": [
+				      [
 				      		[{"type": "text", "msg": "Amit Madaan"}],
 				      		[{"type": "text", "msg": "Dhruv Mahajan"}],
 				      		[{"type": "text", "msg": "Subhajit Sanyal"}]
-				      	]
-				      },
-				      {
-				      	"title": "Do you want to choose",
-				      	"items": [
+				      ]
+				      ,
+				      [
 				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Amit Madaan"}],
 				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Dhruv Mahajan"}],
 				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Subhajit Sanyal"}]
-				      	]
-				      }
+				      ]
 				    ]
 			    },
 			    {
 			  	  "id": 30,
 			      "title": "",
-			      "type": "radioDetail",
+			      "type": "infoWithOptions",
 			      "message": "Events",
 			      "message1": "Do you want to show other attributes of an Event than those shown in the example?",
 			      "options": [
 			      	{"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
 			      ],
-			      "detail":
-				      {
-				      	"title": "Do you want to choose",
-				      	"items": [
-				      		[{"type": "text", "msg": "Posters Display"}],
-				      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
-				      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
-				      	]
-				      }
+			      "details":[
+					      		[{"type": "text", "msg": "Posters Display"}],
+					      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+					      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      		]
 			    },
 			    {
 			  	  "id": 31,
 			      "title": "",
-			      "type": "radioDetail",
+			      "type": "infoWithOptions",
 			      "message": "Events",
 			      "message1": "Do you want to show other attributes of an Event than those shown in the example?",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
 			      ],
-			      "detail":
-			      	{
-				      	"title": "Do you want to choose",
-				      	"items": [
-				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
-				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
-				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
-				      	]
-				    }
+			      "details":[
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
+					      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      		]
+			    },
+			    {
+			  	  "id": 32,
+			      "title": "",
+			      "type": "infoWithOptions",
+			      "message": "Persons",
+			      "message1": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "options": [
+			      	{"key": 0, "text":"Yes", "next": 34},{"key": 1, "text":"No", "next": 23}
+			      ],
+			      "details":[
+					      		[{"type": "text", "msg": "Amit Madaan"}],
+					      		[{"type": "text", "msg": "Dhruv Mahajan"}],
+					      		[{"type": "text", "msg": "Subhajit Sanyal"}]
+				      		]
+			    },
+			    {
+			  	  "id": 33,
+			      "title": "",
+			      "type": "infoWithOptions",
+			      "message": "Persons",
+			      "message1": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 34},{"key": 1, "text":"No", "next": 23}
+			      ],
+			      "details":[
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Amit Madaan"}],
+					      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Dhruv Mahajan"}],
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Subhajit Sanyal"}]
+				      		]
+			    },
+			    {
+			  	  "id": 34,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Person list?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},{"key": 1, "text":"Attributes of other classes related to Person", "next": 10},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			      ]
+			    },
+			    {
+			  	  "id": 35,
+			      "title": "",
+			      "type": "radioSelectedProperties",
+			      "message": "Do you want to show more attributes in the Person list? Which type?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 9},
+			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 10},
+			        {"key": 2, "text":"Computed Attributes", "next": 13},
+			        {"key": 3, "text":"No more", "next": 24}
+			      ]
+			    },
+			    {
+			  	  "id": 36,
+			      "title": "Following this example which attributes you want to show in the Person list",
+			      "type": "checkbox",
+			      "message": "Add Event properties",
+			      "options":  [  
+							   	{"key": 0, "text":"rdfs:label", "next": 8},
+							   	{"key": 1, "text":"foaf:name", "next": 8},
+							   	{"key": 2, "text":"foaf:family_name", "next": 8},
+							   	{"key": 3, "text":"foaf:firstName", "next": 8},
+							   	{"key": 4, "text":"foaf:mbox_sha1sum", "next": 8}
+							  ],
+			      "message1": "Selected properties"
 			    }
 			],
 	"data": {

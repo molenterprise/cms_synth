@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   
   #controls
   match '/radio-nomenclator-chooser',    to: 'partial_pages#radio-nomenclator-chooser',    via: 'get'
-  match '/radio-detail-nomenclator-chooser',    to: 'partial_pages#radio-detail-nomenclator-chooser',    via: 'get'
+  match '/info-depending-on-selected-option',    to: 'partial_pages#info-depending-on-selected-option',    via: 'get'
   match '/select-nomenclator-chooser',    to: 'partial_pages#select-nomenclator-chooser',    via: 'get'
   match '/add-ontology',    to: 'partial_pages#add-ontology',    via: 'get'
   match '/selected-properties',    to: 'partial_pages#selected-properties',    via: 'get'
@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   match '/detail-other-attributes-yesno',    to: 'partial_pages#detail-other-attributes-yesno',    via: 'get'
   match '/question-options',    to: 'partial_pages#question-options',    via: 'get'
   match '/radio-attribute-for-choosing-detail',    to: 'partial_pages#radio-attribute-for-choosing-detail',    via: 'get'
+  match '/info-to-show',    to: 'partial_pages#info-to-show',    via: 'get'
+  
  end

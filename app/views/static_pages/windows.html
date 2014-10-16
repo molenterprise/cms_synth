@@ -26,13 +26,19 @@
 			</div>
 			
 			<div ng-show="step.isType('radioDetail')">
-				<radio-detail-nomenclator-chooser></radio-detail-nomenclator-chooser>
+				<info-depending-on-selected-option></info-depending-on-selected-option>
+				<question-options></question-options>
+			</div>			
+			
+			<div ng-show="step.isType('infoWithOptions')">
+				<info-to-show></info-to-show>
+				<question-options></question-options>
 			</div>
 			
 			<div ng-show="step.isType('yesNoDetail')">
 				<resource-detail></resource-detail>
 				<question-options></question-options>
-			</div>
+			</div>				
 			
 			<div ng-show="step.isType('loopDetail')">
 				<resource-detail></resource-detail>
