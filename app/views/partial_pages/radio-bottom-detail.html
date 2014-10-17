@@ -1,4 +1,3 @@
-
 <section>
 	<div class="list-group" ng-repeat="path in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')):step.example:step.isType('paths') track by $index">
 		<input type="radio" ng-model="step.solution.selectedOption" value="{{$index}}">

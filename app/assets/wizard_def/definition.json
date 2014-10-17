@@ -96,6 +96,7 @@
 			      "title": "",
 			      "type": "radioSelectedProperties",
 			      "message": "Do you want to show more attributes in the Event list? Which type?",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "text":"Direct attributes of an Event", "next": 9},
 			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 10},
@@ -108,11 +109,10 @@
 			      "title": "Following this example which attributes you want to show in the Event list",
 			      "type": "checkbox",
 			      "message": "Add Event properties",
+			      "example": "events",
+			      "datatypeProperties": ["label", "start", "end", "summary"],
 			      "options":  [  
-							   	{"key": 0, "text":"label", "next": 8},
-							   	{"key": 1, "text":"start", "next": 8},
-							   	{"key": 2, "text":"end", "next": 8},
-							   	{"key": 3, "text":"summary", "next": 8} 
+							   	{"key": 0, "next": 8}
 							  ],
 			      "message1": "Selected properties"
 			    },
@@ -151,24 +151,7 @@
 			      																			"Event1 - hasOpeningDocument:author - João",
 			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
 			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
-			      		 ], 
-			      "propertySets": [
-			      					[
-				      					[
-				        					{"key": 0, "text":"organizer"}
-				      			  		]
-			      			  		],
-			      			  		[
-				      					[
-				        					{"key": 0, "text":"hasOpeningDocument"},
-				        					{"key": 1, "text":"hasClosingDocument"}
-				      			  		],
-				      			  		[
-				        					{"key": 0, "text":"presenter"},
-				        					{"key": 1, "text":"author"}
-				      			  		]
-			      			  		]
-			      			  	],
+			      		 ],
 			      "options": [
 					        	{"key": 0, "next": 8}, {"key": 1, "next": 8}
 					      	 ]
@@ -384,13 +367,13 @@
 				      [
 				      		[{"type": "text", "msg": "Amit Madaan"}],
 				      		[{"type": "text", "msg": "Dhruv Mahajan"}],
-				      		[{"type": "text", "msg": "Subhajit Sanyal"}]
+				      		[{"type": "text", "msg": "S. Sundararajan"}]
 				      ]
 				      ,
 				      [
 				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Amit Madaan"}],
 				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Dhruv Mahajan"}],
-				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Subhajit Sanyal"}]
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "S. Sundararajan"}]
 				      ]
 				    ]
 			    },
@@ -460,7 +443,7 @@
 			      "type": "radio",
 			      "message": "Which type of attributes you want to show in the Person list?",
 			      "options": [
-			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},{"key": 1, "text":"Attributes of other classes related to Person", "next": 10},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},{"key": 1, "text":"Attributes of other classes related to Person", "next": 37},{"key": 2, "text":"Computed Attributes", "next": 13} 
 			      ]
 			    },
 			    {
@@ -468,6 +451,7 @@
 			      "title": "",
 			      "type": "radioSelectedProperties",
 			      "message": "Do you want to show more attributes in the Person list? Which type?",
+			      "example": "persons",
 			      "options": [
 			        {"key": 0, "text":"Direct attributes of a Person", "next": 9},
 			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 10},
@@ -479,19 +463,57 @@
 			  	  "id": 36,
 			      "title": "Following this example which attributes you want to show in the Person list",
 			      "type": "checkbox",
-			      "message": "Add Event properties",
+			      "message": "Add Person properties",
+			      "example": "persons",
+			      "datatypeProperties": ["rdfs:label", "foaf:name", "foaf:family_name", "foaf:firstName", "foaf:mbox_sha1sum"],
 			      "options":  [  
-							   	{"key": 0, "text":"rdfs:label", "next": 8},
-							   	{"key": 1, "text":"foaf:name", "next": 8},
-							   	{"key": 2, "text":"foaf:family_name", "next": 8},
-							   	{"key": 3, "text":"foaf:firstName", "next": 8},
-							   	{"key": 4, "text":"foaf:mbox_sha1sum", "next": 8}
+							   	{"key": 0, "next": 8}
 							  ],
 			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 37,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Person \t related collections",
+			      "options": [
+			        {"key": 0, "text":"swrc:University", "next": 38}, {"key": 1, "text":" swrc:Organization", "next": 38}, {"key": 2, "text":"swrc:Publication", "next": 38},
+			        {"key": 3, "text":" swrc:Report", "next": 38}, {"key": 4, "text":"swrc:Project", "next": 38}, {"key": 5, "text":"Person", "next": 38}
+			      ]
+			    },
+			    {
+			  	  "id": 38,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		   ],
+			      "options": [
+					        	{"key": 0, "next": 39}, {"key": 1, "next": 39}
+					      	 ]
+			    },
+			    {
+			  	  "id": 39,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		 ],
+			      "options": [
+					        	{"key": 0, "next": 35}, {"key": 1, "next": 35}
+					      	 ]
 			    }
 			],
 	"data": {
-		      "items": [
+		      "events": [
 				      		[
 								{"id": 0, "name": "label", "value":["Posters Display"]}, 
 						    	{"id": 1, "name": "start", "value":["2011-01-01 10:00"]}, 
@@ -511,6 +533,30 @@
 					      		 {"id": 5, "name": "Documents", "value":["Accelerating Instant Question...",
 					      		 									 "Adapting a Map Query Interface for..."]}
 				      	    ]
-		      		  ]
+		      		   ],
+      			"persons": [
+      							[
+      								{"id": 0, "name": "rdfs:label", "value":["Amit Madaan"]}, 
+      								{"id": 1, "name": "foaf:name", "value":["Amit Madaan"]},
+      								{"id": 2, "name": "foaf:family_name", "value":["Madaan"]},
+      								{"id": 3, "name": "foaf:firstName", "value":["Amit"]},
+      								{"id": 4, "name": "foaf:mbox_sha1sum", "value":["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]},
+      								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization"]}
+      							],
+      							[
+      								{"id": 0, "name": "rdfs:label", "value":["Dhruv Mahajan"]}, 
+      								{"id": 1, "name": "foaf:name", "value":["Dhruv Mahajan"]},
+      								{"id": 2, "name": "foaf:family_name", "value":["Mahajan"]},
+      								{"id": 3, "name": "foaf:firstName", "value":["Dhruv"]},
+      								{"id": 4, "name": "foaf:mbox_sha1sum", "value":["b9e3e3da483c8cd333e1e6198b5e1c84db5c99e4"]},
+      								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization"]}
+      							],
+      							[
+      								{"id": 0, "name": "rdfs:label", "value":["S. Sundararajan"]}, 
+      								{"id": 1, "name": "foaf:name", "value":["S. Sundararajan"]},
+      								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization", 
+      																		   "Web Information Extraction Using Markov Logic Networks"]}
+      							]
+      					   ]
 			}
 }

@@ -16,7 +16,7 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[35];
+  		me.currentWindow = me.wizard.windows[0];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -133,7 +133,6 @@
     	}else if(this.isType('yesNoDetail')){
     		this.solution.selectedProperties = [];
     		for (var i=0; i < this.currentWindow.datatypeProperties.length; i++) {
-			  this.currentWindow.datatypeProperties[i];
 			  for (var j=0; j < this.wizard.data.items[0].length; j++) {
 				if(this.wizard.data.items[0][j].name == this.currentWindow.datatypeProperties[i])
 					this.solution.selectedProperties.push(this.wizard.data.items[0][j].id);
@@ -229,6 +228,16 @@
 		return "";
 	};
 	
+	this.selectPropertyByName = function(name, arr, canExec) {
+		if(arr != null && canExec){
+			for ( i = 0; i < arr.length; i++) {
+				if (arr[i].name == name)
+					return arr[i];
+			}
+		}
+		return "";
+	};
+	
 	this.getRelatedCollectionName = function(previousWindowInfo, canExec) {
 		if (canExec) {
 			if(previousWindowInfo){
@@ -272,6 +281,10 @@
 	this.hasSelectedProperty = function() {
 		return this.isType('radioSelectedProperties') || this.isType('loop') || this.isType('selectedProperties') || 
 			   this.isType('checkbox') || this.isType('computedAttribute'); 
+	};
+	
+	this.hasDatatypePropertySelection = function() {
+		return this.isType('checkbox') || this.isType('checkboxForDetail'); 
 	};
     
   }]);
@@ -579,8 +592,6 @@
 			}
 			return input;
 		};
-		
-		
 
 	});
 })();

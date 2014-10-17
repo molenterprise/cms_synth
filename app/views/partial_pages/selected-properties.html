@@ -4,12 +4,12 @@
     <thead>
         <tr>
            <th ng-repeat="prop in step.solution.selectedProperties">
-           		<input type="text" value="{{step.selectProperty(prop, step.wizard.data.items[0], step.hasSelectedProperty()).name}}">
+           		<input type="text" value="{{step.selectProperty(prop, step.wizard.data[step.currentWindow.example][0], step.hasSelectedProperty()).name}}">
            </th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="item in step.wizard.data.items">
+        <tr ng-repeat="item in step.wizard.data[step.currentWindow.example]">
             <td ng-repeat="prop in step.solution.selectedProperties">
             	<div ng-repeat="value in step.selectProperty(prop, item, step.hasSelectedProperty()).value">{{value}}</div>
             </td>

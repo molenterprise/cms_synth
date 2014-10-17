@@ -1,8 +1,12 @@
 <div class="list-group" >
 	<div ng-repeat="prop in step.solution.selectedProperties" >
-		<b class="list-group-item-without-border halign col-md-2">{{step.selectProperty(prop,step.wizard.data.items[0], step.hasResourceDetail()).name}}:</b>
+		<b class="list-group-item-without-border halign col-md-2">
+			{{step.selectProperty(prop,step.wizard.data.items[0], step.hasResourceDetail()).name}}:
+		</b>
 		<div class="list-group-item-without-border halign">
-			<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0], step.hasResourceDetail()).value" >{{value}}</div>
+			<div ng-repeat="value in step.selectProperty(prop,step.wizard.data.items[0], step.hasResourceDetail()).value">
+				{{value}}
+			</div>
 		</div>
 	</div>
 	<br>
