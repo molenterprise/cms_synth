@@ -63,7 +63,7 @@
 			      "title": "",
 			      "type": "radioDetail",
 			      "message": "Events",
-			      "message1": "Do you want to choose",
+			      "messageOptions": "Do you want to choose",
 			      "options": [
 			        {"key": 0, "text":"one Event?", "next": 30},{"key": 1, "text":"more than one Event?", "next": 31} 
 			      ],
@@ -120,7 +120,7 @@
 			  	  "id": 10,
 			      "title": "Select what you want to show",
 			      "type": "select",
-			      "message": "Event \t related collections",
+			      "message": "Event's \t related collections",
 			      "options": [
 			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 11}, {"key": 2, "text":"Conference", "next": 11},
 			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 11}, {"key": 5, "text":"Document", "next": 11} 
@@ -171,8 +171,8 @@
 			  	  "id": 14,
 			      "title": "Select where one should click to choose an Event",
 			      "type": "attributeForChoosing",
-			      "needNextProcessing": true,
 			      "message": "Events",
+			      "example": "events",
 			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "options": [
@@ -183,8 +183,9 @@
 			  	  "id": 15,
 			      "title": "Event detail",
 			      "type": "yesNoDetail",
-			      "message1": "Do you want to show other attributes of an Event in the detail view?",
+			      "messageOptions": "Do you want to show other attributes of an Event in the detail view?",
 			      "datatypeProperties": ["label", "summary", "Documents"],
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 16},{"key": 1, "text":"No", "next": 23} 
 			      ]
@@ -203,11 +204,10 @@
 			      "title": "Following this example which attributes you want to show in the Event detail",
 			      "type": "checkboxForDetail",
 			      "message": "Add Event properties",
+			      "example": "events",
+			      "datatypeProperties": ["label", "start", "end", "summary"],
 			      "options":  [  
-							   	{"key": 0, "text":"label", "next": 18},
-							   	{"key": 1, "text":"start", "next": 18},
-							   	{"key": 2, "text":"end", "next": 18},
-							   	{"key": 3, "text":"summary", "next": 18} 
+							   	{"key": 0, "next": 18}
 							  ],
 			      "message1": "Selected properties"
 			    },
@@ -216,6 +216,7 @@
 			      "title": "",
 			      "type": "radioSelectedPropertiesForDetail",
 			      "message": "Do you want to show more attributes in the Event detail? Which type?",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},
 			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 19},
@@ -227,7 +228,7 @@
 			  	  "id": 19,
 			      "title": "Select what you want to show",
 			      "type": "select",
-			      "message": "Event \t related collections",
+			      "message": "Event's \t related collections",
 			      "options": [
 			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 20}, {"key": 2, "text":"Conference", "next": 20},
 			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 20}, {"key": 5, "text":"Document", "next": 20} 
@@ -287,6 +288,7 @@
 			      "needNextProcessing": true,
 			      "message": "New attribute",
 			      "message1": "Selected properties",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "next": 18} 
 			       ]
@@ -296,7 +298,8 @@
 			      "title": "",
 			      "type": "loopDetail",
 			      "message": "Event Detail",
-			      "message1": "Do you want to choose anything to navigate to other screen?",
+			      "messageOptions": "Do you want to choose anything to navigate to other screen?",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 25	},
 			        {"key": 1, "text":"No", "next": 26}
@@ -306,8 +309,10 @@
 			  	  "id": 24,
 			      "title": "",
 			      "type": "loop",
-			      "message": "Event List",
-			      "message1": "Do you want to choose anything to navigate to other screen?",
+			      "message": "",
+			      "message1": "Event List",
+			      "messageOptions" : "Do you want to choose anything to navigate to other screen?",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 14},
 			        {"key": 1, "text":"No", "next": 26}
@@ -321,6 +326,7 @@
 			      "message": "Event Detail",
 			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
 			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "next": 3} 
 			       ]
@@ -350,7 +356,7 @@
 			      "type": "radio",
 			      "message": "",
 			      "options": [
-			        {"key": 0, "text":"Show a list of Persons to be chosen", "next": 29},{"key": 1, "text":"Show the detail of a Person", "next": 15},{"key": 2, "text":"Define a computation using a Person", "next": 28} 
+			        {"key": 0, "text":"Show a list of Persons to be chosen", "next": 29},{"key": 1, "text":"Show the detail of a Person", "next": 42},{"key": 2, "text":"Define a computation using a Person", "next": 28} 
 			      ]
 			    },
 			    {
@@ -358,7 +364,7 @@
 			      "title": "",
 			      "type": "radioDetail",
 			      "message": "Persons",
-			      "message1": "Do you want to choose",
+			      "messageOptions": "Do you want to choose",
 			      "options": [
 			        {"key": 0, "text":"one Person?", "next": 32},{"key": 1, "text":"more than one Person?", "next": 33} 
 			      ],
@@ -382,7 +388,7 @@
 			      "title": "",
 			      "type": "infoWithOptions",
 			      "message": "Events",
-			      "message1": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "messageOptions": "Do you want to show other attributes of an Event than those shown in the example?",
 			      "options": [
 			      	{"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
 			      ],
@@ -397,7 +403,7 @@
 			      "title": "",
 			      "type": "infoWithOptions",
 			      "message": "Events",
-			      "message1": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "messageOptions": "Do you want to show other attributes of an Event than those shown in the example?",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
 			      ],
@@ -412,7 +418,7 @@
 			      "title": "",
 			      "type": "infoWithOptions",
 			      "message": "Persons",
-			      "message1": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "messageOptions": "Do you want to show other attributes of a Person than those shown in the example?",
 			      "options": [
 			      	{"key": 0, "text":"Yes", "next": 34},{"key": 1, "text":"No", "next": 23}
 			      ],
@@ -427,7 +433,7 @@
 			      "title": "",
 			      "type": "infoWithOptions",
 			      "message": "Persons",
-			      "message1": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "messageOptions": "Do you want to show other attributes of a Person than those shown in the example?",
 			      "options": [
 			        {"key": 0, "text":"Yes", "next": 34},{"key": 1, "text":"No", "next": 23}
 			      ],
@@ -456,7 +462,7 @@
 			        {"key": 0, "text":"Direct attributes of a Person", "next": 9},
 			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 37},
 			        {"key": 2, "text":"Computed Attributes", "next": 40},
-			        {"key": 3, "text":"No more", "next": 24}
+			        {"key": 3, "text":"No more", "next": 51}
 			      ]
 			    },
 			    {
@@ -475,7 +481,7 @@
 			  	  "id": 37,
 			      "title": "Select what you want to show",
 			      "type": "select",
-			      "message": "Person \t related collections",
+			      "message": "Person's \t related collections",
 			      "options": [
 			        {"key": 0, "text":"swrc:University", "next": 38}, {"key": 1, "text":" swrc:Organization", "next": 38}, {"key": 2, "text":"swrc:Publication", "next": 38},
 			        {"key": 3, "text":" swrc:Report", "next": 38}, {"key": 4, "text":"swrc:Project", "next": 38}, {"key": 5, "text":"Person", "next": 38}
@@ -520,6 +526,170 @@
 			      "example": "persons",
 			      "options": [
 			        {"key": 0, "next": 35} 
+			       ]
+			    },
+			    {
+			  	  "id": 41,
+			      "title": "Select where one should click to choose a Person",
+			      "type": "attributeForChoosing",
+			      "needNextProcessing": true,
+			      "message": "Persons",
+			      "example": "persons",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "options": [
+			        {"key": 0, "next": 3} 
+			       ]
+			    },
+			    {
+			  	  "id": 42,
+			      "title": "Person detail",
+			      "type": "yesNoDetail",
+			      "messageOptions": "Do you want to show other attributes of a Person in the detail view?",
+			      "datatypeProperties": ["rdfs:label", "foaf:name", "foaf:family_name", "foaf:firstName"],
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 43},{"key": 1, "text":"No", "next": 50} 
+			      ]
+			    },
+			    {
+			  	  "id": 43,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Person detail?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 44},{"key": 1, "text":"Attributes of other classes related to Person", "next": 46},{"key": 2, "text":"Computed Attributes", "next": 49} 
+			      ]
+			    },
+			    {
+			  	  "id": 44,
+			      "title": "Following this example which attributes you want to show in the Person detail",
+			      "type": "checkboxForDetail",
+			      "message": "Add Person properties",
+			      "example": "persons",
+			      "datatypeProperties": ["rdfs:label", "foaf:name", "foaf:family_name", "foaf:firstName", "foaf:mbox_sha1sum"],
+			      "options":  [  
+							   	{"key": 0, "next": 45}
+							  ],
+			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 45,
+			      "title": "",
+			      "type": "radioSelectedPropertiesForDetail",
+			      "message": "Do you want to show more attributes in the Person detail? Which type?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 44},
+			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 46},
+			        {"key": 2, "text":"Computed Attributes", "next": 49},
+			        {"key": 3, "text":"No more", "next": 50}
+			      ]
+			    },
+			    {
+			  	  "id": 46,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Person's \t related collections",
+			      "options": [
+			        {"key": 0, "text":"swrc:University", "next": 47}, {"key": 1, "text":" swrc:Organization", "next": 47}, {"key": 2, "text":"swrc:Publication", "next": 47},
+			        {"key": 3, "text":" swrc:Report", "next": 47}, {"key": 4, "text":"swrc:Project", "next": 47}, {"key": 5, "text":"Person", "next": 47}
+			      ]
+			    },
+			    {
+			  	  "id": 47,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		   ],
+			      "options": [
+					        	{"key": 0, "next": 48}, {"key": 1, "next": 48}
+					      	 ]
+			    },
+			    {
+			  	  "id": 48,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		 ], 
+			      "propertySets": [
+			      					[
+				      					[
+				        					{"key": 0, "text":"organizer"}
+				      			  		]
+			      			  		],
+			      			  		[
+				      					[
+				        					{"key": 0, "text":"hasOpeningDocument"},
+				        					{"key": 1, "text":"hasClosingDocument"}
+				      			  		],
+				      			  		[
+				        					{"key": 0, "text":"presenter"},
+				        					{"key": 1, "text":"author"}
+				      			  		]
+			      			  		]
+			      			  	],
+			      "options": [
+					        	{"key": 0, "next": 45}, {"key": 1, "next": 45}
+					      	 ]
+			    },
+			    {
+			  	  "id": 49,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "needNextProcessing": true,
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "next": 45} 
+			       ]
+			    },
+			    {
+			  	  "id": 50,
+			      "title": "",
+			      "type": "loopDetail",
+			      "message": "Person Detail",
+			      "messageOptions": "Do you want to choose anything to navigate to other screen?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 52	},
+			        {"key": 1, "text":"No", "next": 26}
+			      ]
+			    },
+			    {
+			  	  "id": 51,
+			      "title": "",
+			      "type": "loop",
+			      "message": "Person List",
+			      "messageOptions": "Do you want to choose anything to navigate to other screen?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 14},
+			        {"key": 1, "text":"No", "next": 26}
+			      ]
+			    },
+			    {
+			  	  "id": 52,
+			      "title": "Select where one should click to choose a Person",
+			      "type": "attributeForChoosingForDetail",
+			      "needNextProcessing": true,
+			      "message": "Person Detail",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "next": 3} 
 			       ]
 			    }
 			],

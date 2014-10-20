@@ -16,7 +16,7 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[33];
+  		me.currentWindow = me.wizard.windows[48];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -127,15 +127,15 @@
     this.beforeExecControl = function(){
     	if(this.isType('attributeForChoosing') || this.isType('attributeForChoosingForDetail')){
     		this.initSelectedOption(this.solution.selectedProperties[0], true); 
-    		this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data.items[0], true).name, true);
+    		this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data[this.currentWindow.example][0], true).name, true);
     	}else if(this.isType('computedAttribute')){
     		this.computedAttr_name = "";
     	}else if(this.isType('yesNoDetail')){
     		this.solution.selectedProperties = [];
     		for (var i=0; i < this.currentWindow.datatypeProperties.length; i++) {
-			  for (var j=0; j < this.wizard.data.items[0].length; j++) {
-				if(this.wizard.data.items[0][j].name == this.currentWindow.datatypeProperties[i])
-					this.solution.selectedProperties.push(this.wizard.data.items[0][j].id);
+			  for (var j=0; j < this.wizard.data[this.currentWindow.example][0].length; j++) {
+				if(this.wizard.data[this.currentWindow.example][0][j].name == this.currentWindow.datatypeProperties[i])
+					this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0][j].id);
 			  };
 			};
     	}
