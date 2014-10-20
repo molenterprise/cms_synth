@@ -16,7 +16,7 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[0];
+  		me.currentWindow = me.wizard.windows[33];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -146,14 +146,14 @@
     	if(this.isType('computedAttribute')){
     		if(this.computedAttr_name != "")
     			var temp = this.computedAttr_name;
-				this.wizard.data.items.forEach(function(entry) {
+				this.wizard.data[this.currentWindow.example].forEach(function(entry) {
 					entry.push({
 						"id": entry.length,
 						"name": temp,
 						"value": ["Computed " + temp + " attribute"]
 						});
 					});
-				  this.solution.selectedProperties.push(this.wizard.data.items[0].length-1); 
+				  this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0].length-1); 
     	}
     	else if(this.isType('loopDetail') || this.isType('loop')){  	
     		if(this.currentWindow.options[this.solution.selectedOption].text == "Yes"){	

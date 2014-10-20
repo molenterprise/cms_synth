@@ -160,9 +160,9 @@
 			  	  "id": 13,
 			      "title": "Computed attribute",
 			      "type": "computedAttribute",
-			      "needNextProcessing": true,
 			      "message": "New attribute",
 			      "message1": "Selected properties",
+			      "example": "events",
 			      "options": [
 			        {"key": 0, "next": 8} 
 			       ]
@@ -443,7 +443,7 @@
 			      "type": "radio",
 			      "message": "Which type of attributes you want to show in the Person list?",
 			      "options": [
-			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},{"key": 1, "text":"Attributes of other classes related to Person", "next": 37},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},{"key": 1, "text":"Attributes of other classes related to Person", "next": 37},{"key": 2, "text":"Computed Attributes", "next": 40} 
 			      ]
 			    },
 			    {
@@ -454,8 +454,8 @@
 			      "example": "persons",
 			      "options": [
 			        {"key": 0, "text":"Direct attributes of a Person", "next": 9},
-			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 10},
-			        {"key": 2, "text":"Computed Attributes", "next": 13},
+			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 37},
+			        {"key": 2, "text":"Computed Attributes", "next": 40},
 			        {"key": 3, "text":"No more", "next": 24}
 			      ]
 			    },
@@ -510,6 +510,17 @@
 			      "options": [
 					        	{"key": 0, "next": 35}, {"key": 1, "next": 35}
 					      	 ]
+			    },
+			    {
+			  	  "id": 40,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "next": 35} 
+			       ]
 			    }
 			],
 	"data": {
@@ -554,6 +565,9 @@
       							[
       								{"id": 0, "name": "rdfs:label", "value":["S. Sundararajan"]}, 
       								{"id": 1, "name": "foaf:name", "value":["S. Sundararajan"]},
+      								{"id":2},
+      								{"id":3},
+      								{"id":4},
       								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization", 
       																		   "Web Information Extraction Using Markov Logic Networks"]}
       							]
