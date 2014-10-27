@@ -16,7 +16,7 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[0];
+  		me.currentWindow = me.wizard.windows[5];
     
 	    me.solution = { 
 	    					selectedOption: 0,
