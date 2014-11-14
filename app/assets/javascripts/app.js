@@ -16,7 +16,7 @@
   	$http.get('/def/definition').success(function(data){
   		me.wizard = data;
   		
-  		me.currentWindow = me.wizard.windows[5];
+  		me.currentWindow = me.wizard.windows[0];
     
 	    me.solution = { 
 	    					selectedOption: 0,
@@ -574,23 +574,23 @@
 		};
 
 		return function(input, classFrom, classTo, rdf, isPath, selectedPath) {
-			input = [];
+			output = [];
 			if(!isPath)
-				input.push("This is not a call of a path control");
+				output.push("This is not a call of a path control");
 			if (!rdf)
-				input.push("rdf is undifined");
+				output.push("rdf is undifined");
 			if (!classFrom)
-				input.push("classFrom is undifined");
+				output.push("classFrom is undifined");
 			if (!classTo)
-				input.push("classTo is undifined");
+				output.push("classTo is undifined");
 			if (input.length == 0) {
 				track(classFrom, classTo, [], input, 10, rdf);
 			}
 			if(selectedPath || selectedPath == 0)
 			{
-				return input[selectedPath];
+				return output[selectedPath];
 			}
-			return input;
+			return output;
 		};
 
 	});
