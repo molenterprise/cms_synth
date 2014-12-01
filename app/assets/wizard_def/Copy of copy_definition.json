@@ -1,0 +1,801 @@
+{
+	"windows": [
+		{
+			"klass": "Categoria",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				]
+			]
+		}, {
+			"klass": "Leilao",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				],[
+					{
+						"temp": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#MP4_Watch_Play_NewLink_PM101"
+							}
+						],
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temProduto"
+						},
+						"name": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temProduto",
+						"label": [],
+						"type": [
+							{
+								"datasets": [],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2002/07/owl#ObjectProperty"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#MP4_Watch_Play_NewLink_PM101"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+								},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						]
+					}
+				],[
+					{
+						"temp": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#vendedor1"
+							}
+						],
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temVendedor"
+						},
+						"name": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temVendedor",
+						"label": [],
+						"type": [
+							{
+								"datasets": [],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2002/07/owl#ObjectProperty"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#vendedor1"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Vendedor"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+								},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Vendedor"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						]
+					}
+				]
+			]
+		}, {
+			"klass": "Produto",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				],[
+					{
+						"temp": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#audio"
+							}
+						],
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#categoria"
+						},
+						"name": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#categoria",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#ObjectProperty"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#audio"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+								},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						]
+					}
+				]
+			]
+		}, {
+			"klass": "Usuario",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Concorrente"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				]
+			]
+		}, {
+			"klass": "Concorrente",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Concorrente"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				]
+			]
+		}, {
+			"klass": "Lance",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Lance"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				],[
+					{
+						"temp": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#concorrente1"
+							}
+						],
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temConcorrente"
+						},
+						"name": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temConcorrente",
+						"label": [],
+						"type": [
+							{
+								"datasets": [],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2002/07/owl#ObjectProperty"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#concorrente1"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Concorrente"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+								},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Concorrente"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						]
+					}
+				],[
+					{
+						"temp": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#leilao1"
+							}
+						],
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temLeilao"
+						},
+						"name": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#temLeilao",
+						"label": [],
+						"type": [
+							{
+								"datasets": [],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [],
+								"uri": "http://www.w3.org/2002/07/owl#ObjectProperty"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#leilao1"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": [null],
+									"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+								},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						]
+					}
+				]
+			]
+		}, {
+			"klass": "Vendedor",
+			"value": [[
+					{
+						"temp": {
+							"inheritable_attributes": {}
+						},
+						"resorce_new": {
+							"datasets": null,
+							"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+						},
+						"name": "rdf:type",
+						"label": [],
+						"type": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						],
+						"prop": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Vendedor"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+							}
+						],
+						"mauricioClasses": [
+							{
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+								},
+								"inheritable_attributes": {}
+							}, {
+								"class_uri": {
+									"datasets": null,
+									"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+								},
+								"accessors": {},
+								"inheritable_attributes": {}
+							}
+						],
+						"mauricioTypes": [
+							{
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Class"
+							}, {
+								"datasets": [null],
+								"uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+							}
+						]
+					}
+				]
+			]
+		}
+	]
+}

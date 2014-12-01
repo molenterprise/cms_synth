@@ -131,30 +131,14 @@
 			      "title": "Select the path",
 			      "type": "paths",
 			      "message": "Suggested paths",
-			      "paths": [
-			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
-			      																			"Event1 - hasOpeningDocument:author - João",
-			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
-			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
-			      		   ],
-			      "options": [
-					        	{"key": 0, "next": 12}, {"key": 1, "next": 12}
-					      	 ]
+			      "next": 12
 			    },
 			    {
 			  	  "id": 12,
 			      "title": "Select the relationships",
 			      "type": "path",
 			      "message": "Suggested path",
-			      "paths": [
-			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
-			      																			"Event1 - hasOpeningDocument:author - João",
-			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
-			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
-			      		 ],
-			      "options": [
-					        	{"key": 0, "next": 8}, {"key": 1, "next": 8}
-					      	 ]
+			      "next": 8
 			    },
 			    {
 			  	  "id": 13,
@@ -239,6 +223,7 @@
 			      "title": "Select the path",
 			      "type": "paths",
 			      "message": "Suggested paths",
+			      "next": 21,
 			      "paths": [
 			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
 			      																			"Event1 - hasOpeningDocument:author - João",
@@ -254,29 +239,13 @@
 			      "title": "Select the relationships",
 			      "type": "path",
 			      "message": "Suggested path",
+			      "next": 18,
 			      "paths": [
 			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
 			      																			"Event1 - hasOpeningDocument:author - João",
 			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
 			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
 			      		 ], 
-			      "propertySets": [
-			      					[
-				      					[
-				        					{"key": 0, "text":"organizer"}
-				      			  		]
-			      			  		],
-			      			  		[
-				      					[
-				        					{"key": 0, "text":"hasOpeningDocument"},
-				        					{"key": 1, "text":"hasClosingDocument"}
-				      			  		],
-				      			  		[
-				        					{"key": 0, "text":"presenter"},
-				        					{"key": 1, "text":"author"}
-				      			  		]
-			      			  		]
-			      			  	],
 			      "options": [
 					        	{"key": 0, "next": 18}, {"key": 1, "next": 18}
 					      	 ]

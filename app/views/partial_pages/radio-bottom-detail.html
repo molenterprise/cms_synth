@@ -1,22 +1,64 @@
-<section>
-	<div class="list-group" ng-repeat="path in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')):step.example:step.isType('paths') track by $index">
+<!-- <section>
+<div class="list-group" ng-repeat="path in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')):step.example:step.isType('paths') track by $index">
+<input type="radio" ng-model="step.solution.selectedOption" value="{{$index}}">
+<div class="halign">
+{{step.solution.mainClass}} >&nbsp;
+</div>
+<div class="halign" ng-repeat="pathItem in path | limitTo:path.length-1 track by $index">
+{{path[$index].className}} >&nbsp;
+</div>
+<div class="halign">
+{{path[path.length-1].className}}
+</div>
+</input>
+</div>
+</section>  -->
+
+	<div class="list-group" ng-repeat="path in step.currentWindow.paths track by $index">
 		<input type="radio" ng-model="step.solution.selectedOption" value="{{$index}}">
-			<div class="halign">
-				Event >&nbsp;
-			</div>
-			<div class="halign" ng-repeat="pathItem in path | limitTo:path.length-1 track by $index">
-				{{path[$index].className}} >&nbsp;
-			</div>
-			<div class="halign">
-				{{path[path.length-1].className}}
-			</div>
+		<div class="halign">
+			{{step.solution.mainClass}} >&nbsp;
+		</div>
+		<div class="halign" ng-repeat="pathItem in path.pathItems | limitTo:path.pathItems.length-1 track by $index">
+			{{pathItem.className}} >&nbsp;
+		</div>
+		<div class="halign">
+			{{path.pathItems[path.pathItems.length-1].className}}
+		</div>
 		</input>
 	</div>
-</section>
+<!--
+	<div class="well">
+		<div ng-repeat="example in step.get_path_examples(step.solution.mainClass,
+			step.track(step.solution.mainClass,
+				step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')),
+				step.example, step.isType('paths'), step.solution.selectedOption), step.isType('paths'))" >
+			{{example}}
+		</div>
+</div> -->
 
-<div class="well">
-	<div ng-repeat="example in step.currentWindow.paths[step.solution.selectedOption].examples" >
-		{{example}}
+<!-- <div class="well">
+<div ng-repeat="pathItem in step.track(step.solution.mainClass,
+step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')),
+step.example,
+step.isType('paths'),
+step.solution.selectedOption) track by $index">
+<div class="halign" >
+{{pathItem.className}} >&nbsp;
+</div> -->
+<!--	{{path = trackFunction([], step.solution.mainClass,
+step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')),
+step.example,
+step.isType('paths'),
+step.solution.selectedOption)}}
+<div ng-repeat="example in get_path_examples(step.solution.mainClass, path)">
+{{example}}
+</div> -->
+<!-- </div>
+</div> -->
+
+	<div class="well">
+		<div ng-repeat="example in step.currentWindow.paths[step.solution.selectedOption].examples" >
+			{{example}}
+		</div>
 	</div>
-</div>
-
