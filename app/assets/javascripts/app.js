@@ -14,8 +14,30 @@
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
 
-		$http.get('/def/definition').success(function(data) {
-			me.wizard = data;
+		// $http.get('/def/definition').success(function(data) {
+			// me.wizard = data;
+// 
+			// me.currentWindow = me.wizard.windows[4];
+// 
+			// me.solution = {
+				// selectedOption : 0,
+				// selectedProperties : [5, 0, 1],
+				// selectedOptions : [],
+				// mainClass : ""
+			// };
+// 
+			// me.userSequence = [];
+			// /* length = me.currentWindow.propertySets ? me.currentWindow.propertySets[me.solution.selectedOption].length : 0;
+			 // me.solution.selectedOptions = [length]; */
+// 
+			// for ( i = 0; i < 100; i++) {
+				// me.solution.selectedOptions[i] = 0;
+			// }
+		// });
+
+		
+		 $http.get('def/definition').success(function(data) {
+		 	me.wizard = data;
 
 			me.currentWindow = me.wizard.windows[4];
 
@@ -33,13 +55,8 @@
 			for ( i = 0; i < 100; i++) {
 				me.solution.selectedOptions[i] = 0;
 			}
-		});
-
-		/*
-		 $http.get('/def/examples').success(function(data) {
-		 me.example = data;
 		 });
-		 */
+		 
 
 		me.example = {
 			"definition" : [{
@@ -434,10 +451,10 @@
 			if (!isCallFromValidControl)
 				result.push("This is not a call of a path control");
 			else{
-				initialInstances = this.get_instances_of_class(initialClass, this.example.triples);
+				initialInstances = this.get_instances_of_class(initialClass);
 	
 				for (var i = 0; i < initialInstances.length; i++) {
-					var rest_examples = this.get_rest_of_path_examples(initialInstances[i], path, 0, this.example.triples);
+					var rest_examples = this.get_rest_of_path_examples(initialInstances[i], path, 0);
 					for (var j = 0; j < rest_examples.length; j++) {
 						result.push(initialInstances[i] + " - " + rest_examples[j]);
 					};
@@ -448,15 +465,15 @@
 
 		}
 
-		this.get_rest_of_path_examples = function(subject, path, pos, triples) {
+		this.get_rest_of_path_examples = function(subject, path, pos) {
 
 			var result = [];
 
 			for (var i = 0; i < path[pos].propertiesNames.length; i++) {
 				var prop = path[pos].propertiesNames[i];
-				var objects = this.get_objects_from(subject, prop, triples);
+				var objects = this.get_objects_from(subject, prop);
 				if (pos == path.length - 1) {
-					var insts = this.get_instances_of_class(path[path.length - 1].className, triples);
+					var insts = this.get_instances_of_class(path[path.length - 1].className);
 
 					for (var j = 0; j < objects.length; j++) {
 						var obj = objects[j];
@@ -466,7 +483,7 @@
 				} else {
 					for (var i = 0; i < objects.length; i++) {
 						var obj = objects[i];
-						rest_examples = this.get_rest_of_path_examples(obj, path, pos + 1, triples);
+						rest_examples = this.get_rest_of_path_examples(obj, path, pos + 1);
 						for (var j = 0; j < rest_examples.length; j++) {
 							var temp = prop + ":" + rest_examples[j];
 							if (temp.split(':').length == path.length - pos)
@@ -479,8 +496,9 @@
 			return result;
 		}
 
-		this.get_instances_of_class = function(className, triples) {
+		this.get_instances_of_class = function(className) {
 			var result = [];
+			triples = me.example.triples;
 			for (var i = 0; i < triples.length; i++) {
 				if (triples[i].predicate == "type" && triples[i].object == className)
 					result.push(triples[i].subject);
@@ -488,8 +506,9 @@
 			return result;
 		}
 
-		this.get_objects_from = function(subject, prop, triples) {
+		this.get_objects_from = function(subject, prop) {
 			var result = [];
+			triples = me.example.triples;
 			for (var i = 0; i < triples.length; i++) {
 				if (triples[i].subject == subject && triples[i].predicate == prop)
 					result.push(triples[i].object);
@@ -722,94 +741,4 @@
 		};
 
 	}]);
-
-	// app.filter('track', function() {
-// 
-		// function properties(classFrom, rdf) {
-			// result = [];
-			// for (var i = 0; i < rdf.definition.length; i++) {
-				// property = rdf.definition[i];
-				// for (var j = 0; j < property.domain.length; j++) {
-					// if (property.domain[j] == classFrom)
-						// result.push(property);
-				// };
-			// };
-			// return result;
-		// };
-// 
-		// function track(classFrom, classTo, current, input, max, rdf) {
-			// if (max <= 0)
-				// return;
-			// var props = properties(classFrom, rdf);
-			// for (var i = 0; i < props.length; i++) {
-				// var prop = props[i];
-				// for (var j = 0; j < prop.range.length; j++) {
-					// _class = prop.range[j];
-					// current.push({
-						// "propertyName" : prop.propertyName,
-						// "className" : _class
-					// });
-					// if (_class == classTo) {
-						// //input.push(current.slice(0));
-						// groupby(input, current);
-					// }
-					// track(_class, classTo, current, input, max - 1, rdf);
-					// current.pop();
-				// }
-			// }
-		// };
-// 
-		// function isTheSamePath(input, current) {
-			// if (input.length != current.length)
-				// return false;
-			// for (var i = 0; i < input.length; i++) {
-				// if (input[i].className != current[i].className)
-					// return false;
-			// }
-			// return true;
-		// }
-// 
-		// function groupby(input, current) {
-			// for (var i = 0; i < input.length; i++) {
-				// if (isTheSamePath(input[i], current)) {
-					// for (var j = 0; j < input[i].length; j++) {
-						// if (input[i][j].propertiesNames.indexOf(current[j].propertyName) == -1)
-							// input[i][j].propertiesNames.push(current[j].propertyName);
-// 
-					// }
-					// return;
-				// }
-			// }
-			// input.push([]);
-			// for (var i = 0; i < current.length; i++) {
-				// input[input.length - 1].push({
-					// "propertiesNames" : [current[i].propertyName],
-					// "className" : current[i].className
-				// });
-			// }
-		// };
-// 
-		// return function(input, classFrom, classTo, rdf, isPath, selectedPath) {
-			// output = [];
-			// if (!isPath)
-				// output.push("This is not a call of a path control");
-			// if (!rdf)
-				// output.push("rdf is undefined");
-			// if (!classFrom)
-				// output.push("classFrom is undefined");
-			// if (!classTo)
-				// output.push("classTo is undefined");
-			// if (input.length == 0) {
-				// track(classFrom, classTo, [], output, 10, rdf);
-			// }
-			// if (selectedPath || selectedPath == 0) {
-				// return output[selectedPath];
-			// }
-			// return output;
-		// };
-// 
-		// //--------------------------------------------------------------
-// 
-	// });
-
 })();
