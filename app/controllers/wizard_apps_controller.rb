@@ -1,3 +1,5 @@
+require 'net/http'
+
 class WizardAppsController < ApplicationController
   before_action :set_wizard_app, only: [:show, :edit, :update, :destroy]
   
@@ -9,9 +11,16 @@ class WizardAppsController < ApplicationController
     @wizard_apps = WizardApp.all
   end
     
-  def wizarddefinition
+  def wizard_definition
     file = File.join(Rails.root, 'app', 'assets', 'wizard_def', "#{params[:id]}.json")
-    render :json => jfile = File.read(file)
+    jfile = File.read(file)
+    render :json => jfile
+  end
+  
+  def generate_wizard
+    uri = URI("http://localhost:3001/ontologies/wizard/#{params[:url]}")
+    req = Net::HTTP.get(uri)
+    render :json => req
   end
 
   # GET /wizard_apps/1

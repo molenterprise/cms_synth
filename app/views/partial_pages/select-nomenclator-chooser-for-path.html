@@ -1,5 +1,5 @@
 <div class="list-group">
-	<label class="control-label list-group-item-without-border halign">{{step.solution.mainClass}}</label>
+	<label class="control-label list-group-item-without-border halign">{{step.currentWindow.mainclass}}</label>
 	<div class="list-group-item-without-border halign" 
 	        ng-repeat="propertiesClass in step.currentWindow.paths[step.userSequence[step.userSequence.length-1].selectedOption].pathItems track by $index">
 		{{propertiesSetIndex = $index; ""}}
