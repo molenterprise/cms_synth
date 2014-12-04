@@ -20,7 +20,15 @@ class WizardAppsController < ApplicationController
   def generate_wizard
     uri = URI("http://localhost:3001/ontologies/wizard/#{params[:url]}")
     req = Net::HTTP.get(uri)
+    
     render :json => req
+  end
+  
+  def generate_app
+    uri = URI("http://localhost:3001/applications/create_app")
+    req = Net::HTTP.post_form(uri, 'application[name]' => 'test10')
+    
+    render :json => {:message => req.message, :code => req.code, :all => req, :body => req.body} 
   end
 
   # GET /wizard_apps/1

@@ -196,26 +196,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Audio",
-								"rdfs:label": "No value"
-							}
+							"msg": "Audio"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Informatica",
-								"rdfs:label": "No value"
-							}
+							"msg": "Informatica"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Cine e Foto",
-								"rdfs:label": "No value"
-							}
+							"msg": "Cine e Foto"
 						}
 					]
 				],[[
@@ -224,10 +215,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Audio",
-								"rdfs:label": "No value"
-							}
+							"msg": "Audio"
 						}
 					],[
 						{
@@ -235,10 +223,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Informatica",
-								"rdfs:label": "No value"
-							}
+							"msg": "Informatica"
 						}
 					],[
 						{
@@ -246,10 +231,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Cine e Foto",
-								"rdfs:label": "No value"
-							}
+							"msg": "Cine e Foto"
 						}
 					]
 				]
@@ -292,26 +274,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "leilao 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "leilao 1"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "leilao 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "leilao 2"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "leilao 10",
-								"rdfs:label": "No value"
-							}
+							"msg": "leilao 10"
 						}
 					]
 				],[[
@@ -320,10 +293,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "leilao 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "leilao 1"
 						}
 					],[
 						{
@@ -331,10 +301,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "leilao 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "leilao 2"
 						}
 					],[
 						{
@@ -342,10 +309,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "leilao 10",
-								"rdfs:label": "No value"
-							}
+							"msg": "leilao 10"
 						}
 					]
 				]
@@ -388,26 +352,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Home Theater LG HT806ST",
-								"rdfs:label": "No value"
-							}
+							"msg": "Home Theater LG HT806ST"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "MP4 Player Philips SA3VBE04KX/78",
-								"rdfs:label": "No value"
-							}
+							"msg": "MP4 Player Philips SA3VBE04KX/78"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "MP4 Watch Play NewLink PM101",
-								"rdfs:label": "No value"
-							}
+							"msg": "MP4 Watch Play NewLink PM101"
 						}
 					]
 				],[[
@@ -416,10 +371,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Home Theater LG HT806ST",
-								"rdfs:label": "No value"
-							}
+							"msg": "Home Theater LG HT806ST"
 						}
 					],[
 						{
@@ -427,10 +379,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "MP4 Player Philips SA3VBE04KX/78",
-								"rdfs:label": "No value"
-							}
+							"msg": "MP4 Player Philips SA3VBE04KX/78"
 						}
 					],[
 						{
@@ -438,10 +387,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "MP4 Watch Play NewLink PM101",
-								"rdfs:label": "No value"
-							}
+							"msg": "MP4 Watch Play NewLink PM101"
 						}
 					]
 				]
@@ -484,26 +430,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 1"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 2"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 1"
 						}
 					]
 				],[[
@@ -512,10 +449,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 1"
 						}
 					],[
 						{
@@ -523,10 +457,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 2"
 						}
 					],[
 						{
@@ -534,10 +465,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 1"
 						}
 					]
 				]
@@ -580,25 +508,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 1"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 2"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No more example"
-							}
+							"msg": "No more example"
 						}
 					]
 				],[[
@@ -607,10 +527,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 1"
 						}
 					],[
 						{
@@ -618,10 +535,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Concorrente 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "Concorrente 2"
 						}
 					],[
 						{
@@ -629,9 +543,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No more example"
-							}
+							"msg": "No more example"
 						}
 					]
 				]
@@ -674,23 +586,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No value"
-							}
+							"msg": "No value"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No value"
-							}
+							"msg": "No value"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No value"
-							}
+							"msg": "No value"
 						}
 					]
 				],[[
@@ -699,9 +605,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No value"
-							}
+							"msg": "No value"
 						}
 					],[
 						{
@@ -709,9 +613,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No value"
-							}
+							"msg": "No value"
 						}
 					],[
 						{
@@ -719,9 +621,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "No value"
-							}
+							"msg": "No value"
 						}
 					]
 				]
@@ -764,26 +664,17 @@
 			"details": [[[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 1"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 2"
 						}
 					],[
 						{
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 3",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 3"
 						}
 					]
 				],[[
@@ -792,10 +683,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 1",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 1"
 						}
 					],[
 						{
@@ -803,10 +691,7 @@
 							"msg": "/assets/checkbox.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 2",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 2"
 						}
 					],[
 						{
@@ -814,10 +699,7 @@
 							"msg": "/assets/checkbox-checked.png"
 						}, {
 							"type": "text",
-							"msg": {
-								"rdfs:label": "Vendedor 3",
-								"rdfs:label": "No value"
-							}
+							"msg": "Vendedor 3"
 						}
 					]
 				]

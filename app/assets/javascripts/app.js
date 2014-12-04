@@ -14,7 +14,7 @@
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
 
-		$http.get('/def/definition_auction').success(function(data) {
+		$http.get('/def/definition').success(function(data) {
 		//$http.get('generate/http%3A%2F%2Fwww.semanticweb.org%2Fmilena%2Fontologies%2F2013%2F6%2Fauction').success(function(data) {
 			me.wizard = data;
 

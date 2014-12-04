@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :wizard_apps, except: [:destroy]
   match '/def/:id',    to: 'wizard_apps#wizard_definition',  via: 'get'
   match '/generate/:url',    to: 'wizard_apps#generate_wizard',  via: 'get', constraints: { :url => /.*/}
-
+  match '/generate_app',    to: 'wizard_apps#generate_app',  via: 'get'
+  
   resources :ontologies, except: [:destroy, :show]
   
   match '/start/:id',  to: 'wizard_step#start', via: 'get', as: 'wizard_steps'
