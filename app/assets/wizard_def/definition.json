@@ -683,7 +683,7 @@
 						      		 								"A Tool for Fast Indexing and Querying of Graphs",
 						      		 								"A User-Tunable Approach to Marketplace Search"]}
 				      	    ],
-				      	    [
+				      	    [	
 				      	    	 {"id": 0, "name": "label", "value":["Demo: Adapting a Map Query..."]}, 
 					      		 {"id": 1, "name": "start", "value":["03/30/2011  0:00"]}, 
 					      		 {"id": 2, "name": "end", "value":["03/30/2011  2:00"]},
