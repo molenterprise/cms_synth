@@ -35,36 +35,70 @@
 			"subject": "Event1",
 			"predicate": "hasOpeningDoc",
 			"object": "DocA"
-		},
-		{
+		}, {
 			"subject": "Event2",
 			"predicate": "hasClosingDoc",
 			"object": "DocC"
-		},
-		{
+		}, {
 			"subject": "DocA",
 			"predicate": "presenter",
 			"object": "Albert"
-		},
-		{
+		}, {
 			"subject": "DocA",
 			"predicate": "author",
 			"object": "John Doe"
-		},
-		{
+		}, {
 			"subject": "DocC",
 			"predicate": "advisor",
 			"object": "Schawbe"
-		},
-		{
+		}, {
 			"subject": "DocA",
 			"predicate": "madeIn",
 			"object": "China"
-		},
-		{
+		}, {
 			"subject": "Event1",
 			"predicate": "organizer",
 			"object": "Tim Berners Lee"
+		}
+		, {
+			"subject": "Event1",
+			"predicate": "type",
+			"object": "Event"
+		}, {
+			"subject": "Event2",
+			"predicate": "type",
+			"object": "Event"
+		}, {
+			"subject": "DocA",
+			"predicate": "type",
+			"object": "Document"
+		}, {
+			"subject": "DocB",
+			"predicate": "type",
+			"object": "Document"
+		}, {
+			"subject": "DocC",
+			"predicate": "type",
+			"object": "Document"
+		}
+		, {
+			"subject": "Albert",
+			"predicate": "type",
+			"object": "Person"
+		}
+		, {
+			"subject": "Tim Berners Lee",
+			"predicate": "type",
+			"object": "Person"
+		}
+		, {
+			"subject": "Schawbe",
+			"predicate": "type",
+			"object": "Person"
+		}, {
+			"subject": "China",
+			"predicate": "type",
+			"object": "Country"
 		}
 	]
 }

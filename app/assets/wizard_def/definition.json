@@ -121,6 +121,7 @@
 			      "title": "Select what you want to show",
 			      "type": "select",
 			      "message": "Event's \t related collections",
+			      "mainclass": "Event",
 			      "options": [
 			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 11}, {"key": 2, "text":"Conference", "next": 11},
 			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 11}, {"key": 5, "text":"Document", "next": 11} 
@@ -213,6 +214,7 @@
 			      "title": "Select what you want to show",
 			      "type": "select",
 			      "message": "Event's \t related collections",
+			      "mainclass": "Event",
 			      "options": [
 			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 20}, {"key": 2, "text":"Conference", "next": 20},
 			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 20}, {"key": 5, "text":"Document", "next": 20} 
@@ -451,6 +453,7 @@
 			      "title": "Select what you want to show",
 			      "type": "select",
 			      "message": "Person's \t related collections",
+			      "mainclass": "Person",
 			      "options": [
 			        {"key": 0, "text":"swrc:University", "next": 38}, {"key": 1, "text":" swrc:Organization", "next": 38}, {"key": 2, "text":"swrc:Publication", "next": 38},
 			        {"key": 3, "text":" swrc:Report", "next": 38}, {"key": 4, "text":"swrc:Project", "next": 38}, {"key": 5, "text":"Person", "next": 38}
@@ -560,6 +563,7 @@
 			      "title": "Select what you want to show",
 			      "type": "select",
 			      "message": "Person's \t related collections",
+			      "mainclass": "Person",
 			      "options": [
 			        {"key": 0, "text":"swrc:University", "next": 47}, {"key": 1, "text":" swrc:Organization", "next": 47}, {"key": 2, "text":"swrc:Publication", "next": 47},
 			        {"key": 3, "text":" swrc:Report", "next": 47}, {"key": 4, "text":"swrc:Project", "next": 47}, {"key": 5, "text":"Person", "next": 47}
