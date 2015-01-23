@@ -736,7 +736,37 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.0.0.1"
+					"next": "0.0.0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Categorias"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "index_id"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -755,6 +785,26 @@
 						"msg": "No value"
 					}
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Categoria.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.0.0.1",
@@ -851,7 +901,37 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.1.0.0.1"
+					"next": "0.0.0.0.1.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Leilaos"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "index_id"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -870,6 +950,26 @@
 						"msg": "No value"
 					}
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Leilao.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.1.0.1",
@@ -966,7 +1066,29 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.2.0.0.1"
+					"next": "0.0.0.0.2.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Produtos"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -985,6 +1107,26 @@
 						"msg": "No value"
 					}
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Produto.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1",
@@ -1081,7 +1223,37 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.3.0.0.1"
+					"next": "0.0.0.0.3.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Usuarios"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "index_id"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -1100,6 +1272,26 @@
 						"msg": "No value"
 					}
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Usuario.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.3.0.1",
@@ -1196,7 +1388,37 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.4.0.0.1"
+					"next": "0.0.0.0.4.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Concorrentes"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "index_id"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -1215,6 +1437,26 @@
 						"msg": "No more example"
 					}
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Concorrente.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.4.0.1",
@@ -1311,7 +1553,57 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.5.0.0.1"
+					"next": "0.0.0.0.5.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Lances"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "index_id"
+								}
+							]
+						}
+					]
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Lance.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
 				}
 			],
 			"details": [[
@@ -1426,7 +1718,37 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.6.0.0.1"
+					"next": "0.0.0.0.6.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_index_landmark_wizard",
+							"params": [
+								{
+									"type": "globar_var",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"value": "Lances"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "context_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"value": "index_id"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -1445,6 +1767,26 @@
 						"msg": "No value"
 					}
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"value": "AUCTION::Vendedor.find_all"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.6.0.1",
@@ -1625,7 +1967,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -1752,7 +2094,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -1867,7 +2209,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -1972,7 +2314,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2077,7 +2419,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2212,7 +2554,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2317,7 +2659,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -3243,7 +3585,7 @@
 		}
 	],
 	"data": {
-			"Categoria": [[
+		"Categoria": [[
 				{
 					"id": 0,
 					"name": "Nome",

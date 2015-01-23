@@ -3,8 +3,15 @@ Rails.application.routes.draw do
   resources :wizard_apps, except: [:destroy]
   match '/def/:id',    to: 'wizard_apps#wizard_definition',  via: 'get'
   match '/generate/:url',    to: 'wizard_apps#generate_wizard',  via: 'get', constraints: { :url => /.*/}
-  match '/generate_app',    to: 'wizard_apps#generate_app',  via: 'get'
-  match '/generate_context',    to: 'wizard_apps#generate_context',  via: 'get'
+  match '/generate_app',    to: 'wizard_apps#create_app',  via: 'get'
+  match '/activate_app',    to: 'wizard_apps#activate_app',  via: 'get'
+  match '/generate_context',    to: 'wizard_apps#create_context',  via: 'get'
+  match '/generate_index',    to: 'wizard_apps#create_index',  via: 'get'
+  match '/generate_index_landmark',    to: 'wizard_apps#create_index_landmark',  via: 'get'
+  match '/generate_context_landmark',    to: 'wizard_apps#create_context_landmark',  via: 'get'
+  match '/generate_context_attribute_for_index',    to: 'wizard_apps#create_context_attribute_for_index',  via: 'get'
+  match '/generate_computed_attribute_for_index',    to: 'wizard_apps#create_computed_attribute_for_index',  via: 'get'
+  
   
   resources :ontologies, except: [:destroy, :show]
   

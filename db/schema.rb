@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905145859) do
+ActiveRecord::Schema.define(version: 20140723033046) do
 
   create_table "ontologies", force: true do |t|
     t.string   "prefix"
@@ -23,25 +23,6 @@ ActiveRecord::Schema.define(version: 20140905145859) do
   end
 
   add_index "ontologies", ["prefix"], name: "index_ontologies_on_prefix", unique: true
-
-  create_table "products", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "t_json_entities", force: true do |t|
-    t.string   "name"
-    t.integer  "ontology_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "wizard_app_jsons", force: true do |t|
-    t.string   "name"
-    t.integer  "ontology_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "wizard_apps", force: true do |t|
     t.string   "name"
