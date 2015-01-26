@@ -22,7 +22,7 @@
 
 			me.solution = {
 				selectedOption : 0,
-				selectedProperties : [5, 0, 1],
+				selectedProperties : [0, 1],
 				selectedOptions : [],
 				mainClass : "it is not used"
 			};

@@ -11,7 +11,7 @@
     <tbody>
         <tr ng-repeat="item in step.wizard.data[step.currentWindow.example]">
             <td ng-repeat="prop in step.solution.selectedProperties">
-            	<div ng-repeat="value in step.selectProperty(prop, item, step.hasSelectedProperty()).value">{{value}}</div>
+            	<div ng-repeat="value in step.selectProperty(prop, item, step.hasSelectedProperty()).value track by $index">{{value}}</div>
             </td>
         </tr>
     </tbody>

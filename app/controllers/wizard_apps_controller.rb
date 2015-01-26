@@ -223,6 +223,7 @@ class WizardAppsController < ApplicationController
     return 'Error: activating application' unless activate_app_wizard( app_name)
     
     
+    
   end
   
   def push_globar_var(key, value)
