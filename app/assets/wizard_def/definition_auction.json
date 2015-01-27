@@ -743,9 +743,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Categorias"
 								}
 							]
@@ -754,6 +756,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -762,6 +765,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -792,7 +796,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Categoria.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Categoria"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Categoria."
 						}
 					],
 					"results": [
@@ -908,9 +923,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Leilaos"
 								}
 							]
@@ -919,6 +936,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -927,6 +945,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -957,7 +976,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Leilao.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Leilao"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Leilao."
 						}
 					],
 					"results": [
@@ -1073,9 +1103,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Produtos"
 								}
 							]
@@ -1084,6 +1116,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -1114,7 +1147,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Produto.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Produto"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Produto."
 						}
 					],
 					"results": [
@@ -1230,9 +1274,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Usuarios"
 								}
 							]
@@ -1241,6 +1287,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -1249,6 +1296,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -1279,7 +1327,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Usuario.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Usuario"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Usuario."
 						}
 					],
 					"results": [
@@ -1395,9 +1454,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Concorrentes"
 								}
 							]
@@ -1406,6 +1467,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -1414,6 +1476,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -1444,7 +1507,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Concorrente.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Concorrente"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Concorrente."
 						}
 					],
 					"results": [
@@ -1560,9 +1634,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Lances"
 								}
 							]
@@ -1571,6 +1647,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -1579,6 +1656,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -1592,7 +1670,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Lance.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Lance"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Lance."
 						}
 					],
 					"results": [
@@ -1725,9 +1814,11 @@
 							"params": [
 								{
 									"type": "globar_var",
+									"name": "index_id",
 									"value": "index_id"
 								}, {
 									"type": "constant",
+									"name": "name",
 									"value": "Lances"
 								}
 							]
@@ -1736,6 +1827,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "context_id"
 								}
 							]
@@ -1744,6 +1836,7 @@
 							"params": [
 								{
 									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -1774,7 +1867,18 @@
 					"params": [
 						{
 							"type": "constant",
+							"name": "query",
 							"value": "AUCTION::Vendedor.find_all"
+						},
+						{
+							"type": "constant",
+							"name": "name",
+							"value": "Vendedor"
+						},
+						{
+							"type": "constant",
+							"name": "title",
+							"value": "Vendedor."
 						}
 					],
 					"results": [
