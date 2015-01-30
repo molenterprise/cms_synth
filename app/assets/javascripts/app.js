@@ -85,7 +85,7 @@
 			}, {
 				"subject" : "DocC",
 				"predicate" : "advisor",
-				"object" : "Schawbe"
+				"object" : "Schwabe"
 			}, {
 				"subject" : "DocA",
 				"predicate" : "madeIn",
@@ -127,7 +127,7 @@
 				"predicate" : "type",
 				"object" : "Person"
 			}, {
-				"subject" : "Schawbe",
+				"subject" : "Schwabe",
 				"predicate" : "type",
 				"object" : "Person"
 			}, {
