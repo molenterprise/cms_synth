@@ -1,0 +1,64 @@
+[
+	{
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.0.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.0.0.0.1",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.0.1.1.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 1
+	}, {
+		"currentWindow": "0.0.0.0.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.1",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.1.1.1.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 2
+	}, {
+		"currentWindow": "0.0.0.0.2",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.0",
+		"selectedOption": 0,
+		"selectedProperties": [3, 0]
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.1.0.0.0",
+		"selectedOption": "3"
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.1",
+		"selectedOption": "1"
+	}
+]

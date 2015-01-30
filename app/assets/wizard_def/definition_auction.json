@@ -235,6 +235,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Categoria.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Categoria"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Categoria."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Categorias"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.0.1",
@@ -313,6 +355,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Leilao.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Leilao"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Leilao."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Leilaos"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1",
@@ -391,6 +475,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Produto.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Produto"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Produto."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Produtos"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1",
@@ -469,6 +595,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Usuario.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Usuario"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Usuario."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Usuarios"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1",
@@ -547,6 +715,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Concorrente.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Concorrente"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Concorrente."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Concorrentes"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.4.1",
@@ -625,6 +835,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Lance.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Lance"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Lance."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Lances"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.5.1",
@@ -703,6 +955,48 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Vendedor.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Vendedor"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Vendedor."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Vendedors"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1",
@@ -739,19 +1033,6 @@
 					"next": "0.0.0.0.0.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
-							"params": [
-								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "name",
-									"value": "Categorias"
-								}
-							]
-						}, {
 							"function_name": "pop_global_var",
 							"params": [
 								{
@@ -789,37 +1070,6 @@
 						"msg": "No value"
 					}
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Categoria.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Categoria"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Categoria."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.0.0.1",
@@ -919,19 +1169,6 @@
 					"next": "0.0.0.0.1.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
-							"params": [
-								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "name",
-									"value": "Leilaos"
-								}
-							]
-						}, {
 							"function_name": "pop_global_var",
 							"params": [
 								{
@@ -969,37 +1206,6 @@
 						"msg": "No value"
 					}
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Leilao.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Leilao"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Leilao."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.1.0.1",
@@ -1099,16 +1305,12 @@
 					"next": "0.0.0.0.2.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
+							"function_name": "pop_global_var",
 							"params": [
 								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
-									"name": "name",
-									"value": "Produtos"
+									"name": "key",
+									"value": "context_id"
 								}
 							]
 						}, {
@@ -1117,7 +1319,7 @@
 								{
 									"type": "constant",
 									"name": "key",
-									"value": "context_id"
+									"value": "index_id"
 								}
 							]
 						}
@@ -1140,37 +1342,6 @@
 						"msg": "No value"
 					}
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Produto.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Produto"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Produto."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1",
@@ -1270,19 +1441,6 @@
 					"next": "0.0.0.0.3.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
-							"params": [
-								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "name",
-									"value": "Usuarios"
-								}
-							]
-						}, {
 							"function_name": "pop_global_var",
 							"params": [
 								{
@@ -1320,37 +1478,6 @@
 						"msg": "No value"
 					}
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Usuario.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Usuario"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Usuario."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.3.0.1",
@@ -1450,19 +1577,6 @@
 					"next": "0.0.0.0.4.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
-							"params": [
-								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "name",
-									"value": "Concorrentes"
-								}
-							]
-						}, {
 							"function_name": "pop_global_var",
 							"params": [
 								{
@@ -1500,37 +1614,6 @@
 						"msg": "No more example"
 					}
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Concorrente.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Concorrente"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Concorrente."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.4.0.1",
@@ -1630,19 +1713,6 @@
 					"next": "0.0.0.0.5.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
-							"params": [
-								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "name",
-									"value": "Lances"
-								}
-							]
-						}, {
 							"function_name": "pop_global_var",
 							"params": [
 								{
@@ -1660,37 +1730,6 @@
 									"value": "index_id"
 								}
 							]
-						}
-					]
-				}
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Lance.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Lance"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Lance."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
 						}
 					]
 				}
@@ -1810,19 +1849,6 @@
 					"next": "0.0.0.0.6.0.0.1",
 					"todo": [
 						{
-							"function_name": "create_index_landmark_wizard",
-							"params": [
-								{
-									"type": "globar_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "name",
-									"value": "Lances"
-								}
-							]
-						}, {
 							"function_name": "pop_global_var",
 							"params": [
 								{
@@ -1860,37 +1886,6 @@
 						"msg": "No value"
 					}
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Vendedor.find_all"
-						},
-						{
-							"type": "constant",
-							"name": "name",
-							"value": "Vendedor"
-						},
-						{
-							"type": "constant",
-							"name": "title",
-							"value": "Vendedor."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.6.0.1",
@@ -2913,7 +2908,31 @@
 					"next": "0.0.0.0.2.0.0.0.1.0.0.0"
 				}
 			],
-			"message1": "Selected properties"
+			"message1": "Selected properties",
+			"todo": [
+				{
+					"function_name": "create_computed_attributes_for_index_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "queries",
+							"value": "self.auction::dataCadastro,self.auction::descricaoProduto,self.auction::estaEmLeilao,self.auction::quantidade,self.rdfs::label,self.auction::nomeProduto"
+						}, {
+							"type": "constant",
+							"name": "names",
+							"value": "Data de Cadastro,Descricao,Esta Em Oferta,Quantidade,self.rdfs::label,Nome]"
+						}, {
+							"type": "user_action",
+							"name": "attributes",
+							"value": "selectedProperties"
+						}
+					]
+				}
+			]
 		}, {
 			"id": "0.0.0.0.2.0.0.0.1",
 			"title": "Select what you want to show",

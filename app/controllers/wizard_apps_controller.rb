@@ -111,7 +111,7 @@ class WizardAppsController < ApplicationController
   end
 
   def create_context_wizard(params)
-    print "LOG: function: create_context_wizard \n" if @log_name
+    print "LOG: begin: create_context_wizard \n" if @log_name
     print "LOG: params: #{params} \n" if @log_param
 
     values = call_synth('contexts/create_api', {'context[context_name]' => params['name'],
@@ -172,6 +172,44 @@ class WizardAppsController < ApplicationController
 
     render :json => {:all_values => values }
   end
+  
+  def create_computed_attribute_for_index_wizard(params)
+    values = call_synth_without_result('indexes/computed_attributes_post_data', {
+        'parent' => params['index_id'],
+        'navigation_attribute_name' => params['name'],
+        'computed_navigation_attribute_value_expression' => params['query'],
+       'navigation_attribute_index_position' => '3',
+       'id' => '_empty'})
+       
+    return {:status => true, :result => {}}
+  end
+  
+  def create_computed_attributes_for_index_wizard(params)
+    print "create_computed_attributes_for_index_wizard #{params}"
+    function_params = {}
+    function_params['index_id'] = params['index_id']
+    attrs = params['attributes']
+    
+    names = params['names'].split(",")
+    queries = params['queries'].split(",")
+    attrs.each{|attr|
+      function_params['name'] = names[attr]
+      function_params['query'] = queries[attr]
+      create_computed_attribute_for_index_wizard(function_params)
+    }
+    return {:status => true, :result => {}}
+  end
+  
+  def create_computed_attribute_for_index_wizard(params)
+    values = call_synth_without_result('indexes/computed_attributes_post_data', {
+        'parent' => params['index_id'],
+        'navigation_attribute_name' => params['name'],
+        'computed_navigation_attribute_value_expression' => params['query'],
+       'navigation_attribute_index_position' => '3',
+       'id' => '_empty'})
+       
+    return {:status => true, :result => {}}
+  end
 
   def create_index_landmark
     values = call_synth('landmarks/create_api', {'landmark[landmark_name]' => 'LandmarkTest1',
@@ -184,12 +222,11 @@ class WizardAppsController < ApplicationController
 
   def create_index_landmark_wizard(params)
 
-    print "LOG: function: create_index_landmark_wizard \n" if @log_name
+    print "LOG: begin: create_index_landmark_wizard \n" if @log_name
     print "LOG: params: #{params} \n" if @log_param
-
-    landmark_position = @global_var[:landmark_position][0] || 1
+    print "LOG: @global_var #{@global_var} \n" if @log_param
     
-    print "LOG: landmark_position: #{landmark_position} \n" if @log_param
+    landmark_position = @global_var[:landmark_position][0] || 2
     
     values = call_synth('landmarks/create_api', {'landmark[landmark_name]' => params['name'],
        'landmark[landmark_position]' => landmark_position, 'landmark[type]' => 'index_anchor',
@@ -201,8 +238,6 @@ class WizardAppsController < ApplicationController
     return {:status => false} unless values['status'] == 'successful'
 
     @global_var[:landmark_position][0] = landmark_position + 1
-
-    print "LOG: values: #{values} \n" if @log_param
 
     return {:status => true, :result => values}
   end
@@ -217,54 +252,25 @@ class WizardAppsController < ApplicationController
     render :json => {:all_values => values, :status => values['status'] }
   end
 
-  def create_full_app
-    app_wizard_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'definition_auction.json')))
-    app_user_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'user_auction.json')));
-
-    @global_var = Hash.new([])
-
-    @log_name = true
-    @log_param = true
-
-    app_name = 'wizard_test'
-
-    #return 'Error: creating application' unless create_app_wizard( app_name)
-    #return 'Error: activating application' unless activate_app_wizard(app_name)
-
-    app_user_definition.each{ |step|
-
-      windowId = step['currentWindow']
-      window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
-
-      todo = window['todo']
-      process_function(todo) unless todo.blank?
-
-      unless window['options'].blank? or window['options'][step['selectedOption'].to_i]['todo'].blank? then
-        process_function(window['options'][step['selectedOption'].to_i]['todo'])
-      end
-
-    }
-
-    render :json => {:status => 'done!' }
-
-  end
-
-  def process_function(todo)
-    print "LOG: function: process_function \n" if @log_name
+  def process_function(todo, step)
+    print "LOG: begin: process_function \n" if @log_name
     print "LOG: params: #{todo} \n" if @log_param
 
     unless todo.blank?
       todo.each{ |function|
-        params = get_params(function)
+        params = get_params(function, step)
         values = send(function['function_name'], params)
-        process_return_values(function, values[:result])
+        process_return_values(function, values[:result]) if values.is_a? Hash
       }
     end
+    
+    print "LOG: end: process_function \n" if @log_name
   end
 
-  def get_params(function)
-    print "LOG: function: get_params \n" if @log_name
-    print "LOG: params: #{function}\n" if @log_param
+  def get_params(function, step)
+    print "LOG: begin: get_params \n" if @log_name or true
+    print "LOG: params: #{function}\n" if @log_param or true
+    print "LOG: @global_var: #{@global_var}\n" if @log_param or true
 
     result = {}
     params = function['params']
@@ -274,36 +280,74 @@ class WizardAppsController < ApplicationController
           result[param['name']] = param['value']
         elsif param['type'] == 'globar_var' then
           result[param['name']] = @global_var[param['value']].last
+        elsif param['type'] == 'user_action' then
+          result[param['name']] = step[param['value']]
         end
       }
     end
-    print "LOG: result #{result}\n" if @log_param
+    print "LOG: result #{result}\n" if @log_param or true
+    print "LOG: end: get_params \n" if @log_name or true
     return result
   end
 
   def process_return_values(function, values)
-    print "LOG: function: process_function \n" if @log_name
+    print "LOG: begin: process_return_values \n" if @log_name
     print "LOG: params: #{function} - #{values}\n" if @log_param
 
     unless function['results'].blank? then
       function['results'].each{ |result|
-        push_globar_var(result['global_var'], values[result['name']])
+        push_global_var(result['global_var'], values[result['name']])
       }
     end
 
     print "LOG: @global_var: #{@global_var}\n" if @log_param
+    print "LOG: end: process_return_values \n" if @log_name
   end
 
-  def push_globar_var(key, value)
-    print "LOG: function: push_globar_var \n" if @log_name
-    print "LOG: params: #{key} - #{value}\n" if @log_param
+  def push_global_var(key, value)
+    print "LOG: begin: push_global_var \n" if @log_name
+    print "LOG: #{key} - #{value}\n" if @log_param
     @global_var[key].push(value)
+    print "LOG: end: push_global_var \n" if @log_name
   end
 
-  def pop_globar_var(param)
-    print "LOG: function: pop_globar_var \n" if @log_name
+  def pop_global_var(param)
+    print "LOG: begin: pop_globar_var \n" if @log_name
     print "LOG: params: #{param} \n" if @log_param
+    print "LOG: end: pop_globar_var \n" if @log_name
     return @global_var[param['key']].pop
+  end
+  
+  def create_full_app
+    app_wizard_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'definition_auction.json')))
+    app_user_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'user_auction.json')));
+
+    @global_var = Hash.new { |hash, key| hash[key] = [] }
+
+    @log_name = true
+    @log_param = false
+
+    app_name = 'wizard_test_2'
+
+    #return 'Error: creating application' unless create_app_wizard(app_name)
+    return 'Error: activating application' unless activate_app_wizard(app_name)
+
+    app_user_definition.each{ |step|
+
+      windowId = step['currentWindow']
+      window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
+
+      todo = window['todo']
+      process_function(todo, step) unless todo.blank?
+
+      unless window['options'].blank? or window['options'][step['selectedOption'].to_i]['todo'].blank? then
+        process_function(window['options'][step['selectedOption'].to_i]['todo'], step)
+      end
+
+    }
+
+    render :json => {:status => 'done!' }
+
   end
 
   private
@@ -336,6 +380,7 @@ class WizardAppsController < ApplicationController
     port = '3002'
 
     uri = URI("http://#{url}:#{port}/#{function}")
+    print "#{params} \n"
     req = Net::HTTP.post_form(uri, params)
 
     return req
