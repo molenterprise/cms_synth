@@ -3,7 +3,7 @@
 		{
 			"id": "0.0.0.0",
 			"type": "select",
-			"title": "What do you want to show from auction ontology?",
+			"title": "What do you want to show from auction ontology after clicking in a Product?",
 			"message": "Class",
 			"options": [
 				{
