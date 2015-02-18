@@ -22,8 +22,8 @@
 
 			me.solution = {
 				selectedOption : 0,
-				selectedProperties : [0, 1],
-				selectedOptions : [],
+				selectedProperties : [0],
+				selectedOptions : [0, 0, 0, 0, 0, 0],
 				mainClass : "it is not used"
 			};
 
@@ -31,9 +31,6 @@
 			/* length = me.currentWindow.propertySets ? me.currentWindow.propertySets[me.solution.selectedOption].length : 0;
 			 me.solution.selectedOptions = [length]; */
 
-			for ( i = 0; i < 5; i++) {
-				me.solution.selectedOptions[i] = 0;
-			}
 		});
 /*
 		me.example = {
@@ -136,8 +133,7 @@
 				"object" : "Country"
 			}]
 		};
-*/
-		
+*/		
 		 me.example = {
 		 "definition" : [{
 		 "propertyName" : "nomeCategoria",
@@ -1153,13 +1149,15 @@
 				currentWindow : this.currentWindow.id,
 				//title: this.currentWindow.title, //debug
 				selectedOption : this.solution.selectedOption,
-				selectedProperties : this.solution.selectedProperties,
-				selectedOptions : this.solution.selectedOptions
+				selectedProperties : this.solution.selectedProperties.slice(),
+				selectedOptions : this.solution.selectedOptions.slice()
 			};
 			this.userSequence.push(step);
 
 			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
 			this.selectWindow(this.currentWindow.options[nextValue].next);
+			this.solution.selectedOptions = [0, 0, 0, 0, 0, 0];
+			this.solution.selectedProperties = [0];
 			this.solution.selectedOption = 0;
 			this.beforeExecControl();
 
@@ -1181,9 +1179,11 @@
 				};
 			} else if (this.isType('paths')) {
 				this.beforeExecutePathsControl();
+			} else if (this.isType('path')) {
+				this.userSequence[this.userSequence.length - 1]['path'] = this.currentWindow.paths;
 			}
-
 		};
+		
 
 		this.beforeExecutePathsControl = function() {
 			var relatedCollection = this.getRelatedCollectionName(this.userSequence[this.userSequence.length - 1], this.isType('paths'));
@@ -1204,7 +1204,7 @@
 					"key" : i,
 					"next" : this.currentWindow.next
 				});
-			};
+			}
 
 			var nextWindow = this.getWindow(this.currentWindow.next);
 			// to set the next window with the same examples
@@ -1216,8 +1216,13 @@
 					"key" : i,
 					"next" : nextWindow.next
 				});
-			};
-		}
+			}
+			
+			for(i = 0; i < paths.length; i++) {
+				this.solution.selectedOptions[i] = 0;
+			}
+			
+		};
 
 		this.afterExecControl = function() {
 			if (this.isType('computedAttribute')) {
@@ -1276,6 +1281,7 @@
 				this.selectWindow(step.currentWindow);
 				this.solution.selectedOption = step.selectedOption;
 				this.solution.selectedProperties = step.selectedProperties;
+				this.solution.selectedOptions = step.selectedOptions;
 			}
 		};
 
@@ -1283,7 +1289,7 @@
 			//	if(index = -1) document.location = "addOntology.html";
 			for ( i = 0; i < this.wizard.windows.length; i++) {
 				if (this.wizard.windows[i].id == id) {
-					return this.wizard.windows[i]
+					return this.wizard.windows[i];
 				}
 			}
 		};
@@ -1407,6 +1413,7 @@
 				output.push("classTo is undefined");
 			if (output.length == 0) {
 				this.trackAux(classFrom, classTo, [], output, 4, rdf);
+				this.trackAux(classTo, classFrom, [], output, 4, rdf);
 
 				if (selectedPath || selectedPath == 0) {
 					return output[selectedPath];
@@ -1423,7 +1430,7 @@
 					return false;
 			}
 			return true;
-		}
+		};
 
 		this.groupby = function(input, current) {
 			for (var i = 0; i < input.length; i++) {
@@ -1461,12 +1468,11 @@
 					for (var j = 0; j < rest_examples.length; j++) {
 						result.push(initialInstances[i] + " - " + rest_examples[j]);
 					};
-				};
-			};
-
+				}
+			}
+			
 			return result;
-
-		}
+		};
 
 		this.get_rest_of_path_examples = function(subject, path, pos) {
 
@@ -1491,13 +1497,13 @@
 							var temp = prop + ":" + rest_examples[j];
 							if (temp.split(':').length == path.length - pos)
 								result.push(temp);
-						};
-					};
+						}
+					}
 				}
 			}
 
 			return result;
-		}
+		};
 
 		this.get_instances_of_class = function(className) {
 			var result = [];
@@ -1505,9 +1511,9 @@
 			for (var i = 0; i < triples.length; i++) {
 				if (triples[i].predicate == "type" && triples[i].object == className)
 					result.push(triples[i].subject);
-			};
+			}
 			return result;
-		}
+		};
 
 		this.get_objects_from = function(subject, prop) {
 			var result = [];
@@ -1515,9 +1521,9 @@
 			for (var i = 0; i < triples.length; i++) {
 				if (triples[i].subject == subject && triples[i].predicate == prop)
 					result.push(triples[i].object);
-			};
+			}
 			return result;
-		}
+		};
 	}]);
 
 	app.directive('radioNomenclatorChooser', function() {

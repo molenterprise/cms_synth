@@ -79,22 +79,10 @@ class WizardAppsController < ApplicationController
     render :json => req
   end
 
-  def create_app
-    values = call_synth("applications/create_api", {'name' => 'App_test'})
-
-    return values['status'] == 'successful'
-  end
-
   def create_app_wizard(name)
     values = call_synth("applications/create_api", {'name' => name})
 
-    render :json => {:all_values => values, :status => values['status'] }
-  end
-
-  def activate_app
-    values = call_synth("applications/activate_api", {'name' => 'App_test'})
-
-    render :json => {:all_values => values, :status => values['status'] }
+    return values['status'] == 'successful'
   end
 
   def activate_app_wizard(name)
@@ -103,20 +91,12 @@ class WizardAppsController < ApplicationController
     return values['status'] == 'successful'
   end
 
-  def create_context
-    values = call_synth('contexts/create_api', {'context[context_name]' => 'Product-11',
-       'context[context_title]' => 'Product Title-11', 'context[context_query]' => 'AUCTION::Produto.find_all'})
-
-    render :json => {:all_values => values, :status => values['status'] }
-  end
-
   def create_context_wizard(params)
     print "LOG: begin: create_context_wizard \n" if @log_name
     print "LOG: params: #{params} \n" if @log_param
 
     values = call_synth('contexts/create_api', {'context[context_name]' => params['name'],
        'context[context_title]' => params['title'], 'context[context_query]' => params['query']})
-
     status = values['status']
 
     print "LOG: values: #{values} \n" if @log_param
@@ -124,72 +104,12 @@ class WizardAppsController < ApplicationController
     return {:status => status == 'successful', :result => values}
   end
 
-  def create_index
-    values = call_synth('indexes/create_api', {'index[index_name]' => 'IndexTest1',
-       'index[index_title]' => 'Index Test Title 1', 'index[context_index_context]' => 'http://base#16655820-a17a-11e4-b0f8-001d92e8bb43'})
-
-    render :json => {:all_values => values, :status => values['status'] }
-  end
-
-  def create_context_attribute_for_index
-
-    label_expression = "
-        label = self.rdfs::label
-        unless label.nil? || label.to_a.empty?
-          label
-        else
-          self.compact_uri
-        end
-      "
-
-    values = call_synth_without_result('indexes/context_anchor_attributes_post_data', {
-        'parent' => 'http://base#471b69a0-a25b-11e4-88ab-001d92e8bb43',
-        'navigation_attribute_name' => 'Attribute_name 1',
-        'context_anchor_navigation_attribute_label_expression' => label_expression,
-       'context_anchor_navigation_attribute_target_node_expression' => 'self',
-       'context_anchor_navigation_attribute_target_context' => 'http://base#46d279c0-a25b-11e4-88ab-001d92e8bb43',
-       'navigation_attribute_index_position' => '1',
-       'id' => '_empty'})
-
-    render :json => {:all_values => values }
-  end
-
-  def create_computed_attribute_for_index
-    label_expression = "
-        if self.auction::estaEmLeilao=='1' then
-          'sim'
-        else
-           'nao'
-        end
-    "
-
-    values = call_synth_without_result('indexes/computed_attributes_post_data', {
-        'parent' => 'http://base#471b69a0-a25b-11e4-88ab-001d92e8bb43',
-        'navigation_attribute_name' => 'Attribute_name 2',
-        'computed_navigation_attribute_value_expression' => label_expression,
-       'navigation_attribute_index_position' => '3',
-       'id' => '_empty'})
-
-    render :json => {:all_values => values }
-  end
-  
-  def create_computed_attribute_for_index_wizard(params)
-    values = call_synth_without_result('indexes/computed_attributes_post_data', {
-        'parent' => params['index_id'],
-        'navigation_attribute_name' => params['name'],
-        'computed_navigation_attribute_value_expression' => params['query'],
-       'navigation_attribute_index_position' => '3',
-       'id' => '_empty'})
-       
-    return {:status => true, :result => {}}
-  end
-  
   def create_computed_attributes_for_index_wizard(params)
     print "create_computed_attributes_for_index_wizard #{params}"
     function_params = {}
     function_params['index_id'] = params['index_id']
     attrs = params['attributes']
-    
+
     names = params['names'].split(",")
     queries = params['queries'].split(",")
     attrs.each{|attr|
@@ -199,25 +119,44 @@ class WizardAppsController < ApplicationController
     }
     return {:status => true, :result => {}}
   end
-  
+
   def create_computed_attribute_for_index_wizard(params)
-    values = call_synth_without_result('indexes/computed_attributes_post_data', {
+
+    index_position_key = "#{params['index_id']}_attribute"
+
+    index_position = @global_var[index_position_key][0] || 2
+
+    call_synth_without_result('indexes/computed_attributes_post_data', {
         'parent' => params['index_id'],
         'navigation_attribute_name' => params['name'],
         'computed_navigation_attribute_value_expression' => params['query'],
-       'navigation_attribute_index_position' => '3',
+       'navigation_attribute_index_position' => index_position,
        'id' => '_empty'})
-       
+
+    @global_var[index_position_key][0] = index_position + 1
+
     return {:status => true, :result => {}}
   end
 
-  def create_index_landmark
-    values = call_synth('landmarks/create_api', {'landmark[landmark_name]' => 'LandmarkTest1',
-       'landmark[landmark_position]' => '1', 'landmark[type]' => 'index_anchor',
-       'index_anchor_navigation_attribute[index_anchor_navigation_attribute_label_expression]' => "'Label Index 1'",
-       'index_anchor_navigation_attribute[index_anchor_navigation_attribute_target_index]' => 'http://base#2e991b00-a17c-11e4-bd15-001d92e8bb43'})
+  def create_index_attribute_for_index_wizard(params)
+    
+    print "LOG: begin: create_index_attribute_for_index_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
 
-    render :json => {:all_values => values, :status => values['status'] }
+    index_position_key = "#{params['index_id']}_attribute"
+
+    index_position = @global_var[index_position_key][0] || 2
+
+    call_synth_without_result('indexes/index_attributes_post_data', {
+        'parent' => params['index_id'],
+        'navigation_attribute_name' => params['name'],
+        'index_navigation_attribute_index' => params['index_navigation_attribute_index'],
+       'navigation_attribute_index_position' => index_position,
+       'id' => '_empty'})
+
+    @global_var[index_position_key][0] = index_position + 1
+
+    return {:status => true, :result => {}}
   end
 
   def create_index_landmark_wizard(params)
@@ -225,9 +164,9 @@ class WizardAppsController < ApplicationController
     print "LOG: begin: create_index_landmark_wizard \n" if @log_name
     print "LOG: params: #{params} \n" if @log_param
     print "LOG: @global_var #{@global_var} \n" if @log_param
-    
+
     landmark_position = @global_var[:landmark_position][0] || 2
-    
+
     values = call_synth('landmarks/create_api', {'landmark[landmark_name]' => params['name'],
        'landmark[landmark_position]' => landmark_position, 'landmark[type]' => 'index_anchor',
        'index_anchor_navigation_attribute[index_anchor_navigation_attribute_label_expression]' => "'#{params['name']}'",
@@ -241,15 +180,116 @@ class WizardAppsController < ApplicationController
 
     return {:status => true, :result => values}
   end
+  
+  def create_parameter_for_context
+    values = call_synth_without_result('contexts/context_parameters_post_data', {
+          'parent' => 'http://base#0d5eee20-ad33-11e4-9b50-001d92e8bb43',
+          'context_parameter_name' => 'context_param',
+         'id' => '_empty'})
 
-  def create_context_landmark
-    values = call_synth('landmarks/create_api', {'landmark[landmark_name]' => 'LandmarkTest1',
-       'landmark[landmark_position]' => '1', 'landmark[type]' => 'context_anchor',
-       'context_anchor_navigation_attribute[context_anchor_navigation_attribute_label_expression]' => "'Label index 2'",
-       'context_anchor_navigation_attribute[context_anchor_navigation_attribute_target_context]' => 'http://base#fd8ac360-a176-11e4-98c4-001d92e8bb43',
-       'context_anchor_navigation_attribute[context_anchor_navigation_attribute_target_node_expression]' => "'target_node_expression 1'"})
+    render :json => {:all_values => values }
+  end
+  
+  def get_context_attr_id
+    print "LOG: begin: get_context_attr_id \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+                                      
+    p = URI.encode_www_form_component('http://base#7a6fdbc0-ae08-11e4-9442-001d92e8bb43')
 
-    render :json => {:all_values => values, :status => values['status'] }
+    values = call_get_synth("indexes/context_anchor_attributes/#{p}", {
+           :id => 'http://base#7a6fdbc0-ae08-11e4-9442-001d92e8bb43',
+          :q=>"1", :_search=>"false", :nd=>"1423488002057", :rows=>"10", :page=>"1", :sidx=>'', :sord=>''
+          })
+    render :json => {:status => true, :result => values[:result]}
+  end
+  
+  def get_context_attr_id_1(params)
+    print "LOG: begin: get_context_attr_id \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+                                      
+    p = URI.encode_www_form_component(params[:id])
+
+    values = call_get_synth("indexes/context_anchor_attributes/#{p}", {
+           #:children_attribute => 'context_anchor_navigation_attribute_target_parameters',
+          :q=>"1", :_search=>"false", :nd=>"1423488002057", :rows=>"10", :page=>"1", :sidx=>'', :sord=>''
+          })
+
+    return {:status => true, :result => values[:result]}
+  end
+
+  def create_parameter_for_context_wizard(params)
+    print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+    
+    call_synth_without_result('contexts/context_parameters_post_data', {
+          'parent' => params['context_id'],
+          'context_parameter_name' => params['name'],
+         'id' => '_empty'})
+    return {:status => true, :result => {}}
+  end
+  
+  def create_attribute_context_parameters
+    print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+    
+    call_synth_without_result('contexts/navigation_attribute_context_parameters_post_data', {
+          'parent_id' => 'http___base_679d36c0-b784-11e4-a7c0-001d92e8bb43',
+          'navigation_attribute_parameter_name' => 'context_param',
+          'navigation_attribute_parameter_value_expression' => "parameters[':context_param']",
+         'id' => '_empty'})
+    render :json => {:status => true, :result => {}}
+  end
+  
+  def create_attribute_context_parameters_wizard(params)
+    print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+    
+    call_synth_without_result('contexts/navigation_attribute_context_parameters_post_data', {
+          'parent_id' => params['index_id'],
+          'navigation_attribute_parameter_name' => params['name'],
+          'navigation_attribute_parameter_value_expression' => params['expression'],
+         'id' => '_empty'})
+    return {:status => true, :result => {}}
+  end
+
+  # key params: ontology, mainClass, paths, option, options, index_id
+  def create_index_anchor_wizard(params)
+    print "LOG: begin: create_index_anchor_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+
+    path = params['paths'].select{|x| x['key'] = params['option']}.first["pathItems"]
+    properties_path = '';
+    index = 0;
+    path.each{|item|
+      properties_path = "#{properties_path}#{params['ontology']}::#{item['propertiesNames'][params['options'][index]]}."
+      index += 1
+    }
+
+    index_key = "#{path.first['className']}_for_#{params['mainClass']}_IndexAnchor"
+    index_position = @global_var[index_key][0] || 1
+    name = "#{index_key}_#{index_position}"
+
+    function_params = {'name' => name, 'title' => name,
+      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
+    values = create_context_wizard(function_params)[:result]
+    
+    print "LOG: values: #{values} \n"
+
+    function_params = {'name' => 'context_param', 'context_id' => values['context']}
+    create_parameter_for_context_wizard(function_params)
+
+    function_params = {'name' => 'Undefined', 'index_id' => params['index_id'], 'index_navigation_attribute_index' => values['defaultIndex']}
+    create_index_attribute_for_index_wizard(function_params)
+    
+    val = get_context_attr_id_1({:id => values['defaultIndex']})[:result]
+    
+    attr = val['rows'][0][':id']
+    create_attribute_context_parameters_wizard({'index_id' => attr, 'name' => 'context_param', 'expression' => 'parameters[:context_param]'})
+
+    @global_var[index_key][0] = index_position + 1
+
+    return {:status => true, :result => {}}
+
   end
 
   def process_function(todo, step)
@@ -263,14 +303,14 @@ class WizardAppsController < ApplicationController
         process_return_values(function, values[:result]) if values.is_a? Hash
       }
     end
-    
+
     print "LOG: end: process_function \n" if @log_name
   end
 
   def get_params(function, step)
-    print "LOG: begin: get_params \n" if @log_name or true
-    print "LOG: params: #{function}\n" if @log_param or true
-    print "LOG: @global_var: #{@global_var}\n" if @log_param or true
+    print "LOG: begin: get_params \n" if @log_name
+    print "LOG: params: #{function}\n" if @log_param
+    print "LOG: @global_var: #{@global_var}\n" if @log_param
 
     result = {}
     params = function['params']
@@ -285,8 +325,8 @@ class WizardAppsController < ApplicationController
         end
       }
     end
-    print "LOG: result #{result}\n" if @log_param or true
-    print "LOG: end: get_params \n" if @log_name or true
+    print "LOG: result #{result}\n" if @log_param
+    print "LOG: end: get_params \n" if @log_name
     return result
   end
 
@@ -317,7 +357,7 @@ class WizardAppsController < ApplicationController
     print "LOG: end: pop_globar_var \n" if @log_name
     return @global_var[param['key']].pop
   end
-  
+
   def create_full_app
     app_wizard_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'definition_auction.json')))
     app_user_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'user_auction.json')));
@@ -327,7 +367,7 @@ class WizardAppsController < ApplicationController
     @log_name = true
     @log_param = false
 
-    app_name = 'wizard_test_2'
+    app_name = 'app_test_1'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
@@ -361,12 +401,32 @@ class WizardAppsController < ApplicationController
   def wizard_app_params
     params.require(:wizard_app).permit(:name, :ontology_id)
   end
+  
+  def call_get_synth(function, params)
+    url = 'localhost'
+    port = '3002'
+
+    uri = URI("http://#{url}:#{port}/#{function}")
+    print "call_get_synth #{uri}\n#{params} \n"
+    uri.query = URI.encode_www_form(params)
+    print "URI = #{uri.to_s}"
+    
+    req = Net::HTTP.get_response(uri)
+    
+    values = {}
+    values[:result] = req.body
+    values[:function] = function
+    values[:params] = params
+
+    return values
+  end
 
   def call_synth(function, params)
     url = 'localhost'
     port = '3002'
 
     uri = URI("http://#{url}:#{port}/#{function}")
+    print "call_synth #{uri}\n#{params} \n"
     req = Net::HTTP.post_form(uri, params)
     values = JSON.parse(req.body)
     values[:function] = function
@@ -380,7 +440,7 @@ class WizardAppsController < ApplicationController
     port = '3002'
 
     uri = URI("http://#{url}:#{port}/#{function}")
-    print "#{params} \n"
+    print "call_synth_without_result #{uri}\n#{params} \n"
     req = Net::HTTP.post_form(uri, params)
 
     return req

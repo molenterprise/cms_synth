@@ -2951,7 +2951,7 @@
 					"next": "0.0.0.0.2.0.0.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
+					"text": "Leilao",
 					"next": "0.0.0.0.2.0.0.0.1.0"
 				}
 			]
@@ -3354,7 +3354,39 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.1.0.0.0.1.0.0.0"
+			"next": "0.0.0.0.1.0.0.0.1.0.0.0",
+			"todo": [
+				{
+					"function_name": "create_index_anchor_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
+						}, {
+							"type": "constant",
+							"name": "mainClass",
+							"value": "Leilao"
+						}, {
+							"type": "user_action",
+							"name": "option",
+							"value": "selectedOption"
+						}, {
+							"type": "user_action",
+							"name": "options",
+							"value": "selectedOptions"
+						}, {
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "paths",
+							"value": "paths"
+						}
+					]
+				}
+			] 
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0.0",
 			"title": "",
@@ -3385,7 +3417,39 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.2.0.0.0.1.0.0.0"
+			"next": "0.0.0.0.2.0.0.0.1.0.0.0",
+			"todo": [
+				{
+					"function_name": "create_index_anchor_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
+						}, {
+							"type": "constant",
+							"name": "mainClass",
+							"value": "Produto"
+						}, {
+							"type": "user_action",
+							"name": "option",
+							"value": "selectedOption"
+						}, {
+							"type": "user_action",
+							"name": "options",
+							"value": "selectedOptions"
+						}, {
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "paths",
+							"value": "paths"
+						}
+					]
+				}
+			] 
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0.0",
 			"title": "",
