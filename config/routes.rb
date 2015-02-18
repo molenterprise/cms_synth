@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   match '/generate_context_landmark',    to: 'wizard_apps#create_context_landmark',  via: 'get'
   match '/generate_context_attribute_for_index',    to: 'wizard_apps#create_context_attribute_for_index',  via: 'get'
   match '/generate_computed_attribute_for_index',    to: 'wizard_apps#create_computed_attribute_for_index',  via: 'get'
+  match '/generate_parameter_for_context',    to: 'wizard_apps#create_parameter_for_context',  via: 'get'
   match '/generate_full_app',    to: 'wizard_apps#create_full_app',  via: 'get'
+  match '/get_context_attr',    to: 'wizard_apps#get_context_attr_id',  via: 'get'
+  match '/generate_attribute_context_parameters',    to: 'wizard_apps#create_attribute_context_parameters',  via: 'get'
+  
   
   
   resources :ontologies, except: [:destroy, :show]
