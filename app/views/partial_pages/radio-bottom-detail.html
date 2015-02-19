@@ -1,8 +1,8 @@
 <!-- <section>
-<div class="list-group" ng-repeat="path in [] | track:step.solution.mainClass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')):step.example:step.isType('paths') track by $index">
+<div class="list-group" ng-repeat="path in [] | track:step.solution.mainclass:step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')):step.example:step.isType('paths') track by $index">
 <input type="radio" ng-model="step.solution.selectedOption" value="{{$index}}">
 <div class="halign">
-{{step.solution.mainClass}} >&nbsp;
+{{step.solution.mainclass}} >&nbsp;
 </div>
 <div class="halign" ng-repeat="pathItem in path | limitTo:path.length-1 track by $index">
 {{path[$index].className}} >&nbsp;
@@ -29,8 +29,8 @@
 	</div>
 <!--
 	<div class="well">
-		<div ng-repeat="example in step.get_path_examples(step.solution.mainClass,
-			step.track(step.solution.mainClass,
+		<div ng-repeat="example in step.get_path_examples(step.solution.mainclass,
+			step.track(step.solution.mainclass,
 				step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')),
 				step.example, step.isType('paths'), step.solution.selectedOption), step.isType('paths'))" >
 			{{example}}
@@ -38,7 +38,7 @@
 </div> -->
 
 <!-- <div class="well">
-<div ng-repeat="pathItem in step.track(step.solution.mainClass,
+<div ng-repeat="pathItem in step.track(step.solution.mainclass,
 step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')),
 step.example,
 step.isType('paths'),
@@ -46,12 +46,12 @@ step.solution.selectedOption) track by $index">
 <div class="halign" >
 {{pathItem.className}} >&nbsp;
 </div> -->
-<!--	{{path = trackFunction([], step.solution.mainClass,
+<!--	{{path = trackFunction([], step.solution.mainclass,
 step.getRelatedCollectionName(step.userSequence[step.userSequence.length-1], step.isType('paths')),
 step.example,
 step.isType('paths'),
 step.solution.selectedOption)}}
-<div ng-repeat="example in get_path_examples(step.solution.mainClass, path)">
+<div ng-repeat="example in get_path_examples(step.solution.mainclass, path)">
 {{example}}
 </div> -->
 <!-- </div>

@@ -265,7 +265,7 @@ class WizardAppsController < ApplicationController
       index += 1
     }
 
-    index_key = "#{path.first['className']}_for_#{params['mainClass']}_IndexAnchor"
+    index_key = "#{path.first['className']}_for_#{params['mainclass']}_IndexAnchor"
     index_position = @global_var[index_key][0] || 1
     name = "#{index_key}_#{index_position}"
 

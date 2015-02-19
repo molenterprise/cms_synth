@@ -3365,7 +3365,7 @@
 							"value": "auction"
 						}, {
 							"type": "constant",
-							"name": "mainClass",
+							"name": "mainclass",
 							"value": "Leilao"
 						}, {
 							"type": "user_action",
@@ -3428,7 +3428,7 @@
 							"value": "auction"
 						}, {
 							"type": "constant",
-							"name": "mainClass",
+							"name": "mainclass",
 							"value": "Produto"
 						}, {
 							"type": "user_action",

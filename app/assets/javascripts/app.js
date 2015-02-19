@@ -24,7 +24,7 @@
 				selectedOption : 0,
 				selectedProperties : [0],
 				selectedOptions : [0, 0, 0, 0, 0, 0],
-				mainClass : "it is not used"
+				mainclass : "it is not used"
 			};
 
 			me.userSequence = [];
@@ -1184,6 +1184,24 @@
 			}
 		};
 		
+		this.invertPath = function(start, path, canExec){
+			temp = [];
+			if(canExec){
+				for(i = 0; i < path.length; i++){
+					temp[i] = {
+								"propertiesNames" : path[i].propertiesNames,
+								"className" : path[i].className
+						};
+				}
+				
+				temp.reverse();
+				for (var i=0; i < temp.length - 1; i++) {
+				  temp[i].className = temp[i+1].className;
+				};
+				temp[temp.length - 1].className = start;
+			}
+			return temp;
+		};
 
 		this.beforeExecutePathsControl = function() {
 			var relatedCollection = this.getRelatedCollectionName(this.userSequence[this.userSequence.length - 1], this.isType('paths'));
@@ -1193,8 +1211,16 @@
 			this.currentWindow.paths = [];
 			this.currentWindow.options = [];
 			for (var i = 0; i < paths.length; i++) {
+				
+				path = paths[i];
 
-				var examples = this.get_path_examples(mainclass, paths[i], this.isType('paths'));
+				var examples = this.get_path_examples(mainclass, path, this.isType('paths'));
+				if (examples.length == 0) {
+					invertedPath = this.invertPath(mainclass, path, this.isType('paths'));
+					cn = path[path.length - 1].className;
+					examples = this.get_path_examples(cn, invertedPath, this.isType('paths'));
+				}
+		
 				this.currentWindow.paths.push({
 					"key" : i,
 					"pathItems" : paths[i],
@@ -1413,7 +1439,18 @@
 				output.push("classTo is undefined");
 			if (output.length == 0) {
 				this.trackAux(classFrom, classTo, [], output, 4, rdf);
+				l = output.length;
 				this.trackAux(classTo, classFrom, [], output, 4, rdf);
+				for (i=l; i < output.length; i++) {
+				  temp = output[i].reverse();
+				  name = classTo;
+				  for (var j=temp.length - 1; j >= 0; j--) {
+				  	t = temp[j].className;
+					temp[j].className = name;
+					name = t;
+				  };
+				  output[i] = temp;
+				};
 
 				if (selectedPath || selectedPath == 0) {
 					return output[selectedPath];
@@ -1432,7 +1469,7 @@
 			return true;
 		};
 
-		this.groupby = function(input, current) {
+		this.groupby = function(input, current, s) {
 			for (var i = 0; i < input.length; i++) {
 				if (this.isTheSamePath(input[i], current)) {
 					for (var j = 0; j < input[i].length; j++) {
