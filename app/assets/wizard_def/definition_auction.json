@@ -3,7 +3,7 @@
 		{
 			"id": "0.0.0.0",
 			"type": "select",
-			"title": "What do you want to show from auction ontology after clicking in a Product?",
+			"title": "What do you want to show from auction ontology?",
 			"message": "Class",
 			"options": [
 				{
@@ -235,48 +235,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Categoria.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categoria"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Categoria."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categorias"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.0.1",
@@ -355,48 +313,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Leilao.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Leilao"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Leilao."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Leilaos"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1",
@@ -475,48 +391,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Produto.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Produto"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Produto."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Produtos"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1",
@@ -595,48 +469,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Usuario.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Usuario"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Usuario."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Usuarios"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1",
@@ -715,48 +547,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Concorrente.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Concorrente"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Concorrente."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Concorrentes"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.4.1",
@@ -835,48 +625,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Lance.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Lance"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Lance."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Lances"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.5.1",
@@ -955,48 +703,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Vendedor.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Vendedor"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Vendedor."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Vendedors"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1",
@@ -1030,28 +736,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.0.0.0.1"
 				}
 			],
 			"details": [[
@@ -1166,28 +851,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.1.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.1.0.0.1"
 				}
 			],
 			"details": [[
@@ -1302,28 +966,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.2.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.2.0.0.1"
 				}
 			],
 			"details": [[
@@ -1438,28 +1081,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.3.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.3.0.0.1"
 				}
 			],
 			"details": [[
@@ -1574,28 +1196,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.4.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.4.0.0.1"
 				}
 			],
 			"details": [[
@@ -1710,28 +1311,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.5.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.5.0.0.1"
 				}
 			],
 			"details": [[
@@ -1846,28 +1426,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.6.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.6.0.0.1"
 				}
 			],
 			"details": [[
@@ -2027,7 +1586,21 @@
 			"type": "select",
 			"message": "Categoria's \t related collections",
 			"mainclass": "Categoria",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.1.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.1.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.1.0.2",
 			"title": "Computed attribute",
@@ -2066,7 +1639,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2139,19 +1712,19 @@
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.1.1.0.1.0"
-				}, {
-					"key": 2,
 					"text": "Usuario",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
-					"key": 3,
+					"key": 2,
 					"text": "Vendedor",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
-					"key": 4,
+					"key": 3,
 					"text": "Categoria",
+					"next": "0.0.0.0.1.1.0.1.0"
+				}, {
+					"key": 4,
+					"text": "Lance",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}
 			]
@@ -2193,7 +1766,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2266,7 +1839,11 @@
 					"next": "0.0.0.0.2.1.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
+					"text": "Leilao",
+					"next": "0.0.0.0.2.1.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
 					"next": "0.0.0.0.2.1.0.1.0"
 				}
 			]
@@ -2308,8 +1885,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
-
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2375,7 +1951,17 @@
 			"type": "select",
 			"message": "Usuario's \t related collections",
 			"mainclass": "Usuario",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.1.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.1.0.2",
 			"title": "Computed attribute",
@@ -2414,8 +2000,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
-
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2481,7 +2066,13 @@
 			"type": "select",
 			"message": "Concorrente's \t related collections",
 			"mainclass": "Concorrente",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.1.0.2",
 			"title": "Computed attribute",
@@ -2520,8 +2111,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
-
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2598,23 +2188,19 @@
 					"next": "0.0.0.0.5.1.0.1.0"
 				}, {
 					"key": 2,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.5.1.0.1.0"
-				}, {
-					"key": 3,
 					"text": "Leilao",
 					"next": "0.0.0.0.5.1.0.1.0"
 				}, {
-					"key": 4,
-					"text": "Categoria",
-					"next": "0.0.0.0.5.1.0.1.0"
-				}, {
-					"key": 5,
+					"key": 3,
 					"text": "Produto",
 					"next": "0.0.0.0.5.1.0.1.0"
 				}, {
-					"key": 6,
+					"key": 4,
 					"text": "Vendedor",
+					"next": "0.0.0.0.5.1.0.1.0"
+				}, {
+					"key": 5,
+					"text": "Categoria",
 					"next": "0.0.0.0.5.1.0.1.0"
 				}
 			]
@@ -2656,8 +2242,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
-
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2723,7 +2308,17 @@
 			"type": "select",
 			"message": "Vendedor's \t related collections",
 			"mainclass": "Vendedor",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.1.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.1.0.2",
 			"title": "Computed attribute",
@@ -2762,8 +2357,7 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
-
+					"next": 26
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2790,7 +2384,21 @@
 			"type": "select",
 			"message": "Categoria's \t related collections",
 			"mainclass": "Categoria",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.0.0.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.0.0.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.0.0.0.2",
 			"title": "Computed attribute",
@@ -2851,19 +2459,19 @@
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.1.0.0.0.1.0"
-				}, {
-					"key": 2,
 					"text": "Usuario",
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}, {
-					"key": 3,
+					"key": 2,
 					"text": "Vendedor",
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}, {
-					"key": 4,
+					"key": 3,
 					"text": "Categoria",
+					"next": "0.0.0.0.1.0.0.0.1.0"
+				}, {
+					"key": 4,
+					"text": "Lance",
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}
 			]
@@ -2913,31 +2521,7 @@
 					"next": "0.0.0.0.2.0.0.0.1.0.0.0"
 				}
 			],
-			"message1": "Selected properties",
-			"todo": [
-				{
-					"function_name": "create_computed_attributes_for_index_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "queries",
-							"value": "self.auction::dataCadastro,self.auction::descricaoProduto,self.auction::estaEmLeilao,self.auction::quantidade,self.rdfs::label,self.auction::nomeProduto"
-						}, {
-							"type": "constant",
-							"name": "names",
-							"value": "Data de Cadastro,Descricao,Esta Em Oferta,Quantidade,self.rdfs::label,Nome]"
-						}, {
-							"type": "user_action",
-							"name": "attributes",
-							"value": "selectedProperties"
-						}
-					]
-				}
-			]
+			"message1": "Selected properties"
 		}, {
 			"id": "0.0.0.0.2.0.0.0.1",
 			"title": "Select what you want to show",
@@ -2952,6 +2536,10 @@
 				}, {
 					"key": 1,
 					"text": "Leilao",
+					"next": "0.0.0.0.2.0.0.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
 					"next": "0.0.0.0.2.0.0.0.1.0"
 				}
 			]
@@ -3008,7 +2596,17 @@
 			"type": "select",
 			"message": "Usuario's \t related collections",
 			"mainclass": "Usuario",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.0.0.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.0.0.0.2",
 			"title": "Computed attribute",
@@ -3062,7 +2660,13 @@
 			"type": "select",
 			"message": "Concorrente's \t related collections",
 			"mainclass": "Concorrente",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.0.0.0.2",
 			"title": "Computed attribute",
@@ -3127,23 +2731,19 @@
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}, {
 					"key": 2,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.5.0.0.0.1.0"
-				}, {
-					"key": 3,
 					"text": "Leilao",
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}, {
-					"key": 4,
-					"text": "Categoria",
-					"next": "0.0.0.0.5.0.0.0.1.0"
-				}, {
-					"key": 5,
+					"key": 3,
 					"text": "Produto",
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}, {
-					"key": 6,
+					"key": 4,
 					"text": "Vendedor",
+					"next": "0.0.0.0.5.0.0.0.1.0"
+				}, {
+					"key": 5,
+					"text": "Categoria",
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}
 			]
@@ -3200,7 +2800,17 @@
 			"type": "select",
 			"message": "Vendedor's \t related collections",
 			"mainclass": "Vendedor",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.0.0.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.0.0.0.2",
 			"title": "Computed attribute",
@@ -3354,39 +2964,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.1.0.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "create_index_anchor_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}, {
-							"type": "constant",
-							"name": "mainclass",
-							"value": "Leilao"
-						}, {
-							"type": "user_action",
-							"name": "option",
-							"value": "selectedOption"
-						}, {
-							"type": "user_action",
-							"name": "options",
-							"value": "selectedOptions"
-						}, {
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "user_action",
-							"name": "paths",
-							"value": "paths"
-						}
-					]
-				}
-			] 
+			"next": "0.0.0.0.1.0.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0.0",
 			"title": "",
@@ -3417,39 +2995,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.2.0.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "create_index_anchor_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}, {
-							"type": "constant",
-							"name": "mainclass",
-							"value": "Produto"
-						}, {
-							"type": "user_action",
-							"name": "option",
-							"value": "selectedOption"
-						}, {
-							"type": "user_action",
-							"name": "options",
-							"value": "selectedOptions"
-						}, {
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "user_action",
-							"name": "paths",
-							"value": "paths"
-						}
-					]
-				}
-			] 
+			"next": "0.0.0.0.2.0.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0.0",
 			"title": "",
