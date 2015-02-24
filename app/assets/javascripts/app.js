@@ -13,7 +13,14 @@
 		me.solution.selectedOptions = [];
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
-
+		
+		me.id = 0; 
+		me.treeSequence = t;
+		me.treeSequence.id = me.id++;
+		me.currentArtNode = me.treeSequence.addChildNode(me.treeSequence, me.id++, "Art");
+		me.previousNode = me.treeSequence;
+		
+		
 		$http.get('/def/definition_auction').success(function(data) {
 			//$http.get('generate/http%3A%2F%2Fwww.semanticweb.org%2Fmilena%2Fontologies%2F2013%2F6%2Fauction').success(function(data) {
 			me.wizard = data;
@@ -1139,12 +1146,20 @@
 		 }]
 		 };
 
+		this.newLandmark = function(){
+			this.currentArtNode = this.treeSequence.addChildNode(me.treeSequence, this.id++, "Art");
+			this.previousNode = this.treeSequence;
+		};
+		
 		this.isType = function(val) {
 			return this.currentWindow.type == val;
 		};
 
 		this.changeWindow = function() {
 			this.afterExecControl();
+			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
+			
+			
 			step = {
 				currentWindow : this.currentWindow.id,
 				//title: this.currentWindow.title, //debug
@@ -1152,9 +1167,15 @@
 				selectedProperties : this.solution.selectedProperties.slice(),
 				selectedOptions : this.solution.selectedOptions.slice()
 			};
+			
 			this.userSequence.push(step);
+			
+			this.previousNode = this.treeSequence.addChildNode(this.currentArtNode, this.id++, step);
+			
+			if (this.currentWindow.options[nextValue].child == "Yes")
+				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, this.id++, "Art");	
+					
 
-			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
 			this.selectWindow(this.currentWindow.options[nextValue].next);
 			this.solution.selectedOptions = [0, 0, 0, 0, 0, 0];
 			this.solution.selectedProperties = [0];
@@ -1272,7 +1293,7 @@
 					this.currentWindow.options[nextValue].next = this.seqNextNavegation.pop();
 				}
 			}
-		};
+		};		
 
 		this.confirmDialog = function(title, msg) {
 
@@ -1304,6 +1325,18 @@
 		this.back = function() {
 			if (this.userSequence.length > 0) {
 				step = this.userSequence.pop();
+				
+				if(this.currentArtNode.children == null || this.currentArtNode.children.length == 0){
+					parent = this.treeSequence.getParent(this.currentArtNode);
+					this.currentArtNode = this.treeSequence.getParent(parent);
+				}
+				
+				step1 = this.previousNode.data;
+				nodeToCut = this.previousNode;
+				this.previousNode = this.treeSequence.getPreviousNode(this.previousNode);
+				this.treeSequence.deleteNode(nodeToCut);
+				
+ 				
 				this.selectWindow(step.currentWindow);
 				this.solution.selectedOption = step.selectedOption;
 				this.solution.selectedProperties = step.selectedProperties;
