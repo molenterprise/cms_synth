@@ -17,8 +17,10 @@
 		me.id = 0; 
 		me.treeSequence = t;
 		me.treeSequence.id = me.id++;
-		me.currentArtNode = me.treeSequence.addChildNode(me.treeSequence, me.id++, "Art");
+		me.currentArtNode = me.treeSequence.addChildNode(me.treeSequence, me.id++, null, "Art");
 		me.previousNode = me.treeSequence;
+		
+		me.print = "";
 		
 		
 		$http.get('/def/definition_auction').success(function(data) {
@@ -1147,7 +1149,7 @@
 		 };
 
 		this.newLandmark = function(){
-			this.currentArtNode = this.treeSequence.addChildNode(me.treeSequence, this.id++, "Art");
+			this.currentArtNode = this.treeSequence.addChildNode(me.treeSequence, this.id++, null, "Art");
 			this.previousNode = this.treeSequence;
 		};
 		
@@ -1168,19 +1170,31 @@
 				selectedOptions : this.solution.selectedOptions.slice()
 			};
 			
+			idNextWindow = this.currentWindow.options[nextValue].next;
+			
 			this.userSequence.push(step);
 			
-			this.previousNode = this.treeSequence.addChildNode(this.currentArtNode, this.id++, step);
+			this.previousNode = this.treeSequence.addChildNode(this.currentArtNode, this.id++, step, "Normal");
 			
 			if (this.currentWindow.options[nextValue].child == "Yes")
-				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, this.id++, "Art");	
+				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, this.id++, null, "Art");	
+				
+			if (this.currentWindow.options[nextValue].child == "End"){
+				if(this.treeSequence(this.currentArtNode).id != 0){ 
+					this.previousNode = this.treeSequence.getParent(this.treeSequence.getParent(this.previosNode));
+					this.currentArtNode = this.treeSequence.getParent(this.treeSequence.getParent(this.currentArtNode));
+					idNextWindow = this.previousNode.data.currentWindow;
+				}
+			}
 					
 
-			this.selectWindow(this.currentWindow.options[nextValue].next);
+			this.selectWindow(idNextWindow);
 			this.solution.selectedOptions = [0, 0, 0, 0, 0, 0];
 			this.solution.selectedProperties = [0];
 			this.solution.selectedOption = 0;
 			this.beforeExecControl();
+			
+			this.print = this.getArtTreeSequence();
 
 		};
 
@@ -1594,6 +1608,43 @@
 			}
 			return result;
 		};
+		
+		this.go_to_step = function(nodeId){
+			
+			node = this.treeSequence.find(nodeId);
+			if(node.type != "Art")
+				node = this.treeSequence.getParent(node);
+			node = node.children.last();
+			
+			this.previousNode = this.treeSequence.getPreviousNode(node);
+			this.currentArtNode = this.treeSequence.getParent(node);
+			this.selectWindow(node.data.currentWindow);
+			this.treeSequence.deleteNode(node);
+		};
+		
+		this.getArtTreeSequence = function(){
+			node = { "id": this.treeSequence.id, "label": this.treeSequence.label, "children": []};
+			
+			this.getArtTreeSequenceAux(node, this.treeSequence);
+			return node;
+		};
+		
+		this.getArtTreeSequenceAux = function(result, original){
+			var node;
+			if(original.type == "Art"){
+				node = {"id": original.id, "label": original.label, "children": []};
+				result.children.push(node);
+			}else{
+				node = result;
+			}
+			
+			if(original.children != undefined){
+				for (var i=0; i < original.children.length; i++) {
+				  this.getArtTreeSequenceAux(node, original.children[i]);
+				};
+			}
+		 };
+		
 	}]);
 
 	app.directive('radioNomenclatorChooser', function() {
