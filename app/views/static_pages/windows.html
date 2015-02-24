@@ -1,13 +1,13 @@
 <div>
 
-	<div ng-controller="myController" class="pull-left" style="padding:120px 20px 0px 0px">
+	<div ng-controller="treeController" class="pull-left" style="padding:120px 20px 0px 0px;width:200px">
 		{{currentNode.currentNode.roleName}}
 		<div 
 			data-angular-treeview="true" 
 			data-tree-id="currentNode" 
 			data-tree-model="tree" 
-			data-node-id="roleId" 
-			data-node-label="roleName" 
+			data-node-id="id" 
+			data-node-label="label" 
 			data-node-children="children">
 		</div>
 	</div>
@@ -24,7 +24,7 @@
 			<h3>{{step.currentWindow.message}}</h3>
 			Window: {{step.currentWindow.id}}
 			
-			a: {{step.Data.currentNode.currentNode.roleName}}
+			a: {{step.Data.currentNode.currentNode}}
 
 			<form name="reviewForm" ng-submit="step.changeWindow()">
 				

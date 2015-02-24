@@ -1218,15 +1218,27 @@
 			this.solution.selectedProperties = [0];
 			this.solution.selectedOption = 0;
 			this.beforeExecControl();
+		
 			
-			this.print = this.getArtTreeSequence();
-
-			me.Data.tree.push({
-				"roleName" : "Guest",
-				"roleId" : "role3",
-				"children" : []
-			});
-
+			// node = me.Data.currentNode;
+			// node.currentNode.selected = "";
+// 			
+			// node = {
+				// "label" : "Guest",
+				// "id" : "role3",
+				// "children" : [],
+				// "selected": "selected"
+			// };
+// 
+			// me.Data.tree.push(node);
+			// me.Data.currentNode.currentNode = node;
+			
+			tree = this.getArtTreeSequence(this.currentArtNode).children;
+			me.Data.tree.length = 0;
+			for(i = 0; i < tree.length; i++){
+				me.Data.tree.push(tree[i])
+			}
+			me.Data.currentNode.currentNode = this.currentArtNode;
 		};
 
 		this.beforeExecControl = function() {
@@ -1385,6 +1397,12 @@
 				this.solution.selectedOption = step.selectedOption;
 				this.solution.selectedProperties = step.selectedProperties;
 				this.solution.selectedOptions = step.selectedOptions;
+			}
+			
+			tree = this.getArtTreeSequence(this.currentArtNode).children;
+			me.Data.tree.length = 0;
+			for(i = 0; i < tree.length; i++){
+				me.Data.tree.push(tree[i])
 			}
 		};
 
@@ -1652,17 +1670,20 @@
 			this.treeSequence.deleteNode(node);
 		};
 		
-		this.getArtTreeSequence = function(){
+		this.getArtTreeSequence = function(selected){
 			node = { "id": this.treeSequence.id, "label": this.treeSequence.label, "children": []};
 			
-			this.getArtTreeSequenceAux(node, this.treeSequence);
+			this.getArtTreeSequenceAux(node, this.treeSequence, selected);
 			return node;
 		};
 		
-		this.getArtTreeSequenceAux = function(result, original){
+		this.getArtTreeSequenceAux = function(result, original, selected){
 			var node;
 			if(original.type == "Art"){
 				node = {"id": original.id, "label": original.label, "children": []};
+				if(selected == original){
+					node.selected = 'selected'
+				}
 				result.children.push(node);
 			}else{
 				node = result;
@@ -1670,46 +1691,39 @@
 			
 			if(original.children != undefined){
 				for (var i=0; i < original.children.length; i++) {
-				  this.getArtTreeSequenceAux(node, original.children[i]);
+				  this.getArtTreeSequenceAux(node, original.children[i], selected);
 				};
 			}
 		 };
 		
 	}]);
 
-	//test controller
-	app.controller('myController', function($scope, Data) {
+	
+	app.controller('treeController', function($scope, Data) {
 
 		$scope.tree = [{
-			"roleName" : "User",
-			"roleId" : "role1",
+			"label" : "User",
+			"id" : "role1",
+			"selected" : "selected",
 			"children" : [{
-				"roleName" : "subUser1",
-				"roleId" : "role11",
+				"label" : "subUser1",
+				"id" : "role11",
 				"children" : []
 			}, {
-				"roleName" : "subUser2",
-				"roleId" : "role12",
+				"label" : "subUser2",
+				"id" : "role12",
 				"children" : [{
-					"roleName" : "subUser2-1",
-					"roleId" : "role121",
-					"children" : [{
-						"roleName" : "subUser2-1-1",
-						"roleId" : "role1211",
-						"children" : []
-					}, {
-						"roleName" : "subUser2-1-2",
-						"roleId" : "role1212",
-						"children" : []
-					}]
+					"label" : "subUser2-1",
+					"id" : "role121",
+					"children" : []
 				}]
 			}]
 		}, {
-			"roleName" : "Admin",
-			"roleId" : "role2",
+			"label" : "Admin",
+			"id" : "role2",
 			"children" : []
 		}];
-		$scope.currentNode = {currentNode: ''};
+		$scope.currentNode = {currentNode: $scope.tree[0]};
 		
 		$scope.$watch('tree', function (newValue, oldValue) {
 	        if (newValue !== oldValue) Data.setTree(newValue);
