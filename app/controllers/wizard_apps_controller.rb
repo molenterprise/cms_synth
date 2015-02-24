@@ -103,6 +103,34 @@ class WizardAppsController < ApplicationController
 
     return {:status => status == 'successful', :result => values}
   end
+  
+  def create_in_context_class_wizard(params)
+    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+
+    values = call_synth_without_result('in_context_classes', {
+      'in_context_class[in_context_class_class]' => params['class'],
+       'in_context_class[in_context_class_context]' => params['context']})
+    status = values['status']
+
+    print "LOG: values: #{values} \n" if @log_param
+
+    return {:status => status == 'successful', :result => {:in_context_class_id => values['location']}}
+  end
+  
+  def create_in_context_class
+    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+
+    values = call_synth_without_result('in_context_classes', {
+      'in_context_class[in_context_class_class]' => 'http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto',
+       'in_context_class[in_context_class_context]' => 'http://base#deda8cc0-b7a1-11e4-a7c0-001d92e8bb43'})
+
+    id = values['location']
+    id = id[id.index('http', 2).. -1]
+    
+    print "LOG: values: #{values} \n" if @log_param or true
+    
+    render :json => {:status => true, :result => {:in_context_class_id => id}}
+  end
 
   def create_computed_attributes_for_index_wizard(params)
     print "create_computed_attributes_for_index_wizard #{params}"
@@ -190,20 +218,7 @@ class WizardAppsController < ApplicationController
     render :json => {:all_values => values }
   end
   
-  def get_context_attr_id
-    print "LOG: begin: get_context_attr_id \n" if @log_name or true
-    print "LOG: params: #{params} \n" if @log_param or true
-                                      
-    p = URI.encode_www_form_component('http://base#7a6fdbc0-ae08-11e4-9442-001d92e8bb43')
-
-    values = call_get_synth("indexes/context_anchor_attributes/#{p}", {
-           :id => 'http://base#7a6fdbc0-ae08-11e4-9442-001d92e8bb43',
-          :q=>"1", :_search=>"false", :nd=>"1423488002057", :rows=>"10", :page=>"1", :sidx=>'', :sord=>''
-          })
-    render :json => {:status => true, :result => values[:result]}
-  end
-  
-  def get_context_attr_id_1(params)
+  def get_context_attr_wizard(params)
     print "LOG: begin: get_context_attr_id \n" if @log_name or true
     print "LOG: params: #{params} \n" if @log_param or true
                                       
@@ -232,10 +247,10 @@ class WizardAppsController < ApplicationController
     print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name or true
     print "LOG: params: #{params} \n" if @log_param or true
     
-    call_synth_without_result('contexts/navigation_attribute_context_parameters_post_data', {
-          'parent_id' => 'http___base_679d36c0-b784-11e4-a7c0-001d92e8bb43',
+    call_synth_without_result('indexes/navigation_attribute_context_parameters_post_data', {
+          'parent_id' => 'http___base_505538d0-b795-11e4-a7c0-001d92e8bb43',
           'navigation_attribute_parameter_name' => 'context_param',
-          'navigation_attribute_parameter_value_expression' => "parameters[':context_param']",
+          'navigation_attribute_parameter_value_expression' => "parameters[:context_param]",
          'id' => '_empty'})
     render :json => {:status => true, :result => {}}
   end
@@ -244,7 +259,7 @@ class WizardAppsController < ApplicationController
     print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name or true
     print "LOG: params: #{params} \n" if @log_param or true
     
-    call_synth_without_result('contexts/navigation_attribute_context_parameters_post_data', {
+    call_synth_without_result('indexes/navigation_attribute_context_parameters_post_data', {
           'parent_id' => params['index_id'],
           'navigation_attribute_parameter_name' => params['name'],
           'navigation_attribute_parameter_value_expression' => params['expression'],
@@ -273,18 +288,16 @@ class WizardAppsController < ApplicationController
       'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
     values = create_context_wizard(function_params)[:result]
     
-    print "LOG: values: #{values} \n"
-
     function_params = {'name' => 'context_param', 'context_id' => values['context']}
     create_parameter_for_context_wizard(function_params)
 
-    function_params = {'name' => 'Undefined', 'index_id' => params['index_id'], 'index_navigation_attribute_index' => values['defaultIndex']}
+    function_params = {'name' => path.first['className'], 'index_id' => params['index_id'],
+       'index_navigation_attribute_index' => values['defaultIndex']}
     create_index_attribute_for_index_wizard(function_params)
     
-    val = get_context_attr_id_1({:id => values['defaultIndex']})[:result]
-    
-    attr = val['rows'][0][':id']
-    create_attribute_context_parameters_wizard({'index_id' => attr, 'name' => 'context_param', 'expression' => 'parameters[:context_param]'})
+    val = get_context_attr_wizard({:id => values['defaultIndex']})[:result]
+    function_params = {'index_id' => val['rows'][0]['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+    create_attribute_context_parameters_wizard(function_params)
 
     @global_var[index_key][0] = index_position + 1
 
@@ -414,7 +427,7 @@ class WizardAppsController < ApplicationController
     req = Net::HTTP.get_response(uri)
     
     values = {}
-    values[:result] = req.body
+    values[:result] = JSON.parse(req.body)
     values[:function] = function
     values[:params] = params
 
@@ -428,6 +441,7 @@ class WizardAppsController < ApplicationController
     uri = URI("http://#{url}:#{port}/#{function}")
     print "call_synth #{uri}\n#{params} \n"
     req = Net::HTTP.post_form(uri, params)
+    
     values = JSON.parse(req.body)
     values[:function] = function
     values[:params] = params
