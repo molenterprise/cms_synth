@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   match '/generate_full_app',    to: 'wizard_apps#create_full_app',  via: 'get'
   match '/get_context_attr',    to: 'wizard_apps#get_context_attr_id',  via: 'get'
   match '/generate_attribute_context_parameters',    to: 'wizard_apps#create_attribute_context_parameters',  via: 'get'
-  
+  match '/generate_in_context_class',    to: 'wizard_apps#create_in_context_class',  via: 'get'
   
   
   resources :ontologies, except: [:destroy, :show]

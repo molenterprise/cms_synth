@@ -1,105 +1,122 @@
+<div>
 
-	<!--  Wizard Header  -->
-	<header>
-		<h1 class="text-center">{{step.currentWindow.title}}</h1>
-	</header>
-
-	<!--  Products Container  -->
-	<div class="list-group">
-		<!--  Product Container  -->
-		<h3>{{step.currentWindow.message}}</h3>
-		Window: {{step.currentWindow.id}}
-		
-		<form name="reviewForm" ng-submit="step.changeWindow()">
-			
-			<div ng-show="step.isType('select')">
-				<select-nomenclator-chooser></select-nomenclator-chooser>
-			</div>	
-			
-			<div ng-show="step.isType('radio')">
-				<radio-nomenclator-chooser></radio-nomenclator-chooser>
-			</div>
-			
-			<div ng-show="step.isType('radioSelectedProperties')">
-				<radio-nomenclator-chooser></radio-nomenclator-chooser>
-				<selected-properties></selected-properties>
-			</div>
-			
-			<div ng-show="step.isType('radioDetail')">
-				<info-depending-on-selected-option></info-depending-on-selected-option>
-				<question-options></question-options>
-			</div>			
-			
-			<div ng-show="step.isType('infoWithOptions')">
-				<info-to-show></info-to-show>
-				<question-options></question-options>
-			</div>
-			
-			<div ng-show="step.isType('yesNoDetail')">
-				<resource-detail></resource-detail>
-				<question-options></question-options>
-			</div>				
-			
-			<div ng-show="step.isType('loopDetail')">
-				<resource-detail></resource-detail>
-				<question-options></question-options>
-			</div>
-			
-			<div ng-show="step.isType('loop')">
-				<selected-properties></selected-properties>
-				<question-options></question-options>
-			</div>
-			
-			<div ng-show="step.isType('addOntology')">
-				<add-ontology></add-ontology>
-			</div>
-			
-			<div ng-show="step.isType('selectedProperties')">
-				<selected-properties></selected-properties>
-			</div>
-			
-			<div ng-show="step.isType('checkbox')">
-				<datatype-property-selection></datatype-property-selection>
-				<selected-properties></selected-properties>
-			</div>
-			
-			<div ng-show="step.isType('paths')">
-				<radio-bottom-detail></radio-bottom-detail>
-			</div>
-			
-			<div ng-show="step.isType('path')">
-				<select-nomenclator-chooser-for-path></select-nomenclator-chooser-for-path>
-			</div>
-			
-			<div ng-show="step.isType('computedAttribute')">
-				<computed-attributes></computed-attributes>
-				<selected-properties></selected-properties>
-			</div>
-			
-			<div ng-show="step.isType('attributeForChoosing')">
-				<radio-attribute-for-choosing></radio-attribute-for-choosing>
-			</div>
-			
-			<div ng-show="step.isType('checkboxForDetail')">
-				<datatype-property-selection></datatype-property-selection>
-				<resource-detail></resource-detail>
-			</div>
-			
-			<div ng-show="step.isType('radioSelectedPropertiesForDetail')">
-				<radio-nomenclator-chooser></radio-nomenclator-chooser>
-				<resource-detail></resource-detail>
-			</div>
-			
-			<div ng-show="step.isType('attributeForChoosingForDetail')">
-				<radio-attribute-for-choosing-detail></radio-attribute-for-choosing-detail>
-			</div>
-			
-			<br/>
-			<fieldset class="form-group">
-				<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
-				<button ng-show="step.currentWindow.modal" class="btn btn-primary pull-right" type="button" ng-click="step.confirmDialog('Alert', step.currentWindow.modal);">Next</button>
-				<input ng-hide="step.currentWindow.modal" type="submit" class="btn btn-primary pull-right" value="Next" />
-			</fieldset>
-		</form>
+	<div ng-controller="myController" class="pull-left" style="padding:120px 20px 0px 0px">
+		<div 
+			data-angular-treeview="true" 
+			data-tree-id="treeData" 
+			data-tree-model="roleList" 
+			data-node-id="roleId" 
+			data-node-label="roleName" 
+			data-node-children="children">
+		</div>
 	</div>
-{{step.userSequence}}
+	
+	<div ng-controller="WizardController as step" class="media-body">
+		<!--  Wizard Header  -->
+		<header>
+			<h1 class="text-center">{{step.currentWindow.title}}</h1>
+		</header>
+	
+		<!--  Products Container  -->
+		<div class="list-group">
+			<!--  Product Container  -->
+			<h3>{{step.currentWindow.message}}</h3>
+			
+			<form name="reviewForm" ng-submit="step.changeWindow()">
+				
+				<div ng-show="step.isType('select')">
+					<select-nomenclator-chooser></select-nomenclator-chooser>
+				</div>	
+				
+				<div ng-show="step.isType('radio')">
+					<radio-nomenclator-chooser></radio-nomenclator-chooser>
+				</div>
+				
+				<div ng-show="step.isType('radioSelectedProperties')">
+					<radio-nomenclator-chooser></radio-nomenclator-chooser>
+					<selected-properties></selected-properties>
+				</div>
+				
+				<div ng-show="step.isType('radioDetail')">
+					<info-depending-on-selected-option></info-depending-on-selected-option>
+					<question-options></question-options>
+				</div>			
+				
+				<div ng-show="step.isType('infoWithOptions')">
+					<info-to-show></info-to-show>
+					<question-options></question-options>
+				</div>
+				
+				<div ng-show="step.isType('yesNoDetail')">
+					<resource-detail></resource-detail>
+					<question-options></question-options>
+				</div>				
+				
+				<div ng-show="step.isType('loopDetail')">
+					<resource-detail></resource-detail>
+					<question-options></question-options>
+				</div>
+				
+				<div ng-show="step.isType('loop')">
+					<selected-properties></selected-properties>
+					<question-options></question-options>
+				</div>
+				
+				<div ng-show="step.isType('addOntology')">
+					<add-ontology></add-ontology>
+				</div>
+				
+				<div ng-show="step.isType('selectedProperties')">
+					<selected-properties></selected-properties>
+				</div>
+				
+				<div ng-show="step.isType('checkbox')">
+					<datatype-property-selection></datatype-property-selection>
+					<selected-properties></selected-properties>
+				</div>
+				
+				<div ng-show="step.isType('paths')">
+					<radio-bottom-detail></radio-bottom-detail>
+				</div>
+				
+				<div ng-show="step.isType('path')">
+					<select-nomenclator-chooser-for-path></select-nomenclator-chooser-for-path>
+				</div>
+				
+				<div ng-show="step.isType('computedAttribute')">
+					<computed-attributes></computed-attributes>
+					<selected-properties></selected-properties>
+				</div>
+				
+				<div ng-show="step.isType('attributeForChoosing')">
+					<radio-attribute-for-choosing></radio-attribute-for-choosing>
+				</div>
+				
+				<div ng-show="step.isType('checkboxForDetail')">
+					<datatype-property-selection></datatype-property-selection>
+					<resource-detail></resource-detail>
+				</div>
+				
+				<div ng-show="step.isType('radioSelectedPropertiesForDetail')">
+					<radio-nomenclator-chooser></radio-nomenclator-chooser>
+					<resource-detail></resource-detail>
+				</div>
+				
+				<div ng-show="step.isType('attributeForChoosingForDetail')">
+					<radio-attribute-for-choosing-detail></radio-attribute-for-choosing-detail>
+				</div>
+				
+				<br/>
+				<fieldset class="form-group">
+					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
+					<button ng-show="step.currentWindow.modal" class="btn btn-primary pull-right" type="button" ng-click="step.confirmDialog('Alert', step.currentWindow.modal);">Next</button>
+					<input ng-hide="step.currentWindow.modal" type="submit" class="btn btn-primary pull-right" value="Next" />
+				</fieldset>
+			</form>
+		</div>
+	
+	</div>
+
+</div>
+
+

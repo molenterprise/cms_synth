@@ -1,0 +1,179 @@
+[
+	{
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.0.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.0.0.0.1",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.0.1.1.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 1
+	}, {
+		"currentWindow": "0.0.0.0.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.1",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.1.1.1.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 2
+	}, {
+		"currentWindow": "0.0.0.0.2",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.0",
+		"selectedOption": 0,
+		"selectedProperties": [3, 0]
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.1.0.0.0",
+		"selectedOption": "3"
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.1",
+		"selectedOption": "1"
+	}
+]
+
+
+[
+	{
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 1
+	}, {
+		"currentWindow": "0.0.0.0.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1",
+		"selectedOption": 4
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1.0.0",
+		"selectedOption": 0,
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0],
+		"paths": [
+			{
+				"key": 0,
+				"pathItems": [
+					{
+						"propertiesNames": ["temProduto"],
+						"className": "Produto"
+					}, {
+						"propertiesNames": ["categoria"],
+						"className": "Categoria"
+					}
+				]
+			}
+		]
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1.0.0.0",
+		"selectedOption": "3",
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0]
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.1",
+		"selectedOption": "1",
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0]
+	}
+]
+
+
+[
+	{
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 1
+	}, {
+		"currentWindow": "0.0.0.0.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1",
+		"selectedOption": 4,
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0]
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1.0",
+		"selectedOption": 0,
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0]
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1.0.0",
+		"selectedOption": 0,
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0],
+		"path": [
+			{
+				"key": 0,
+				"pathItems": [
+					{
+						"propertiesNames": ["temProduto"],
+						"className": "Produto"
+					}, {
+						"propertiesNames": ["categoria"],
+						"className": "Categoria"
+					}
+				]
+}
+		]
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.0.1.0.0.0",
+		"selectedOption": "3",
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0]
+	}, {
+		"currentWindow": "0.0.0.0.1.0.0.1",
+		"selectedOption": "1",
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0]
+	}
+]
+
