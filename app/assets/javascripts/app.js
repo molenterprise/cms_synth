@@ -47,6 +47,7 @@
 		me.previousNode = me.treeSequence;
 		
 		me.Data = Data.getData();
+		$scope.me = me;
 		
 		
 		$http.get('/def/definition_auction').success(function(data) {
@@ -67,108 +68,8 @@
 			 me.solution.selectedOptions = [length]; */
 
 		});
-		/*
-		 me.example = {
-		 "definition" : [{
-		 "propertyName" : "hasOpeningDoc",
-		 "domain" : ["Event"],
-		 "range" : ["Document"]
-		 }, {
-		 "propertyName" : "hasClosingDoc",
-		 "domain" : ["Event"],
-		 "range" : ["Document"]
-		 }, {
-		 "propertyName" : "presenter",
-		 "domain" : ["Document"],
-		 "range" : ["Person"]
-		 }, {
-		 "propertyName" : "author",
-		 "domain" : ["Document"],
-		 "range" : ["Person"]
-		 }, {
-		 "propertyName" : "advisor",
-		 "domain" : ["Document"],
-		 "range" : ["Person"]
-		 }, {
-		 "propertyName" : "madeIn",
-		 "domain" : ["Document"],
-		 "range" : ["Country"]
-		 }, {
-		 "propertyName" : "organizer",
-		 "domain" : ["Event"],
-		 "range" : ["Person"]
-		 }],
-		 "triples" : [{
-		 "subject" : "Event1",
-		 "predicate" : "hasOpeningDoc",
-		 "object" : "DocA"
-		 }, {
-		 "subject" : "Event2",
-		 "predicate" : "hasClosingDoc",
-		 "object" : "DocC"
-		 }, {
-		 "subject" : "DocA",
-		 "predicate" : "presenter",
-		 "object" : "Albert"
-		 }, {
-		 "subject" : "DocA",
-		 "predicate" : "author",
-		 "object" : "John Doe"
-		 }, {
-		 "subject" : "DocC",
-		 "predicate" : "advisor",
-		 "object" : "Schwabe"
-		 }, {
-		 "subject" : "DocA",
-		 "predicate" : "madeIn",
-		 "object" : "China"
-		 }, {
-		 "subject" : "Event1",
-		 "predicate" : "organizer",
-		 "object" : "Tim Berners Lee"
-		 }, {
-		 "subject" : "Event2",
-		 "predicate" : "organizer",
-		 "object" : "Tim Berners Lee"
-		 }, {
-		 "subject" : "Event1",
-		 "predicate" : "type",
-		 "object" : "Event"
-		 }, {
-		 "subject" : "Event2",
-		 "predicate" : "type",
-		 "object" : "Event"
-		 }, {
-		 "subject" : "DocA",
-		 "predicate" : "type",
-		 "object" : "Document"
-		 }, {
-		 "subject" : "DocB",
-		 "predicate" : "type",
-		 "object" : "Document"
-		 }, {
-		 "subject" : "DocC",
-		 "predicate" : "type",
-		 "object" : "Document"
-		 }, {
-		 "subject" : "Albert",
-		 "predicate" : "type",
-		 "object" : "Person"
-		 }, {
-		 "subject" : "Tim Berners Lee",
-		 "predicate" : "type",
-		 "object" : "Person"
-		 }, {
-		 "subject" : "Schwabe",
-		 "predicate" : "type",
-		 "object" : "Person"
-		 }, {
-		 "subject" : "China",
-		 "predicate" : "type",
-		 "object" : "Country"
-		 }]
-		 };
-		 */
+
+
 		me.example = {
 			"definition" : [{
 				"propertyName" : "nomeCategoria",
@@ -1205,9 +1106,9 @@
 				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, this.id++, null, "Art");	
 				
 			if (this.currentWindow.options[nextValue].child == "End"){
-				if(this.treeSequence(this.currentArtNode).id != 0){ 
-					this.previousNode = this.treeSequence.getParent(this.treeSequence.getParent(this.previosNode));
-					this.currentArtNode = this.treeSequence.getParent(this.treeSequence.getParent(this.currentArtNode));
+				if(this.treeSequence.getParent(this.currentArtNode).id != 0){ 
+					this.previousNode = this.treeSequence.getParent(this.currentArtNode);
+					this.currentArtNode = this.treeSequence.getParent(this.previousNode);
 					idNextWindow = this.previousNode.data.currentWindow;
 				}
 			}
@@ -1233,12 +1134,81 @@
 			// me.Data.tree.push(node);
 			// me.Data.currentNode.currentNode = node;
 			
-			tree = this.getArtTreeSequence(this.currentArtNode).children;
+			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
-			for(i = 0; i < tree.length; i++){
-				me.Data.tree.push(tree[i])
+			for(i = 0; i < tree.children.length; i++){
+				me.Data.tree.push(tree.children[i]);
 			}
-			me.Data.currentNode.currentNode = this.currentArtNode;
+			me.pull = true;
+			me.Data.currentNode.currentNode = tree.selectedNode;
+			
+		};
+		
+		this.back = function() {
+			if (this.userSequence.length > 0) {
+				step = this.userSequence.pop();
+
+				if (this.currentArtNode.children == null || this.currentArtNode.children.length == 0) {
+					parent = this.treeSequence.getParent(this.currentArtNode);
+					this.currentArtNode = this.treeSequence.getParent(parent);
+				}
+
+				step1 = this.previousNode.data;
+				nodeToCut = this.previousNode;
+				this.previousNode = this.treeSequence.getPreviousNode(this.previousNode);
+				this.treeSequence.deleteNode(nodeToCut);
+
+				this.selectWindow(step.currentWindow);
+				this.solution.selectedOption = step.selectedOption;
+				this.solution.selectedProperties = step.selectedProperties;
+				this.solution.selectedOptions = step.selectedOptions;
+			}
+			
+			tree = this.getArtTreeSequence(this.currentArtNode);
+			me.Data.tree.length = 0;
+			for(i = 0; i < tree.children.length; i++){
+				me.Data.tree.push(tree.children[i]);
+			}
+			me.pull = true;
+			me.Data.currentNode.currentNode = tree.selectedNode;
+		};
+		
+		$scope.$watch('me.Data.currentNode.currentNode', function (newValue, oldValue) {
+			if(newValue != undefined && newValue.id != undefined && oldValue != undefined && newValue.id != oldValue.id){
+				me.go_to_step(newValue.id);
+			}
+	    });
+		/*
+		$scope.$on('changedNodeSelected', function(event, args) {
+			this.go_to_step(me.Data.currentNode.currentNode.id);
+		});
+		*/
+		this.go_to_step = function(nodeId){
+			
+			if(me.pull == true)
+			{
+				me.pull = false;
+				return;
+			}
+			node = this.treeSequence.findNode(nodeId);
+			if(node.type != "Art")
+				node = this.treeSequence.getParent(node);
+			
+			if(node.children == undefined || node.children.length == 0)
+				return;	
+			node = node.children[node.children.length - 1];
+			
+			this.previousNode = this.treeSequence.getPreviousNode(node);
+			this.currentArtNode = this.treeSequence.getParent(node);
+			this.selectWindow(node.data.currentWindow);
+			this.treeSequence.deleteNode(node);
+			
+			tree = this.getArtTreeSequence(this.currentArtNode);
+			me.Data.tree.length = 0;
+			for(i = 0; i < tree.children.length; i++){
+				me.Data.tree.push(tree.children[i]);
+			}
+			me.Data.currentNode.currentNode = tree.selectedNode;
 		};
 
 		this.beforeExecControl = function() {
@@ -1340,7 +1310,7 @@
 					});
 				});
 				this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0].length - 1);
-			} else if (this.isType('loopDetail') || this.isType('loop')) {
+			} /*else if (this.isType('loopDetail') || this.isType('loop')) {
 				if (this.currentWindow.options[this.solution.selectedOption].text == "Yes") {
 					if (this.seqNextNavegation.length == 0)
 						this.seqNextNavegation.push(this.currentWindow.options[1].next);
@@ -1349,7 +1319,7 @@
 					nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
 					this.currentWindow.options[nextValue].next = this.seqNextNavegation.pop();
 				}
-			}
+			}*/
 		};
 
 		this.confirmDialog = function(title, msg) {
@@ -1377,33 +1347,6 @@
 			modalService.showModal({}, modalOptions).then(function(result) {
 				me.changeWindow();
 			});
-		};
-
-		this.back = function() {
-			if (this.userSequence.length > 0) {
-				step = this.userSequence.pop();
-
-				if (this.currentArtNode.children == null || this.currentArtNode.children.length == 0) {
-					parent = this.treeSequence.getParent(this.currentArtNode);
-					this.currentArtNode = this.treeSequence.getParent(parent);
-				}
-
-				step1 = this.previousNode.data;
-				nodeToCut = this.previousNode;
-				this.previousNode = this.treeSequence.getPreviousNode(this.previousNode);
-				this.treeSequence.deleteNode(nodeToCut);
-
-				this.selectWindow(step.currentWindow);
-				this.solution.selectedOption = step.selectedOption;
-				this.solution.selectedProperties = step.selectedProperties;
-				this.solution.selectedOptions = step.selectedOptions;
-			}
-			
-			tree = this.getArtTreeSequence(this.currentArtNode).children;
-			me.Data.tree.length = 0;
-			for(i = 0; i < tree.length; i++){
-				me.Data.tree.push(tree[i])
-			}
 		};
 
 		this.getWindow = function(id) {
@@ -1657,41 +1600,32 @@
 			return result;
 		};
 		
-		this.go_to_step = function(nodeId){
-			
-			node = this.treeSequence.find(nodeId);
-			if(node.type != "Art")
-				node = this.treeSequence.getParent(node);
-			node = node.children.last();
-			
-			this.previousNode = this.treeSequence.getPreviousNode(node);
-			this.currentArtNode = this.treeSequence.getParent(node);
-			this.selectWindow(node.data.currentWindow);
-			this.treeSequence.deleteNode(node);
-		};
-		
 		this.getArtTreeSequence = function(selected){
-			node = { "id": this.treeSequence.id, "label": this.treeSequence.label, "children": []};
+			node = { "id": this.treeSequence.id, "label": this.treeSequence.label, "children": [], "selectedNode": null};
+			info = {"selected": selected, "resultSelected": null};
 			
-			this.getArtTreeSequenceAux(node, this.treeSequence, selected);
+			this.getArtTreeSequenceAux(node, this.treeSequence, info);
+			node.selectedNode = info.resultSelected;
+			 
 			return node;
 		};
 		
-		this.getArtTreeSequenceAux = function(result, original, selected){
+		this.getArtTreeSequenceAux = function(parent, current, info){
 			var node;
-			if(original.type == "Art"){
-				node = {"id": original.id, "label": original.label, "children": []};
-				if(selected == original){
-					node.selected = 'selected'
+			if(current.type == "Art"){
+				node = {"id": current.id, "label": current.label, "children": []};
+				if(info.selected == current){
+					node.selected = 'selected';
+					info.resultSelected = node;
 				}
-				result.children.push(node);
+				parent.children.push(node);
 			}else{
-				node = result;
+				node = parent;
 			}
 			
-			if(original.children != undefined){
-				for (var i=0; i < original.children.length; i++) {
-				  this.getArtTreeSequenceAux(node, original.children[i], selected);
+			if(current.children != undefined){
+				for (var i=0; i < current.children.length; i++) {
+				  this.getArtTreeSequenceAux(node, current.children[i], info);
 				};
 			}
 		 };
@@ -1701,36 +1635,18 @@
 	
 	app.controller('treeController', function($scope, Data) {
 
-		$scope.tree = [{
-			"label" : "User",
-			"id" : "role1",
-			"selected" : "selected",
-			"children" : [{
-				"label" : "subUser1",
-				"id" : "role11",
-				"children" : []
-			}, {
-				"label" : "subUser2",
-				"id" : "role12",
-				"children" : [{
-					"label" : "subUser2-1",
-					"id" : "role121",
-					"children" : []
-				}]
-			}]
-		}, {
-			"label" : "Admin",
-			"id" : "role2",
-			"children" : []
-		}];
-		$scope.currentNode = {currentNode: $scope.tree[0]};
+		$scope.tree = [];
+		$scope.currentNode = {currentNode: null};
 		
 		$scope.$watch('tree', function (newValue, oldValue) {
 	        if (newValue !== oldValue) Data.setTree(newValue);
 	    });
 	    
 	    $scope.$watch('currentNode', function (newValue, oldValue) {
-	        if (newValue !== oldValue) Data.setCurrentNode(currentNode);
+	        if (newValue !== oldValue){
+	        	Data.setCurrentNode(newValue);
+	        	//$scope.$emit('changedNodeSelected', newValue);
+	        }
 	    });
 	    
 	    Data.setTree($scope.tree);

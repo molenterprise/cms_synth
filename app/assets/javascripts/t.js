@@ -108,7 +108,7 @@
 			}
 		};
 
-		t.find = function(nodeId) {
+		t.findNode = function(nodeId) {
 			return t.find(this, function(node, par) {
 				return node.id == nodeId;
 			});
