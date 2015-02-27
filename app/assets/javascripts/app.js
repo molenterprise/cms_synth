@@ -1310,16 +1310,7 @@
 					});
 				});
 				this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0].length - 1);
-			} /*else if (this.isType('loopDetail') || this.isType('loop')) {
-				if (this.currentWindow.options[this.solution.selectedOption].text == "Yes") {
-					if (this.seqNextNavegation.length == 0)
-						this.seqNextNavegation.push(this.currentWindow.options[1].next);
-					this.seqNextNavegation.push(this.currentWindow.id);
-				} else if (this.seqNextNavegation.length > 0) {
-					nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
-					this.currentWindow.options[nextValue].next = this.seqNextNavegation.pop();
-				}
-			}*/
+			} 
 		};
 
 		this.confirmDialog = function(title, msg) {

@@ -381,23 +381,37 @@ class WizardAppsController < ApplicationController
     @log_param = false
 
     app_name = 'app_test_1'
+    
+    
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
-
-    app_user_definition.each{ |step|
-
-      windowId = step['currentWindow']
-      window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
-
-      todo = window['todo']
-      process_function(todo, step) unless todo.blank?
-
-      unless window['options'].blank? or window['options'][step['selectedOption'].to_i]['todo'].blank? then
-        process_function(window['options'][step['selectedOption'].to_i]['todo'], step)
+    
+    stack = [{:children => app_user_definition.children, :index => 0}]
+      
+    while !stack.empty? do  
+      
+      node = stack[-1];
+      if(node[:children].length >= node[:index]) then
+        stack.pop()
+      else
+        current = node[:children][node[:index]]
+        node[index] += 1
+        
+        if current['type'] != 'Art' then
+          windowId = current['currentWindow']
+          window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
+    
+          todo = window['todo']
+          process_function(todo, step) unless todo.blank?
+    
+          unless window['options'].blank? or window['options'][step['selectedOption'].to_i]['todo'].blank? then
+            process_function(window['options'][step['selectedOption'].to_i]['todo'], step)
+          end
+        end
+        stack.push({:node => current[:children], :index => 0}) unless current[:children].nil? || current[:children].empty?
       end
-
-    }
+    end
 
     render :json => {:status => 'done!' }
 

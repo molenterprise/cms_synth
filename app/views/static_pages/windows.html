@@ -19,12 +19,10 @@
 		</header>
 	
 		<!--  Products Container  -->
-		<div class="list-group">
+		<div class="list-group" style="height: 600px">
 			<!--  Product Container  -->
 			<h3>{{step.currentWindow.message}}</h3>
 			Window: {{step.currentWindow.id}}
-			
-			a: {{step.Data.currentNode.currentNode}}
 
 			<form name="reviewForm" ng-submit="step.changeWindow()">
 				
@@ -118,7 +116,7 @@
 				</fieldset>
 			</form>
 			
-			{{step.test}} 
+			{{step.treeSequence}} 
 
 		</div>
 	
