@@ -39,6 +39,7 @@
 		me.solution.selectedOptions = [];
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
+		me.scope = me.scope = {"data":[], "examples":[]};;
 
 		me.id = 0;
 		me.treeSequence = t;
@@ -58,7 +59,7 @@
 
 			me.solution = {
 				selectedOption : 0,
-				selectedProperties : [0],
+				selectedProperties : [],
 				selectedOptions : [0, 0, 0, 0, 0, 0],
 				mainclass : "it is not used"
 			};
@@ -1087,13 +1088,17 @@
 		this.changeWindow = function() {
 			this.afterExecControl();
 			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
+			
+			if(this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
+				this.scope.data = this.scope.data.concat(this.solution.selectedProperties);
 
 			step = {
 				currentWindow : this.currentWindow.id,
 				//title: this.currentWindow.title, //debug
 				selectedOption : this.solution.selectedOption,
 				selectedProperties : this.solution.selectedProperties.slice(),
-				selectedOptions : this.solution.selectedOptions.slice()
+				selectedOptions : this.solution.selectedOptions.slice(),
+				scope: JSON.parse(JSON.stringify(this.scope))
 			};
 
 			idNextWindow = this.currentWindow.options[nextValue].next;
@@ -1112,27 +1117,18 @@
 					idNextWindow = this.previousNode.data.currentWindow;
 				}
 			}
+			
+			if (this.currentWindow.scope == "new"){
+				text = JSON.stringify(this.wizard.data[this.currentWindow.example]);
+				me.scope = {"data":[0], "examples": JSON.parse(text)};
+			}
 					
 
 			this.selectWindow(idNextWindow);
-			this.solution.selectedOptions = [0, 0, 0, 0, 0, 0];
-			this.solution.selectedProperties = [0];
+			this.solution.selectedOptions = [];
+			this.solution.selectedProperties = [];
 			this.solution.selectedOption = 0;
 			this.beforeExecControl();
-		
-			
-			// node = me.Data.currentNode;
-			// node.currentNode.selected = "";
-// 			
-			// node = {
-				// "label" : "Guest",
-				// "id" : "role3",
-				// "children" : [],
-				// "selected": "selected"
-			// };
-// 
-			// me.Data.tree.push(node);
-			// me.Data.currentNode.currentNode = node;
 			
 			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
@@ -1162,6 +1158,7 @@
 				this.solution.selectedOption = step.selectedOption;
 				this.solution.selectedProperties = step.selectedProperties;
 				this.solution.selectedOptions = step.selectedOptions;
+				this.solution.scope = step.scope;
 			}
 			
 			tree = this.getArtTreeSequence(this.currentArtNode);
@@ -1300,17 +1297,31 @@
 
 		this.afterExecControl = function() {
 			if (this.isType('computedAttribute')) {
-				if (this.computedAttr_name != "")
-					var temp = this.computedAttr_name;
-				this.wizard.data[this.currentWindow.example].forEach(function(entry) {
+				var temp = this.computedAttr_name;
+				this.scope.examples.forEach(function(entry) {
 					entry.push({
 						"id" : entry.length,
 						"name" : temp,
 						"value" : ["Computed " + temp + " attribute"]
 					});
 				});
-				this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0].length - 1);
+
+				this.scope.data.push(this.scope.examples[0].length - 1);
 			} 
+			
+			if (this.isType('path')) {
+				var paths = this.currentWindow.paths;
+					this.scope.examples.forEach(function(entry) {
+						items = paths[0].pathItems;
+						entry.push({
+							"id" : entry.length,
+							"name" : items[items.length - 1].className,
+							"value" : "Path to " + [items[items.length - 1].className]
+						});
+					});
+
+				this.scope.data.push(this.scope.examples[0].length - 1);
+			}
 		};
 
 		this.confirmDialog = function(title, msg) {
@@ -1320,19 +1331,6 @@
 				actionButtonText : 'Yes',
 				headerText : title,
 				bodyText : msg,
-				/*  close: function (result) { //revisar para definir el no
-				 console.log("close");
-				 /*   	step = {
-				 currentWindow: this.currentWindow.id,
-				 //title: this.currentWindow.title, //debug
-				 selectedOption: this.solution.selectedOption,
-				 selectedProperties: this.solution.selectedProperties,
-				 selectedOptions: this.solution.selectedOptions
-				 };
-				 this.userSequence.push(step);
-				 this.selectWindow(this.currentWindow.cancelModalNext);
-				 this.solution.selectedOption = 0;
-				 }*/
 			};
 
 			modalService.showModal({}, modalOptions).then(function(result) {
@@ -1677,6 +1675,13 @@
 		return {
 			restrict : 'E',
 			templateUrl : 'selected-properties.html'
+		};
+	});
+	
+	app.directive('showScope', function() {
+		return {
+			restrict : 'E',
+			templateUrl : 'show-scope.html'
 		};
 	});
 

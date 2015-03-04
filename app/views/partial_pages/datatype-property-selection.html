@@ -1,3 +1,4 @@
 <div class="col-md-6" ng-repeat="property in step.currentWindow.datatypeProperties">	
-	<input type="checkbox" checklist-model="step.solution.selectedProperties" checklist-value="step.selectPropertyByName(property, step.wizard.data[step.currentWindow.example][0], step.hasDatatypePropertySelection()).id">{{property}}
+	<input type="checkbox" checklist-model="step.scope.data" 
+		checklist-value="step.selectPropertyByName(property, step.wizard.data[step.currentWindow.example][0], step.hasDatatypePropertySelection()).id">{{property}}
 </div>
