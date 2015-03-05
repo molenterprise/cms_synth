@@ -49,7 +49,7 @@
 		//
 		//     $ npm install t
 		//
-		var _dfsPostOrder, t = {}, root = this, isArray = function(o) {
+		var _dfsPostOrder, t = {}, root = this, id = 0, isArray = function(o) {
 			return Object.prototype.toString.call(o) === '[object Array]';
 		}, getChildrenName = function(config) {
 			return config.childrenName || 'children';
@@ -62,11 +62,12 @@
 		} else {
 			root.t = t;
 		}
+		
 
-		t.addChildNode = function(tree, id, value, type) {
+		t.addChildNode = function(tree, label, value, type) {
 			node = {
-				"id" : id,
-				"label" : "data " + id,
+				"id" : id++,
+				"label" : label,
 				"data" : value,
 				"type" : type
 			};

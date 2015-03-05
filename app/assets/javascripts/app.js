@@ -39,12 +39,11 @@
 		me.solution.selectedOptions = [];
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
-		me.scope = me.scope = {"data":[], "examples":[]};;
+		me.scope = {"data":[], "examples":[]};;
 
 		me.id = 0;
 		me.treeSequence = t;
-		me.treeSequence.id = me.id++;
-		me.currentArtNode = me.treeSequence.addChildNode(me.treeSequence, me.id++, null, "Art");
+		me.currentArtNode = me.treeSequence.addChildNode(me.treeSequence, "New Landmark", null, "Art");
 		me.previousNode = me.treeSequence;
 		
 		me.Data = Data.getData();
@@ -1076,39 +1075,48 @@
 			}]
 		};
 
-		this.newLandmark = function() {
-			this.currentArtNode = this.treeSequence.addChildNode(me.treeSequence, this.id++, null, "Art");
-			this.previousNode = this.treeSequence;
-		};
 
 		this.isType = function(val) {
 			return this.currentWindow.type == val;
 		};
-
-		this.changeWindow = function() {
-			this.afterExecControl();
-			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
+		
+		this.saveCurrentValues = function(){
 			
-			if(this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
-				this.scope.data = this.scope.data.concat(this.solution.selectedProperties);
-
 			step = {
 				currentWindow : this.currentWindow.id,
-				//title: this.currentWindow.title, //debug
 				selectedOption : this.solution.selectedOption,
 				selectedProperties : this.solution.selectedProperties.slice(),
 				selectedOptions : this.solution.selectedOptions.slice(),
 				scope: JSON.parse(JSON.stringify(this.scope))
 			};
-
-			idNextWindow = this.currentWindow.options[nextValue].next;
 			
 			this.userSequence.push(step);
+			
+			return step;
 
-			this.previousNode = this.treeSequence.addChildNode(this.currentArtNode, this.id++, step, "Normal");
+		};
+
+		this.changeWindow = function() {
+			this.afterExecControl();
+			
+			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
+			
+			if(this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
+				this.scope.data = this.scope.data.concat(this.solution.selectedProperties);
+			
+			step = this.saveCurrentValues();
+			
+			idNextWindow = this.currentWindow.options[nextValue].next;
+			
+			if (this.currentWindow.options[nextValue].child == "Landmark"){
+				this.treeSequence.addChildNode(this.currentArtNode, "", step, "Normal");
+				this.currentArtNode = this.treeSequence.addChildNode(me.treeSequence, "New Landmark", null, "Art");
+				this.previousNode = this.treeSequence;
+			}else
+				this.previousNode = this.treeSequence.addChildNode(this.currentArtNode, "", step, "Normal");
 
 			if (this.currentWindow.options[nextValue].child == "Yes")
-				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, this.id++, null, "Art");	
+				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, "Relation", null, "Art");	
 				
 			if (this.currentWindow.options[nextValue].child == "End"){
 				if(this.treeSequence.getParent(this.currentArtNode).id != 0){ 
@@ -1142,14 +1150,14 @@
 		
 		this.back = function() {
 			if (this.userSequence.length > 0) {
-				step = this.userSequence.pop();
+				this.userSequence.pop();
 
 				if (this.currentArtNode.children == null || this.currentArtNode.children.length == 0) {
 					parent = this.treeSequence.getParent(this.currentArtNode);
 					this.currentArtNode = this.treeSequence.getParent(parent);
 				}
 
-				step1 = this.previousNode.data;
+				step = this.previousNode.data;
 				nodeToCut = this.previousNode;
 				this.previousNode = this.treeSequence.getPreviousNode(this.previousNode);
 				this.treeSequence.deleteNode(nodeToCut);
@@ -1158,7 +1166,7 @@
 				this.solution.selectedOption = step.selectedOption;
 				this.solution.selectedProperties = step.selectedProperties;
 				this.solution.selectedOptions = step.selectedOptions;
-				this.solution.scope = step.scope;
+				this.scope = step.scope;
 			}
 			
 			tree = this.getArtTreeSequence(this.currentArtNode);
@@ -1172,8 +1180,10 @@
 		
 		$scope.$watch('me.Data.currentNode.currentNode', function (newValue, oldValue) {
 			if(newValue != undefined && newValue.id != undefined && oldValue != undefined && newValue.id != oldValue.id){
-				me.go_to_step(newValue.id);
+				if(!me.pull)
+					me.go_to_step(newValue.id);
 			}
+			me.pull = false;
 	    });
 		/*
 		$scope.$on('changedNodeSelected', function(event, args) {
@@ -1182,11 +1192,12 @@
 		*/
 		this.go_to_step = function(nodeId){
 			
-			if(me.pull == true)
-			{
-				me.pull = false;
-				return;
-			}
+			//save current values
+			step = this.saveCurrentValues();
+			this.treeSequence.addChildNode(this.currentArtNode, "", step, "Normal");
+			
+			//restore values
+			
 			node = this.treeSequence.findNode(nodeId);
 			if(node.type != "Art")
 				node = this.treeSequence.getParent(node);
@@ -1195,10 +1206,17 @@
 				return;	
 			node = node.children[node.children.length - 1];
 			
+			step = node.data;
+			
 			this.previousNode = this.treeSequence.getPreviousNode(node);
 			this.currentArtNode = this.treeSequence.getParent(node);
 			this.selectWindow(node.data.currentWindow);
 			this.treeSequence.deleteNode(node);
+			
+			this.solution.selectedOption = step.selectedOption;
+			this.solution.selectedProperties = step.selectedProperties;
+			this.solution.selectedOptions = step.selectedOptions;
+			this.scope = step.scope;
 			
 			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
@@ -1210,8 +1228,8 @@
 
 		this.beforeExecControl = function() {
 			if (this.isType('attributeForChoosing') || this.isType('attributeForChoosingForDetail')) {
-				this.initSelectedOption(this.solution.selectedProperties[0], true);
-				this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data[this.currentWindow.example][0], true).name, true);
+				this.initSelectedOption(this.scope.data[0], true);
+				//this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data[this.currentWindow.example][0], true).name, true);
 			} else if (this.isType('computedAttribute')) {
 				this.computedAttr_name = "";
 			} else if (this.isType('yesNoDetail')) {
@@ -1316,7 +1334,7 @@
 						entry.push({
 							"id" : entry.length,
 							"name" : items[items.length - 1].className,
-							"value" : "Path to " + [items[items.length - 1].className]
+							"value" : ["Path to " + [items[items.length - 1].className]]
 						});
 					});
 
