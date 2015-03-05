@@ -240,9 +240,10 @@
 			"id": "0.0.0.0.0.1",
 			"title": "Categoria detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Categoria",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
 			"datatypeProperties": ["label", "Nome"],
-			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -318,9 +319,10 @@
 			"id": "0.0.0.0.1.1",
 			"title": "Leilao detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Leilao",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -396,9 +398,10 @@
 			"id": "0.0.0.0.2.1",
 			"title": "Produto detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Produto",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -474,9 +477,10 @@
 			"id": "0.0.0.0.3.1",
 			"title": "Usuario detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Usuario",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario in the detail view?",
 			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
-			"example": "Usuario",
 			"options": [
 				{
 					"key": 0,
@@ -552,9 +556,10 @@
 			"id": "0.0.0.0.4.1",
 			"title": "Concorrente detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Concorrente",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente in the detail view?",
 			"datatypeProperties": ["label", "Nome", "email"],
-			"example": "Concorrente",
 			"options": [
 				{
 					"key": 0,
@@ -630,9 +635,10 @@
 			"id": "0.0.0.0.5.1",
 			"title": "Lance detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Lance",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance in the detail view?",
 			"datatypeProperties": ["timeStamp", "valor"],
-			"example": "Lance",
 			"options": [
 				{
 					"key": 0,
@@ -708,9 +714,10 @@
 			"id": "0.0.0.0.6.1",
 			"title": "Vendedor detail",
 			"type": "yesNoDetail",
+			"scope": "new",
+			"example": "Vendedor",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
-			"example": "Vendedor",
 			"options": [
 				{
 					"key": 0,
@@ -762,6 +769,8 @@
 			"id": "0.0.0.0.0.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria than those shown in the example?",
 			"options": [
@@ -832,10 +841,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.0.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.0.1.1.1"
 				}
 			]
@@ -879,6 +890,8 @@
 			"id": "0.0.0.0.1.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao than those shown in the example?",
 			"options": [
@@ -949,10 +962,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.1.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.1.1.1.1"
 				}
 			]
@@ -996,6 +1011,8 @@
 			"id": "0.0.0.0.2.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto than those shown in the example?",
 			"options": [
@@ -1066,10 +1083,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.2.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.2.1.1.1"
 				}
 			]
@@ -1113,6 +1132,8 @@
 			"id": "0.0.0.0.3.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario than those shown in the example?",
 			"options": [
@@ -1183,10 +1204,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.3.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.3.1.1.1"
 				}
 			]
@@ -1230,6 +1253,8 @@
 			"id": "0.0.0.0.4.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente than those shown in the example?",
 			"options": [
@@ -1300,10 +1325,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.4.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.4.1.1.1"
 				}
 			]
@@ -1347,6 +1374,8 @@
 			"id": "0.0.0.0.5.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance than those shown in the example?",
 			"options": [
@@ -1417,10 +1446,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.5.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.5.1.1.1"
 				}
 			]
@@ -1464,6 +1495,8 @@
 			"id": "0.0.0.0.6.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor than those shown in the example?",
 			"options": [
@@ -1534,10 +1567,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.6.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.6.1.1.1"
 				}
 			]
@@ -1578,8 +1613,8 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.1.1.1",
-					"child": "End"
+					"child": "End",
+					"next": "0.0.0.0.0.1.1.1"
 				}
 			]
 		}, {
@@ -1622,7 +1657,6 @@
 			"id": "0.0.0.0.0.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -1657,11 +1691,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.0.1.1.1."
 				}
 			]
 		}, {
@@ -1696,10 +1730,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.1.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.1.1.1.1"
 				}
 			]
@@ -1707,6 +1743,7 @@
 			"id": "0.0.0.0.1.1.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao detail",
 			"type": "checkboxForDetail",
+			"scope": "scope",
 			"message": "Add Leilao properties",
 			"example": "Leilao",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
@@ -1750,7 +1787,6 @@
 			"id": "0.0.0.0.1.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -1785,11 +1821,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.1.1.1.1."
 				}
 			]
 		}, {
@@ -1829,6 +1865,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.2.1.1.1"
 				}
 			]
@@ -1836,6 +1873,7 @@
 			"id": "0.0.0.0.2.1.0.0",
 			"title": "Following this example which attributes you want to show in the Produto detail",
 			"type": "checkboxForDetail",
+			"scope": "scope",
 			"message": "Add Produto properties",
 			"example": "Produto",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -1871,7 +1909,6 @@
 			"id": "0.0.0.0.2.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -1906,11 +1943,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.2.1.1.1."
 				}
 			]
 		}, {
@@ -1945,10 +1982,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.3.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.3.1.1.1"
 				}
 			]
@@ -1956,6 +1995,7 @@
 			"id": "0.0.0.0.3.1.0.0",
 			"title": "Following this example which attributes you want to show in the Usuario detail",
 			"type": "checkboxForDetail",
+			"scope": "scope",
 			"message": "Add Usuario properties",
 			"example": "Usuario",
 			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
@@ -1987,7 +2027,6 @@
 			"id": "0.0.0.0.3.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -2022,11 +2061,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.3.1.1.1."
 				}
 			]
 		}, {
@@ -2061,10 +2100,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.4.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.4.1.1.1"
 				}
 			]
@@ -2072,6 +2113,7 @@
 			"id": "0.0.0.0.4.1.0.0",
 			"title": "Following this example which attributes you want to show in the Concorrente detail",
 			"type": "checkboxForDetail",
+			"scope": "scope",
 			"message": "Add Concorrente properties",
 			"example": "Concorrente",
 			"datatypeProperties": ["label", "Nome", "email"],
@@ -2099,7 +2141,6 @@
 			"id": "0.0.0.0.4.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -2134,11 +2175,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.4.1.1.1."
 				}
 			]
 		}, {
@@ -2173,10 +2214,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.5.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.5.1.1.1"
 				}
 			]
@@ -2184,6 +2227,7 @@
 			"id": "0.0.0.0.5.1.0.0",
 			"title": "Following this example which attributes you want to show in the Lance detail",
 			"type": "checkboxForDetail",
+			"scope": "scope",
 			"message": "Add Lance properties",
 			"example": "Lance",
 			"datatypeProperties": ["timeStamp", "valor"],
@@ -2231,7 +2275,6 @@
 			"id": "0.0.0.0.5.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -2266,11 +2309,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.5.1.1.1."
 				}
 			]
 		}, {
@@ -2305,10 +2348,12 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.6.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
+					"child": "End",
 					"next": "0.0.0.0.6.1.1.1"
 				}
 			]
@@ -2316,6 +2361,7 @@
 			"id": "0.0.0.0.6.1.0.0",
 			"title": "Following this example which attributes you want to show in the Vendedor detail",
 			"type": "checkboxForDetail",
+			"scope": "scope",
 			"message": "Add Vendedor properties",
 			"example": "Vendedor",
 			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
@@ -2347,7 +2393,6 @@
 			"id": "0.0.0.0.6.1.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"needNextProcessing": true,
 			"message": "New attribute",
 			"message1": "Selected properties",
@@ -2382,11 +2427,11 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.6.1.1.1."
 				}
 			]
 		}, {
@@ -2429,7 +2474,6 @@
 			"id": "0.0.0.0.0.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Categoria",
@@ -2450,8 +2494,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0",
-					"child": "End"
+					"next": ".0.0.0"
 				}
 			]
 		}, {
@@ -2508,7 +2551,6 @@
 			"id": "0.0.0.0.1.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Leilao",
@@ -2578,7 +2620,6 @@
 			"id": "0.0.0.0.2.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Produto",
@@ -2644,7 +2685,6 @@
 			"id": "0.0.0.0.3.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Usuario",
@@ -2706,7 +2746,6 @@
 			"id": "0.0.0.0.4.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Concorrente",
@@ -2788,7 +2827,6 @@
 			"id": "0.0.0.0.5.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Lance",
@@ -2854,7 +2892,6 @@
 			"id": "0.0.0.0.6.0.0.0.2",
 			"title": "Computed attribute",
 			"type": "computedAttribute",
-			"scope": "scope",
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Vendedor",
@@ -3189,7 +3226,6 @@
 			"id": "0.0.0.0.0.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Categoria list? Which type?",
 			"example": "Categoria",
 			"options": [
@@ -3215,7 +3251,6 @@
 			"id": "0.0.0.0.1.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Leilao list? Which type?",
 			"example": "Leilao",
 			"options": [
@@ -3241,7 +3276,6 @@
 			"id": "0.0.0.0.2.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Produto list? Which type?",
 			"example": "Produto",
 			"options": [
@@ -3267,7 +3301,6 @@
 			"id": "0.0.0.0.3.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Usuario list? Which type?",
 			"example": "Usuario",
 			"options": [
@@ -3293,7 +3326,6 @@
 			"id": "0.0.0.0.4.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Concorrente list? Which type?",
 			"example": "Concorrente",
 			"options": [
@@ -3319,7 +3351,6 @@
 			"id": "0.0.0.0.5.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Lance list? Which type?",
 			"example": "Lance",
 			"options": [
@@ -3345,7 +3376,6 @@
 			"id": "0.0.0.0.6.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
-			"scope": "scope",
 			"message": "Do you want to show more attributes in the Vendedor list? Which type?",
 			"example": "Vendedor",
 			"options": [

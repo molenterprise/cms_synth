@@ -1,0 +1,20 @@
+<div ng-show="step.scope.data.length > 0">
+	<br/>
+	<h3>Selected Properties</h3>
+	<table class="table table-striped">
+	    <thead>
+	        <tr>
+	           <th ng-repeat="prop in step.scope.data">
+	           		<input type="text" value="{{step.scope.examples[0][prop].name}}">
+	           </th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="item in step.scope.examples">
+	            <td ng-repeat="prop in step.scope.data">
+	            	<div ng-repeat="value in item[prop].value track by $index">{{value}}</div>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
