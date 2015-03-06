@@ -39,7 +39,7 @@
 		me.solution.selectedOptions = [];
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
-		me.scope = {"data":[], "examples":[]};;
+		me.scope = {"data":[], "examples":[]};
 
 		me.id = 0;
 		me.treeSequence = t;
@@ -1099,13 +1099,12 @@
 		this.changeWindow = function() {
 			this.afterExecControl();
 			
-			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
-			
 			if(this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
 				this.scope.data = this.scope.data.concat(this.solution.selectedProperties);
 			
 			step = this.saveCurrentValues();
 			
+			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
 			idNextWindow = this.currentWindow.options[nextValue].next;
 			
 			if (this.currentWindow.options[nextValue].child == "Landmark"){
@@ -1119,7 +1118,7 @@
 				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, "Relation", null, "Art");	
 				
 			if (this.currentWindow.options[nextValue].child == "End"){
-				if(this.treeSequence.getParent(this.currentArtNode).id != 0){ 
+				if(this.treeSequence.getParent(this.currentArtNode).id != undefined){ 
 					this.previousNode = this.treeSequence.getParent(this.currentArtNode);
 					this.currentArtNode = this.treeSequence.getParent(this.previousNode);
 					idNextWindow = this.previousNode.data.currentWindow;
@@ -1128,7 +1127,8 @@
 			
 			if (this.currentWindow.scope == "new"){
 				text = JSON.stringify(this.wizard.data[this.currentWindow.example]);
-				me.scope = {"data":[0], "examples": JSON.parse(text)};
+				me.scope = JSON.parse(JSON.stringify(this.currentWindow.scope_value));
+				me.scope.examples = JSON.parse(text);
 			}
 					
 
@@ -1702,6 +1702,13 @@
 			templateUrl : 'show-scope.html'
 		};
 	});
+	
+	// app.directive('showScopeDetail', function() {
+		// return {
+			// restrict : 'E',
+			// templateUrl : 'show-scope-detail.html'
+		// };
+	// });
 
 	app.directive('datatypePropertySelection', function() {
 		return {
@@ -1750,12 +1757,12 @@
 		};
 	});
 
-	app.directive('radioAttributeForChoosingDetail', function() {
-		return {
-			restrict : 'E',
-			templateUrl : 'radio-attribute-for-choosing-detail.html'
-		};
-	});
+	// app.directive('radioAttributeForChoosingDetail', function() {
+		// return {
+			// restrict : 'E',
+			// templateUrl : 'radio-attribute-for-choosing-detail.html'
+		// };
+	// });
 
 	app.directive('selectNomenclatorChooser', function() {
 		return {

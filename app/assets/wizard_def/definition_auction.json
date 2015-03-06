@@ -241,6 +241,7 @@
 			"title": "Categoria detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Categoria",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
 			"datatypeProperties": ["label", "Nome"],
@@ -320,6 +321,7 @@
 			"title": "Leilao detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Leilao",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
@@ -399,6 +401,7 @@
 			"title": "Produto detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Produto",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -478,6 +481,7 @@
 			"title": "Usuario detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Usuario",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario in the detail view?",
 			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
@@ -557,6 +561,7 @@
 			"title": "Concorrente detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Concorrente",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente in the detail view?",
 			"datatypeProperties": ["label", "Nome", "email"],
@@ -636,6 +641,7 @@
 			"title": "Lance detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Lance",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance in the detail view?",
 			"datatypeProperties": ["timeStamp", "valor"],
@@ -715,6 +721,7 @@
 			"title": "Vendedor detail",
 			"type": "yesNoDetail",
 			"scope": "new",
+			"scope_value": {"show": "details", "data":[0], "examples":[]},
 			"example": "Vendedor",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
@@ -734,6 +741,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of an Categoria than those shown in the example?",
@@ -770,6 +778,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria than those shown in the example?",
@@ -833,7 +842,7 @@
 		}, {
 			"id": "0.0.0.0.0.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Categoria Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Categoria",
@@ -855,6 +864,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of an Leilao than those shown in the example?",
@@ -891,6 +901,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao than those shown in the example?",
@@ -954,7 +965,7 @@
 		}, {
 			"id": "0.0.0.0.1.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Leilao Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Leilao",
@@ -976,6 +987,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of an Produto than those shown in the example?",
@@ -1012,6 +1024,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto than those shown in the example?",
@@ -1075,7 +1088,7 @@
 		}, {
 			"id": "0.0.0.0.2.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Produto Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Produto",
@@ -1097,6 +1110,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of an Usuario than those shown in the example?",
@@ -1133,6 +1147,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario than those shown in the example?",
@@ -1196,7 +1211,7 @@
 		}, {
 			"id": "0.0.0.0.3.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Usuario Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Usuario",
@@ -1218,6 +1233,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of an Concorrente than those shown in the example?",
@@ -1254,6 +1270,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente than those shown in the example?",
@@ -1317,7 +1334,7 @@
 		}, {
 			"id": "0.0.0.0.4.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Concorrente Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Concorrente",
@@ -1339,6 +1356,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of an Lance than those shown in the example?",
@@ -1375,6 +1393,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance than those shown in the example?",
@@ -1438,7 +1457,7 @@
 		}, {
 			"id": "0.0.0.0.5.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Lance Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Lance",
@@ -1460,6 +1479,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of an Vendedor than those shown in the example?",
@@ -1496,6 +1516,7 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
+			"scope_value": {"show": "table", "data":[0], "examples":[]},
 			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor than those shown in the example?",
@@ -1559,7 +1580,7 @@
 		}, {
 			"id": "0.0.0.0.6.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Vendedor Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Vendedor",
@@ -1620,7 +1641,7 @@
 		}, {
 			"id": "0.0.0.0.0.1.0.0",
 			"title": "Following this example which attributes you want to show in the Categoria detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Categoria properties",
 			"example": "Categoria",
@@ -1670,7 +1691,7 @@
 		}, {
 			"id": "0.0.0.0.0.1.1.0",
 			"title": "Select where one should click to choose an Categoria",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Categoria Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
@@ -1744,7 +1765,7 @@
 		}, {
 			"id": "0.0.0.0.1.1.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Leilao properties",
 			"example": "Leilao",
@@ -1802,7 +1823,7 @@
 		}, {
 			"id": "0.0.0.0.1.1.1.0",
 			"title": "Select where one should click to choose an Leilao",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Leilao Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Leilao",
@@ -1875,7 +1896,7 @@
 		}, {
 			"id": "0.0.0.0.2.1.0.0",
 			"title": "Following this example which attributes you want to show in the Produto detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Produto properties",
 			"example": "Produto",
@@ -1925,7 +1946,7 @@
 		}, {
 			"id": "0.0.0.0.2.1.1.0",
 			"title": "Select where one should click to choose an Produto",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Produto Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Produto",
@@ -1998,7 +2019,7 @@
 		}, {
 			"id": "0.0.0.0.3.1.0.0",
 			"title": "Following this example which attributes you want to show in the Usuario detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Usuario properties",
 			"example": "Usuario",
@@ -2044,7 +2065,7 @@
 		}, {
 			"id": "0.0.0.0.3.1.1.0",
 			"title": "Select where one should click to choose an Usuario",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Usuario Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Usuario",
@@ -2117,7 +2138,7 @@
 		}, {
 			"id": "0.0.0.0.4.1.0.0",
 			"title": "Following this example which attributes you want to show in the Concorrente detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Concorrente properties",
 			"example": "Concorrente",
@@ -2159,7 +2180,7 @@
 		}, {
 			"id": "0.0.0.0.4.1.1.0",
 			"title": "Select where one should click to choose an Concorrente",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Concorrente Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Concorrente",
@@ -2232,7 +2253,7 @@
 		}, {
 			"id": "0.0.0.0.5.1.0.0",
 			"title": "Following this example which attributes you want to show in the Lance detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Lance properties",
 			"example": "Lance",
@@ -2294,7 +2315,7 @@
 		}, {
 			"id": "0.0.0.0.5.1.1.0",
 			"title": "Select where one should click to choose an Lance",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Lance Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Lance",
@@ -2367,7 +2388,7 @@
 		}, {
 			"id": "0.0.0.0.6.1.0.0",
 			"title": "Following this example which attributes you want to show in the Vendedor detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Vendedor properties",
 			"example": "Vendedor",
@@ -2413,7 +2434,7 @@
 		}, {
 			"id": "0.0.0.0.6.1.1.0",
 			"title": "Select where one should click to choose an Vendedor",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Vendedor Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Vendedor",
@@ -3022,7 +3043,7 @@
 		}, {
 			"id": "0.0.0.0.0.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Categoria detail? Which type?",
 			"example": "Categoria",
 			"options": [
@@ -3053,7 +3074,7 @@
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Leilao detail? Which type?",
 			"example": "Leilao",
 			"options": [
@@ -3084,7 +3105,7 @@
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Produto detail? Which type?",
 			"example": "Produto",
 			"options": [
@@ -3115,7 +3136,7 @@
 		}, {
 			"id": "0.0.0.0.3.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Usuario detail? Which type?",
 			"example": "Usuario",
 			"options": [
@@ -3146,7 +3167,7 @@
 		}, {
 			"id": "0.0.0.0.4.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Concorrente detail? Which type?",
 			"example": "Concorrente",
 			"options": [
@@ -3177,7 +3198,7 @@
 		}, {
 			"id": "0.0.0.0.5.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Lance detail? Which type?",
 			"example": "Lance",
 			"options": [
@@ -3208,7 +3229,7 @@
 		}, {
 			"id": "0.0.0.0.6.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Vendedor detail? Which type?",
 			"example": "Vendedor",
 			"options": [

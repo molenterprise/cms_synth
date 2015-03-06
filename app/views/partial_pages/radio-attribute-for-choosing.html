@@ -1,31 +1,47 @@
-<table class="table table-striped">
-    <thead>
-        <tr>
-           <th ng-repeat="prop in step.scope.data">
-           		<input type="text" value="{{step.scope.examples[0][prop].name}}">
-           </th>
-        </tr>
-    </thead>
-    <tbody>
-    	<tr> 		
-    		<td ng-repeat="prop in step.scope.data" >
-    			<div>
-    				{{p = step.scope.examples[0][prop]; ""}}
-		    		<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}">
-		    			{{p.value[0]}}
-		    		</input> 
-		    		<div ng-repeat="value in p.value | limitTo: - (p.value.length - 1)">
-		    			{{value}}
+<div ng-show="step.scope.show == 'table'">
+	<table class="table table-striped">
+	    <thead>
+	        <tr>
+	           <th ng-repeat="prop in step.scope.data">
+	           		<input type="text" value="{{step.scope.examples[0][prop].name}}">
+	           </th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	<tr> 		
+	    		<td ng-repeat="prop in step.scope.data" >
+	    			<div>
+	    				{{p = step.scope.examples[0][prop]; ""}}
+			    		<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}">
+			    			{{p.value[0]}}
+			    		</input> 
+			    		<div ng-repeat="value in p.value | limitTo: - (p.value.length - 1)">
+			    			{{value}}
+			    		</div>
 		    		</div>
-	    		</div>
-    		</td>
- 
-    	</tr>
-    		
-	    <tr ng-repeat="item in step.scope.examples | limitTo: - (step.wizard.data[step.currentWindow.example].length - 1)">
-            <td ng-repeat="prop in step.scope.data">
-            	<div ng-repeat="value in item[prop].value">{{value}}</div>
-            </td>
-	    </tr>
-    </tbody>
-</table>
+	    		</td>
+	 
+	    	</tr>
+	    		
+		    <tr ng-repeat="item in step.scope.examples | limitTo: - (step.wizard.data[step.currentWindow.example].length - 1)">
+	            <td ng-repeat="prop in step.scope.data">
+	            	<div ng-repeat="value in item[prop].value">{{value}}</div>
+	            </td>
+		    </tr>
+	    </tbody>
+	</table>
+</div>
+<div ng-show="step.scope.show == 'details'">
+	<div class="list-group" >
+		<div ng-repeat="prop in step.scope.data" >
+			{{p = step.scope.examples[0][prop]; ""}}		
+			<b class="list-group-item-without-border halign col-md-2">{{p.name}}:</b>
+			<div class="list-group-item-without-border halign">
+				<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}">
+					{{p.value[0]}}
+				<div ng-repeat="value in p.value | limitTo: - (p.value.length - 1)">{{value}}</div>
+			</div>
+		</div>
+		<br>
+	</div>
+</div>

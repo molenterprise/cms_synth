@@ -50,5 +50,6 @@ Rails.application.routes.draw do
   match '/radio-attribute-for-choosing-detail',    to: 'partial_pages#radio-attribute-for-choosing-detail',    via: 'get'
   match '/info-to-show',    to: 'partial_pages#info-to-show',    via: 'get'
   match '/show-scope',    to: 'partial_pages#show-scope',    via: 'get'
+  match '/show-scope-detail',    to: 'partial_pages#show-scope-detail',    via: 'get'
   
  end
