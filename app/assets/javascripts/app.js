@@ -1244,8 +1244,23 @@
 				this.beforeExecutePathsControl();
 			} else if (this.isType('path')) {
 				this.userSequence[this.userSequence.length - 1]['path'] = this.currentWindow.paths;
+			} else if (this.isType('hidden')) {
+				this.beforeExecuteHiddenControl();
 			}
+			
 		};
+		
+		this.beforeExecuteHiddenControl = function(){
+			previous_step = this.userSequence[this.userSequence.length - 3];
+			_class = this.getWindow(previous_step.currentWindow).options[previous_step.selectedOption].text;
+			current_options = this.currentWindow.options;
+			for (var i=0; i < current_options.length; i++) {
+				if (current_options[i].text == _class){
+				  	this.selectWindow(current_options[i].next);
+				  	return;
+				}
+			}
+		}
 
 		this.invertPath = function(start, path, canExec) {
 			temp = [];

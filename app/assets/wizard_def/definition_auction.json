@@ -241,7 +241,11 @@
 			"title": "Categoria detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Categoria",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
 			"datatypeProperties": ["label", "Nome"],
@@ -321,7 +325,11 @@
 			"title": "Leilao detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Leilao",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
@@ -401,7 +409,11 @@
 			"title": "Produto detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Produto",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -481,7 +493,11 @@
 			"title": "Usuario detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Usuario",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario in the detail view?",
 			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
@@ -561,7 +577,11 @@
 			"title": "Concorrente detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Concorrente",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente in the detail view?",
 			"datatypeProperties": ["label", "Nome", "email"],
@@ -641,7 +661,11 @@
 			"title": "Lance detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Lance",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance in the detail view?",
 			"datatypeProperties": ["timeStamp", "valor"],
@@ -721,7 +745,11 @@
 			"title": "Vendedor detail",
 			"type": "yesNoDetail",
 			"scope": "new",
-			"scope_value": {"show": "details", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "details",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Vendedor",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor in the detail view?",
 			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
@@ -741,7 +769,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of an Categoria than those shown in the example?",
@@ -778,7 +810,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria than those shown in the example?",
@@ -864,7 +900,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of an Leilao than those shown in the example?",
@@ -901,7 +941,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao than those shown in the example?",
@@ -987,7 +1031,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of an Produto than those shown in the example?",
@@ -1024,7 +1072,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto than those shown in the example?",
@@ -1110,7 +1162,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of an Usuario than those shown in the example?",
@@ -1147,7 +1203,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario than those shown in the example?",
@@ -1233,7 +1293,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of an Concorrente than those shown in the example?",
@@ -1270,7 +1334,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente than those shown in the example?",
@@ -1356,7 +1424,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of an Lance than those shown in the example?",
@@ -1393,7 +1465,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance than those shown in the example?",
@@ -1479,7 +1555,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of an Vendedor than those shown in the example?",
@@ -1516,7 +1596,11 @@
 			"title": "",
 			"type": "infoWithOptions",
 			"scope": "new",
-			"scope_value": {"show": "table", "data":[0], "examples":[]},
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"examples": []
+			},
 			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor than those shown in the example?",
@@ -1700,7 +1784,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -1711,10 +1795,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
-					
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -1832,7 +1914,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -1843,9 +1925,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -1955,7 +2036,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -1966,9 +2047,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2074,7 +2154,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2085,9 +2165,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2189,7 +2268,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2200,9 +2279,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2324,7 +2402,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2335,9 +2413,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2443,7 +2520,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2454,9 +2531,8 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Go to create other page",
-					"next": "0.0.0.0",
-					"child": "Landmark"
+					"text": "Go to the pages index",
+					"next": "0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2523,7 +2599,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2532,6 +2608,27 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.0.1.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Categoria",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.1.1.0.0.2"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.1.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao list",
@@ -2600,7 +2697,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.1.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2609,6 +2706,35 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.1.1.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Leilao",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Produto",
+					"next": "0.0.0.0.1.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Usuario",
+					"next": "0.0.0.0.1.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Vendedor",
+					"next": "0.0.0.0.1.1.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Categoria",
+					"next": "0.0.0.0.1.1.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Lance",
+					"next": "0.0.0.0.1.1.1.0.0.4"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.2.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Produto list",
@@ -2669,7 +2795,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.2.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2678,6 +2804,27 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.1.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Produto",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.2.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.2.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.2.1.1.0.0.2"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Usuario list",
@@ -2734,7 +2881,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.3.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2743,6 +2890,23 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.3.1.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Usuario",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.1.1.0.0.1"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Concorrente list",
@@ -2795,7 +2959,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.4.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2804,6 +2968,19 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.4.1.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.4.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Concorrente",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.1.1.0.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.5.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Lance list",
@@ -2876,7 +3053,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.5.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2885,6 +3062,39 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.5.1.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Lance",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Usuario",
+					"next": "0.0.0.0.5.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Concorrente",
+					"next": "0.0.0.0.5.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.0.0.5.1.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.0.0.5.1.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Vendedor",
+					"next": "0.0.0.0.5.1.1.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Categoria",
+					"next": "0.0.0.0.5.1.1.0.0.5"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Vendedor list",
@@ -2941,7 +3151,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.6.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2951,11 +3161,49 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.6.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.6.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Vendedor",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.1.1.0.0.1"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.0.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.0.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Categoria",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.0.0.1.0.0.2"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -2963,11 +3211,58 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.0.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.0.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.1.1.0.0.2.0"
+		}, {
 			"id": "0.0.0.0.1.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.1.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Leilao",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Produto",
+					"next": "0.0.0.0.1.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Usuario",
+					"next": "0.0.0.0.1.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Vendedor",
+					"next": "0.0.0.0.1.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Categoria",
+					"next": "0.0.0.0.1.0.0.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Lance",
+					"next": "0.0.0.0.1.0.0.1.0.0.4"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -2975,11 +3270,62 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.1.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.4.0"
+		}, {
 			"id": "0.0.0.0.2.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Produto",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.2.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.2.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.2.0.0.1.0.0.2"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -2987,11 +3333,46 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.2.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.1.1.0.0.2.0"
+		}, {
 			"id": "0.0.0.0.3.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.3.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Usuario",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.0.0.1.0.0.1"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -2999,11 +3380,36 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.3.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.3.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.1.1.0.0.1.0"
+		}, {
 			"id": "0.0.0.0.4.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.4.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Concorrente",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.0.0.1.0.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3011,11 +3417,50 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.4.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.4.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.4.1.1.0.0.0.0"
+		}, {
 			"id": "0.0.0.0.5.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.5.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Lance",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Usuario",
+					"next": "0.0.0.0.5.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Concorrente",
+					"next": "0.0.0.0.5.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.0.0.5.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.0.0.5.0.0.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Vendedor",
+					"next": "0.0.0.0.5.0.0.1.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Categoria",
+					"next": "0.0.0.0.5.0.0.1.0.0.5"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.5.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3023,11 +3468,64 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.5.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.5.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.4.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.5",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.5.0"
+		}, {
 			"id": "0.0.0.0.6.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.6.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Vendedor",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.0.0.1.0.0.1"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3035,11 +3533,41 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.6.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.6.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.1.1.0.0.1.0"
+		}, {
 			"id": "0.0.0.0.0.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.0.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.0.0.1.0.0.2.0"
 		}, {
 			"id": "0.0.0.0.0.1.0.1.0.0.0",
 			"title": "",
@@ -3066,11 +3594,59 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.0.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.1.1.0.0.2.0.0"
+		}, {
 			"id": "0.0.0.0.1.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.4.0"
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0.0",
 			"title": "",
@@ -3097,11 +3673,59 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.1.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.4.0.0"
+		}, {
 			"id": "0.0.0.0.2.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.0.0.1.0.0.2.0"
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0.0",
 			"title": "",
@@ -3128,11 +3752,41 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.2.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.1.1.0.0.2.0.0"
+		}, {
 			"id": "0.0.0.0.3.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.3.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.0.0.1.0.0.1.0"
 		}, {
 			"id": "0.0.0.0.3.1.0.1.0.0.0",
 			"title": "",
@@ -3159,11 +3813,29 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.3.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.1.1.0.0.1.0.0"
+		}, {
 			"id": "0.0.0.0.4.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.4.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.4.0.0.1.0.0.0.0"
 		}, {
 			"id": "0.0.0.0.4.1.0.1.0.0.0",
 			"title": "",
@@ -3190,11 +3862,53 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.4.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.4.1.1.0.0.0.0.0"
+		}, {
 			"id": "0.0.0.0.5.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.5.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.4.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.5",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.5.0"
 		}, {
 			"id": "0.0.0.0.5.1.0.1.0.0.0",
 			"title": "",
@@ -3221,11 +3935,59 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.5.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.4.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.5.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.5.0.0"
+		}, {
 			"id": "0.0.0.0.6.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.6.0.0.0.1.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.0.0.1.0.0.1.0"
 		}, {
 			"id": "0.0.0.0.6.1.0.1.0.0.0",
 			"title": "",
@@ -3252,6 +4014,18 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.6.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.1.1.0.0.1.0.0"
+		}, {
 			"id": "0.0.0.0.0.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3277,6 +4051,126 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.1.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3285,7 +4179,7 @@
 			"options": [
 				{
 					"key": 0,
-					"text": "Direct attributes of an Leilao",
+						"text": "Direct attributes of an Leilao",
 					"next": "0.0.0.0.1.0.0.0.0"
 				}, {
 					"key": 1,
@@ -3299,6 +4193,206 @@
 					"key": 3,
 					"text": "No more",
 					"next": "0.0.0.0.1.0.0.1"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.4.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
 				}
 			]
 		}, {
@@ -3327,6 +4421,126 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.3.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3349,6 +4563,86 @@
 					"key": 3,
 					"text": "No more",
 					"next": "0.0.0.0.3.0.0.1"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
 				}
 			]
 		}, {
@@ -3377,6 +4671,46 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.4.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.4.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.5.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3402,6 +4736,246 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.4.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.5.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.5.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.5.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.6.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3424,6 +4998,834 @@
 					"key": 3,
 					"text": "No more",
 					"next": "0.0.0.0.6.0.0.1"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.5.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
 				}
 			]
 		}
