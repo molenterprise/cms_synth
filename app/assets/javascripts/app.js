@@ -7,24 +7,24 @@
 			tree : [],
 			currentNode : ''
 		};
-		
+
 		return {
-        	getTree: function () {
-            	return data.tree;
-        	},
-	        setTree: function (tree) {
-	            data.tree = tree;
-	        },
-	        getCurrentNode: function () {
-            	return data.currentNode;
-        	},
-	        setCurrentNode: function (currentNode) {
-	            data.currentNode = currentNode;
-	        },
-	        getData: function () {
-            	return data;
-        	}
-    	};
+			getTree : function() {
+				return data.tree;
+			},
+			setTree : function(tree) {
+				data.tree = tree;
+			},
+			getCurrentNode : function() {
+				return data.currentNode;
+			},
+			setCurrentNode : function(currentNode) {
+				data.currentNode = currentNode;
+			},
+			getData : function() {
+				return data;
+			}
+		};
 	});
 
 	app.controller('WizardController', ['$http', 'modalService', '$scope', 'Data',
@@ -39,17 +39,19 @@
 		me.solution.selectedOptions = [];
 		me.computedAttr_name = "";
 		me.seqNextNavegation = [];
-		me.scope = {"data":[], "examples":[]};
+		me.scope = {
+			"data" : [],
+			"examples" : []
+		};
 
 		me.id = 0;
 		me.treeSequence = t;
 		me.currentArtNode = me.treeSequence.addChildNode(me.treeSequence, "New Landmark", null, "Art");
 		me.previousNode = me.treeSequence;
-		
+
 		me.Data = Data.getData();
 		$scope.me = me;
-		
-		
+
 		$http.get('/def/definition_auction').success(function(data) {
 			//$http.get('generate/http%3A%2F%2Fwww.semanticweb.org%2Fmilena%2Fontologies%2F2013%2F6%2Fauction').success(function(data) {
 			me.wizard = data;
@@ -68,7 +70,6 @@
 			 me.solution.selectedOptions = [length]; */
 
 		});
-
 
 		me.example = {
 			"definition" : [{
@@ -1075,79 +1076,77 @@
 			}]
 		};
 
-
 		this.isType = function(val) {
 			return this.currentWindow.type == val;
 		};
-		
-		this.saveCurrentValues = function(){
-			
+
+		this.saveCurrentValues = function() {
+
 			step = {
 				currentWindow : this.currentWindow.id,
 				selectedOption : this.solution.selectedOption,
 				selectedProperties : this.solution.selectedProperties.slice(),
 				selectedOptions : this.solution.selectedOptions.slice(),
-				scope: JSON.parse(JSON.stringify(this.scope))
+				scope : JSON.parse(JSON.stringify(this.scope))
 			};
-			
+
 			this.userSequence.push(step);
-			
+
 			return step;
 
 		};
 
 		this.changeWindow = function() {
 			this.afterExecControl();
-			
-			if(this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
+
+			if (this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
 				this.scope.data = this.scope.data.concat(this.solution.selectedProperties);
-			
+
 			step = this.saveCurrentValues();
-			
+
 			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
 			idNextWindow = this.currentWindow.options[nextValue].next;
-			
-			if (this.currentWindow.options[nextValue].child == "Landmark"){
+
+			if (this.currentWindow.options[nextValue].child == "Landmark") {
 				this.treeSequence.addChildNode(this.currentArtNode, "", step, "Normal");
 				this.currentArtNode = this.treeSequence.addChildNode(me.treeSequence, "New Landmark", null, "Art");
 				this.previousNode = this.treeSequence;
-			}else
+			} else
 				this.previousNode = this.treeSequence.addChildNode(this.currentArtNode, "", step, "Normal");
 
 			if (this.currentWindow.options[nextValue].child == "Yes")
-				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, "Relation", null, "Art");	
-				
-			if (this.currentWindow.options[nextValue].child == "End"){
-				if(this.treeSequence.getParent(this.currentArtNode).id != undefined){ 
+				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, "Relation", null, "Art");
+
+			if (this.currentWindow.options[nextValue].child == "End") {
+				if (this.treeSequence.getParent(this.currentArtNode).id != undefined) {
 					this.previousNode = this.treeSequence.getParent(this.currentArtNode);
 					this.currentArtNode = this.treeSequence.getParent(this.previousNode);
 					idNextWindow = this.previousNode.data.currentWindow;
 				}
 			}
-			
-			if (this.currentWindow.scope == "new"){
+
+			if (this.currentWindow.scope == "new") {
 				text = JSON.stringify(this.wizard.data[this.currentWindow.example]);
 				me.scope = JSON.parse(JSON.stringify(this.currentWindow.scope_value));
 				me.scope.examples = JSON.parse(text);
 			}
-					
 
 			this.selectWindow(idNextWindow);
 			this.solution.selectedOptions = [];
 			this.solution.selectedProperties = [];
 			this.solution.selectedOption = 0;
 			this.beforeExecControl();
-			
+
 			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
-			for(i = 0; i < tree.children.length; i++){
+			for ( i = 0; i < tree.children.length; i++) {
 				me.Data.tree.push(tree.children[i]);
 			}
 			me.pull = true;
 			me.Data.currentNode.currentNode = tree.selectedNode;
-			
+
 		};
-		
+
 		this.back = function() {
 			if (this.userSequence.length > 0) {
 				this.userSequence.pop();
@@ -1168,59 +1167,59 @@
 				this.solution.selectedOptions = step.selectedOptions;
 				this.scope = step.scope;
 			}
-			
+
 			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
-			for(i = 0; i < tree.children.length; i++){
+			for ( i = 0; i < tree.children.length; i++) {
 				me.Data.tree.push(tree.children[i]);
 			}
 			me.pull = true;
 			me.Data.currentNode.currentNode = tree.selectedNode;
 		};
-		
-		$scope.$watch('me.Data.currentNode.currentNode', function (newValue, oldValue) {
-			if(newValue != undefined && newValue.id != undefined && oldValue != undefined && newValue.id != oldValue.id){
-				if(!me.pull)
+
+		$scope.$watch('me.Data.currentNode.currentNode', function(newValue, oldValue) {
+			if (newValue != undefined && newValue.id != undefined && oldValue != undefined && newValue.id != oldValue.id) {
+				if (!me.pull)
 					me.go_to_step(newValue.id);
 			}
 			me.pull = false;
-	    });
-		/*
-		$scope.$on('changedNodeSelected', function(event, args) {
-			this.go_to_step(me.Data.currentNode.currentNode.id);
 		});
-		*/
-		this.go_to_step = function(nodeId){
-			
+		/*
+		 $scope.$on('changedNodeSelected', function(event, args) {
+		 this.go_to_step(me.Data.currentNode.currentNode.id);
+		 });
+		 */
+		this.go_to_step = function(nodeId) {
+
 			//save current values
 			step = this.saveCurrentValues();
 			this.treeSequence.addChildNode(this.currentArtNode, "", step, "Normal");
-			
+
 			//restore values
-			
+
 			node = this.treeSequence.findNode(nodeId);
-			if(node.type != "Art")
+			if (node.type != "Art")
 				node = this.treeSequence.getParent(node);
-			
-			if(node.children == undefined || node.children.length == 0)
-				return;	
+
+			if (node.children == undefined || node.children.length == 0)
+				return;
 			node = node.children[node.children.length - 1];
-			
+
 			step = node.data;
-			
+
 			this.previousNode = this.treeSequence.getPreviousNode(node);
 			this.currentArtNode = this.treeSequence.getParent(node);
 			this.selectWindow(node.data.currentWindow);
 			this.treeSequence.deleteNode(node);
-			
+
 			this.solution.selectedOption = step.selectedOption;
 			this.solution.selectedProperties = step.selectedProperties;
 			this.solution.selectedOptions = step.selectedOptions;
 			this.scope = step.scope;
-			
+
 			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
-			for(i = 0; i < tree.children.length; i++){
+			for ( i = 0; i < tree.children.length; i++) {
 				me.Data.tree.push(tree.children[i]);
 			}
 			me.Data.currentNode.currentNode = tree.selectedNode;
@@ -1247,17 +1246,17 @@
 			} else if (this.isType('hidden')) {
 				this.beforeExecuteHiddenControl();
 			}
-			
+
 		};
-		
-		this.beforeExecuteHiddenControl = function(){
+
+		this.beforeExecuteHiddenControl = function() {
 			previous_step = this.userSequence[this.userSequence.length - 3];
 			_class = this.getWindow(previous_step.currentWindow).options[previous_step.selectedOption].text;
 			current_options = this.currentWindow.options;
-			for (var i=0; i < current_options.length; i++) {
-				if (current_options[i].text == _class){
-				  	this.selectWindow(current_options[i].next);
-				  	return;
+			for (var i = 0; i < current_options.length; i++) {
+				if (current_options[i].text == _class) {
+					this.selectWindow(current_options[i].next);
+					return;
 				}
 			}
 		}
@@ -1340,20 +1339,31 @@
 				});
 
 				this.scope.data.push(this.scope.examples[0].length - 1);
-			} 
-			
+				this.scope.type.push("ComputedAttribute");
+				this.scope.names.push(temp);
+				this.scope.queries.push(this.computedAttr_query);
+			}
+
 			if (this.isType('path')) {
 				var paths = this.currentWindow.paths;
-					this.scope.examples.forEach(function(entry) {
-						items = paths[0].pathItems;
-						entry.push({
-							"id" : entry.length,
-							"name" : items[items.length - 1].className,
-							"value" : ["Path to " + [items[items.length - 1].className]]
-						});
+				var items = paths[this.solution.selectedOption].pathItems
+				var className = items[items.length - 1].className
+				this.scope.examples.forEach(function(entry) {
+					entry.push({
+						"id" : entry.length,
+						"name" : className,
+						"value" : ["Path to " + className]
 					});
-
+				});
+				
 				this.scope.data.push(this.scope.examples[0].length - 1);
+				this.scope.type.push("Path");
+				this.scope.names.push(className);
+				this.scope.queries.push({
+					"path" : items,
+					"properties" : this.solution.selectedOptions,
+					"mainclass" : this.currentWindow.mainclass
+				});
 			}
 		};
 
@@ -1621,58 +1631,72 @@
 			}
 			return result;
 		};
-		
-		this.getArtTreeSequence = function(selected){
-			node = { "id": this.treeSequence.id, "label": this.treeSequence.label, "children": [], "selectedNode": null};
-			info = {"selected": selected, "resultSelected": null};
-			
+
+		this.getArtTreeSequence = function(selected) {
+			node = {
+				"id" : this.treeSequence.id,
+				"label" : this.treeSequence.label,
+				"children" : [],
+				"selectedNode" : null
+			};
+			info = {
+				"selected" : selected,
+				"resultSelected" : null
+			};
+
 			this.getArtTreeSequenceAux(node, this.treeSequence, info);
 			node.selectedNode = info.resultSelected;
-			 
+
 			return node;
 		};
-		
-		this.getArtTreeSequenceAux = function(parent, current, info){
+
+		this.getArtTreeSequenceAux = function(parent, current, info) {
 			var node;
-			if(current.type == "Art"){
-				node = {"id": current.id, "label": current.label, "children": []};
-				if(info.selected == current){
+			if (current.type == "Art") {
+				node = {
+					"id" : current.id,
+					"label" : current.label,
+					"children" : []
+				};
+				if (info.selected == current) {
 					node.selected = 'selected';
 					info.resultSelected = node;
 				}
 				parent.children.push(node);
-			}else{
+			} else {
 				node = parent;
 			}
-			
-			if(current.children != undefined){
-				for (var i=0; i < current.children.length; i++) {
-				  this.getArtTreeSequenceAux(node, current.children[i], info);
+
+			if (current.children != undefined) {
+				for (var i = 0; i < current.children.length; i++) {
+					this.getArtTreeSequenceAux(node, current.children[i], info);
 				};
 			}
-		 };
-		
+		};
+
 	}]);
 
-	
 	app.controller('treeController', function($scope, Data) {
 
 		$scope.tree = [];
-		$scope.currentNode = {currentNode: null};
-		
-		$scope.$watch('tree', function (newValue, oldValue) {
-	        if (newValue !== oldValue) Data.setTree(newValue);
-	    });
-	    
-	    $scope.$watch('currentNode', function (newValue, oldValue) {
-	        if (newValue !== oldValue){
-	        	Data.setCurrentNode(newValue);
-	        	//$scope.$emit('changedNodeSelected', newValue);
-	        }
-	    });
-	    
-	    Data.setTree($scope.tree);
-	    Data.setCurrentNode($scope.currentNode);
+		$scope.currentNode = {
+			currentNode : null
+		};
+
+		$scope.$watch('tree', function(newValue, oldValue) {
+			if (newValue !== oldValue)
+				Data.setTree(newValue);
+		});
+
+		$scope.$watch('currentNode', function(newValue, oldValue) {
+			if (newValue !== oldValue) {
+				Data.setCurrentNode(newValue);
+				//$scope.$emit('changedNodeSelected', newValue);
+			}
+		});
+
+		Data.setTree($scope.tree);
+		Data.setCurrentNode($scope.currentNode);
 
 	});
 
@@ -1710,19 +1734,19 @@
 			templateUrl : 'selected-properties.html'
 		};
 	});
-	
+
 	app.directive('showScope', function() {
 		return {
 			restrict : 'E',
 			templateUrl : 'show-scope.html'
 		};
 	});
-	
+
 	// app.directive('showScopeDetail', function() {
-		// return {
-			// restrict : 'E',
-			// templateUrl : 'show-scope-detail.html'
-		// };
+	// return {
+	// restrict : 'E',
+	// templateUrl : 'show-scope-detail.html'
+	// };
 	// });
 
 	app.directive('datatypePropertySelection', function() {
@@ -1773,10 +1797,10 @@
 	});
 
 	// app.directive('radioAttributeForChoosingDetail', function() {
-		// return {
-			// restrict : 'E',
-			// templateUrl : 'radio-attribute-for-choosing-detail.html'
-		// };
+	// return {
+	// restrict : 'E',
+	// templateUrl : 'radio-attribute-for-choosing-detail.html'
+	// };
 	// });
 
 	app.directive('selectNomenclatorChooser', function() {

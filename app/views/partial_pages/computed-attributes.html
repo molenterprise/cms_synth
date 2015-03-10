@@ -9,7 +9,7 @@
 		<div class="control-group">
 			<label class="control-label">Value Expression:</label>
 			<div class="controls">
-				<textarea>
+				<textarea ng-model="step.computedAttr_query">
 loc = self.swc::hasLocation.first
 loc ||= self.swc::isSubEventOf.map{|se| se.swc::hasLocation.first }.first
 loc.nil? ? 'Auditorium' : loc.rdfs::label

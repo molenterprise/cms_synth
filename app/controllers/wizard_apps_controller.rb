@@ -147,12 +147,39 @@ class WizardAppsController < ApplicationController
     }
     return {:status => true, :result => {}}
   end
+  
+  def create_computed_attributes_wizard(params)
+    print "create_computed_attributes_wizard #{params}"
+    function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology']}
+    attrs = params['scope']
+    
+    selected = attrs['data']
+    names = attrs.params['names']
+    queries = attrs.params['queries']
+    types = attrs.params['type']
+    
+
+    for i in 0..(selected.length - 1)
+      att = selected[i]
+      function_params['name'] = names[attr]
+      function_params['position'] = i
+      if type[attr] == 'ComputedAttribute' then  
+        function_params['query'] = queries[attr]
+        create_computed_attribute_for_index_wizard(function_params)
+      elsif type[attr] == 'Path' then
+        function_params['path'] = queries[attr]['path']
+        function_params['properties'] = queries[attr]['properties']
+        function_params['mainclass'] = queries[attr]['mainclass']
+        create_index_anchor_1_wizard(function_params)
+      end
+    end
+    return {:status => true, :result => {}}
+  end
 
   def create_computed_attribute_for_index_wizard(params)
 
     index_position_key = "#{params['index_id']}_attribute"
-
-    index_position = @global_var[index_position_key][0] || 2
+    index_position = params['position'] || @global_var[index_position_key][0] || 2
 
     call_synth_without_result('indexes/computed_attributes_post_data', {
         'parent' => params['index_id'],
@@ -161,7 +188,7 @@ class WizardAppsController < ApplicationController
        'navigation_attribute_index_position' => index_position,
        'id' => '_empty'})
 
-    @global_var[index_position_key][0] = index_position + 1
+    @global_var[index_position_key][0] = index_position + 1 unless !params['position'].nil?
 
     return {:status => true, :result => {}}
   end
@@ -304,6 +331,41 @@ class WizardAppsController < ApplicationController
     return {:status => true, :result => {}}
 
   end
+  
+  # key params: ontology, mainClass, path, properties, index_id, position
+  def create_index_anchor_1_wizard(params)
+    print "LOG: begin: create_index_anchor_1_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+
+    path = params['path']
+    properties_path = '';
+    index = 0;
+    path.each{|item|
+      properties_path = "#{properties_path}#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}."
+      index += 1
+    }
+
+    index_key = "#{path.first['className']}_for_#{params['mainclass']}_IndexAnchor"
+    name = "#{index_key}_#{position}"
+
+    function_params = {'name' => name, 'title' => name,
+      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
+    values = create_context_wizard(function_params)[:result]
+    
+    function_params = {'name' => 'context_param', 'context_id' => values['context']}
+    create_parameter_for_context_wizard(function_params)
+
+    function_params = {'name' => path.first['className'], 'index_id' => params['index_id'],
+       'index_navigation_attribute_index' => values['defaultIndex']}
+    create_index_attribute_for_index_wizard(function_params)
+    
+    val = get_context_attr_wizard({:id => values['defaultIndex']})[:result]
+    function_params = {'index_id' => val['rows'][0]['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+    create_attribute_context_parameters_wizard(function_params)
+
+    return {:status => true, :result => {}}
+
+  end
 
   def process_function(todo, step)
     print "LOG: begin: process_function \n" if @log_name
@@ -318,6 +380,15 @@ class WizardAppsController < ApplicationController
     end
 
     print "LOG: end: process_function \n" if @log_name
+  end
+  
+  def save_value(params)
+    print "LOG: begin: save_value \n" if @log_name
+    print "LOG: #{params}\n" if @log_param
+    params.each{ |key, value|
+      push_global_var(key, value)
+    }
+    print "LOG: end: save_value \n" if @log_name
   end
 
   def get_params(function, step)

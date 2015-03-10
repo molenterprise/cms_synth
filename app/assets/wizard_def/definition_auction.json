@@ -45,7 +45,19 @@
 				{
 					"key": 0,
 					"text": "Show a list of Categoria(s) to be chosen",
-					"next": "0.0.0.0.0.0"
+					"next": "0.0.0.0.0.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "attribute_type",
+									"value": "list"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Categoria",
@@ -235,6 +247,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Categoria.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Categoria"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Categoria."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.0.1",
@@ -243,12 +284,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"names": ["label", "Nome"],
 				"examples": []
 			},
 			"example": "Categoria",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
-			"datatypeProperties": ["label", "Nome"],
 			"options": [
 				{
 					"key": 0,
@@ -319,6 +362,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Leilao.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Leilao"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Leilao."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1",
@@ -327,12 +399,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4, 5, 6, 7],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
 			"example": "Leilao",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
-			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 			"options": [
 				{
 					"key": 0,
@@ -403,6 +477,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Produto.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Produto"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Produto."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1",
@@ -411,12 +514,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4, 5],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
 			"example": "Produto",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
-			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 			"options": [
 				{
 					"key": 0,
@@ -487,6 +592,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Usuario.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Usuario"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Usuario."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1",
@@ -495,12 +629,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
 			},
 			"example": "Usuario",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario in the detail view?",
-			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 			"options": [
 				{
 					"key": 0,
@@ -571,6 +707,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Concorrente.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Concorrente"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Concorrente."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.4.1",
@@ -579,12 +744,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1, 2],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"names": ["label", "Nome", "email"],
 				"examples": []
 			},
 			"example": "Concorrente",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente in the detail view?",
-			"datatypeProperties": ["label", "Nome", "email"],
 			"options": [
 				{
 					"key": 0,
@@ -655,6 +822,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Lance.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Lance"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Lance."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.5.1",
@@ -663,12 +859,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.auction::timeStamp", "self.auction::valor"],
+				"names": ["timeStamp", "valor"],
 				"examples": []
 			},
 			"example": "Lance",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance in the detail view?",
-			"datatypeProperties": ["timeStamp", "valor"],
 			"options": [
 				{
 					"key": 0,
@@ -739,6 +937,35 @@
 						}
 					]
 				]
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Vendedor.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Vendedor"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Vendedor."
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1",
@@ -747,12 +974,14 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
 			},
 			"example": "Vendedor",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor in the detail view?",
-			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 			"options": [
 				{
 					"key": 0,
@@ -772,6 +1001,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"names": ["label", "Nome"],
 				"examples": []
 			},
 			"example": "Categoria",
@@ -812,7 +1044,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"names": ["label", "Nome"],
 				"examples": []
 			},
 			"example": "Categoria",
@@ -892,7 +1127,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.0.1.1.1"
+					"next": "0.0.0.0.0.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -903,6 +1160,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
 			"example": "Leilao",
@@ -943,7 +1203,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4, 5, 6, 7],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
 			"example": "Leilao",
@@ -1023,7 +1286,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1.1"
+					"next": "0.0.0.0.1.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1034,6 +1319,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
 			"example": "Produto",
@@ -1074,7 +1362,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4, 5],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
 			"example": "Produto",
@@ -1154,7 +1445,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.2.1.1.1"
+					"next": "0.0.0.0.2.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1165,6 +1478,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
 			},
 			"example": "Usuario",
@@ -1205,7 +1521,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
 			},
 			"example": "Usuario",
@@ -1285,7 +1604,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.3.1.1.1"
+					"next": "0.0.0.0.3.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1296,6 +1637,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"names": ["label", "Nome", "email"],
 				"examples": []
 			},
 			"example": "Concorrente",
@@ -1336,7 +1680,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1, 2],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"names": ["label", "Nome", "email"],
 				"examples": []
 			},
 			"example": "Concorrente",
@@ -1416,7 +1763,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.4.1.1.1"
+					"next": "0.0.0.0.4.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1427,6 +1796,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.auction::timeStamp", "self.auction::valor"],
+				"names": ["timeStamp", "valor"],
 				"examples": []
 			},
 			"example": "Lance",
@@ -1467,7 +1839,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.auction::timeStamp", "self.auction::valor"],
+				"names": ["timeStamp", "valor"],
 				"examples": []
 			},
 			"example": "Lance",
@@ -1547,7 +1922,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.5.1.1.1"
+					"next": "0.0.0.0.5.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1558,6 +1955,9 @@
 			"scope_value": {
 				"show": "table",
 				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
 			},
 			"example": "Vendedor",
@@ -1598,7 +1998,10 @@
 			"scope": "new",
 			"scope_value": {
 				"show": "table",
-				"data": [0],
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
 			},
 			"example": "Vendedor",
@@ -1678,7 +2081,29 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.6.1.1.1"
+					"next": "0.0.0.0.6.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1719,7 +2144,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.0.1.1.1"
+					"next": "0.0.0.0.0.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1802,6 +2245,31 @@
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.0.1.1.1."
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Categoria"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.1.0.0.0",
@@ -1841,7 +2309,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1.1"
+					"next": "0.0.0.0.1.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -1932,6 +2418,31 @@
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.1.1.1.1."
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Leilao"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.2.0.0.0",
@@ -1971,7 +2482,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.2.1.1.1"
+					"next": "0.0.0.0.2.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -2054,6 +2583,31 @@
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.2.1.1.1."
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Produto"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.3.0.0.0",
@@ -2093,7 +2647,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.3.1.1.1"
+					"next": "0.0.0.0.3.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -2172,6 +2744,31 @@
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.3.1.1.1."
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Usuario"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.4.0.0.0",
@@ -2211,7 +2808,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.4.1.1.1"
+					"next": "0.0.0.0.4.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -2286,6 +2901,31 @@
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.4.1.1.1."
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Concorrente"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.5.0.0.0",
@@ -2325,7 +2965,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.5.1.1.1"
+					"next": "0.0.0.0.5.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -2420,6 +3078,31 @@
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.5.1.1.1."
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Lance"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.6.0.0.0",
@@ -2459,7 +3142,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.6.1.1.1"
+					"next": "0.0.0.0.6.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_computed_attributes_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -2537,6 +3238,31 @@
 					"key": 1,
 					"text": "Finish the application definition",
 					"next": "0.0.0.0.6.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_index_landmark_wizard",
+					"params": [
+						{
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Vendedor"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -4179,7 +4905,7 @@
 			"options": [
 				{
 					"key": 0,
-						"text": "Direct attributes of an Leilao",
+					"text": "Direct attributes of an Leilao",
 					"next": "0.0.0.0.1.0.0.0.0"
 				}, {
 					"key": 1,
