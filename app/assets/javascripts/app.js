@@ -1095,6 +1095,19 @@
 			return step;
 
 		};
+		
+		this.resetCurrentValue = function(){
+			this.solution.selectedOptions = [];
+			this.solution.selectedProperties = [];
+			this.solution.selectedOption = 0;
+		};
+		
+		this.setCurrentValue = function(step){
+			this.solution.selectedOption = step.selectedOption;
+			this.solution.selectedProperties = step.selectedProperties;
+			this.solution.selectedOptions = step.selectedOptions;
+			this.scope = step.scope;
+		};
 
 		this.changeWindow = function() {
 			this.afterExecControl();
@@ -1116,12 +1129,17 @@
 
 			if (this.currentWindow.options[nextValue].child == "Yes")
 				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, "Relation", null, "Art");
+				
+			updated = false;
 
 			if (this.currentWindow.options[nextValue].child == "End") {
 				if (this.treeSequence.getParent(this.currentArtNode).id != undefined) {
 					this.previousNode = this.treeSequence.getParent(this.currentArtNode);
 					this.currentArtNode = this.treeSequence.getParent(this.previousNode);
 					idNextWindow = this.previousNode.data.currentWindow;
+					step = this.previousNode.data;
+					this.setCurrentValue(step);	
+					updated = true;
 				}
 			}
 
@@ -1132,9 +1150,9 @@
 			}
 
 			this.selectWindow(idNextWindow);
-			this.solution.selectedOptions = [];
-			this.solution.selectedProperties = [];
-			this.solution.selectedOption = 0;
+			if(!updated){
+				this.resetCurrentValue();
+			}
 			this.beforeExecControl();
 
 			tree = this.getArtTreeSequence(this.currentArtNode);
@@ -1162,10 +1180,7 @@
 				this.treeSequence.deleteNode(nodeToCut);
 
 				this.selectWindow(step.currentWindow);
-				this.solution.selectedOption = step.selectedOption;
-				this.solution.selectedProperties = step.selectedProperties;
-				this.solution.selectedOptions = step.selectedOptions;
-				this.scope = step.scope;
+				this.setCurrentValue(step);	
 			}
 
 			tree = this.getArtTreeSequence(this.currentArtNode);
@@ -1212,10 +1227,7 @@
 			this.selectWindow(node.data.currentWindow);
 			this.treeSequence.deleteNode(node);
 
-			this.solution.selectedOption = step.selectedOption;
-			this.solution.selectedProperties = step.selectedProperties;
-			this.solution.selectedOptions = step.selectedOptions;
-			this.scope = step.scope;
+			this.setCurrentValue(step);
 
 			tree = this.getArtTreeSequence(this.currentArtNode);
 			me.Data.tree.length = 0;
@@ -1226,6 +1238,7 @@
 		};
 
 		this.beforeExecControl = function() {
+			
 			if (this.isType('attributeForChoosing') || this.isType('attributeForChoosingForDetail')) {
 				this.initSelectedOption(this.scope.data[0], true);
 				//this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data[this.currentWindow.example][0], true).name, true);
@@ -1245,6 +1258,10 @@
 				this.userSequence[this.userSequence.length - 1]['path'] = this.currentWindow.paths;
 			} else if (this.isType('hidden')) {
 				this.beforeExecuteHiddenControl();
+			}
+			
+			if(this.currentWindow.pathName != undefined){
+				this.currentArtNode.label = this.currentWindow.pathName;
 			}
 
 		};

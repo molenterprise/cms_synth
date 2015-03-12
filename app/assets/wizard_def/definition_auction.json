@@ -41,6 +41,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -73,6 +74,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -93,6 +95,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -113,6 +116,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Usuario",
 			"options": [
 				{
 					"key": 0,
@@ -133,6 +137,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Concorrente",
 			"options": [
 				{
 					"key": 0,
@@ -153,6 +158,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Lance",
 			"options": [
 				{
 					"key": 0,
@@ -173,6 +179,7 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Vendedor",
 			"options": [
 				{
 					"key": 0,
