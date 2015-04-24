@@ -1140,7 +1140,7 @@
 					"next": "0.0.0.0.0.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1303,7 +1303,7 @@
 					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1466,7 +1466,7 @@
 					"next": "0.0.0.0.2.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1629,7 +1629,7 @@
 					"next": "0.0.0.0.3.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1792,7 +1792,7 @@
 					"next": "0.0.0.0.4.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1955,7 +1955,7 @@
 					"next": "0.0.0.0.5.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2118,7 +2118,7 @@
 					"next": "0.0.0.0.6.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2185,7 +2185,7 @@
 					"next": "0.0.0.0.0.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2359,7 +2359,7 @@
 					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2541,7 +2541,7 @@
 					"next": "0.0.0.0.2.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2715,7 +2715,7 @@
 					"next": "0.0.0.0.3.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2885,7 +2885,7 @@
 					"next": "0.0.0.0.4.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -3051,7 +3051,7 @@
 					"next": "0.0.0.0.5.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -3237,7 +3237,7 @@
 					"next": "0.0.0.0.6.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_computed_attributes_wizard",
+							"function_name": "create_attributes_for_index_wizard",
 							"params": [
 								{
 									"type": "user_action",

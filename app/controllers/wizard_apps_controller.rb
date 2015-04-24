@@ -103,34 +103,6 @@ class WizardAppsController < ApplicationController
 
     return {:status => status == 'successful', :result => values}
   end
-  
-  def create_in_context_class_wizard(params)
-    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
-
-    values = call_synth_without_result('in_context_classes', {
-      'in_context_class[in_context_class_class]' => params['class'],
-       'in_context_class[in_context_class_context]' => params['context']})
-    status = values['status']
-
-    print "LOG: values: #{values} \n" if @log_param
-
-    return {:status => status == 'successful', :result => {:in_context_class_id => values['location']}}
-  end
-  
-  def create_in_context_class
-    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
-
-    values = call_synth_without_result('in_context_classes', {
-      'in_context_class[in_context_class_class]' => 'http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto',
-       'in_context_class[in_context_class_context]' => 'http://base#deda8cc0-b7a1-11e4-a7c0-001d92e8bb43'})
-
-    id = values['location']
-    id = id[id.index('http', 2).. -1]
-    
-    print "LOG: values: #{values} \n" if @log_param or true
-    
-    render :json => {:status => true, :result => {:in_context_class_id => id}}
-  end
 
   def create_computed_attributes_for_index_wizard(params)
     print "create_computed_attributes_for_index_wizard #{params}"
@@ -148,7 +120,7 @@ class WizardAppsController < ApplicationController
     return {:status => true, :result => {}}
   end
   
-  def create_computed_attributes_wizard(params)
+  def create_attributes_for_index_wizard(params)
     print "LOG: begin: create_computed_attributes_wizard \n" if @log_name or true
     print "LOG: params: #{params} \n" if @log_param  or true
     
@@ -240,6 +212,21 @@ class WizardAppsController < ApplicationController
     @global_var[:landmark_position][0] = landmark_position + 1
 
     return {:status => true, :result => values}
+  end
+  
+  def create_in_context_class_wizard(params)
+
+    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+    print "LOG: params: #{params} \n" if @log_param
+
+    values = call_synth('in_context_classes/create_api', {'in_context_class[in_context_class_class]' => params['ontology_class'],
+       'in_context_class[in_context_class_context]' => params['context_id']})
+
+    print "LOG: values: #{values} \n" if @log_param
+
+    return {:status => false} unless values['status'] == 'successful'
+
+    return {:status => true, :result => {:in_context_class_id => values}}
   end
   
   def create_parameter_for_context

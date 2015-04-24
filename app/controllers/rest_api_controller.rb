@@ -134,4 +134,38 @@ class RestApi < ApplicationController
 
     return req
   end
+  
+  def create_in_context_class_wizard(params)
+    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+
+    values = call_synth_without_result('in_context_classes', {
+      'in_context_class[in_context_class_class]' => params['class'],
+       'in_context_class[in_context_class_context]' => params['context']})
+    status = values['status']
+
+    print "LOG: values: #{values} \n" if @log_param
+
+    return {:status => status == 'successful', :result => {:in_context_class_id => values['location']}}
+  end
+  
+  def create_in_context_class_1
+    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+
+    values = call_synth_without_result('in_context_classes', {
+      'in_context_class[in_context_class_class]' => 'http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto',
+       'in_context_class[in_context_class_context]' => 'http://base#deda8cc0-b7a1-11e4-a7c0-001d92e8bb43'})
+
+    id = values['location']
+    id = id[id.index('http', 2).. -1]
+    
+    print "LOG: values: #{values} \n" if @log_param or true
+    
+    render :json => {:status => true, :result => {:in_context_class_id => id}}
+  end
+  
+    def create_in_context_class
+    values = call_synth('in_context_classes/create_api', {'in_context_class[in_context_class_class]' => 'http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria',
+       'in_context_class[in_context_class_context]' => 'http://base#2c01d5b0-eab7-11e4-8140-001d92e8bb43'})
+    render :json => {:all_values => values, :status => values['status'] }
+  end
 end
