@@ -374,7 +374,7 @@ class WizardAppsController < ApplicationController
     name = "#{path.first['className']}_for_#{params['mainclass']}"
     
     function_params = {'name' => name, 'title' => name,
-      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select#{properties_path}map{|#{x}| #{x}.#{params['ontology']}::prop}.flatten.include? context_param.first.#{params['ontology']}::prop}"}
+      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select#{properties_path}include? context_param}"}
 
     # function_params = {'name' => name, 'title' => name,
       # 'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
@@ -485,7 +485,7 @@ class WizardAppsController < ApplicationController
 
     app_name = 'app_test_1'
 
-    return 'Error: creating application' unless create_app_wizard(app_name)
+    #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
     
     stack = [{:children => app_user_definition['children'], :index => 0}]
