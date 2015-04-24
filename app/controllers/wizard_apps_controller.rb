@@ -149,27 +149,30 @@ class WizardAppsController < ApplicationController
   end
   
   def create_computed_attributes_wizard(params)
-    print "create_computed_attributes_wizard #{params}"
+    print "LOG: begin: create_computed_attributes_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
+    
     function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology']}
     attrs = params['scope']
     
     selected = attrs['data']
-    names = attrs.params['names']
-    queries = attrs.params['queries']
-    types = attrs.params['type']
+    names = attrs['names']
+    queries = attrs['queries']
+    types = attrs['type']
     
 
     for i in 0..(selected.length - 1)
-      att = selected[i]
+      attr = selected[i]
       function_params['name'] = names[attr]
       function_params['position'] = i
-      if type[attr] == 'ComputedAttribute' then  
+      if types[attr] == 'ComputedAttribute' then  
         function_params['query'] = queries[attr]
         create_computed_attribute_for_index_wizard(function_params)
-      elsif type[attr] == 'Path' then
+      elsif types[attr] == 'Path' then
         function_params['path'] = queries[attr]['path']
         function_params['properties'] = queries[attr]['properties']
         function_params['mainclass'] = queries[attr]['mainclass']
+        function_params['reverse'] = queries[attr]['reverse']
         create_index_anchor_1_wizard(function_params)
       end
     end
@@ -177,6 +180,9 @@ class WizardAppsController < ApplicationController
   end
 
   def create_computed_attribute_for_index_wizard(params)
+    
+    print "LOG: begin: create_computed_attribute_for_index_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
 
     index_position_key = "#{params['index_id']}_attribute"
     index_position = params['position'] || @global_var[index_position_key][0] || 2
@@ -338,18 +344,42 @@ class WizardAppsController < ApplicationController
     print "LOG: params: #{params} \n" if @log_param or true
 
     path = params['path']
+    x = 'x'
     properties_path = '';
-    index = 0;
-    path.each{|item|
-      properties_path = "#{properties_path}#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}."
+    index = 0      
+    
+    ########
+    reverse = params['reverse']
+    
+    if reverse
+      path = path.reverse
+    end
+    path.each{|item|      
+      properties_path = "#{properties_path}map{|#{x}| #{x}.#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}}.flatten."
       index += 1
+      x = (x[0].ord + 1).chr
     }
+    
+    properties_path.sub!("map", "")
+    properties_path.sub!("}", "") #remove the first closing curly brace
+    properties_path.sub!(".flatten", "")
+    
+    # path.each{|item|
+      # properties_path = "#{properties_path}#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}."
+      # index += 1
+    # }
 
     index_key = "#{path.first['className']}_for_#{params['mainclass']}_IndexAnchor"
-    name = "#{index_key}_#{position}"
-
+    index_position = params['position'] || @global_var[index_key][0] || 2
+    name = "#{path.first['className']}_for_#{params['mainclass']}"
+    
     function_params = {'name' => name, 'title' => name,
-      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
+      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select#{properties_path}map{|#{x}| #{x}.#{params['ontology']}::prop}.flatten.include? context_param.first.#{params['ontology']}::prop}"}
+
+    # function_params = {'name' => name, 'title' => name,
+      # 'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
+      
+    #############
     values = create_context_wizard(function_params)[:result]
     
     function_params = {'name' => 'context_param', 'context_id' => values['context']}
@@ -362,6 +392,8 @@ class WizardAppsController < ApplicationController
     val = get_context_attr_wizard({:id => values['defaultIndex']})[:result]
     function_params = {'index_id' => val['rows'][0]['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
     create_attribute_context_parameters_wizard(function_params)
+    
+    @global_var[index_key][0] = index_position + 1
 
     return {:status => true, :result => {}}
 
@@ -402,7 +434,7 @@ class WizardAppsController < ApplicationController
       params.each{ |param|
         if param['type'] == 'constant' then
           result[param['name']] = param['value']
-        elsif param['type'] == 'globar_var' then
+        elsif param['type'] == 'global_var' then
           result[param['name']] = @global_var[param['value']].last
         elsif param['type'] == 'user_action' then
           result[param['name']] = step[param['value']]
@@ -436,41 +468,40 @@ class WizardAppsController < ApplicationController
   end
 
   def pop_global_var(param)
-    print "LOG: begin: pop_globar_var \n" if @log_name
+    print "LOG: begin: pop_global_var \n" if @log_name
     print "LOG: params: #{param} \n" if @log_param
-    print "LOG: end: pop_globar_var \n" if @log_name
+    print "LOG: end: pop_global_var \n" if @log_name
     return @global_var[param['key']].pop
   end
 
   def create_full_app
     app_wizard_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'definition_auction.json')))
-    app_user_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'user_auction.json')));
+    app_user_definition = JSON.parse(File.read(File.join(Rails.root, 'app', 'assets', 'wizard_def', 'user_auction.json')))
 
     @global_var = Hash.new { |hash, key| hash[key] = [] }
 
     @log_name = true
-    @log_param = false
+    @log_param = true
 
     app_name = 'app_test_1'
-    
-    
 
-    #return 'Error: creating application' unless create_app_wizard(app_name)
+    return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
     
-    stack = [{:children => app_user_definition.children, :index => 0}]
+    stack = [{:children => app_user_definition['children'], :index => 0}]
       
     while !stack.empty? do  
       
       node = stack[-1];
-      if(node[:children].length >= node[:index]) then
+      
+      if(node[:index] >= node[:children].length) then
         stack.pop()
       else
         current = node[:children][node[:index]]
-        node[index] += 1
-        
+        node[:index] += 1
         if current['type'] != 'Art' then
-          windowId = current['currentWindow']
+          step = current['data']
+          windowId = step['currentWindow']
           window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
     
           todo = window['todo']
@@ -480,7 +511,7 @@ class WizardAppsController < ApplicationController
             process_function(window['options'][step['selectedOption'].to_i]['todo'], step)
           end
         end
-        stack.push({:node => current[:children], :index => 0}) unless current[:children].nil? || current[:children].empty?
+        stack.push({:children => current['children'], :index => 0}) unless current['children'].nil? || current['children'].empty?
       end
     end
 

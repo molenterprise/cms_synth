@@ -22,9 +22,9 @@
 			<!--  Product Container  -->
 			
 			<form name="reviewForm" ng-submit="step.changeWindow()">
-				<div class="list-group" style="height: 380px;overflow:auto">
+				<div class="list-group" style="height: 480px;overflow:auto">
 					<h3>{{step.currentWindow.message}}</h3>
-					Window: {{step.currentWindow.id}}
+					 Window: {{step.currentWindow.id}}
 		
 					<div ng-show="step.isType('select')">
 						<select-nomenclator-chooser></select-nomenclator-chooser>
@@ -120,7 +120,7 @@
 				</fieldset>
 			</form>
 			
-			{{step.treeSequence}} 
+			{{step.treeSequence}}
 
 		</div>
 	

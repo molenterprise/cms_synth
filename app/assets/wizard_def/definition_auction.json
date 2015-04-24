@@ -403,6 +403,7 @@
 			"id": "0.0.0.0.1.1",
 			"title": "Leilao detail",
 			"type": "yesNoDetail",
+			"pathName": "Leilao",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -431,6 +432,7 @@
 			"type": "radioDetail",
 			"message": "Produto",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Produto (List)",
 			"options": [
 				{
 					"key": 0,
@@ -518,6 +520,7 @@
 			"id": "0.0.0.0.2.1",
 			"title": "Produto detail",
 			"type": "yesNoDetail",
+			"pathName": "Produto",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -1144,9 +1147,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -1303,9 +1310,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -1462,9 +1473,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -1621,9 +1636,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -1780,9 +1799,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -1939,9 +1962,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2098,9 +2125,13 @@
 									"name": "scope",
 									"value": "scope"
 								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "110"
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2160,6 +2191,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2246,7 +2285,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2258,7 +2298,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2325,6 +2365,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2419,7 +2467,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2431,7 +2480,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2498,6 +2547,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2572,7 +2629,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2584,7 +2641,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2596,7 +2654,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2663,6 +2721,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2745,7 +2811,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2757,7 +2824,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2824,6 +2891,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -2902,7 +2977,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -2914,7 +2990,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2981,6 +3057,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -3079,7 +3163,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -3091,7 +3176,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -3158,6 +3243,14 @@
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
 								}
 							],
 							"results": [
@@ -3240,7 +3333,8 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": "0.0.0.0"
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
@@ -3252,7 +3346,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "globar_var",
+							"type": "global_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -3935,6 +4029,10 @@
 					"key": 2,
 					"text": "Lance",
 					"next": "0.0.0.0.0.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
 				}
 			]
 		}, {
@@ -3994,6 +4092,10 @@
 					"key": 4,
 					"text": "Lance",
 					"next": "0.0.0.0.1.0.0.1.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
 				}
 			]
 		}, {
@@ -4057,6 +4159,10 @@
 					"key": 2,
 					"text": "Lance",
 					"next": "0.0.0.0.2.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
 				}
 			]
 		}, {

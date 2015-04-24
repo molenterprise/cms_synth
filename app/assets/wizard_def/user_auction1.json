@@ -177,3 +177,144 @@
 	}
 ]
 
+[
+	{
+		"currentWindow": "0.0.0.0",
+		"selectedOption": 2
+	}, {
+		"currentWindow": "0.0.0.0.2",
+		"selectedOption": "0"
+	}, {
+		"currentWindow": "0.0.0.0.2.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0",
+		"selectedOption": "1"
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.1",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.1.0",
+		"selectedOption": 0
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.1.0.0",
+		"selectedOption": 0,
+		"selectedProperties": [0],
+		"selectedOptions": [0, 0, 0, 0, 0, 0],
+		"paths": [
+			{
+				"key": 0,
+				"pathItems": [
+					{
+						"propertiesNames": ["categoria"],
+						"className": "Categoria"
+					}
+				]
+			}
+		]
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.0.1.0.0.0",
+		"selectedOption": "3"
+	}, {
+		"currentWindow": "0.0.0.0.2.0.0.1",
+		"selectedOption": "1"
+	}
+]
+
+
+{
+	"children": [
+		{
+			"data": null,
+			"type": "Art",
+			"children": [
+				{
+					"data": {
+						"currentWindow": "0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [0, 0, 0, 0, 0, 0],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"data": {
+						"currentWindow": "0.0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"data": {
+						"currentWindow": "0.0.0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0",
+						"selectedOption": "1",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1",
+						"selectedOption": "1",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [0],
+							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"names": ["label", "Nome"]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"data": {
+						"currentWindow": "0.0.0.0.0.1.1.1",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [0],
+							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"names": ["label", "Nome"]
+						}
+					},
+					"type": "Normal"
+				}
+			]
+		}, {
+			"data": null,
+			"type": "Art"
+		}
+	]
+}
+

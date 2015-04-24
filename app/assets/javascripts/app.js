@@ -1245,6 +1245,7 @@
 			} else if (this.isType('computedAttribute')) {
 				this.computedAttr_name = "";
 			} else if (this.isType('yesNoDetail')) {
+				/*
 				this.solution.selectedProperties = [];
 				for (var i = 0; i < this.currentWindow.datatypeProperties.length; i++) {
 					for (var j = 0; j < this.wizard.data[this.currentWindow.example][0].length; j++) {
@@ -1252,6 +1253,7 @@
 							this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0][j].id);
 					};
 				};
+				*/
 			} else if (this.isType('paths')) {
 				this.beforeExecutePathsControl();
 			} else if (this.isType('path')) {
@@ -1307,10 +1309,12 @@
 			for (var i = 0; i < paths.length; i++) {
 
 				path = paths[i];
+				reverse = false;
 
 				var examples = this.get_path_examples(mainclass, path, this.isType('paths'));
 				if (examples.length == 0) {
 					invertedPath = this.invertPath(mainclass, path, this.isType('paths'));
+					reverse = true;
 					cn = path[path.length - 1].className;
 					examples = this.get_path_examples(cn, invertedPath, this.isType('paths'));
 				}
@@ -1318,7 +1322,8 @@
 				this.currentWindow.paths.push({
 					"key" : i,
 					"pathItems" : paths[i],
-					"examples" : examples
+					"examples" : examples,
+					"reverse" : reverse
 				});
 				this.currentWindow.options.push({
 					"key" : i,
@@ -1363,7 +1368,8 @@
 
 			if (this.isType('path')) {
 				var paths = this.currentWindow.paths;
-				var items = paths[this.solution.selectedOption].pathItems
+				var path = paths[this.solution.selectedOption]
+				var items = path.pathItems
 				var className = items[items.length - 1].className
 				this.scope.examples.forEach(function(entry) {
 					entry.push({
@@ -1379,7 +1385,8 @@
 				this.scope.queries.push({
 					"path" : items,
 					"properties" : this.solution.selectedOptions,
-					"mainclass" : this.currentWindow.mainclass
+					"mainclass" : this.currentWindow.mainclass,
+					"reverse" : path.reverse
 				});
 			}
 		};

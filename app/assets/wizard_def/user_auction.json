@@ -1,46 +1,687 @@
-[
-	{
-		"currentWindow": "0.0.0.0",
-		"selectedOption": 2
-	}, {
-		"currentWindow": "0.0.0.0.2",
-		"selectedOption": "0"
-	}, {
-		"currentWindow": "0.0.0.0.2.0",
-		"selectedOption": 0
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0",
-		"selectedOption": 0
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0.0",
-		"selectedOption": "1"
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0.0.1",
-		"selectedOption": 0
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0.0.1.0",
-		"selectedOption": 0
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0.0.1.0.0",
-		"selectedOption": 0,
-		"selectedProperties": [0],
-		"selectedOptions": [0, 0, 0, 0, 0, 0],
-		"paths": [
-			{
-				"key": 0,
-				"pathItems": [
-					{
-						"propertiesNames": ["categoria"],
-						"className": "Categoria"
-					}
-				]
-			}
-		]
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0.0.1.0.0.0",
-		"selectedOption": "3"
-	}, {
-		"currentWindow": "0.0.0.0.2.0.0.1",
-		"selectedOption": "1"
-	}
-]
+{
+	"children": [
+		{
+			"id": 0,
+			"label": "Categoria",
+			"data": null,
+			"type": "Art",
+			"children": [
+				{
+					"id": 1,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [0, 0, 0, 0, 0, 0],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 2,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 3,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 4,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"data": [],
+							"examples": []
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 5,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0",
+						"selectedOption": "1",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [0],
+							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"names": ["label", "Nome"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 6,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.1",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [0],
+							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"names": ["label", "Nome"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 7,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.1.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [0],
+						"scope": {
+							"show": "table",
+							"data": [0],
+							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"names": ["label", "Nome"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}
+								]
+							]
+						},
+						"path": [
+							{
+								"key": 0,
+								"pathItems": [
+									{
+										"propertiesNames": ["categoria"],
+										"className": "Produto"
+									}, {
+										"propertiesNames": ["temProduto"],
+										"className": "Leilao"
+									}
+								],
+								"examples": ["leilao1 - temProduto:categoria - audio", "leilao2 - temProduto:categoria - audio", "leilao10 - temProduto:categoria - cine_e_foto", "leilao3 - temProduto:categoria - audio"],
+								"reverse": true
+							}
+						]
+					},
+					"type": "Normal"
+				}, {
+					"id": 8,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [0, 0],
+						"scope": {
+							"show": "table",
+							"data": [0, 2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 9,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0.0",
+						"selectedOption": "0",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [0, 2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 10,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 11,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0.0",
+						"selectedOption": "3",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 12,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1",
+						"selectedOption": "1",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 13,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.1.1.1",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}
+			]
+		}, {
+			"id": 14,
+			"label": "New Landmark",
+			"data": null,
+			"type": "Art"
+		}
+	]
+}
