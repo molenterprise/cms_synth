@@ -53,7 +53,7 @@
 							"params": [
 								{
 									"type": "constant",
-									"name": "attribute_type",
+									"name": "landmark_type",
 									"value": "list"
 								}
 							]
@@ -62,7 +62,19 @@
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Categoria",
-					"next": "0.0.0.0.0.1"
+					"next": "0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Categoria",
@@ -308,6 +320,43 @@
 					"key": 1,
 					"text": "No",
 					"next": "0.0.0.0.0.1.1"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_in_context_class_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "class",
+							"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
+						}, {
+							"type": "constant",
+							"name": "query",
+							"value": "AUCTION::Categoria.find_all"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Categoria"
+						}, {
+							"type": "constant",
+							"name": "title",
+							"value": "Categoria."
+						}
+					],
+					"results": [
+						{
+							"name": "in_context_class",
+							"global_var": "in_context_class_id"
+						},
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -1140,7 +1189,7 @@
 					"next": "0.0.0.0.0.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1148,18 +1197,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -2200,12 +2243,6 @@
 									"name": "ontology",
 									"value": "auction"
 								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}
 							]
 						}
 					]
@@ -2295,12 +2332,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",

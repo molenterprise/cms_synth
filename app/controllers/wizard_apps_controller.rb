@@ -145,28 +145,73 @@ class WizardAppsController < ApplicationController
         function_params['properties'] = queries[attr]['properties']
         function_params['mainclass'] = queries[attr]['mainclass']
         function_params['reverse'] = queries[attr]['reverse']
-        create_index_anchor_1_wizard(function_params)
+        create_index_and_index_attribute_for_index_wizard(function_params)
       end
     end
     return {:status => true, :result => {}}
   end
 
+  def create_attributes_for_detail_wizard(params) #isomorphic with create_attributes_for_index_wizard
+    print "LOG: begin: create_attributes_for_detail_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
+    
+    function_params = {'in_context_class_id' => params['in_context_class_id'], 'ontology' => params['ontology']}
+    attrs = params['scope']
+    
+    selected = attrs['data']
+    names = attrs['names']
+    queries = attrs['queries']
+    types = attrs['type']
+    
+
+    for i in 0..(selected.length - 1)
+      attr = selected[i]
+      function_params['name'] = names[attr]
+      function_params['position'] = i
+      if types[attr] == 'ComputedAttribute' then  
+        function_params['query'] = queries[attr]
+        create_computed_attribute_for_detail_wizard(function_params)
+      elsif types[attr] == 'Path' then
+        function_params['path'] = queries[attr]['path']
+        function_params['properties'] = queries[attr]['properties']
+        function_params['mainclass'] = queries[attr]['mainclass']
+        function_params['reverse'] = queries[attr]['reverse']
+        create_index_and_index_attribute_for_detail_wizard(function_params)
+      end
+    end
+    return {:status => true, :result => {}}
+  end
+  
   def create_computed_attribute_for_index_wizard(params)
     
     print "LOG: begin: create_computed_attribute_for_index_wizard \n" if @log_name or true
     print "LOG: params: #{params} \n" if @log_param  or true
 
-    index_position_key = "#{params['index_id']}_attribute"
-    index_position = params['position'] || @global_var[index_position_key][0] || 2
+    attribute_position_key = "#{params['index_id']}_attribute"
+    attribute_position = params['position'] || @global_var[attribute_position_key][0] || 2
 
     call_synth_without_result('indexes/computed_attributes_post_data', {
         'parent' => params['index_id'],
         'navigation_attribute_name' => params['name'],
         'computed_navigation_attribute_value_expression' => params['query'],
-       'navigation_attribute_index_position' => index_position,
+       'navigation_attribute_index_position' => attribute_position,
        'id' => '_empty'})
 
-    @global_var[index_position_key][0] = index_position + 1 unless !params['position'].nil?
+    @global_var[attribute_position_key][0] = attribute_position + 1 unless !params['position'].nil?
+
+    return {:status => true, :result => {}}
+  end
+  
+  def create_computed_attribute_for_detail_wizard(params) #isomorphic with create_computed_attribute_for_index_wizard
+    
+    print "LOG: begin: create_computed_attribute_for_detail_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
+
+    call_synth_without_result('in_context_classes/computed_attributes_post_data', {
+        'parent' => params['in_context_class_id'],
+        'navigation_attribute_name' => params['name'],
+        'computed_navigation_attribute_value_expression' => params['query'],
+        'id' => '_empty'})
 
     return {:status => true, :result => {}}
   end
@@ -191,6 +236,30 @@ class WizardAppsController < ApplicationController
 
     return {:status => true, :result => {}}
   end
+  
+  def create_index_attribute_for_detail_wizard(params) #isomorphic with create_index_attribute_for_index_wizard
+    
+    print "LOG: begin: create_index_attribute_for_detail_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
+
+    call_synth_without_result('in_context_classes/index_attributes_post_data', {
+        'parent' => params['in_context_class_id'],
+        'navigation_attribute_name' => params['name'],
+        'index_navigation_attribute_index' => params['index_navigation_attribute_index'],
+       'id' => '_empty'})
+
+    return {:status => true, :result => {}}
+  end
+  
+  def create_landmark_wizard(params)
+    if params['landmark_type'] == "list"
+      params['index_id'] = @global_var['index_id'].last
+      create_index_landmark_wizard(params)
+    elsif params['landmark_type'] == "detail"
+      params['context_id'] = @global_var['context_id'].last
+      create_context_landmark_wizard(params)
+    end
+  end
 
   def create_index_landmark_wizard(params)
 
@@ -214,19 +283,47 @@ class WizardAppsController < ApplicationController
     return {:status => true, :result => values}
   end
   
-  def create_in_context_class_wizard(params)
+  def create_context_landmark_wizard(params)
 
-    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+    print "LOG: begin: create_context_landmark_wizard \n" if @log_name
     print "LOG: params: #{params} \n" if @log_param
+    print "LOG: @global_var #{@global_var} \n" if @log_param
 
-    values = call_synth('in_context_classes/create_api', {'in_context_class[in_context_class_class]' => params['ontology_class'],
-       'in_context_class[in_context_class_context]' => params['context_id']})
+    landmark_position = @global_var[:landmark_position][0] || 2
+
+    values = call_synth('landmarks/create_api', {'landmark[landmark_name]' => params['name'],
+       'landmark[landmark_position]' => landmark_position, 'landmark[type]' => 'context_anchor',
+       'context_anchor_navigation_attribute[context_anchor_navigation_attribute_label_expression]' => "'#{params['name']}'",
+       'context_anchor_navigation_attribute[context_anchor_navigation_attribute_target_context]' => params['context_id'],
+       'context_anchor_navigation_attribute[context_anchor_navigation_attribute_target_node_expression]' => ""})
 
     print "LOG: values: #{values} \n" if @log_param
 
     return {:status => false} unless values['status'] == 'successful'
 
-    return {:status => true, :result => {:in_context_class_id => values}}
+    @global_var[:landmark_position][0] = landmark_position + 1
+
+    return {:status => true, :result => values}
+  end
+  
+  def create_in_context_class_wizard(params)
+
+    print "LOG: begin: create_in_context_class_wizard \n" if @log_name
+    print "LOG: params: #{params} \n" if @log_param
+    
+    context_values = create_context_wizard(params)[:result]
+
+    values = call_synth('in_context_classes/create_api', {'in_context_class[in_context_class_class]' => params['class'],
+       'in_context_class[in_context_class_context]' => context_values['context']})
+
+    print "LOG: values: #{values} \n" if @log_param
+    
+    values['defaultIndex'] = context_values['defaultIndex']
+    values['context'] = context_values['context']
+
+    return {:status => false} unless values['status'] == 'successful'
+
+    return {:status => true, :result => values}
   end
   
   def create_parameter_for_context
@@ -325,9 +422,9 @@ class WizardAppsController < ApplicationController
 
   end
   
-  # key params: ontology, mainClass, path, properties, index_id, position
-  def create_index_anchor_1_wizard(params)
-    print "LOG: begin: create_index_anchor_1_wizard \n" if @log_name or true
+  # key params: ontology, mainClass, path, properties, index_id, position, reverse
+  def create_index_and_index_attribute_for_index_wizard(params)
+    print "LOG: begin: create_index_and_index_attribute_for_index_wizard \n" if @log_name or true
     print "LOG: params: #{params} \n" if @log_param or true
 
     path = params['path']
@@ -335,7 +432,6 @@ class WizardAppsController < ApplicationController
     properties_path = '';
     index = 0      
     
-    ########
     reverse = params['reverse']
     
     if reverse
@@ -350,11 +446,6 @@ class WizardAppsController < ApplicationController
     properties_path.sub!("map", "")
     properties_path.sub!("}", "") #remove the first closing curly brace
     properties_path.sub!(".flatten", "")
-    
-    # path.each{|item|
-      # properties_path = "#{properties_path}#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}."
-      # index += 1
-    # }
 
     index_key = "#{path.first['className']}_for_#{params['mainclass']}_IndexAnchor"
     index_position = params['position'] || @global_var[index_key][0] || 2
@@ -362,11 +453,6 @@ class WizardAppsController < ApplicationController
     
     function_params = {'name' => name, 'title' => name,
       'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select#{properties_path}include? context_param}"}
-
-    # function_params = {'name' => name, 'title' => name,
-      # 'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select{ |x| context_param.#{properties_path}include? x}"}
-      
-    #############
     values = create_context_wizard(function_params)[:result]
     
     function_params = {'name' => 'context_param', 'context_id' => values['context']}
@@ -381,6 +467,52 @@ class WizardAppsController < ApplicationController
     create_attribute_context_parameters_wizard(function_params)
     
     @global_var[index_key][0] = index_position + 1
+
+    return {:status => true, :result => {}}
+
+  end
+  
+  # key params: ontology, mainClass, path, properties, in_context_class_id, position, reverse
+  def create_index_and_index_attribute_for_detail_wizard(params) #isomorphic with create_index_and_index_attribute_for_index_wizard
+    print "LOG: begin: create_index_and_index_attribute_for_detail_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
+
+    path = params['path']
+    x = 'x'
+    properties_path = '';
+    index = 0      
+    
+    reverse = params['reverse']
+    
+    if reverse
+      path = path.reverse
+    end
+    path.each{|item|      
+      properties_path = "#{properties_path}map{|#{x}| #{x}.#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}}.flatten."
+      index += 1
+      x = (x[0].ord + 1).chr
+    }
+    
+    properties_path.sub!("map", "")
+    properties_path.sub!("}", "") #remove the first closing curly brace
+    properties_path.sub!(".flatten", "")
+
+    name = "#{path.first['className']}_for_#{params['mainclass']}"
+    
+    function_params = {'name' => name, 'title' => name,
+      'query' => "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select#{properties_path}include? context_param}"}
+    values = create_context_wizard(function_params)[:result]
+    
+    function_params = {'name' => 'context_param', 'context_id' => values['context']}
+    create_parameter_for_context_wizard(function_params)
+
+    function_params = {'name' => path.first['className'], 'in_context_class_id' => params['in_context_class_id'],
+       'index_navigation_attribute_index' => values['defaultIndex']}
+    create_index_attribute_for_detail_wizard(function_params)
+    
+    val = get_context_attr_wizard({:id => values['defaultIndex']})[:result]
+    function_params = {'index_id' => val['rows'][0]['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+    create_attribute_context_parameters_wizard(function_params)
 
     return {:status => true, :result => {}}
 
@@ -472,7 +604,7 @@ class WizardAppsController < ApplicationController
 
     app_name = 'app_test_1'
 
-    #return 'Error: creating application' unless create_app_wizard(app_name)
+    return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
     
     stack = [{:children => app_user_definition['children'], :index => 0}]
