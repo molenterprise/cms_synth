@@ -16,8 +16,12 @@ Rails.application.routes.draw do
   match '/get_context_attr',    to: 'wizard_apps#get_context_attr_id',  via: 'get'
   match '/generate_attribute_context_parameters',    to: 'wizard_apps#create_attribute_context_parameters',  via: 'get'
   match '/generate_in_context_class',    to: 'wizard_apps#create_in_context_class',  via: 'get'
+  match '/generate_context_anchor_attribute_for_index',    to: 'wizard_apps#create_context_anchor_attribute_for_index_wizard_testing',  via: 'get'
+  match '/generate_context_anchor_attribute_for_detail_wizard_testing',    to: 'wizard_apps#create_context_anchor_attribute_for_detail_wizard_testing',  via: 'get'
+  match '/generate_index_anchor_attribute_for_index_wizard_testing',    to: 'wizard_apps#create_index_anchor_attribute_for_index_wizard_testing',  via: 'get'
+  match '/generate_index_anchor_attribute_for_detail_wizard_testing',    to: 'wizard_apps#create_index_anchor_attribute_for_detail_wizard_testing',  via: 'get'
   
-  
+   
   resources :ontologies, except: [:destroy, :show]
   
   match '/start/:id',  to: 'wizard_step#start', via: 'get', as: 'wizard_steps'

@@ -223,6 +223,23 @@
 									"global_var": "index_id"
 								}
 							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
+								}
+							]
 						}
 					]
 				}, {
@@ -284,6 +301,23 @@
 									"global_var": "in_context_class_id"
 								}
 							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
+								}
+							]
 						}
 					]
 				}, {
@@ -337,6 +371,23 @@
 								}, {
 									"name": "defaultIndex",
 									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "context_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
 								}
 							]
 						}
@@ -398,6 +449,23 @@
 								{
 									"name": "in_context_class",
 									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "detail"
 								}
 							]
 						}
@@ -3944,6 +4012,28 @@
 				{
 					"key": 0,
 					"next": "0.0.0.0.0.0.0.1.0.0"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_definition",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+							{
+								"name": "key",
+								"global_var": "anchor_att_id"
+							}
+						]
 				}
 			]
 		}, {
