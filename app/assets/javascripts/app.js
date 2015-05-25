@@ -1095,14 +1095,14 @@
 			return step;
 
 		};
-		
-		this.resetCurrentValue = function(){
+
+		this.resetCurrentValue = function() {
 			this.solution.selectedOptions = [];
 			this.solution.selectedProperties = [];
 			this.solution.selectedOption = 0;
 		};
-		
-		this.setCurrentValue = function(step){
+
+		this.setCurrentValue = function(step) {
 			this.solution.selectedOption = step.selectedOption;
 			this.solution.selectedProperties = step.selectedProperties;
 			this.solution.selectedOptions = step.selectedOptions;
@@ -1129,7 +1129,7 @@
 
 			if (this.currentWindow.options[nextValue].child == "Yes")
 				this.currentArtNode = this.treeSequence.addChildNode(this.previousNode, "Relation", null, "Art");
-				
+
 			updated = false;
 
 			if (this.currentWindow.options[nextValue].child == "End") {
@@ -1138,7 +1138,7 @@
 					this.currentArtNode = this.treeSequence.getParent(this.previousNode);
 					idNextWindow = this.previousNode.data.currentWindow;
 					step = this.previousNode.data;
-					this.setCurrentValue(step);	
+					this.setCurrentValue(step);
 					updated = true;
 				}
 			}
@@ -1150,7 +1150,7 @@
 			}
 
 			this.selectWindow(idNextWindow);
-			if(!updated){
+			if (!updated) {
 				this.resetCurrentValue();
 			}
 			this.beforeExecControl();
@@ -1180,7 +1180,7 @@
 				this.treeSequence.deleteNode(nodeToCut);
 
 				this.selectWindow(step.currentWindow);
-				this.setCurrentValue(step);	
+				this.setCurrentValue(step);
 			}
 
 			tree = this.getArtTreeSequence(this.currentArtNode);
@@ -1199,11 +1199,7 @@
 			}
 			me.pull = false;
 		});
-		/*
-		 $scope.$on('changedNodeSelected', function(event, args) {
-		 this.go_to_step(me.Data.currentNode.currentNode.id);
-		 });
-		 */
+
 		this.go_to_step = function(nodeId) {
 
 			//save current values
@@ -1238,7 +1234,7 @@
 		};
 
 		this.beforeExecControl = function() {
-			
+
 			if (this.isType('attributeForChoosing') || this.isType('attributeForChoosingForDetail')) {
 				this.initSelectedOption(this.scope.data[0], true);
 				//this.setModalParameterized(this.selectProperty(this.solution.selectedOption, this.wizard.data[this.currentWindow.example][0], true).name, true);
@@ -1246,24 +1242,26 @@
 				this.computedAttr_name = "";
 			} else if (this.isType('yesNoDetail')) {
 				/*
-				this.solution.selectedProperties = [];
-				for (var i = 0; i < this.currentWindow.datatypeProperties.length; i++) {
-					for (var j = 0; j < this.wizard.data[this.currentWindow.example][0].length; j++) {
-						if (this.wizard.data[this.currentWindow.example][0][j].name == this.currentWindow.datatypeProperties[i])
-							this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0][j].id);
-					};
-				};
-				*/
+				 this.solution.selectedProperties = [];
+				 for (var i = 0; i < this.currentWindow.datatypeProperties.length; i++) {
+				 for (var j = 0; j < this.wizard.data[this.currentWindow.example][0].length; j++) {
+				 if (this.wizard.data[this.currentWindow.example][0][j].name == this.currentWindow.datatypeProperties[i])
+				 this.solution.selectedProperties.push(this.wizard.data[this.currentWindow.example][0][j].id);
+				 };
+				 };
+				 */
 			} else if (this.isType('paths')) {
 				this.beforeExecutePathsControl();
 			} else if (this.isType('path')) {
 				this.userSequence[this.userSequence.length - 1]['path'] = this.currentWindow.paths;
 			} else if (this.isType('hidden')) {
 				this.beforeExecuteHiddenControl();
-			}
-			
-			if(this.currentWindow.pathName != undefined){
-				this.currentArtNode.label = this.currentWindow.pathName;
+			} else if (this.isType('nodeName')) {
+				this.value = 'Categoria';
+			} else if (this.isType('selectNode')) {
+				options = [];
+				this.getPlainTree(this.treeSequence, options, '0.0.0.0.0');
+				this.currentWindow.options = options;
 			}
 
 		};
@@ -1278,7 +1276,7 @@
 					return;
 				}
 			}
-		}
+		};
 
 		this.invertPath = function(start, path, canExec) {
 			temp = [];
@@ -1366,11 +1364,15 @@
 				this.scope.queries.push(this.computedAttr_query);
 			}
 
+			if (this.isType('nodeName')) {
+				this.currentArtNode.label = this.value;
+			}
+
 			if (this.isType('path')) {
 				var paths = this.currentWindow.paths;
-				var path = paths[this.solution.selectedOption]
-				var items = path.pathItems
-				var className = items[items.length - 1].className
+				var path = paths[this.solution.selectedOption];
+				var items = path.pathItems;
+				var className = items[items.length - 1].className;
 				this.scope.examples.forEach(function(entry) {
 					entry.push({
 						"id" : entry.length,
@@ -1378,7 +1380,7 @@
 						"value" : ["Path to " + className]
 					});
 				});
-				
+
 				this.scope.data.push(this.scope.examples[0].length - 1);
 				this.scope.type.push("Path");
 				this.scope.names.push(className);
@@ -1698,6 +1700,24 @@
 			}
 		};
 
+		this.getPlainTree = function(current, info, next) {
+			if (current.type == "Art") {
+				node = {
+					"key" : info.length,
+					"text" : current.label,
+					"next": next
+				};
+				
+				info.push(node);
+			}
+
+			if (current.children != undefined) {
+				for (var i = 0; i < current.children.length; i++) {
+					this.getPlainTree(current.children[i], info, next);
+				};
+			}
+		};
+
 	}]);
 
 	app.controller('treeController', function($scope, Data) {
@@ -1728,6 +1748,13 @@
 		return {
 			restrict : 'E',
 			templateUrl : 'radio-nomenclator-chooser.html'
+		};
+	});
+
+	app.directive('nodeName', function() {
+		return {
+			restrict : 'E',
+			templateUrl : 'node-name.html'
 		};
 	});
 

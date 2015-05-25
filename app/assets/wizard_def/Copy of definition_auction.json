@@ -9,7 +9,7 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"next": "0.0.0.0.0-1"
+					"next": "0.0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Leilao",
@@ -37,29 +37,6 @@
 				}
 			]
 		}, {
-			"id": "0.0.0.0.0-1",
-			"title": "Defined object",
-			"type": "nodeName",
-			"message": "Name",
-			"options": [
-				{
-					"key": 0,
-					"next": "0.0.0.0.0-2"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0-2",
-			"title": "Select object",
-			"type": "selectNode",
-			"message": "Select",
-			"next": "0.0.0.0.0",
-			"options": [
-				{
-					"key": 0,
-					"next": "0.0.0.0.0"
-				}
-			]
-		}, {
 			"id": "0.0.0.0.0",
 			"type": "radio",
 			"title": "What do you want to do?",
@@ -76,7 +53,7 @@
 							"params": [
 								{
 									"type": "constant",
-									"name": "landmark_type",
+									"name": "attribute_type",
 									"value": "list"
 								}
 							]
@@ -85,19 +62,7 @@
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Categoria",
-					"next": "0.0.0.0.0.1",
-					"todo": [
-						{
-							"function_name": "save_value",
-							"params": [
-								{
-									"type": "constant",
-									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.0.1"
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Categoria",
@@ -344,43 +309,6 @@
 					"text": "No",
 					"next": "0.0.0.0.0.1.1"
 				}
-			],
-			"todo": [
-				{
-					"function_name": "create_in_context_class_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "class",
-							"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
-						}, {
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Categoria.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categoria"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Categoria."
-						}
-					],
-					"results": [
-						{
-							"name": "in_context_class",
-							"global_var": "in_context_class_id"
-						},
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.1.0",
@@ -475,7 +403,6 @@
 			"id": "0.0.0.0.1.1",
 			"title": "Leilao detail",
 			"type": "yesNoDetail",
-			"pathName": "Leilao",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -504,7 +431,6 @@
 			"type": "radioDetail",
 			"message": "Produto",
 			"messageOptions": "Do you want to choose",
-			"pathName": "Produto (List)",
 			"options": [
 				{
 					"key": 0,
@@ -592,7 +518,6 @@
 			"id": "0.0.0.0.2.1",
 			"title": "Produto detail",
 			"type": "yesNoDetail",
-			"pathName": "Produto",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -1212,20 +1137,22 @@
 					"next": "0.0.0.0.0.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_detail_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "in_context_class_id",
-									"value": "in_context_class_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
 								}
 							]
 						}
@@ -1369,20 +1296,16 @@
 					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
 								}
 							],
 							"results": [
@@ -1532,20 +1455,16 @@
 					"next": "0.0.0.0.2.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
 								}
 							],
 							"results": [
@@ -1695,20 +1614,16 @@
 					"next": "0.0.0.0.3.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
 								}
 							],
 							"results": [
@@ -1858,20 +1773,16 @@
 					"next": "0.0.0.0.4.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
 								}
 							],
 							"results": [
@@ -2021,20 +1932,16 @@
 					"next": "0.0.0.0.5.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
 								}
 							],
 							"results": [
@@ -2184,20 +2091,16 @@
 					"next": "0.0.0.0.6.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
 								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
 									"type": "constant",
 									"name": "ontology",
-									"value": "auction"
+									"value": "110"
 								}
 							],
 							"results": [
@@ -2251,20 +2154,18 @@
 					"next": "0.0.0.0.0.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
 								}
 							]
 						}
@@ -2355,12 +2256,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_landmark_wizard",
+					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
-							"name": "landmark_type",
-							"value": "landmark_type"
+							"type": "globar_var",
+							"name": "index_id",
+							"value": "index_id"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -2419,20 +2320,12 @@
 					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
 								}
 							],
 							"results": [
@@ -2540,7 +2433,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
+							"type": "globar_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2601,20 +2494,12 @@
 					"next": "0.0.0.0.2.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
 								}
 							],
 							"results": [
@@ -2689,7 +2574,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2714,7 +2599,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
+							"type": "globar_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2775,20 +2660,12 @@
 					"next": "0.0.0.0.3.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
 								}
 							],
 							"results": [
@@ -2884,7 +2761,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
+							"type": "globar_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -2945,20 +2822,12 @@
 					"next": "0.0.0.0.4.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
 								}
 							],
 							"results": [
@@ -3050,7 +2919,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
+							"type": "globar_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -3111,20 +2980,12 @@
 					"next": "0.0.0.0.5.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
 								}
 							],
 							"results": [
@@ -3236,7 +3097,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
+							"type": "globar_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -3297,20 +3158,12 @@
 					"next": "0.0.0.0.6.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_computed_attributes_wizard",
 							"params": [
 								{
 									"type": "user_action",
 									"name": "scope",
 									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
 								}
 							],
 							"results": [
@@ -3406,7 +3259,7 @@
 					"function_name": "create_index_landmark_wizard",
 					"params": [
 						{
-							"type": "global_var",
+							"type": "globar_var",
 							"name": "index_id",
 							"value": "index_id"
 						}, {
@@ -4220,7 +4073,7 @@
 					"text": "Lance",
 					"next": "0.0.0.0.2.0.0.1.0.0.2"
 				}, {
-					"key": 3,
+					"key": 5,
 					"text": "Produto",
 					"next": "0.0.0.0.2"
 				}
