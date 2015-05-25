@@ -9,31 +9,171 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"next": "0.0.0.0.0-1"
+					"next": "0.0.0.0.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Categoria.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Categoria"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Categoria."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"next": "0.0.0.0.1"
+					"next": "0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Leilao.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Leilao"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Leilao."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"next": "0.0.0.0.2"
+					"next": "0.0.0.0.2",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Produto.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Produto"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Produto."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 3,
 					"text": "Usuario",
-					"next": "0.0.0.0.3"
+					"next": "0.0.0.0.3",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Usuario.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Usuario"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Usuario."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 4,
 					"text": "Concorrente",
-					"next": "0.0.0.0.4"
+					"next": "0.0.0.0.4",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Concorrente.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Concorrente"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Concorrente."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 5,
 					"text": "Lance",
-					"next": "0.0.0.0.5"
+					"next": "0.0.0.0.5",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Lance.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Lance"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Lance."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 6,
 					"text": "Vendedor",
-					"next": "0.0.0.0.6"
+					"next": "0.0.0.0.6",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Vendedor.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Vendedor"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Vendedor."
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -80,6 +220,49 @@
 									"value": "list"
 								}
 							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
+								}
+							]
 						}
 					]
 				}, {
@@ -94,6 +277,68 @@
 									"type": "constant",
 									"name": "landmark_type",
 									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
 								}
 							]
 						}
@@ -114,11 +359,140 @@
 				{
 					"key": 0,
 					"text": "Show a list of Leilao(s) to be chosen",
-					"next": "0.0.0.0.1.0"
+					"next": "0.0.0.0.1.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "context_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Leilao",
-					"next": "0.0.0.0.1.1"
+					"next": "0.0.0.0.1.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "detail"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Leilao",
@@ -135,11 +509,106 @@
 				{
 					"key": 0,
 					"text": "Show a list of Produto(s) to be chosen",
-					"next": "0.0.0.0.2.0"
+					"next": "0.0.0.0.2.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Produto",
-					"next": "0.0.0.0.2.1"
+					"next": "0.0.0.0.2.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Produto",
@@ -156,11 +625,106 @@
 				{
 					"key": 0,
 					"text": "Show a list of Usuario(s) to be chosen",
-					"next": "0.0.0.0.3.0"
+					"next": "0.0.0.0.3.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Usuario",
-					"next": "0.0.0.0.3.1"
+					"next": "0.0.0.0.3.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Usuario",
@@ -177,11 +741,106 @@
 				{
 					"key": 0,
 					"text": "Show a list of Concorrente(s) to be chosen",
-					"next": "0.0.0.0.4.0"
+					"next": "0.0.0.0.4.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Concorrente",
-					"next": "0.0.0.0.4.1"
+					"next": "0.0.0.0.4.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Concorrente"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Concorrente",
@@ -198,11 +857,106 @@
 				{
 					"key": 0,
 					"text": "Show a list of Lance(s) to be chosen",
-					"next": "0.0.0.0.5.0"
+					"next": "0.0.0.0.5.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Lance",
-					"next": "0.0.0.0.5.1"
+					"next": "0.0.0.0.5.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Lance"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Lance",
@@ -219,11 +973,106 @@
 				{
 					"key": 0,
 					"text": "Show a list of Vendedor(s) to be chosen",
-					"next": "0.0.0.0.6.0"
+					"next": "0.0.0.0.6.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Vendedor",
-					"next": "0.0.0.0.6.1"
+					"next": "0.0.0.0.6.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Vendedor"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Vendedor",
@@ -236,6 +1085,7 @@
 			"type": "radioDetail",
 			"message": "Categoria",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Categoria (List)",
 			"options": [
 				{
 					"key": 0,
@@ -289,40 +1139,12 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Categoria.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categoria"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Categoria."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.0.1",
 			"title": "Categoria detail",
 			"type": "yesNoDetail",
+			"pathName": "Categoria",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -344,43 +1166,6 @@
 					"text": "No",
 					"next": "0.0.0.0.0.1.1"
 				}
-			],
-			"todo": [
-				{
-					"function_name": "create_in_context_class_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "class",
-							"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
-						}, {
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Categoria.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categoria"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Categoria."
-						}
-					],
-					"results": [
-						{
-							"name": "in_context_class",
-							"global_var": "in_context_class_id"
-						},
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.1.0",
@@ -388,6 +1173,7 @@
 			"type": "radioDetail",
 			"message": "Leilao",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Leilao (List)",
 			"options": [
 				{
 					"key": 0,
@@ -441,35 +1227,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Leilao.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Leilao"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Leilao."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1",
@@ -558,35 +1315,6 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Produto.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Produto"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Produto."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1",
@@ -621,6 +1349,7 @@
 			"type": "radioDetail",
 			"message": "Usuario",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Usuario (List)",
 			"options": [
 				{
 					"key": 0,
@@ -674,40 +1403,12 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Usuario.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Usuario"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Usuario."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1",
 			"title": "Usuario detail",
 			"type": "yesNoDetail",
+			"pathName": "Usuario",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -736,6 +1437,7 @@
 			"type": "radioDetail",
 			"message": "Concorrente",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Concorrente (List)",
 			"options": [
 				{
 					"key": 0,
@@ -789,40 +1491,12 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Concorrente.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Concorrente"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Concorrente."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.4.1",
 			"title": "Concorrente detail",
 			"type": "yesNoDetail",
+			"pathName": "Concorrente",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -851,6 +1525,7 @@
 			"type": "radioDetail",
 			"message": "Lance",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Lance (List)",
 			"options": [
 				{
 					"key": 0,
@@ -904,40 +1579,12 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Lance.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Lance"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Lance."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.5.1",
 			"title": "Lance detail",
 			"type": "yesNoDetail",
+			"pathName": "Lance",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -966,6 +1613,7 @@
 			"type": "radioDetail",
 			"message": "Vendedor",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Vendedor (List)",
 			"options": [
 				{
 					"key": 0,
@@ -1019,40 +1667,12 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Vendedor.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Vendedor"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Vendedor."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1",
 			"title": "Vendedor detail",
 			"type": "yesNoDetail",
+			"pathName": "Vendedor",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
@@ -1369,7 +1989,7 @@
 					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1377,18 +1997,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -1532,7 +2146,7 @@
 					"next": "0.0.0.0.2.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1540,18 +2154,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -1695,7 +2303,7 @@
 					"next": "0.0.0.0.3.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1703,18 +2311,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -1858,7 +2460,7 @@
 					"next": "0.0.0.0.4.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -1866,18 +2468,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -2021,7 +2617,7 @@
 					"next": "0.0.0.0.5.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2029,18 +2625,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -2184,7 +2774,7 @@
 					"next": "0.0.0.0.6.1.1.1",
 					"todo": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
+							"function_name": "create_attributes_for_detail_wizard",
 							"params": [
 								{
 									"type": "user_action",
@@ -2192,18 +2782,12 @@
 									"value": "scope"
 								}, {
 									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -2434,12 +3018,6 @@
 									"name": "ontology",
 									"value": "auction"
 								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}
 							]
 						}
 					]
@@ -2537,12 +3115,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -2616,12 +3194,6 @@
 									"name": "ontology",
 									"value": "auction"
 								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}
 							]
 						}
 					]
@@ -2689,7 +3261,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2711,12 +3283,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -2789,12 +3361,6 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -2881,12 +3447,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -2959,12 +3525,6 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -3047,12 +3607,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -3125,12 +3685,6 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -3233,12 +3787,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -3311,12 +3865,6 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
 								}
 							]
 						}
@@ -3403,12 +3951,12 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_index_landmark_wizard",
+					"function_name": "create_landmark_wizard",
 					"params": [
 						{
 							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"name": "landmark_type",
+							"value": "landmark_type"
 						}, {
 							"type": "constant",
 							"name": "name",
@@ -3487,6 +4035,28 @@
 				{
 					"key": 0,
 					"next": "0.0.0.0.0.0.0.1.0.0"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_definition",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+							{
+								"name": "key",
+								"global_var": "anchor_att_id"
+							}
+						]
 				}
 			]
 		}, {
@@ -4089,10 +4659,6 @@
 					"key": 2,
 					"text": "Lance",
 					"next": "0.0.0.0.0.0.0.1.0.0.2"
-				}, {
-					"key": 3,
-					"text": "Categoria",
-					"next": "0.0.0.0.0"
 				}
 			]
 		}, {
@@ -4152,10 +4718,6 @@
 					"key": 4,
 					"text": "Lance",
 					"next": "0.0.0.0.1.0.0.1.0.0.4"
-				}, {
-					"key": 5,
-					"text": "Leilao",
-					"next": "0.0.0.0.1"
 				}
 			]
 		}, {
@@ -4219,10 +4781,6 @@
 					"key": 2,
 					"text": "Lance",
 					"next": "0.0.0.0.2.0.0.1.0.0.2"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2"
 				}
 			]
 		}, {

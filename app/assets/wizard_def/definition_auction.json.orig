@@ -9,31 +9,198 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"next": "0.0.0.0.0"
+<<<<<<< HEAD
+					"next": "0.0.0.0.0-1"
+=======
+					"next": "0.0.0.0.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Categoria.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Categoria"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Categoria."
+								}
+							]
+						}
+					]
+>>>>>>> f99799f5b849841c781dd49bb36fd1e6176ba100
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"next": "0.0.0.0.1"
+					"next": "0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Leilao.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Leilao"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Leilao."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"next": "0.0.0.0.2"
+					"next": "0.0.0.0.2",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Produto.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Produto"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Produto."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 3,
 					"text": "Usuario",
-					"next": "0.0.0.0.3"
+					"next": "0.0.0.0.3",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Usuario.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Usuario"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Usuario."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 4,
 					"text": "Concorrente",
-					"next": "0.0.0.0.4"
+					"next": "0.0.0.0.4",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Concorrente.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Concorrente"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Concorrente."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 5,
 					"text": "Lance",
-					"next": "0.0.0.0.5"
+					"next": "0.0.0.0.5",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Lance.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Lance"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Lance."
+								}
+							]
+						}
+					]
 				}, {
 					"key": 6,
 					"text": "Vendedor",
-					"next": "0.0.0.0.6"
+					"next": "0.0.0.0.6",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "context_query",
+									"value": "AUCTION::Vendedor.find_all"
+								}, {
+									"type": "constant",
+									"name": "context_name",
+									"value": "Vendedor"
+								}, {
+									"type": "constant",
+									"name": "context_title",
+									"value": "Vendedor."
+								}
+							]
+						}
+					]
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0-1",
+			"title": "Defined object",
+			"type": "nodeName",
+			"message": "Name",
+			"options": [
+				{
+					"key": 0,
+					"next": "0.0.0.0.0-2"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0-2",
+			"title": "Select object",
+			"type": "selectNode",
+			"message": "Select",
+			"next": "0.0.0.0.0",
+			"options": [
+				{
+					"key": 0,
+					"next": "0.0.0.0.0"
 				}
 			]
 		}, {
@@ -41,15 +208,145 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Categoria",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Categoria(s) to be chosen",
-					"next": "0.0.0.0.0.0"
+					"next": "0.0.0.0.0.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Categoria",
-					"next": "0.0.0.0.0.1"
+					"next": "0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Categoria",
@@ -61,15 +358,145 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Leilao",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Leilao(s) to be chosen",
-					"next": "0.0.0.0.1.0"
+					"next": "0.0.0.0.1.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "context_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Leilao",
-					"next": "0.0.0.0.1.1"
+					"next": "0.0.0.0.1.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "detail"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Leilao",
@@ -81,15 +508,111 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Produto",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Produto(s) to be chosen",
-					"next": "0.0.0.0.2.0"
+					"next": "0.0.0.0.2.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Produto",
-					"next": "0.0.0.0.2.1"
+					"next": "0.0.0.0.2.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Produto",
@@ -101,15 +624,111 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Usuario",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Usuario(s) to be chosen",
-					"next": "0.0.0.0.3.0"
+					"next": "0.0.0.0.3.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Usuario",
-					"next": "0.0.0.0.3.1"
+					"next": "0.0.0.0.3.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Usuario"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Usuario",
@@ -121,15 +740,111 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Concorrente",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Concorrente(s) to be chosen",
-					"next": "0.0.0.0.4.0"
+					"next": "0.0.0.0.4.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Concorrente",
-					"next": "0.0.0.0.4.1"
+					"next": "0.0.0.0.4.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Concorrente"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Concorrente",
@@ -141,15 +856,111 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Lance",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Lance(s) to be chosen",
-					"next": "0.0.0.0.5.0"
+					"next": "0.0.0.0.5.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Lance",
-					"next": "0.0.0.0.5.1"
+					"next": "0.0.0.0.5.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Lance"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Lance",
@@ -161,15 +972,111 @@
 			"type": "radio",
 			"title": "What do you want to do?",
 			"message": "",
+			"pathName": "Vendedor",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Vendedor(s) to be chosen",
-					"next": "0.0.0.0.6.0"
+					"next": "0.0.0.0.6.0",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "list"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Vendedor",
-					"next": "0.0.0.0.6.1"
+					"next": "0.0.0.0.6.1",
+					"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "constant",
+									"name": "landmark_type",
+									"value": "detail"
+								}
+							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
+						}, {
+							"function_name": "create_in_context_class_wizard",
+							"params": [
+								{
+									"type": "constant",
+									"name": "class",
+									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Vendedor"
+								}, {
+									"type": "global_var",
+									"name": "context",
+									"value": "context_id"
+								}
+							],
+							"results": [
+								{
+									"name": "in_context_class",
+									"global_var": "in_context_class_id"
+								}
+							]
+						}
+					]
 				}, {
 					"key": 2,
 					"text": "Define a computation using a(n) Vendedor",
@@ -182,6 +1089,7 @@
 			"type": "radioDetail",
 			"message": "Categoria",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Categoria (List)",
 			"options": [
 				{
 					"key": 0,
@@ -235,56 +1143,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Categoria.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categoria"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Categoria."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Categorias"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.0.1",
 			"title": "Categoria detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
-			"datatypeProperties": ["label", "Nome"],
+			"pathName": "Categoria",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"names": ["label", "Nome"],
+				"examples": []
+			},
 			"example": "Categoria",
+			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -302,6 +1177,7 @@
 			"type": "radioDetail",
 			"message": "Leilao",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Leilao (List)",
 			"options": [
 				{
 					"key": 0,
@@ -355,56 +1231,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Leilao.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Leilao"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Leilao."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Leilaos"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1",
 			"title": "Leilao detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
-			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
+			"pathName": "Leilao",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1, 2, 3, 4, 5, 6, 7],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
+				"examples": []
+			},
 			"example": "Leilao",
+			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -422,6 +1265,7 @@
 			"type": "radioDetail",
 			"message": "Produto",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Produto (List)",
 			"options": [
 				{
 					"key": 0,
@@ -475,56 +1319,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Produto.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Produto"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Produto."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Produtos"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1",
 			"title": "Produto detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
-			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+			"pathName": "Produto",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1, 2, 3, 4, 5],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+				"examples": []
+			},
 			"example": "Produto",
+			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -542,6 +1353,7 @@
 			"type": "radioDetail",
 			"message": "Usuario",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Usuario (List)",
 			"options": [
 				{
 					"key": 0,
@@ -595,56 +1407,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Usuario.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Usuario"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Usuario."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Usuarios"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1",
 			"title": "Usuario detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Usuario in the detail view?",
-			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
+			"pathName": "Usuario",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
+				"examples": []
+			},
 			"example": "Usuario",
+			"messageOptions": "Do you want to show other attributes of a(n) Usuario in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -662,6 +1441,7 @@
 			"type": "radioDetail",
 			"message": "Concorrente",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Concorrente (List)",
 			"options": [
 				{
 					"key": 0,
@@ -715,56 +1495,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Concorrente.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Concorrente"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Concorrente."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Concorrentes"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.4.1",
 			"title": "Concorrente detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Concorrente in the detail view?",
-			"datatypeProperties": ["label", "Nome", "email"],
+			"pathName": "Concorrente",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1, 2],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"names": ["label", "Nome", "email"],
+				"examples": []
+			},
 			"example": "Concorrente",
+			"messageOptions": "Do you want to show other attributes of a(n) Concorrente in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -782,6 +1529,7 @@
 			"type": "radioDetail",
 			"message": "Lance",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Lance (List)",
 			"options": [
 				{
 					"key": 0,
@@ -835,56 +1583,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Lance.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Lance"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Lance."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Lances"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.5.1",
 			"title": "Lance detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Lance in the detail view?",
-			"datatypeProperties": ["timeStamp", "valor"],
+			"pathName": "Lance",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.auction::timeStamp", "self.auction::valor"],
+				"names": ["timeStamp", "valor"],
+				"examples": []
+			},
 			"example": "Lance",
+			"messageOptions": "Do you want to show other attributes of a(n) Lance in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -902,6 +1617,7 @@
 			"type": "radioDetail",
 			"message": "Vendedor",
 			"messageOptions": "Do you want to choose",
+			"pathName": "Vendedor (List)",
 			"options": [
 				{
 					"key": 0,
@@ -955,56 +1671,23 @@
 						}
 					]
 				]
-			],
-			"todo": [
-				{
-					"function_name": "create_context_wizard",
-					"params": [
-						{
-							"type": "constant",
-							"name": "query",
-							"value": "AUCTION::Vendedor.find_all"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Vendedor"
-						}, {
-							"type": "constant",
-							"name": "title",
-							"value": "Vendedor."
-						}
-					],
-					"results": [
-						{
-							"name": "context",
-							"global_var": "context_id"
-						}, {
-							"name": "defaultIndex",
-							"global_var": "index_id"
-						}
-					]
-				}, {
-					"function_name": "create_index_landmark_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "name",
-							"value": "Vendedors"
-						}
-					]
-				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1",
 			"title": "Vendedor detail",
 			"type": "yesNoDetail",
-			"messageOptions": "Do you want to show other attributes of a(n) Vendedor in the detail view?",
-			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
+			"pathName": "Vendedor",
+			"scope": "new",
+			"scope_value": {
+				"show": "details",
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
+				"examples": []
+			},
 			"example": "Vendedor",
+			"messageOptions": "Do you want to show other attributes of a(n) Vendedor in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -1020,6 +1703,16 @@
 			"id": "0.0.0.0.0.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"names": ["label", "Nome"],
+				"examples": []
+			},
+			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of an Categoria than those shown in the example?",
 			"options": [
@@ -1030,60 +1723,23 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.0.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.0.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
 					{
 						"type": "text",
-<<<<<<< HEAD
-						"msg": "No value"
-=======
 						"msg": "Audio"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 					}
 				],[
 					{
 						"type": "text",
-<<<<<<< HEAD
-						"msg": "No value"
-=======
 						"msg": "Informatica"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 					}
 				],[
 					{
 						"type": "text",
-<<<<<<< HEAD
-						"msg": "No value"
-=======
 						"msg": "Cine e Foto"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 					}
 				]
 			]
@@ -1091,6 +1747,16 @@
 			"id": "0.0.0.0.0.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"names": ["label", "Nome"],
+				"examples": []
+			},
+			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria than those shown in the example?",
 			"options": [
@@ -1153,7 +1819,7 @@
 		}, {
 			"id": "0.0.0.0.0.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Categoria Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Categoria",
@@ -1161,17 +1827,49 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.0.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.0.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.1.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
+				"examples": []
+			},
+			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of an Leilao than those shown in the example?",
 			"options": [
@@ -1182,32 +1880,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.1.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.1.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
@@ -1231,6 +1904,16 @@
 			"id": "0.0.0.0.1.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1, 2, 3, 4, 5, 6, 7],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
+				"examples": []
+			},
+			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao than those shown in the example?",
 			"options": [
@@ -1293,7 +1976,7 @@
 		}, {
 			"id": "0.0.0.0.1.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Leilao Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Leilao",
@@ -1301,17 +1984,49 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.1.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.1.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.1.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.2.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+				"examples": []
+			},
+			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of an Produto than those shown in the example?",
 			"options": [
@@ -1322,32 +2037,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.2.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.2.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
@@ -1371,6 +2061,16 @@
 			"id": "0.0.0.0.2.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1, 2, 3, 4, 5],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+				"examples": []
+			},
+			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto than those shown in the example?",
 			"options": [
@@ -1433,7 +2133,7 @@
 		}, {
 			"id": "0.0.0.0.2.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Produto Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Produto",
@@ -1441,17 +2141,49 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.2.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.2.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.2.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.3.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
+				"examples": []
+			},
+			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of an Usuario than those shown in the example?",
 			"options": [
@@ -1462,32 +2194,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.3.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.3.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
@@ -1511,6 +2218,16 @@
 			"id": "0.0.0.0.3.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
+				"examples": []
+			},
+			"example": "Usuario",
 			"message": "Usuarios",
 			"messageOptions": "Do you want to show other attributes of a(n) Usuario than those shown in the example?",
 			"options": [
@@ -1573,7 +2290,7 @@
 		}, {
 			"id": "0.0.0.0.3.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Usuario Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Usuario",
@@ -1581,17 +2298,49 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.3.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.3.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.3.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.4.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"names": ["label", "Nome", "email"],
+				"examples": []
+			},
+			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of an Concorrente than those shown in the example?",
 			"options": [
@@ -1602,32 +2351,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.4.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.4.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
@@ -1651,6 +2375,16 @@
 			"id": "0.0.0.0.4.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1, 2],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"names": ["label", "Nome", "email"],
+				"examples": []
+			},
+			"example": "Concorrente",
 			"message": "Concorrentes",
 			"messageOptions": "Do you want to show other attributes of a(n) Concorrente than those shown in the example?",
 			"options": [
@@ -1713,7 +2447,7 @@
 		}, {
 			"id": "0.0.0.0.4.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Concorrente Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Concorrente",
@@ -1721,17 +2455,49 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.4.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.4.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.4.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.5.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.auction::timeStamp", "self.auction::valor"],
+				"names": ["timeStamp", "valor"],
+				"examples": []
+			},
+			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of an Lance than those shown in the example?",
 			"options": [
@@ -1742,32 +2508,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.5.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.5.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
@@ -1791,6 +2532,16 @@
 			"id": "0.0.0.0.5.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1],
+				"type": ["ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.auction::timeStamp", "self.auction::valor"],
+				"names": ["timeStamp", "valor"],
+				"examples": []
+			},
+			"example": "Lance",
 			"message": "Lances",
 			"messageOptions": "Do you want to show other attributes of a(n) Lance than those shown in the example?",
 			"options": [
@@ -1853,7 +2604,7 @@
 		}, {
 			"id": "0.0.0.0.5.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Lance Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Lance",
@@ -1861,17 +2612,49 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.5.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.5.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.5.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.6.0.0",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
+				"examples": []
+			},
+			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of an Vendedor than those shown in the example?",
 			"options": [
@@ -1882,32 +2665,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-<<<<<<< HEAD
-					"next": "0.0.0.0.6.0.0.1",
-					"todo": [
-						{
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "context_id"
-								}
-							]
-						}, {
-							"function_name": "pop_global_var",
-							"params": [
-								{
-									"type": "constant",
-									"name": "key",
-									"value": "index_id"
-								}
-							]
-						}
-					]
-=======
 					"next": "0.0.0.0.6.0.0.1"
->>>>>>> 1cbfaed8faa1abb7a52d8404e8be25d35bfc7068
 				}
 			],
 			"details": [[
@@ -1931,6 +2689,16 @@
 			"id": "0.0.0.0.6.0.1",
 			"title": "",
 			"type": "infoWithOptions",
+			"scope": "new",
+			"scope_value": {
+				"show": "table",
+				"data": [0, 1, 2, 3, 4],
+				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
+				"examples": []
+			},
+			"example": "Vendedor",
 			"message": "Vendedors",
 			"messageOptions": "Do you want to show other attributes of a(n) Vendedor than those shown in the example?",
 			"options": [
@@ -1993,7 +2761,7 @@
 		}, {
 			"id": "0.0.0.0.6.1.1",
 			"title": "",
-			"type": "loopDetail",
+			"type": "loop",
 			"message": "Vendedor Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Vendedor",
@@ -2001,11 +2769,33 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.6.1.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.6.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.6.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_detail_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "in_context_class_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -2040,17 +2830,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.0.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.0.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.0.1.0.0",
 			"title": "Following this example which attributes you want to show in the Categoria detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Categoria properties",
 			"example": "Categoria",
 			"datatypeProperties": ["label", "Nome"],
@@ -2067,7 +2880,21 @@
 			"type": "select",
 			"message": "Categoria's \t related collections",
 			"mainclass": "Categoria",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.1.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.1.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.1.0.2",
 			"title": "Computed attribute",
@@ -2085,7 +2912,7 @@
 		}, {
 			"id": "0.0.0.0.0.1.1.0",
 			"title": "Select where one should click to choose an Categoria",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Categoria Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
@@ -2094,7 +2921,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2106,11 +2933,37 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.0.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Categoria"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -2145,17 +2998,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.1.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.1.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.1.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Leilao properties",
 			"example": "Leilao",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
@@ -2179,19 +3055,19 @@
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.1.1.0.1.0"
-				}, {
-					"key": 2,
 					"text": "Usuario",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
-					"key": 3,
+					"key": 2,
 					"text": "Vendedor",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
-					"key": 4,
+					"key": 3,
 					"text": "Categoria",
+					"next": "0.0.0.0.1.1.0.1.0"
+				}, {
+					"key": 4,
+					"text": "Lance",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}
 			]
@@ -2212,7 +3088,7 @@
 		}, {
 			"id": "0.0.0.0.1.1.1.0",
 			"title": "Select where one should click to choose an Leilao",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Leilao Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Leilao",
@@ -2221,7 +3097,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2233,11 +3109,37 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.1.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Leilao"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -2272,17 +3174,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.2.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.2.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.2.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1.0.0",
 			"title": "Following this example which attributes you want to show in the Produto detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Produto properties",
 			"example": "Produto",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -2306,7 +3231,11 @@
 					"next": "0.0.0.0.2.1.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
+					"text": "Leilao",
+					"next": "0.0.0.0.2.1.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
 					"next": "0.0.0.0.2.1.0.1.0"
 				}
 			]
@@ -2327,7 +3256,7 @@
 		}, {
 			"id": "0.0.0.0.2.1.1.0",
 			"title": "Select where one should click to choose an Produto",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Produto Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Produto",
@@ -2336,7 +3265,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2348,11 +3277,37 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.2.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Produto"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -2387,17 +3342,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.3.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.3.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.3.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1.0.0",
 			"title": "Following this example which attributes you want to show in the Usuario detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Usuario properties",
 			"example": "Usuario",
 			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
@@ -2414,7 +3392,17 @@
 			"type": "select",
 			"message": "Usuario's \t related collections",
 			"mainclass": "Usuario",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.1.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.1.0.2",
 			"title": "Computed attribute",
@@ -2432,7 +3420,7 @@
 		}, {
 			"id": "0.0.0.0.3.1.1.0",
 			"title": "Select where one should click to choose an Usuario",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Usuario Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Usuario",
@@ -2441,7 +3429,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2453,11 +3441,37 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.3.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Usuario"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -2492,17 +3506,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.4.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.4.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.4.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.4.1.0.0",
 			"title": "Following this example which attributes you want to show in the Concorrente detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Concorrente properties",
 			"example": "Concorrente",
 			"datatypeProperties": ["label", "Nome", "email"],
@@ -2519,7 +3556,13 @@
 			"type": "select",
 			"message": "Concorrente's \t related collections",
 			"mainclass": "Concorrente",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.1.0.2",
 			"title": "Computed attribute",
@@ -2537,7 +3580,7 @@
 		}, {
 			"id": "0.0.0.0.4.1.1.0",
 			"title": "Select where one should click to choose an Concorrente",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Concorrente Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Concorrente",
@@ -2546,7 +3589,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2558,11 +3601,37 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.4.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Concorrente"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -2597,17 +3666,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.5.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.5.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.5.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.5.1.0.0",
 			"title": "Following this example which attributes you want to show in the Lance detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Lance properties",
 			"example": "Lance",
 			"datatypeProperties": ["timeStamp", "valor"],
@@ -2635,23 +3727,19 @@
 					"next": "0.0.0.0.5.1.0.1.0"
 				}, {
 					"key": 2,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.5.1.0.1.0"
-				}, {
-					"key": 3,
 					"text": "Leilao",
 					"next": "0.0.0.0.5.1.0.1.0"
 				}, {
-					"key": 4,
-					"text": "Categoria",
-					"next": "0.0.0.0.5.1.0.1.0"
-				}, {
-					"key": 5,
+					"key": 3,
 					"text": "Produto",
 					"next": "0.0.0.0.5.1.0.1.0"
 				}, {
-					"key": 6,
+					"key": 4,
 					"text": "Vendedor",
+					"next": "0.0.0.0.5.1.0.1.0"
+				}, {
+					"key": 5,
+					"text": "Categoria",
 					"next": "0.0.0.0.5.1.0.1.0"
 				}
 			]
@@ -2672,7 +3760,7 @@
 		}, {
 			"id": "0.0.0.0.5.1.1.0",
 			"title": "Select where one should click to choose an Lance",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Lance Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Lance",
@@ -2681,7 +3769,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2693,11 +3781,37 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.5.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Lance"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -2732,17 +3846,40 @@
 				{
 					"key": 0,
 					"text": "Yes",
+					"child": "Yes",
 					"next": "0.0.0.0.6.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.6.1.1.1"
+					"child": "End",
+					"next": "0.0.0.0.6.1.1.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1.0.0",
 			"title": "Following this example which attributes you want to show in the Vendedor detail",
-			"type": "checkboxForDetail",
+			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Vendedor properties",
 			"example": "Vendedor",
 			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
@@ -2759,7 +3896,17 @@
 			"type": "select",
 			"message": "Vendedor's \t related collections",
 			"mainclass": "Vendedor",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.1.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.1.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.1.0.2",
 			"title": "Computed attribute",
@@ -2777,7 +3924,7 @@
 		}, {
 			"id": "0.0.0.0.6.1.1.0",
 			"title": "Select where one should click to choose an Vendedor",
-			"type": "attributeForChoosingForDetail",
+			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Vendedor Detail",
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Vendedor",
@@ -2786,7 +3933,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2798,17 +3945,44 @@
 				{
 					"key": 0,
 					"text": "Go to the pages index",
-					"next": 26
+					"next": "0.0.0.0",
+					"child": "Landmark"
 				}, {
 					"key": 1,
 					"text": "Finish the application definition",
-					"next": 26
+					"next": "0.0.0.0.6.1.1.1."
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_landmark_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "landmark_type",
+							"value": "landmark_type"
+						}, {
+							"type": "constant",
+							"name": "name",
+							"value": "Vendedor"
+						}
+					]
+				}, {
+					"function_name": "pop_global_var",
+					"params": [
+						{
+							"type": "constant",
+							"name": "key",
+							"value": "context_id"
+						}
+					]
 				}
 			]
 		}, {
 			"id": "0.0.0.0.0.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Categoria list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Categoria properties",
 			"example": "Categoria",
 			"datatypeProperties": ["label", "Nome"],
@@ -2825,7 +3999,21 @@
 			"type": "select",
 			"message": "Categoria's \t related collections",
 			"mainclass": "Categoria",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.0.0.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.0.0.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.0.0.0.2",
 			"title": "Computed attribute",
@@ -2850,7 +4038,29 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.0.0.0.1.0.0"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_definition",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+							{
+								"name": "key",
+								"global_var": "anchor_att_id"
+							}
+						]
 				}
 			]
 		}, {
@@ -2860,9 +4070,31 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.0.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.0.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Categoria",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.1.1.0.0.2"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.1.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Leilao properties",
 			"example": "Leilao",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
@@ -2886,19 +4118,19 @@
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.1.0.0.0.1.0"
-				}, {
-					"key": 2,
 					"text": "Usuario",
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}, {
-					"key": 3,
+					"key": 2,
 					"text": "Vendedor",
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}, {
-					"key": 4,
+					"key": 3,
 					"text": "Categoria",
+					"next": "0.0.0.0.1.0.0.0.1.0"
+				}, {
+					"key": 4,
+					"text": "Lance",
 					"next": "0.0.0.0.1.0.0.0.1.0"
 				}
 			]
@@ -2926,7 +4158,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.1.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -2936,9 +4168,39 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.1.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.1.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Leilao",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Produto",
+					"next": "0.0.0.0.1.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Usuario",
+					"next": "0.0.0.0.1.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Vendedor",
+					"next": "0.0.0.0.1.1.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Categoria",
+					"next": "0.0.0.0.1.1.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Lance",
+					"next": "0.0.0.0.1.1.1.0.0.4"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.2.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Produto list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Produto properties",
 			"example": "Produto",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -2948,31 +4210,7 @@
 					"next": "0.0.0.0.2.0.0.0.1.0.0.0"
 				}
 			],
-			"message1": "Selected properties",
-			"todo": [
-				{
-					"function_name": "create_computed_attributes_for_index_wizard",
-					"params": [
-						{
-							"type": "globar_var",
-							"name": "index_id",
-							"value": "index_id"
-						}, {
-							"type": "constant",
-							"name": "queries",
-							"value": "self.auction::dataCadastro,self.auction::descricaoProduto,self.auction::estaEmLeilao,self.auction::quantidade,self.rdfs::label,self.auction::nomeProduto"
-						}, {
-							"type": "constant",
-							"name": "names",
-							"value": "Data de Cadastro,Descricao,Esta Em Oferta,Quantidade,self.rdfs::label,Nome]"
-						}, {
-							"type": "user_action",
-							"name": "attributes",
-							"value": "selectedProperties"
-						}
-					]
-				}
-			]
+			"message1": "Selected properties"
 		}, {
 			"id": "0.0.0.0.2.0.0.0.1",
 			"title": "Select what you want to show",
@@ -2986,7 +4224,11 @@
 					"next": "0.0.0.0.2.0.0.0.1.0"
 				}, {
 					"key": 1,
-					"text": "NamedIndividual",
+					"text": "Leilao",
+					"next": "0.0.0.0.2.0.0.0.1.0"
+				}, {
+					"key": 2,
+					"text": "Lance",
 					"next": "0.0.0.0.2.0.0.0.1.0"
 				}
 			]
@@ -3014,7 +4256,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.2.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -3024,9 +4266,31 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.2.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Produto",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.2.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.2.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.2.1.1.0.0.2"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.3.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Usuario list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Usuario properties",
 			"example": "Usuario",
 			"datatypeProperties": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
@@ -3043,7 +4307,17 @@
 			"type": "select",
 			"message": "Usuario's \t related collections",
 			"mainclass": "Usuario",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.0.0.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.0.0.0.2",
 			"title": "Computed attribute",
@@ -3068,7 +4342,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.3.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -3078,9 +4352,27 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.3.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.3.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Usuario",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.1.1.0.0.1"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.4.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Concorrente list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Concorrente properties",
 			"example": "Concorrente",
 			"datatypeProperties": ["label", "Nome", "email"],
@@ -3097,7 +4389,13 @@
 			"type": "select",
 			"message": "Concorrente's \t related collections",
 			"mainclass": "Concorrente",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.0.0.0.2",
 			"title": "Computed attribute",
@@ -3122,7 +4420,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.4.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -3132,9 +4430,23 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.4.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.4.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Concorrente",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.1.1.0.0.0"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.5.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Lance list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Lance properties",
 			"example": "Lance",
 			"datatypeProperties": ["timeStamp", "valor"],
@@ -3162,23 +4474,19 @@
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}, {
 					"key": 2,
-					"text": "NamedIndividual",
-					"next": "0.0.0.0.5.0.0.0.1.0"
-				}, {
-					"key": 3,
 					"text": "Leilao",
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}, {
-					"key": 4,
-					"text": "Categoria",
-					"next": "0.0.0.0.5.0.0.0.1.0"
-				}, {
-					"key": 5,
+					"key": 3,
 					"text": "Produto",
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}, {
-					"key": 6,
+					"key": 4,
 					"text": "Vendedor",
+					"next": "0.0.0.0.5.0.0.0.1.0"
+				}, {
+					"key": 5,
+					"text": "Categoria",
 					"next": "0.0.0.0.5.0.0.0.1.0"
 				}
 			]
@@ -3206,7 +4514,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.5.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -3216,9 +4524,43 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.5.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.5.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Lance",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Usuario",
+					"next": "0.0.0.0.5.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Concorrente",
+					"next": "0.0.0.0.5.1.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.0.0.5.1.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.0.0.5.1.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Vendedor",
+					"next": "0.0.0.0.5.1.1.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Categoria",
+					"next": "0.0.0.0.5.1.1.0.0.5"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.6.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Vendedor list",
 			"type": "checkbox",
+			"scope": "scope",
 			"message": "Add Vendedor properties",
 			"example": "Vendedor",
 			"datatypeProperties": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
@@ -3235,7 +4577,17 @@
 			"type": "select",
 			"message": "Vendedor's \t related collections",
 			"mainclass": "Vendedor",
-			"options": []
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.0.0.0.1.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.0.0.0.1.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.0.0.0.2",
 			"title": "Computed attribute",
@@ -3260,7 +4612,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": ".0.0.0"
+					"next": "0.0.0.0.6.0.0.1.0.0"
 				}
 			]
 		}, {
@@ -3270,11 +4622,49 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.6.1.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.6.1.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Vendedor",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.1.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.1.1.0.0.1"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.0.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.0.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Categoria",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.0.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Produto",
+					"next": "0.0.0.0.0.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.0.0.0.1.0.0.2"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3282,11 +4672,58 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.0.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.0.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.1.1.0.0.2.0"
+		}, {
 			"id": "0.0.0.0.1.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.1.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Leilao",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Produto",
+					"next": "0.0.0.0.1.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Usuario",
+					"next": "0.0.0.0.1.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Vendedor",
+					"next": "0.0.0.0.1.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Categoria",
+					"next": "0.0.0.0.1.0.0.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Lance",
+					"next": "0.0.0.0.1.0.0.1.0.0.4"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3294,11 +4731,62 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.1.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.1.1.0.0.4.0"
+		}, {
 			"id": "0.0.0.0.2.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Produto",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.2.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.2.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Lance",
+					"next": "0.0.0.0.2.0.0.1.0.0.2"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3306,11 +4794,46 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.2.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.1.1.0.0.2.0"
+		}, {
 			"id": "0.0.0.0.3.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.3.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Usuario",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.3.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.3.0.0.1.0.0.1"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.3.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3318,11 +4841,36 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.3.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.3.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.1.1.0.0.1.0"
+		}, {
 			"id": "0.0.0.0.4.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.4.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Concorrente",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Lance",
+					"next": "0.0.0.0.4.0.0.1.0.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.4.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3330,11 +4878,50 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.4.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.4.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.4.1.1.0.0.0.0"
+		}, {
 			"id": "0.0.0.0.5.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.5.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Lance",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Usuario",
+					"next": "0.0.0.0.5.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Concorrente",
+					"next": "0.0.0.0.5.0.0.1.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.0.0.5.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.0.0.5.0.0.1.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Vendedor",
+					"next": "0.0.0.0.5.0.0.1.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Categoria",
+					"next": "0.0.0.0.5.0.0.1.0.0.5"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.5.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3342,11 +4929,64 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.5.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.5.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.4.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.5",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.1.1.0.0.5.0"
+		}, {
 			"id": "0.0.0.0.6.0.0.0.1.0",
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.6.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0",
+			"type": "select",
+			"title": "What do you want to show from auction ontology?",
+			"mainclass": "Vendedor",
+			"message": "Class",
+			"options": [
+				{
+					"key": 0,
+					"text": "Leilao",
+					"next": "0.0.0.0.6.0.0.1.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Lance",
+					"next": "0.0.0.0.6.0.0.1.0.0.1"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.1.0.1.0.0",
 			"title": "Select the relationships",
@@ -3354,15 +4994,45 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.6.1.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.6.1.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.1.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.1.1.0.0.1.0"
+		}, {
 			"id": "0.0.0.0.0.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.0.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.0.0.0.1.0.0.2.0"
+		}, {
 			"id": "0.0.0.0.0.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Categoria detail? Which type?",
 			"example": "Categoria",
 			"options": [
@@ -3385,15 +5055,63 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.0.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.1.1.0.0.2.0.0"
+		}, {
 			"id": "0.0.0.0.1.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.1.0.0.1.0.0.4.0"
+		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Leilao detail? Which type?",
 			"example": "Leilao",
 			"options": [
@@ -3416,15 +5134,63 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.1.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.1.1.0.0.4.0.0"
+		}, {
 			"id": "0.0.0.0.2.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.2.0.0.1.0.0.2.0"
+		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Produto detail? Which type?",
 			"example": "Produto",
 			"options": [
@@ -3447,15 +5213,45 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.2.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.1.1.0.0.2.0.0"
+		}, {
 			"id": "0.0.0.0.3.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.3.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.3.0.0.1.0.0.1.0"
+		}, {
 			"id": "0.0.0.0.3.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Usuario detail? Which type?",
 			"example": "Usuario",
 			"options": [
@@ -3478,15 +5274,33 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.3.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.1.1.0.0.1.0.0"
+		}, {
 			"id": "0.0.0.0.4.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.4.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.4.0.0.1.0.0.0.0"
+		}, {
 			"id": "0.0.0.0.4.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Concorrente detail? Which type?",
 			"example": "Concorrente",
 			"options": [
@@ -3509,15 +5323,57 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.4.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.4.1.1.0.0.0.0.0"
+		}, {
 			"id": "0.0.0.0.5.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.5.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.1.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.2",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.2.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.3",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.3.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.4",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.4.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.5",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.5.0.0.1.0.0.5.0"
+		}, {
 			"id": "0.0.0.0.5.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Lance detail? Which type?",
 			"example": "Lance",
 			"options": [
@@ -3540,15 +5396,63 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.5.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.4.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.5.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.1.1.0.0.5.0.0"
+		}, {
 			"id": "0.0.0.0.6.0.0.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.6.0.0.0.1.0.0.0"
 		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.0",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.0.0.1.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.1",
+			"title": "Select the path",
+			"type": "paths",
+			"message": "Suggested paths",
+			"next": "0.0.0.0.6.0.0.1.0.0.1.0"
+		}, {
 			"id": "0.0.0.0.6.1.0.1.0.0.0",
 			"title": "",
-			"type": "radioSelectedPropertiesForDetail",
+			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Vendedor detail? Which type?",
 			"example": "Vendedor",
 			"options": [
@@ -3570,6 +5474,18 @@
 					"next": "0.0.0.0.6.1.1"
 				}
 			]
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.1.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.1.1.0.0.1.0.0"
 		}, {
 			"id": "0.0.0.0.0.0.0.0.1.0.0.0",
 			"title": "",
@@ -3593,6 +5509,126 @@
 					"key": 3,
 					"text": "No more",
 					"next": "0.0.0.0.0.0.0.1"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.0.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
 				}
 			]
 		}, {
@@ -3621,6 +5657,206 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.1.0.0.1.0.0.4.0.0"
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.1.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.2.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3643,6 +5879,126 @@
 					"key": 3,
 					"text": "No more",
 					"next": "0.0.0.0.2.0.0.1"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.2.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
 				}
 			]
 		}, {
@@ -3671,6 +6027,86 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.3.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.4.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3693,6 +6129,46 @@
 					"key": 3,
 					"text": "No more",
 					"next": "0.0.0.0.4.0.0.1"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.4.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.4.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
 				}
 			]
 		}, {
@@ -3721,6 +6197,246 @@
 				}
 			]
 		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.2.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.2.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.3.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.3.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.4.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.4.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.5.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.5.0.0.1.0.0.5.0.0"
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.1.1.0.0.5.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.6.0.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
@@ -3745,37 +6461,865 @@
 					"next": "0.0.0.0.6.0.0.1"
 				}
 			]
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.0.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.0.0.1.0.0.0.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.1.0",
+			"title": "Select the relationships",
+			"type": "path",
+			"message": "Suggested path",
+			"next": "0.0.0.0.6.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.1.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.0.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.1.0.0.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.2.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.3.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.4.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.2.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.3.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.4.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.5.0.0.1.0.0.5.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.0.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
+		}, {
+			"id": "0.0.0.0.6.0.0.1.0.0.1.0.0",
+			"type": "hidden",
+			"options": [
+				{
+					"key": 0,
+					"text": "Categoria",
+					"next": "0.0.0.0.0"
+				}, {
+					"key": 1,
+					"text": "Leilao",
+					"next": "0.0.0.0.1"
+				}, {
+					"key": 2,
+					"text": "Produto",
+					"next": "0.0.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Usuario",
+					"next": "0.0.0.0.3"
+				}, {
+					"key": 4,
+					"text": "Concorrente",
+					"next": "0.0.0.0.4"
+				}, {
+					"key": 5,
+					"text": "Lance",
+					"next": "0.0.0.0.5"
+				}, {
+					"key": 6,
+					"text": "Vendedor",
+					"next": "0.0.0.0.6"
+				}
+			]
 		}
 	],
 	"data": {
 		"Categoria": [[
 				{
 					"id": 0,
-					"name": "Nome",
+					"name": "label",
 					"value": ["Audio"]
 				}, {
 					"id": 1,
-					"name": "label",
+					"name": "Nome",
 					"value": ["Audio"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Nome",
+					"name": "label",
 					"value": ["Informatica"]
 				}, {
 					"id": 1,
-					"name": "label",
+					"name": "Nome",
 					"value": ["Informatica"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Nome",
+					"name": "label",
 					"value": ["Cine e Foto"]
 				}, {
 					"id": 1,
-					"name": "label",
+					"name": "Nome",
 					"value": ["Cine e Foto"]
 				}
 			]
@@ -3783,295 +7327,295 @@
 		"Leilao": [[
 				{
 					"id": 0,
+					"name": "label",
+					"value": ["leilao 1"]
+				}, {
+					"id": 1,
+					"name": "Nome",
+					"value": ["leilao 1"]
+				}, {
+					"id": 2,
 					"name": "Data de fim",
 					"value": ["2012/02/20"]
 				}, {
-					"id": 1,
+					"id": 3,
 					"name": "Data de inicio",
 					"value": ["2012/02/01"]
 				}, {
-					"id": 2,
+					"id": 4,
 					"name": "Diferenca minima",
 					"value": ["5"]
 				}, {
-					"id": 3,
+					"id": 5,
 					"name": "Estado do produto",
 					"value": ["30.00 USPS Priority Mail International \nInternational items may be subject to customs processing and additional charges.  \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide, novo"]
 				}, {
-					"id": 4,
-					"name": "Informacao do frete",
-					"value": ["No value"]
-				}, {
-					"id": 5,
+					"id": 6,
 					"name": "Minimo lance",
 					"value": ["23"]
 				}, {
-					"id": 6,
-					"name": "Nome",
-					"value": ["leilao 1"]
-				}, {
 					"id": 7,
-					"name": "label",
-					"value": ["leilao 1"]
+					"name": "Informacao do frete",
+					"value": ["No value"]
 				}
 			],[
 				{
 					"id": 0,
+					"name": "label",
+					"value": ["leilao 2"]
+				}, {
+					"id": 1,
+					"name": "Nome",
+					"value": ["leilao 2"]
+				}, {
+					"id": 2,
 					"name": "Data de fim",
 					"value": ["2012/12/25"]
 				}, {
-					"id": 1,
+					"id": 3,
 					"name": "Data de inicio",
 					"value": ["2012/10/04"]
 				}, {
-					"id": 2,
+					"id": 4,
 					"name": "Diferenca minima",
 					"value": ["25"]
 				}, {
-					"id": 3,
+					"id": 5,
 					"name": "Estado do produto",
 					"value": ["novo"]
 				}, {
-					"id": 4,
+					"id": 6,
 					"name": "Informacao do frete",
 					"value": ["30.00 USPS Priority Mail International\nInternational items may be subject to customs processing and additional charges.  \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide"]
 				}, {
-					"id": 5,
+					"id": 7,
 					"name": "Minimo lance",
 					"value": ["45"]
-				}, {
-					"id": 6,
-					"name": "Nome",
-					"value": ["leilao 2"]
-				}, {
-					"id": 7,
-					"name": "label",
-					"value": ["leilao 2"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Data de fim",
-					"value": ["2012/09/10"]
+					"name": "label",
+					"value": ["leilao 10"]
 				}, {
 					"id": 1,
-					"name": "Data de inicio",
-					"value": ["2012/04/04"]
-				}, {
-					"id": 2,
-					"name": "Diferenca minima",
-					"value": ["5"]
-				}, {
-					"id": 3,
-					"name": "Estado do produto",
-					"value": ["No value"]
-				}, {
-					"id": 4,
-					"name": "Informacao do frete",
-					"value": ["frete gratis"]
-				}, {
-					"id": 5,
-					"name": "Minimo lance",
-					"value": ["45"]
-				}, {
-					"id": 6,
 					"name": "Nome",
 					"value": ["leilao 10"]
 				}, {
+					"id": 2,
+					"name": "Data de fim",
+					"value": ["2012/09/10"]
+				}, {
+					"id": 3,
+					"name": "Data de inicio",
+					"value": ["2012/04/04"]
+				}, {
+					"id": 4,
+					"name": "Diferenca minima",
+					"value": ["5"]
+				}, {
+					"id": 5,
+					"name": "Informacao do frete",
+					"value": ["frete gratis"]
+				}, {
+					"id": 6,
+					"name": "Minimo lance",
+					"value": ["45"]
+				}, {
 					"id": 7,
-					"name": "label",
-					"value": ["leilao 10"]
+					"name": "Estado do produto",
+					"value": ["No value"]
 				}
 			]
 		],
 		"Produto": [[
 				{
 					"id": 0,
+					"name": "label",
+					"value": ["Home Theater LG HT806ST"]
+				}, {
+					"id": 1,
+					"name": "Nome",
+					"value": ["Home Theater LG HT806ST"]
+				}, {
+					"id": 2,
 					"name": "Data de cadastro",
 					"value": ["23/05/2013"]
 				}, {
-					"id": 1,
+					"id": 3,
 					"name": "Descricao",
 					"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
 				}, {
-					"id": 2,
+					"id": 4,
 					"name": "Esta em oferta",
 					"value": ["1"]
 				}, {
-					"id": 3,
-					"name": "Nome",
-					"value": ["Home Theater LG HT806ST"]
-				}, {
-					"id": 4,
+					"id": 5,
 					"name": "Quantidade",
 					"value": ["2"]
-				}, {
-					"id": 5,
-					"name": "label",
-					"value": ["Home Theater LG HT806ST"]
 				}
 			],[
 				{
 					"id": 0,
+					"name": "label",
+					"value": ["MP4 Player Philips SA3VBE04KX/78"]
+				}, {
+					"id": 1,
+					"name": "Nome",
+					"value": ["MP4 Player Philips SA3VBE04KX/78"]
+				}, {
+					"id": 2,
 					"name": "Data de cadastro",
 					"value": ["12/03/2012"]
 				}, {
-					"id": 1,
+					"id": 3,
 					"name": "Descricao",
 					"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
 				}, {
-					"id": 2,
+					"id": 4,
 					"name": "Esta em oferta",
 					"value": ["1"]
 				}, {
-					"id": 3,
-					"name": "Nome",
-					"value": ["MP4 Player Philips SA3VBE04KX/78"]
-				}, {
-					"id": 4,
+					"id": 5,
 					"name": "Quantidade",
 					"value": ["12"]
-				}, {
-					"id": 5,
-					"name": "label",
-					"value": ["MP4 Player Philips SA3VBE04KX/78"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Data de cadastro",
-					"value": ["12/10/2012"]
+					"name": "label",
+					"value": ["MP4 Watch Play NewLink PM101"]
 				}, {
 					"id": 1,
-					"name": "Descricao",
-					"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
-				}, {
-					"id": 2,
-					"name": "Esta em oferta",
-					"value": ["1"]
-				}, {
-					"id": 3,
 					"name": "Nome",
 					"value": ["MP4 Watch Play NewLink PM101"]
 				}, {
+					"id": 2,
+					"name": "Data de cadastro",
+					"value": ["12/10/2012"]
+				}, {
+					"id": 3,
+					"name": "Descricao",
+					"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+				}, {
 					"id": 4,
-					"name": "Quantidade",
-					"value": ["23"]
+					"name": "Esta em oferta",
+					"value": ["1"]
 				}, {
 					"id": 5,
-					"name": "label",
-					"value": ["MP4 Watch Play NewLink PM101"]
+					"name": "Quantidade",
+					"value": ["23"]
 				}
 			]
 		],
 		"Usuario": [[
 				{
 					"id": 0,
-					"name": "Membro desde",
-					"value": ["No value"]
+					"name": "label",
+					"value": ["Concorrente 1"]
 				}, {
 					"id": 1,
 					"name": "Nome",
 					"value": ["Concorrente 1"]
 				}, {
 					"id": 2,
-					"name": "Qualificacao",
-					"value": ["No value"]
-				}, {
-					"id": 3,
 					"name": "email",
 					"value": ["concorrente1@gmail.com"]
 				}, {
+					"id": 3,
+					"name": "Membro desde",
+					"value": ["No value"]
+				}, {
 					"id": 4,
-					"name": "label",
-					"value": ["Concorrente 1"]
+					"name": "Qualificacao",
+					"value": ["No value"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Membro desde",
-					"value": ["No value"]
+					"name": "label",
+					"value": ["Concorrente 2"]
 				}, {
 					"id": 1,
 					"name": "Nome",
 					"value": ["Concorrente 2"]
 				}, {
 					"id": 2,
-					"name": "Qualificacao",
-					"value": ["No value"]
-				}, {
-					"id": 3,
 					"name": "email",
 					"value": ["concorrente2@gmail.com"]
 				}, {
+					"id": 3,
+					"name": "Membro desde",
+					"value": ["No value"]
+				}, {
 					"id": 4,
-					"name": "label",
-					"value": ["Concorrente 2"]
+					"name": "Qualificacao",
+					"value": ["No value"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Membro desde",
-					"value": ["1/01/2005"]
+					"name": "label",
+					"value": ["Vendedor 1"]
 				}, {
 					"id": 1,
 					"name": "Nome",
 					"value": ["Vendedor 1"]
 				}, {
 					"id": 2,
-					"name": "Qualificacao",
-					"value": ["1"]
+					"name": "Membro desde",
+					"value": ["1/01/2005"]
 				}, {
 					"id": 3,
 					"name": "email",
 					"value": ["vendedor1@gmail.com"]
 				}, {
 					"id": 4,
-					"name": "label",
-					"value": ["Vendedor 1"]
+					"name": "Qualificacao",
+					"value": ["1"]
 				}
 			]
 		],
 		"Concorrente": [[
 				{
 					"id": 0,
-					"name": "Nome",
+					"name": "label",
 					"value": ["Concorrente 1"]
 				}, {
 					"id": 1,
+					"name": "Nome",
+					"value": ["Concorrente 1"]
+				}, {
+					"id": 2,
 					"name": "email",
 					"value": ["concorrente1@gmail.com"]
-				}, {
-					"id": 2,
-					"name": "label",
-					"value": ["Concorrente 1"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Nome",
+					"name": "label",
 					"value": ["Concorrente 2"]
 				}, {
 					"id": 1,
+					"name": "Nome",
+					"value": ["Concorrente 2"]
+				}, {
+					"id": 2,
 					"name": "email",
 					"value": ["concorrente2@gmail.com"]
-				}, {
-					"id": 2,
-					"name": "label",
-					"value": ["Concorrente 2"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Nome",
+					"name": "label",
 					"value": ["No more example"]
 				}, {
 					"id": 1,
-					"name": "email",
+					"name": "Nome",
 					"value": ["No more example"]
 				}, {
 					"id": 2,
-					"name": "label",
+					"name": "email",
 					"value": ["No more example"]
 				}
 			]
@@ -4111,68 +7655,68 @@
 		"Vendedor": [[
 				{
 					"id": 0,
-					"name": "Membro desde",
-					"value": ["1/01/2005"]
+					"name": "label",
+					"value": ["Vendedor 1"]
 				}, {
 					"id": 1,
 					"name": "Nome",
 					"value": ["Vendedor 1"]
 				}, {
 					"id": 2,
-					"name": "Qualificacao",
-					"value": ["1"]
+					"name": "Membro desde",
+					"value": ["1/01/2005"]
 				}, {
 					"id": 3,
 					"name": "email",
 					"value": ["vendedor1@gmail.com"]
 				}, {
 					"id": 4,
-					"name": "label",
-					"value": ["Vendedor 1"]
+					"name": "Qualificacao",
+					"value": ["1"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Membro desde",
-					"value": ["2/04/2008"]
+					"name": "label",
+					"value": ["Vendedor 2"]
 				}, {
 					"id": 1,
 					"name": "Nome",
 					"value": ["Vendedor 2"]
 				}, {
 					"id": 2,
-					"name": "Qualificacao",
-					"value": ["3"]
+					"name": "Membro desde",
+					"value": ["2/04/2008"]
 				}, {
 					"id": 3,
 					"name": "email",
 					"value": ["vendedor2@yahoo.com"]
 				}, {
 					"id": 4,
-					"name": "label",
-					"value": ["Vendedor 2"]
+					"name": "Qualificacao",
+					"value": ["3"]
 				}
 			],[
 				{
 					"id": 0,
-					"name": "Membro desde",
-					"value": ["23/05/2010"]
+					"name": "label",
+					"value": ["Vendedor 3"]
 				}, {
 					"id": 1,
 					"name": "Nome",
 					"value": ["Vendedor 3"]
 				}, {
 					"id": 2,
-					"name": "Qualificacao",
-					"value": ["5"]
+					"name": "Membro desde",
+					"value": ["23/05/2010"]
 				}, {
 					"id": 3,
 					"name": "email",
 					"value": ["vendedor3@hotmail.com"]
 				}, {
 					"id": 4,
-					"name": "label",
-					"value": ["Vendedor 3"]
+					"name": "Qualificacao",
+					"value": ["5"]
 				}
 			]
 		]
