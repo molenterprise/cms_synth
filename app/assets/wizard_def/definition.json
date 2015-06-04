@@ -1,216 +1,728 @@
-[
-  	{
-  	  "id": 1,
-      "title": "Ontologies",
-      "type": "radioDetail",
-      "message": "Ontologies",
-      "options": [
-        {"key": 0, "text":"Add Ontology", "next": 2},{"key": 1, "text":"Create Application", "next": 3} 
-      ],
-      "details":
-      	[
-	      {
-	      	"title": "",
-	      	"items": [
-	      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
-	      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
-	      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
-	      	]
-	      },
-	      {
-	      	"title": "",
-	      	"items": [
-	      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
-	      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
-	      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
-	      	]
-	      }
-	    ]
-    },
-    {
-  	  "id": 2,
-      "title": "Add Ontology",
-      "type": "unique",
-      "message": "",
-      "options": [
-        {"key": 0, "next": 1} 
-      ]
-    },
-    {
-  	  "id": 3,
-      "title": "Select the main Ontology you want to use",
-      "type": "select",
-      "message": "Ontology",
-      "options": [
-        {"key": 0, "text":"foaf", "next": 4},{"key": 1, "text":"skos", "next": 4},{"key": 2, "text":"swrc", "next": 4},{"key": 3, "text":"schm", "next": 4} 
-      ]
-    },
-    {
-  	  "id": 4,
-      "title": "What do you want to show from swrc ontology?",
-      "type": "select",
-      "message": "Class",
-      "options": [
-        {"key": 0, "text":"swrc:Article", "next": 5},{"key": 1, "text":"swrc:Book", "next": 5},{"key": 2, "text":"swrc:Conference", "next": 5},{"key": 3, "text":"swrc:Event", "next": 5} 
-      ]
-    },
-    {
-  	  "id": 5,
-      "title": "What do you want to do?",
-      "type": "radio",
-      "message": "",
-      "options": [
-        {"key": 0, "text":"Show a list of Events to be chosen", "next": 6},{"key": 1, "text":"Show the detail of an Event", "next": 5},{"key": 2, "text":"Define a computation using an Event", "next": 5} 
-      ]
-    },
-    {
-  	  "id": 6,
-      "title": "",
-      "type": "radioDetail",
-      "message": "Events",
-      "options": [
-        {"key": 0, "text":"one Event?", "next": 7},{"key": 1, "text":"more than one Event?", "next": 7} 
-      ],
-      "modal": "texto",
-      "details":
-      	[
-	      {
-	      	"title": "Do you want to choose",
-	      	"items": [
-	      		[{"type": "text", "msg": "Posters Display"}],
-	      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
-	      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
-	      	]
-	      },
-	      {
-	      	"title": "Do you want to choose",
-	      	"items": [
-	      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
-	      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
-	      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
-	      	]
-	      }
-	    ]
-    },
-    {
-  	  "id": 7,
-      "title": "",
-      "type": "radio",
-      "message": "Which type of attributes you want to show in the Event list?",
-      "options": [
-        {"key": 0, "text":"Direct attributes of an Event", "next": 8},{"key": 1, "text":"Attributes of other classes related to Event", "next": 9},{"key": 2, "text":"Computed Attributes", "next": 9} 
-      ]
-    },
-    {
-  	  "id": 8,
-      "title": "Following this example which attributes you want to show in the Event list",
-      "type": "checkbox",
-      "message": "Add Event properties",
-      "properties": [
-        {"key": 0, "text":"label", "next": 7},{"key": 1, "text":"start", "next": 7},{"key": 2, "text":"end", "next": 7},{"key": 3, "text":"summary", "next": 7} 
-      ],
-      "message1": "Selected properties",
-      "items": [
-	      		[
-					{"id": 0, "name": "label", "value":["Posters Display"]}, 
-			    	{"id": 1, "name": "start", "value":["2011-01-01 10:00"]}, 
-			    	{"id": 2, "name": "end", "value":["2011-01-01 18:00"]},
-			    	{"id": 3, "name": "summary", "value":["Posters Display"]},
-			    	{"id": 4, "name": "where", "value":["Auditorium"]},
-			    	{"id": 5, "name": "Documents", "value": ["A Demo Search Engine for Products",
-			      		 								"A Tool for Fast Indexing and Querying of Graphs",
-			      		 								"A User-Tunable Approach to Marketplace Search"]}
-	      	    ],
-	      	    [
-	      	    	 {"id": 0, "name": "label", "value":["Demo: Adapting a Map Query..."]}, 
-		      		 {"id": 1, "name": "start", "value":["03/30/2011  0:00"]}, 
-		      		 {"id": 2, "name": "end", "value":["03/30/2011  2:00"]},
-		      		 {"id": 3, "name": "summary", "value":["Demo: Adapting"]},
-		      		 {"id": 4, "name": "where", "value":["Auditorium"]},
-		      		 {"id": 5, "name": "Documents", "value":["Accelerating Instant Question...",
-		      		 									 "Adapting a Map Query Interface for..."]}
-	      	    ]
-	      	]
-    },
-    {
-  	  "id": 9,
-      "title": "Select what you want to show",
-      "type": "select",
-      "message": "Event \t related collections",
-      "options": [
-        {"key": 0, "text":"Article", "next": 10}, {"key": 1, "text":"Book", "next": 10}, {"key": 2, "text":"Conference", "next": 10},
-        {"key": 3, "text":"Event", "next": 10}, {"key": 4, "text":"Person", "next": 10}, {"key": 5, "text":"Document", "next": 10} 
-      ]
-    },
-    {
-  	  "id": 10,
-      "title": "Select the path",
-      "type": "paths",
-      "message": "Suggested paths",
-      "paths": [
-      			{"key": 0, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]},
-      			{"key": 1, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
-      																			"Event1 - hasOpeningDocument:author - Jaisse",
-      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
-      		 ]
-    },
-    {
-  	  "id": 11,
-      "title": "Select the relationships",
-      "type": "path",
-      "message": "Suggested path",
-      "paths": [
-      			{"key": 0, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]},
-      			{"key": 1, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
-      																			"Event1 - hasOpeningDocument:author - Jaisse",
-      																			"Event2 - hasClosingDocument:advisor - Schawbe"]}
-      		 ], 
-      "propertySets": [
-      					[
-	      					[
-	        					{"key": 0, "text":"organizer", "next": 7}
-	      			  		]
-      			  		],
-      			  		[
-	      					[
-	        					{"key": 0, "text":"hasOpeningDocument", "next": 7},
-	        					{"key": 1, "text":"hasClosingDocument", "next": 7}
-	      			  		],
-	      			  		[
-	        					{"key": 0, "text":"presenter", "next": 7},
-	        					{"key": 1, "text":"author", "next": 7}
-	      			  		]
-      			  		]
-      			  	]
-    },
-     {
-  	  "id": 12,
-      "title": "Computed attribute",
-      "type": "computedAttribute",
-      "needNextProcessing": true,
-      "message": "New attribute",
-      "message1": "Selected properties",
-      "options": [
-        {"key": 0, "next": 12} 
-      ],
-      "items": [
-	      		[
-					{"id": 0, "name": "label", "value":["Posters Display"]}, 
-			    	{"id": 1, "name": "start", "value":["2011-01-01 10:00"]}, 
-			    	{"id": 2, "name": "end", "value":["2011-01-01 18:00"]},
-			    	{"id": 3, "name": "summary", "value":["Posters Display"]},
-			    	{"id": 4, "name": "Documents", "value": ["A Demo Search Engine for Products",
-			      		 								"A Tool for Fast Indexing and Querying of Graphs",
-			      		 								"A User-Tunable Approach to Marketplace Search"]}
-	      	    ],
-	      	    [
-	      	    	 {"id": 0, "name": "label", "value":["Demo: Adapting a Map Query..."]}, 
-		      		 {"id": 1, "name": "start", "value":["03/30/2011  0:00"]}, 
-		      		 {"id": 2, "name": "end", "value":["03/30/2011  2:00"]},
-		      		 {"id": 3, "name": "summary", "value":["Demo: Adapting"]},
-		      		 {"id": 4, "name": "Documents", "value":["Accelerating Instant Question...",
-		      		 									"Adapting a Map Query Interface for..."]}
-	      	    ]
-	      	]
-    }
-]
+ {
+   "windows": [
+			  	{
+			  	  "id": 1,
+			      "title": "Ontologies",
+			      "type": "radioDetail",
+			      "message": "Ontologies",
+			      "options": [
+			        {"key": 0, "text":"Create Application", "next": 3},{"key": 1, "text":"Add Ontology", "next": 2} 
+			      ],
+			      "details":
+			      	[
+			      		[
+				      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
+				      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
+				      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
+				      	],
+					    [
+				      		[{"type": "text", "msg": "foaf"}, {"type": "text", "msg": "http://xmlns.com/foaf/0.1/"}],
+				      		[{"type": "text", "msg": "skos"}, {"type": "text", "msg": "http://www.w3.org/2004/02/skos/core#"}],
+				      		[{"type": "text", "msg": "swc"}, {"type": "text", "msg": "http://data.semanticweb.org/ns/swc/ontology#"}]
+				      	]
+				    ]
+			    },
+			    {
+			  	  "id": 2,
+			      "title": "Add Ontology",
+			      "type": "addOntology",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "next": 1} 
+			      ]
+			    },
+			    {
+			  	  "id": 3,
+			      "title": "Select the main Ontology you want to use",
+			      "type": "select",
+			      "message": "Ontology",
+			      "options": [
+			        {"key": 0, "text":"foaf", "next": 27},{"key": 1, "text":"skos", "next": 4},{"key": 2, "text":"swrc", "next": 4},{"key": 3, "text":"schm", "next": 4} 
+			      ]
+			    },
+			    {
+			  	  "id": 4,
+			      "title": "What do you want to show from swrc ontology?",
+			      "type": "select",
+			      "message": "Class",
+			      "options": [
+			        {"key": 0, "text":"swrc:Article", "next": 4},{"key": 1, "text":"swrc:Book", "next": 4},{"key": 2, "text":"swrc:Conference", "next": 4},{"key": 3, "text":"swrc:Event", "next": 5} 
+			      ]
+			    },
+			    {
+			  	  "id": 5,
+			      "title": "What do you want to do?",
+			      "type": "radio",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "text":"Show a list of Events to be chosen", "next": 6},{"key": 1, "text":"Show the detail of an Event", "next": 15},{"key": 2, "text":"Define a computation using an Event", "next": 5} 
+			      ]
+			    },
+			    {
+			  	  "id": 6,
+			      "title": "",
+			      "type": "radioDetail",
+			      "message": "Events",
+			      "messageOptions": "Do you want to choose",
+			      "options": [
+			        {"key": 0, "text":"one Event?", "next": 30},{"key": 1, "text":"more than one Event?", "next": 31} 
+			      ],
+			      "details":
+			      	[
+				      [
+				      		[{"type": "text", "msg": "Posters Display"}],
+				      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+				      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      ]
+				      ,
+				      [
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
+				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      ]
+				    ]
+			    },
+			    {
+			  	  "id": 7,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Event list?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 9},{"key": 1, "text":"Attributes of other classes related to Event", "next": 10},{"key": 2, "text":"Computed Attributes", "next": 13} 
+			      ]
+			    },
+			    {
+			  	  "id": 8,
+			      "title": "",
+			      "type": "radioSelectedProperties",
+			      "message": "Do you want to show more attributes in the Event list? Which type?",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 9},
+			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 10},
+			        {"key": 2, "text":"Computed Attributes", "next": 13},
+			        {"key": 3, "text":"No more", "next": 24}
+			      ]
+			    },
+			    {
+			  	  "id": 9,
+			      "title": "Following this example which attributes you want to show in the Event list",
+			      "type": "checkbox",
+			      "message": "Add Event properties",
+			      "example": "events",
+			      "datatypeProperties": ["label", "start", "end", "summary"],
+			      "options":  [  
+							   	{"key": 0, "next": 8}
+							  ],
+			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 10,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Event's \t related collections",
+			      "mainclass": "Event",
+			      "options": [
+			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 11}, {"key": 2, "text":"Conference", "next": 11},
+			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 11}, {"key": 5, "text":"Document", "next": 11} 
+			      ]
+			    },
+			    {
+			  	  "id": 11,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "next": 12
+			    },
+			    {
+			  	  "id": 12,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "next": 8
+			    },
+			    {
+			  	  "id": 13,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "next": 8} 
+			       ]
+			    },
+			    {
+			  	  "id": 14,
+			      "title": "Select where one should click to choose an Event",
+			      "type": "attributeForChoosing",
+			      "message": "Events",
+			      "example": "events",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
+			      "options": [
+			        {"key": 0, "next": 3} 
+			       ]
+			    },
+			    {
+			  	  "id": 15,
+			      "title": "Event detail",
+			      "type": "yesNoDetail",
+			      "messageOptions": "Do you want to show other attributes of an Event in the detail view?",
+			      "datatypeProperties": ["label", "summary", "Documents"],
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 16},{"key": 1, "text":"No", "next": 23} 
+			      ]
+			    },
+			    {
+			  	  "id": 16,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Event detail?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},{"key": 1, "text":"Attributes of other classes related to Event", "next": 19},{"key": 2, "text":"Computed Attributes", "next": 22} 
+			      ]
+			    },
+			    {
+			  	  "id": 17,
+			      "title": "Following this example which attributes you want to show in the Event detail",
+			      "type": "checkboxForDetail",
+			      "message": "Add Event properties",
+			      "example": "events",
+			      "datatypeProperties": ["label", "start", "end", "summary"],
+			      "options":  [  
+							   	{"key": 0, "next": 18}
+							  ],
+			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 18,
+			      "title": "",
+			      "type": "radioSelectedPropertiesForDetail",
+			      "message": "Do you want to show more attributes in the Event detail? Which type?",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of an Event", "next": 17},
+			        {"key": 1, "text":"Attributes of other classes related to Event", "next": 19},
+			        {"key": 2, "text":"Computed Attributes", "next": 22},
+			        {"key": 3, "text":"No more", "next": 23}
+			      ]
+			    },
+			    {
+			  	  "id": 19,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Event's \t related collections",
+			      "mainclass": "Event",
+			      "options": [
+			        {"key": 0, "text":"Article", "next": 11}, {"key": 1, "text":"Book", "next": 20}, {"key": 2, "text":"Conference", "next": 20},
+			        {"key": 3, "text":"Event", "next": 11}, {"key": 4, "text":"Person", "next": 20}, {"key": 5, "text":"Document", "next": 20} 
+			      ]
+			    },
+			    {
+			  	  "id": 20,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "next": 21,
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		   ],
+			      "options": [
+					        	{"key": 0, "next": 21}, {"key": 1, "next": 21}
+					      	 ]
+			    },
+			    {
+			  	  "id": 21,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "next": 18,
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		 ], 
+			      "options": [
+					        	{"key": 0, "next": 18}, {"key": 1, "next": 18}
+					      	 ]
+			    },
+			    {
+			  	  "id": 22,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "needNextProcessing": true,
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "next": 18} 
+			       ]
+			    },
+			    {
+			  	  "id": 23,
+			      "title": "",
+			      "type": "loopDetail",
+			      "message": "Event Detail",
+			      "messageOptions": "Do you want to choose anything to navigate to other screen?",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 25	},
+			        {"key": 1, "text":"No", "next": 26}
+			      ]
+			    },
+			    {
+			  	  "id": 24,
+			      "title": "",
+			      "type": "loop",
+			      "message": "",
+			      "message1": "Event List",
+			      "messageOptions" : "Do you want to choose anything to navigate to other screen?",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 14},
+			        {"key": 1, "text":"No", "next": 26}
+			      ]
+			    },
+			    {
+			  	  "id": 25,
+			      "title": "Select where one should click to choose an Event",
+			      "type": "attributeForChoosingForDetail",
+			      "needNextProcessing": true,
+			      "message": "Event Detail",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose an Event?",
+			      "example": "events",
+			      "options": [
+			        {"key": 0, "next": 3} 
+			       ]
+			    },
+			    {
+			  	  "id": 26,
+			      "title": "What do you want to do?",
+			      "type": "radio",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "text":"Go to the pages index", "next": 26},{"key": 1, "text":"Finish the application definition", "next": 26} 
+			      ]
+			    },
+			    {
+			  	  "id": 27,
+			      "title": "What do you want to show from foaf ontology?",
+			      "type": "select",
+			      "message": "Class",
+			      "options": [
+			        {"key": 0, "text":"foaf:Document", "next": 27},{"key": 1, "text":"foaf:Group", "next": 27},{"key": 2, "text":"foaf:Organization", "next": 27},
+			        {"key": 3, "text":"foaf:Person", "next": 28}, {"key": 3, "text":"foaf:Project", "next": 27} 
+			      ]
+			    },
+			    {
+			  	  "id": 28,
+			      "title": "What do you want to do?",
+			      "type": "radio",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "text":"Show a list of Persons to be chosen", "next": 29},{"key": 1, "text":"Show the detail of a Person", "next": 42},{"key": 2, "text":"Define a computation using a Person", "next": 28} 
+			      ]
+			    },
+			    {
+			  	  "id": 29,
+			      "title": "",
+			      "type": "radioDetail",
+			      "message": "Persons",
+			      "messageOptions": "Do you want to choose",
+			      "options": [
+			        {"key": 0, "text":"one Person?", "next": 32},{"key": 1, "text":"more than one Person?", "next": 33} 
+			      ],
+			      "details":
+			      	[
+				      [
+				      		[{"type": "text", "msg": "Amit Madaan"}],
+				      		[{"type": "text", "msg": "Dhruv Mahajan"}],
+				      		[{"type": "text", "msg": "S. Sundararajan"}]
+				      ]
+				      ,
+				      [
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Amit Madaan"}],
+				      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Dhruv Mahajan"}],
+				      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "S. Sundararajan"}]
+				      ]
+				    ]
+			    },
+			    {
+			  	  "id": 30,
+			      "title": "",
+			      "type": "infoWithOptions",
+			      "message": "Events",
+			      "messageOptions": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "options": [
+			      	{"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
+			      ],
+			      "details":[
+					      		[{"type": "text", "msg": "Posters Display"}],
+					      		[{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+					      		[{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      		]
+			    },
+			    {
+			  	  "id": 31,
+			      "title": "",
+			      "type": "infoWithOptions",
+			      "message": "Events",
+			      "messageOptions": "Do you want to show other attributes of an Event than those shown in the example?",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 7},{"key": 1, "text":"No", "next": 24}
+			      ],
+			      "details":[
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Posters Display"}],
+					      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Demo: Adapting a Map Query Interface..."}],
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Demo: Blognoon: Exploring a Topic in..."}]
+				      		]
+			    },
+			    {
+			  	  "id": 32,
+			      "title": "",
+			      "type": "infoWithOptions",
+			      "message": "Persons",
+			      "messageOptions": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "options": [
+			      	{"key": 0, "text":"Yes", "next": 34},{"key": 1, "text":"No", "next": 51}
+			      ],
+			      "details":[
+					      		[{"type": "text", "msg": "Amit Madaan"}],
+					      		[{"type": "text", "msg": "Dhruv Mahajan"}],
+					      		[{"type": "text", "msg": "Subhajit Sanyal"}]
+				      		]
+			    },
+			    {
+			  	  "id": 33,
+			      "title": "",
+			      "type": "infoWithOptions",
+			      "message": "Persons",
+			      "messageOptions": "Do you want to show other attributes of a Person than those shown in the example?",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 34},{"key": 1, "text":"No", "next": 51}
+			      ],
+			      "details":[
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Amit Madaan"}],
+					      		[{"type": "img", "msg": "/assets/checkbox.png"},{"type": "text", "msg": "Dhruv Mahajan"}],
+					      		[{"type": "img", "msg": "/assets/checkbox-checked.png"},{"type": "text", "msg": "Subhajit Sanyal"}]
+				      		]
+			    },
+			    {
+			  	  "id": 34,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Person list?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},{"key": 1, "text":"Attributes of other classes related to Person", "next": 37},{"key": 2, "text":"Computed Attributes", "next": 40} 
+			      ]
+			    },
+			    {
+			  	  "id": 35,
+			      "title": "",
+			      "type": "radioSelectedProperties",
+			      "message": "Do you want to show more attributes in the Person list? Which type?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 36},
+			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 37},
+			        {"key": 2, "text":"Computed Attributes", "next": 40},
+			        {"key": 3, "text":"No more", "next": 51}
+			      ]
+			    },
+			    {
+			  	  "id": 36,
+			      "title": "Following this example which attributes you want to show in the Person list",
+			      "type": "checkbox",
+			      "message": "Add Person properties",
+			      "example": "persons",
+			      "datatypeProperties": ["rdfs:label", "foaf:name", "foaf:family_name", "foaf:firstName", "foaf:mbox_sha1sum"],
+			      "options":  [  
+							   	{"key": 0, "next": 35}
+							  ],
+			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 37,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Person's \t related collections",
+			      "mainclass": "Person",
+			      "options": [
+			        {"key": 0, "text":"swrc:University", "next": 38}, {"key": 1, "text":" swrc:Organization", "next": 38}, {"key": 2, "text":"swrc:Publication", "next": 38},
+			        {"key": 3, "text":" swrc:Report", "next": 38}, {"key": 4, "text":"swrc:Project", "next": 38}, {"key": 5, "text":"Person", "next": 38}
+			      ]
+			    },
+			    {
+			  	  "id": 38,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		   ],
+			      "options": [
+					        	{"key": 0, "next": 39}, {"key": 1, "next": 39}
+					      	 ]
+			    },
+			    {
+			  	  "id": 39,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		 ],
+			      "options": [
+					        	{"key": 0, "next": 35}, {"key": 1, "next": 35}
+					      	 ]
+			    },
+			    {
+			  	  "id": 40,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "next": 35} 
+			       ]
+			    },
+			    {
+			  	  "id": 41,
+			      "title": "Select where one should click to choose a Person",
+			      "type": "attributeForChoosing",
+			      "needNextProcessing": true,
+			      "message": "Persons",
+			      "example": "persons",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "options": [
+			        {"key": 0, "next": 3} 
+			       ]
+			    },
+			    {
+			  	  "id": 42,
+			      "title": "Person detail",
+			      "type": "yesNoDetail",
+			      "messageOptions": "Do you want to show other attributes of a Person in the detail view?",
+			      "datatypeProperties": ["rdfs:label", "foaf:name", "foaf:family_name", "foaf:firstName"],
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 43},{"key": 1, "text":"No", "next": 50} 
+			      ]
+			    },
+			    {
+			  	  "id": 43,
+			      "title": "",
+			      "type": "radio",
+			      "message": "Which type of attributes you want to show in the Person detail?",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 44},{"key": 1, "text":"Attributes of other classes related to Person", "next": 46},{"key": 2, "text":"Computed Attributes", "next": 49} 
+			      ]
+			    },
+			    {
+			  	  "id": 44,
+			      "title": "Following this example which attributes you want to show in the Person detail",
+			      "type": "checkboxForDetail",
+			      "message": "Add Person properties",
+			      "example": "persons",
+			      "datatypeProperties": ["rdfs:label", "foaf:name", "foaf:family_name", "foaf:firstName", "foaf:mbox_sha1sum"],
+			      "options":  [  
+							   	{"key": 0, "next": 45}
+							  ],
+			      "message1": "Selected properties"
+			    },
+			    {
+			  	  "id": 45,
+			      "title": "",
+			      "type": "radioSelectedPropertiesForDetail",
+			      "message": "Do you want to show more attributes in the Person detail? Which type?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Direct attributes of a Person", "next": 44},
+			        {"key": 1, "text":"Attributes of other classes related to Person", "next": 46},
+			        {"key": 2, "text":"Computed Attributes", "next": 49},
+			        {"key": 3, "text":"No more", "next": 50}
+			      ]
+			    },
+			    {
+			  	  "id": 46,
+			      "title": "Select what you want to show",
+			      "type": "select",
+			      "message": "Person's \t related collections",
+			      "mainclass": "Person",
+			      "options": [
+			        {"key": 0, "text":"swrc:University", "next": 47}, {"key": 1, "text":" swrc:Organization", "next": 47}, {"key": 2, "text":"swrc:Publication", "next": 47},
+			        {"key": 3, "text":" swrc:Report", "next": 47}, {"key": 4, "text":"swrc:Project", "next": 47}, {"key": 5, "text":"Person", "next": 47}
+			      ]
+			    },
+			    {
+			  	  "id": 47,
+			      "title": "Select the path",
+			      "type": "paths",
+			      "message": "Suggested paths",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		   ],
+			      "options": [
+					        	{"key": 0, "next": 48}, {"key": 1, "next": 48}
+					      	 ]
+			    },
+			    {
+			  	  "id": 48,
+			      "title": "Select the relationships",
+			      "type": "path",
+			      "message": "Suggested path",
+			      "paths": [
+			      			{"key": 0, "pathItems": ["Event", "Document", "Person"], "examples": ["Event1 - hasOpeningDocument:presenter - Milena",
+			      																			"Event1 - hasOpeningDocument:author - João",
+			      																			"Event2 - hasClosingDocument:advisor - Schawbe"]},
+			      			{"key": 1, "pathItems": ["Event", "Person"], "examples": ["Event1 - organizer - Tim Berners Lee"]}
+			      		 ], 
+			      "propertySets": [
+			      					[
+				      					[
+				        					{"key": 0, "text":"organizer"}
+				      			  		]
+			      			  		],
+			      			  		[
+				      					[
+				        					{"key": 0, "text":"hasOpeningDocument"},
+				        					{"key": 1, "text":"hasClosingDocument"}
+				      			  		],
+				      			  		[
+				        					{"key": 0, "text":"presenter"},
+				        					{"key": 1, "text":"author"}
+				      			  		]
+			      			  		]
+			      			  	],
+			      "options": [
+					        	{"key": 0, "next": 45}, {"key": 1, "next": 45}
+					      	 ]
+			    },
+			    {
+			  	  "id": 49,
+			      "title": "Computed attribute",
+			      "type": "computedAttribute",
+			      "needNextProcessing": true,
+			      "message": "New attribute",
+			      "message1": "Selected properties",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "next": 45} 
+			       ]
+			    },
+			    {
+			  	  "id": 50,
+			      "title": "",
+			      "type": "loopDetail",
+			      "message": "Person Detail",
+			      "messageOptions": "Do you want to choose anything to navigate to other screen?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 52	},
+			        {"key": 1, "text":"No", "next": 26}
+			      ]
+			    },
+			    {
+			  	  "id": 51,
+			      "title": "",
+			      "type": "loop",
+			      "message": "Person List",
+			      "messageOptions": "Do you want to choose anything to navigate to other screen?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "text":"Yes", "next": 41},
+			        {"key": 1, "text":"No", "next": 53}
+			      ]
+			    },
+			    {
+			  	  "id": 52,
+			      "title": "Select where one should click to choose a Person",
+			      "type": "attributeForChoosingForDetail",
+			      "needNextProcessing": true,
+			      "message": "Person Detail",
+			      "originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "modal": "You clicked on the {0}. Do you want to use the {0} to choose a Person?",
+			      "example": "persons",
+			      "options": [
+			        {"key": 0, "next": 3} 
+			       ]
+			    },
+			    {
+			  	  "id": 53,
+			      "title": "What do you want to do?",
+			      "type": "radio",
+			      "message": "",
+			      "options": [
+			        {"key": 0, "text":"Go to the pages index", "next": 26},{"key": 1, "text":"Finish the application definition", "next": 26} 
+			      ]
+			    }
+			],
+	"data": {
+		      "events": [
+				      		[
+								{"id": 0, "name": "label", "value":["Posters Display"]}, 
+						    	{"id": 1, "name": "start", "value":["2011-01-01 10:00"]}, 
+						    	{"id": 2, "name": "end", "value":["2011-01-01 18:00"]},
+						    	{"id": 3, "name": "summary", "value":["Posters Display Summary"]},
+						    	{"id": 4, "name": "where", "value":["Auditorium"]},
+						    	{"id": 5, "name": "Documents", "value": ["A Demo Search Engine for Products",
+						      		 								"A Tool for Fast Indexing and Querying of Graphs",
+						      		 								"A User-Tunable Approach to Marketplace Search"]}
+				      	    ],
+				      	    [	
+				      	    	 {"id": 0, "name": "label", "value":["Demo: Adapting a Map Query..."]}, 
+					      		 {"id": 1, "name": "start", "value":["03/30/2011  0:00"]}, 
+					      		 {"id": 2, "name": "end", "value":["03/30/2011  2:00"]},
+					      		 {"id": 3, "name": "summary", "value":["Demo: Adapting Summary"]},
+					      		 {"id": 4, "name": "where", "value":["Auditorium"]},
+					      		 {"id": 5, "name": "Documents", "value":["Accelerating Instant Question...",
+					      		 									 "Adapting a Map Query Interface for..."]}
+				      	    ]
+		      		   ],
+      			"persons": [
+      							[
+      								{"id": 0, "name": "rdfs:label", "value":["Amit Madaan"]}, 
+      								{"id": 1, "name": "foaf:name", "value":["Amit Madaan"]},
+      								{"id": 2, "name": "foaf:family_name", "value":["Madaan"]},
+      								{"id": 3, "name": "foaf:firstName", "value":["Amit"]},
+      								{"id": 4, "name": "foaf:mbox_sha1sum", "value":["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]},
+      								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization"]}
+      							],
+      							[
+      								{"id": 0, "name": "rdfs:label", "value":["Dhruv Mahajan"]}, 
+      								{"id": 1, "name": "foaf:name", "value":["Dhruv Mahajan"]},
+      								{"id": 2, "name": "foaf:family_name", "value":["Mahajan"]},
+      								{"id": 3, "name": "foaf:firstName", "value":["Dhruv"]},
+      								{"id": 4, "name": "foaf:mbox_sha1sum", "value":["b9e3e3da483c8cd333e1e6198b5e1c84db5c99e4"]},
+      								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization"]}
+      							],
+      							[
+      								{"id": 0, "name": "rdfs:label", "value":["S. Sundararajan"]}, 
+      								{"id": 1, "name": "foaf:name", "value":["S. Sundararajan"]},
+      								{"id":2},
+      								{"id":3},
+      								{"id":4},
+      								{"id": 5, "name": "Publications", "value":["A Classification Based Framework for Concept Summarization", 
+      																		   "Web Information Extraction Using Markov Logic Networks"]}
+      							]
+      					   ]
+			}
+}

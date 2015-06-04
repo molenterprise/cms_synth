@@ -1,0 +1,2 @@
+module PartialPagesHelper
+end

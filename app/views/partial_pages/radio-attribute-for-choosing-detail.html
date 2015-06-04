@@ -1,0 +1,12 @@
+<div class="list-group" >
+	<div ng-repeat="prop in step.scope.data" >
+		{{p = step.scope.examples[0][prop]; ""}}		
+		<b class="list-group-item-without-border halign col-md-3">{{p.name}}:</b>
+		<div class="list-group-item-without-border halign">
+			<input type="radio" ng-model="step.solution.selectedOption" value="{{p.id}}">
+				{{p.value[0]}}
+			<div ng-repeat="value in p.value | limitTo: - (p.value.length - 1)">{{value}}</div>
+		</div>
+	</div>
+	<br>
+</div>

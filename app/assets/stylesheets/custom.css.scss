@@ -196,6 +196,7 @@ input {
   @extend .error;
 }
 
+
 /* Users index */
 
 .ontologies {
@@ -208,5 +209,24 @@ input {
     &:last-child {
       border-bottom: 1px solid $grayLighter;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 538px;
+    margin: 8px 8px 8px 8px
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5)
+  }
+  .modal-sm {
+    width: 300px
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 300px
   }
 }

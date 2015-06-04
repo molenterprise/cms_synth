@@ -1,0 +1,13 @@
+<div class="list-group" >
+	<div ng-repeat="prop in step.wizard.data[step.currentWindow.example][0]" >
+		<b class="list-group-item-without-border halign col-md-3">
+			{{prop.name}}:
+		</b>
+		<div class="list-group-item-without-border halign">
+			<div ng-repeat="value in prop.value">
+				{{value}}
+			</div>
+		</div>
+	</div>
+	<br>
+</div>

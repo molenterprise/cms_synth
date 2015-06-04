@@ -1,0 +1,16 @@
+<div ng-controller="DropdownCtrl as ctrl">
+	<h1>{{ctrl.selectedNomenclatorChooser.message}}</h1>> <!-- Simple dropdown -->
+	<!-- Single button -->
+	<div class="btn-group" dropdown is-open="status.isopen">
+		<button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+			Button dropdown <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li ng-repeat="choice in ctrl.selectedNomenclatorChooser.items">
+				<a href>{{choice.description}}</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
