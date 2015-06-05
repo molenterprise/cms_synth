@@ -276,7 +276,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
+									"value": "details"
 								}
 							]
 						}, {
@@ -426,7 +426,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
+									"value": "details"
 								}
 							]
 						}, {
@@ -488,7 +488,7 @@
 								}, {
 									"type": "constant",
 									"name": "anchor_type",
-									"value": "detail"
+									"value": "details"
 								}
 							]
 						}
@@ -559,7 +559,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
+									"value": "details"
 								}
 							]
 						}, {
@@ -675,7 +675,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
+									"value": "details"
 								}
 							]
 						}, {
@@ -2003,6 +2003,15 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "landmark_type"
 								}
 							]
 						}
@@ -5012,7 +5021,19 @@
 			"title": "Select the path",
 			"type": "paths",
 			"message": "Suggested paths",
-			"next": "0.0.0.0.0.0.0.1.0.0.0.0"
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0",
+			"todo": [
+						{
+							"function_name": "save_value",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "selectedPath",
+									"value": "selectedOption"
+								}
+							]
+						}
+					]
 		}, {
 			"id": "0.0.0.0.0.0.0.1.0.0.1",
 			"title": "Select the path",
@@ -5512,7 +5533,27 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0"
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0",
+			"todo": [
+						{
+							"function_name": "get_query_expression_from_path_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "selectedPath",
+									"value": "selectedPath"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 		}, {
 			"id": "0.0.0.0.0.0.0.1.0.0.1.0",
 			"title": "Select the relationships",

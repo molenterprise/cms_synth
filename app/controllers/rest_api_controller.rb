@@ -97,8 +97,8 @@ class RestApi < ApplicationController
   end
   
   def get_context_attr_id
-    print "LOG: begin: get_context_attr_id \n" if @log_name or true
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: begin: get_context_attr_id \n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param 
                                       
     p = URI.encode_www_form_component('http://base#507013d0-b795-11e4-a7c0-001d92e8bb43')
 
@@ -129,7 +129,7 @@ class RestApi < ApplicationController
     port = '3002'
 
     uri = URI("http://#{url}:#{port}/#{function}")
-    print "Calling #{uri}\n#{params} \n"
+    print "Calling #{uri}\n#{params} \n" if @log_name
     req = Net::HTTP.post_form(uri, params)
 
     return req
@@ -158,7 +158,7 @@ class RestApi < ApplicationController
     id = values['location']
     id = id[id.index('http', 2).. -1]
     
-    print "LOG: values: #{values} \n" if @log_param or true
+    print "LOG: values: #{values} \n" if @log_param 
     
     render :json => {:status => true, :result => {:in_context_class_id => id}}
   end
@@ -172,8 +172,8 @@ end
 
 # key params: ontology, mainClass, paths, option, options, index_id
   def create_index_anchor_wizard(params)
-    print "LOG: begin: create_index_anchor_wizard \n" if @log_name or true
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: begin: create_index_anchor_wizard \n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param 
 
     path = params['paths'].select{|x| x['key'] = params['option']}.first["pathItems"]
     properties_path = '';
