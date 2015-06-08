@@ -231,6 +231,7 @@ class WizardAppsController < ApplicationController
         end
       elsif types[attr] == 'Path' then
         if attr_values.length == 0 then
+          
         else
           function_params['defaultIndex'] = attr_values.first['defaultIndex']
         end
