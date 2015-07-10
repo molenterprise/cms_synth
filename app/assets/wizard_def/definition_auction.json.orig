@@ -9,9 +9,6 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-<<<<<<< HEAD
-					"next": "0.0.0.0.0-1"
-=======
 					"next": "0.0.0.0.0",
 					"todo": [
 						{
@@ -31,9 +28,34 @@
 									"value": "Categoria."
 								}
 							]
+						}, {
+							"function_name": "create_context_wizard",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "query",
+									"value": "context_query"
+								}, {
+									"type": "global_var",
+									"name": "name",
+									"value": "context_name"
+								}, {
+									"type": "global_var",
+									"name": "title",
+									"value": "context_title"
+								}
+							],
+							"results": [
+								{
+									"name": "context",
+									"global_var": "context_id"
+								}, {
+									"name": "defaultIndex",
+									"global_var": "index_id"
+								}
+							]
 						}
 					]
->>>>>>> f99799f5b849841c781dd49bb36fd1e6176ba100
 				}, {
 					"key": 1,
 					"text": "Leilao",
@@ -181,29 +203,6 @@
 				}
 			]
 		}, {
-			"id": "0.0.0.0.0-1",
-			"title": "Defined object",
-			"type": "nodeName",
-			"message": "Name",
-			"options": [
-				{
-					"key": 0,
-					"next": "0.0.0.0.0-2"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0-2",
-			"title": "Select object",
-			"type": "selectNode",
-			"message": "Select",
-			"next": "0.0.0.0.0",
-			"options": [
-				{
-					"key": 0,
-					"next": "0.0.0.0.0"
-				}
-			]
-		}, {
 			"id": "0.0.0.0.0",
 			"type": "radio",
 			"title": "What do you want to do?",
@@ -222,32 +221,6 @@
 									"type": "constant",
 									"name": "landmark_type",
 									"value": "list"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
 								}
 							]
 						}, {
@@ -280,33 +253,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -338,7 +285,7 @@
 								}, {
 									"type": "global_var",
 									"name": "parent_id",
-									"value": "in_context_class"
+									"value": "in_context_class_id"
 								}, {
 									"type": "constant",
 									"name": "anchor_type",
@@ -375,32 +322,6 @@
 								}
 							]
 						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
-								}
-							]
-						}, {
 							"function_name": "set_anchor_values",
 							"params": [
 								{
@@ -410,7 +331,7 @@
 								}, {
 									"type": "global_var",
 									"name": "parent_id",
-									"value": "context_id"
+									"value": "index_id"
 								}, {
 									"type": "constant",
 									"name": "anchor_type",
@@ -430,33 +351,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -492,7 +387,7 @@
 								}, {
 									"type": "constant",
 									"name": "anchor_type",
-									"value": "detail"
+									"value": "details"
 								}
 							]
 						}
@@ -525,29 +420,20 @@
 								}
 							]
 						}, {
-							"function_name": "create_context_wizard",
+							"function_name": "set_anchor_values",
 							"params": [
 								{
 									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
 								}, {
 									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
+									"name": "parent_id",
+									"value": "index_id"
 								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
 								}
 							]
 						}
@@ -563,33 +449,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -609,6 +469,23 @@
 								{
 									"name": "in_context_class",
 									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
 								}
 							]
 						}
@@ -641,29 +518,20 @@
 								}
 							]
 						}, {
-							"function_name": "create_context_wizard",
+							"function_name": "set_anchor_values",
 							"params": [
 								{
 									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
 								}, {
 									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
+									"name": "parent_id",
+									"value": "index_id"
 								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
 								}
 							]
 						}
@@ -679,33 +547,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -725,6 +567,23 @@
 								{
 									"name": "in_context_class",
 									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
 								}
 							]
 						}
@@ -757,29 +616,20 @@
 								}
 							]
 						}, {
-							"function_name": "create_context_wizard",
+							"function_name": "set_anchor_values",
 							"params": [
 								{
 									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
 								}, {
 									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
+									"name": "parent_id",
+									"value": "index_id"
 								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
 								}
 							]
 						}
@@ -795,33 +645,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -841,6 +665,23 @@
 								{
 									"name": "in_context_class",
 									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
 								}
 							]
 						}
@@ -873,29 +714,20 @@
 								}
 							]
 						}, {
-							"function_name": "create_context_wizard",
+							"function_name": "set_anchor_values",
 							"params": [
 								{
 									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
 								}, {
 									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
+									"name": "parent_id",
+									"value": "index_id"
 								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
 								}
 							]
 						}
@@ -911,33 +743,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -957,6 +763,23 @@
 								{
 									"name": "in_context_class",
 									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
 								}
 							]
 						}
@@ -989,29 +812,20 @@
 								}
 							]
 						}, {
-							"function_name": "create_context_wizard",
+							"function_name": "set_anchor_values",
 							"params": [
 								{
 									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
 								}, {
 									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
+									"name": "parent_id",
+									"value": "index_id"
 								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "list"
 								}
 							]
 						}
@@ -1027,33 +841,7 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "detail"
-								}
-							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
+									"value": "details"
 								}
 							]
 						}, {
@@ -1073,6 +861,23 @@
 								{
 									"name": "in_context_class",
 									"global_var": "in_context_class_id"
+								}
+							]
+						}, {
+							"function_name": "set_anchor_values",
+							"params": [
+								{
+									"type": "global_var",
+									"name": "anchor_att_id",
+									"value": "anchor_att_id"
+								}, {
+									"type": "global_var",
+									"name": "parent_id",
+									"value": "in_context_class_id"
+								}, {
+									"type": "constant",
+									"name": "anchor_type",
+									"value": "details"
 								}
 							]
 						}
@@ -1723,7 +1528,27 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.0.0.1"
+					"next": "0.0.0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -2007,6 +1832,33 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "landmark_type"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "index_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "context_id"
 								}
 							]
 						}
@@ -2836,25 +2688,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.0.1.1.1",
-					"todo": [
+					"next": "0.0.0.0.0.1.1.1"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_attributes_for_index_wizard",
+					"params": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
-							"params": [
-								{
-									"type": "user_action",
-									"name": "scope",
-									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
-								}
-							]
+							"type": "user_action",
+							"name": "scope",
+							"value": "scope"
+						}, {
+							"type": "global_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
 						}
 					]
 				}
@@ -4033,6 +3885,15 @@
 			"type": "attributeForChoosing",
 			"message": "Categorias",
 			"example": "Categoria",
+			"scope": "new",
+			"scope_value": {
+				"show": "none",
+				"data": [],
+				"type": [],
+				"queries": [],
+				"names": [],
+				"examples": []
+			},
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"options": [
@@ -4043,24 +3904,41 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_anchor_key",
+					"function_name": "create_query_attribute_wizard",
 					"params": [
 						{
 							"type": "global_var",
 							"name": "parent_id",
 							"value": "index_id"
 						}, {
-							"type": "user_definition",
-							"name": "position",
+							"type": "user_action",
+							"name": "selectedAttribute",
 							"value": "selectedOption"
+						}, {
+							"type": "user_action",
+							"name": "scope",
+							"value": "scope"
+						}, {
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
 						}
 					],
 					"results": [
-							{
-								"name": "key",
-								"global_var": "anchor_att_id"
-							}
-						]
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
+				}, {
+					"function_name": "set_current_contex_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "anchor_att_id",
+							"value": "anchor_att_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -4160,6 +4038,28 @@
 					"key": 0,
 					"next": "0.0.0.0.1.0.0.1.0.0"
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0",
@@ -4258,6 +4158,28 @@
 					"key": 0,
 					"next": "0.0.0.0.2.0.0.1.0.0"
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1.0.1.0",
@@ -4344,6 +4266,28 @@
 					"key": 0,
 					"next": "0.0.0.0.3.0.0.1.0.0"
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.3.1.0.1.0",
@@ -4421,6 +4365,28 @@
 				{
 					"key": 0,
 					"next": "0.0.0.0.4.0.0.1.0.0"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -4515,6 +4481,28 @@
 				{
 					"key": 0,
 					"next": "0.0.0.0.5.0.0.1.0.0"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
 				}
 			]
 		}, {
@@ -4614,6 +4602,28 @@
 					"key": 0,
 					"next": "0.0.0.0.6.0.0.1.0.0"
 				}
+			],
+			"todo": [
+				{
+					"function_name": "create_anchor_key",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "user_action",
+							"name": "position",
+							"value": "selectedOption"
+						}
+					],
+					"results": [
+						{
+							"name": "key",
+							"global_var": "anchor_att_id"
+						}
+					]
+				}
 			]
 		}, {
 			"id": "0.0.0.0.6.1.0.1.0",
@@ -4662,6 +4672,10 @@
 				}, {
 					"key": 2,
 					"text": "Lance",
+					"next": "0.0.0.0.0.0.0.1.0.0.2"
+				}, {
+					"key": 3,
+					"text": "Details",
 					"next": "0.0.0.0.0.0.0.1.0.0.2"
 				}
 			]
@@ -5508,7 +5522,27 @@
 				}, {
 					"key": 3,
 					"text": "No more",
-					"next": "0.0.0.0.0.0.0.1"
+					"next": "0.0.0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -5516,7 +5550,43 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
+<<<<<<< HEAD
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0",
+			"todo": [
+						{
+							"function_name": "get_query_expression_from_path_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "selectedPath",
+									"value": "selectedPath"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							],
+							"results": [
+								{
+									"name": "query",
+									"global_var": "context_query"
+								}, {
+									"name": "context_name",
+									"global_var": "context_name"
+								}, {
+									"name": "first_class",
+									"global_var": "context_title"
+								}
+							]
+						}
+					]
+=======
 			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0"
+>>>>>>> 4df7759d47a600ba8e683cddeac7b4da73fefc0c
 		}, {
 			"id": "0.0.0.0.0.0.0.1.0.0.1.0",
 			"title": "Select the relationships",
