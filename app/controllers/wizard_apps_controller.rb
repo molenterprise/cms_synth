@@ -93,7 +93,7 @@ class WizardAppsController < ApplicationController
 
   def create_context_wizard(params)
     print "LOG: begin: create_context_wizard #{params['name']}\n" if @log_name
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: params: #{params} \n" if @log_param or true
 
     values = call_synth('contexts/create_api', {'context[context_name]' => params['name'],
        'context[context_title]' => params['title'], 'context[context_query]' => params['query']})
@@ -159,7 +159,7 @@ class WizardAppsController < ApplicationController
     for i in 0..(selected.length - 1)
       attr = selected[i]
       function_params['name'] = names[attr]
-      function_params['position'] = i
+      function_params['position'] = i + 1
       key = "#{params['index_id']}.#{i}"
       
       if types[attr] == 'ComputedAttribute' then 
@@ -525,22 +525,23 @@ class WizardAppsController < ApplicationController
   
   def get_query_expression_from_path_wizard(params)
     print "LOG: begin: get_query_expression_from_path_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true 
+    print "LOG: params: #{params} \n" if @log_param
+   
     attrs = params['scope']
-    
-    queries = attrs['queries']
-    
-    index = params['selectedPath'].to_i
-    param = queries[index]['path']
+    param = attrs['queries'][attrs['selectedPath'].to_i]
     
     function_params = {'path' => param['path'], 'reverse' => param['reverse'], 'ontology' => params['ontology'],
                        'properties' => param['properties'], 'mainclass' => param['mainclass']}
                      
-    values = get_query_expression_from_path(params)
-    return {:status => true, :result => values}
+    values = get_query_expression_from_path(function_params)
+    
+    return values
   end
   
   def get_query_expression_from_path(params)
+    print "LOG: begin: get_query_expression_from_path \n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param
+    
     path = params['path']
     x = 'x'
     properties_path = '';
@@ -565,7 +566,7 @@ class WizardAppsController < ApplicationController
     first_class = path.first['className']
     name = "#{first_class}_for_#{params['mainclass']}"
     
-    return {:query => query, :context_name => name, :first_class => first_class}
+    return {:status => true, :result =>{'query' => query, 'context_name' => name, 'first_class' => first_class}}
   end
   
   # key params: ontology, mainClass, path, properties, index_id, position, reverse
@@ -575,10 +576,10 @@ class WizardAppsController < ApplicationController
     
     function_params = {'path' => params['path'], 'reverse' => params['reverse'], 'ontology' => params['ontology'],
                        'properties' => params['properties'], 'mainclass' => params['mainclass']}
-    context_params = get_query_expression_from_path(function_params)
-    query = context_params[:query]
-    name = context_params[:context_name]
-    first_class = context_params[:first_class]
+    context_params = get_query_expression_from_path(function_params)[:result]
+    query = context_params['query']
+    name = context_params['context_name']
+    first_class = context_params['first_class']
     
     index_key = "#{first_class}_for_#{params['mainclass']}_IndexAnchor" ## Esto esta de mas?
     index_position = params['position'] || @global_var[index_key][0] || 2
@@ -612,7 +613,7 @@ class WizardAppsController < ApplicationController
     
     function_params = {'path' => params['path'], 'reverse' => params['reverse'], 'ontology' => params['ontology'],
                        'properties' => params['properties'], 'mainclass' => params['mainclass']}
-    context_params = get_query_expression_from_path(function_params)
+    context_params = get_query_expression_from_path(function_params)[:result]
     query = context_params[:query]
     name = context_params[:context_name]
     first_class = context_params[:first_class]
@@ -723,7 +724,7 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'app_test_4'
+    app_name = 'app_test_5'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
@@ -743,13 +744,13 @@ class WizardAppsController < ApplicationController
           step = current['data']
           windowId = step['currentWindow']
           window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
-    
-          todo = window['todo']
-          process_function(todo, step) unless todo.blank?
           
           print "window: #{window['id']} \n"
           #print "window: #{window} \n"
           #print "step #{step} \n"
+    
+          todo = window['todo']
+          process_function(todo, step) unless todo.blank?
     
           todo_index = step['selectedOption'].to_i
           unless window['options'].blank? or window['options'][todo_index].blank? or window['options'][todo_index]['todo'].blank? then
@@ -766,12 +767,10 @@ class WizardAppsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_wizard_app
     @wizard_app = WizardApp.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def wizard_app_params
     params.require(:wizard_app).permit(:name, :ontology_id)
   end

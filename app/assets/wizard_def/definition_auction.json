@@ -1719,7 +1719,27 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.0.0.1"
+					"next": "0.0.0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -2841,25 +2861,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.0.1.1.1",
-					"todo": [
+					"next": "0.0.0.0.0.1.1.1"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_attributes_for_index_wizard",
+					"params": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
-							"params": [
-								{
-									"type": "user_action",
-									"name": "scope",
-									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
-								}
-							]
+							"type": "user_action",
+							"name": "scope",
+							"value": "scope"
+						}, {
+							"type": "global_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
 						}
 					]
 				}
@@ -4038,6 +4058,15 @@
 			"type": "attributeForChoosing",
 			"message": "Categorias",
 			"example": "Categoria",
+			"scope": "new",
+			"scope_value": {
+				"show": "none",
+				"data": [],
+				"type": [],
+				"queries": [],
+				"names": [],
+				"examples": []
+			},
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"options": [
@@ -5525,7 +5554,27 @@
 				}, {
 					"key": 3,
 					"text": "No more",
-					"next": "0.0.0.0.0.0.0.1"
+					"next": "0.0.0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			]
 		}, {
@@ -5550,6 +5599,18 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
+								}
+							],
+							"results": [
+								{
+									"name": "query",
+									"global_var": "context_query"
+								}, {
+									"name": "context_name",
+									"global_var": "context_name"
+								}, {
+									"name": "first_class",
+									"global_var": "context_title"
 								}
 							]
 						}
