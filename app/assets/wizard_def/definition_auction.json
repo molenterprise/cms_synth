@@ -959,7 +959,7 @@
 				"show": "details",
 				"data": [0, 1],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 				"names": ["label", "Nome"],
 				"examples": []
 			},
@@ -1047,7 +1047,7 @@
 				"show": "details",
 				"data": [0, 1, 2, 3, 4, 5, 6, 7],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
 				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
@@ -1135,7 +1135,7 @@
 				"show": "details",
 				"data": [0, 1, 2, 3, 4, 5],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
@@ -1223,7 +1223,7 @@
 				"show": "details",
 				"data": [0, 1, 2, 3, 4],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
 			},
@@ -1311,7 +1311,7 @@
 				"show": "details",
 				"data": [0, 1, 2],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email"],
 				"names": ["label", "Nome", "email"],
 				"examples": []
 			},
@@ -1487,7 +1487,7 @@
 				"show": "details",
 				"data": [0, 1, 2, 3, 4],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
 			},
@@ -1513,7 +1513,7 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 				"names": ["label", "Nome"],
 				"examples": []
 			},
@@ -1528,7 +1528,27 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.0.0.1"
+					"next": "0.0.0.0.0.0.0.1",
+					"todo": [
+						{
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
+						}
+					]
 				}
 			],
 			"details": [[
@@ -1557,7 +1577,7 @@
 				"show": "table",
 				"data": [0, 1],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 				"names": ["label", "Nome"],
 				"examples": []
 			},
@@ -1670,7 +1690,7 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
 				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
@@ -1714,7 +1734,7 @@
 				"show": "table",
 				"data": [0, 1, 2, 3, 4, 5, 6, 7],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
+				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
 				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
@@ -1854,7 +1874,7 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
@@ -1898,7 +1918,7 @@
 				"show": "table",
 				"data": [0, 1, 2, 3, 4, 5],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
@@ -2011,7 +2031,7 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
 			},
@@ -2055,7 +2075,7 @@
 				"show": "table",
 				"data": [0, 1, 2, 3, 4],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
 			},
@@ -2168,7 +2188,7 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email"],
 				"names": ["label", "Nome", "email"],
 				"examples": []
 			},
@@ -2212,7 +2232,7 @@
 				"show": "table",
 				"data": [0, 1, 2],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::email"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email"],
 				"names": ["label", "Nome", "email"],
 				"examples": []
 			},
@@ -2482,7 +2502,7 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
 			},
@@ -2526,7 +2546,7 @@
 				"show": "table",
 				"data": [0, 1, 2, 3, 4],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
+				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
 			},
@@ -2668,25 +2688,25 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.0.1.1.1",
-					"todo": [
+					"next": "0.0.0.0.0.1.1.1"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_attributes_for_index_wizard",
+					"params": [
 						{
-							"function_name": "create_attributes_for_index_wizard",
-							"params": [
-								{
-									"type": "user_action",
-									"name": "scope",
-									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
-								}
-							]
+							"type": "user_action",
+							"name": "scope",
+							"value": "scope"
+						}, {
+							"type": "global_var",
+							"name": "index_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
 						}
 					]
 				}
@@ -3865,6 +3885,15 @@
 			"type": "attributeForChoosing",
 			"message": "Categorias",
 			"example": "Categoria",
+			"scope": "new",
+			"scope_value": {
+				"show": "none",
+				"data": [],
+				"type": [],
+				"queries": [],
+				"names": [],
+				"examples": []
+			},
 			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"options": [
@@ -5501,7 +5530,39 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0"
+			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0",
+			"todo": [
+						{
+							"function_name": "get_query_expression_from_path_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "selectedPath",
+									"value": "selectedPath"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							],
+							"results": [
+								{
+									"name": "query",
+									"global_var": "context_query"
+								}, {
+									"name": "context_name",
+									"global_var": "context_name"
+								}, {
+									"name": "first_class",
+									"global_var": "context_title"
+								}
+							]
+						}
+					]
 		}, {
 			"id": "0.0.0.0.0.0.0.1.0.0.1.0",
 			"title": "Select the relationships",

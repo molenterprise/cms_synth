@@ -74,7 +74,7 @@
 							"show": "table",
 							"data": [0],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
 									{
@@ -123,7 +123,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
 									{
@@ -161,7 +161,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 11,
+					"id": 7,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0.0",
@@ -172,7 +172,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
 									{
@@ -210,7 +210,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 12,
+					"id": 8,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.0.0.1",
@@ -221,7 +221,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
 									{
@@ -259,7 +259,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 13,
+					"id": 9,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.0.0.1.0",
@@ -270,7 +270,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
 									{
@@ -324,7 +324,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 14,
+					"id": 10,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0",
@@ -335,7 +335,83 @@
 							"show": "table",
 							"data": [1, 2],
 							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							],
+							"back": "{\"show\":\"table\",\"data\":[1],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\"],\"queries\":[\"self.rdfs::label\",\"self.auction::nomeCategoria\"],\"names\":[\"label\",\"Nome\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"07H\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"07I\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]}]]}"
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 11,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0.0",
+						"selectedOption": "2",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria", {
 									"path": [
 										{
 											"propertiesNames": ["categoria"],
@@ -399,7 +475,95 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 16,
+					"id": 12,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0.2",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View Leiloes'"
+							],
+							"names": ["label", "Nome", "Leilao", "Leiloes"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
+									}
+								]
+							],
+							"back": "{\"show\":\"table\",\"data\":[1,2],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\",\"Path\"],\"queries\":[\"self.rdfs::label\",\"self.auction::nomeCategoria\",{\"path\":[{\"propertiesNames\":[\"categoria\"],\"className\":\"Produto\"},{\"propertiesNames\":[\"temProduto\"],\"className\":\"Leilao\"}],\"properties\":[0,0],\"mainclass\":\"Categoria\",\"reverse\":true}],\"names\":[\"label\",\"Nome\",\"Leilao\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"07H\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"07I\"},{\"id\":2,\"name\":\"Leilao\",\"value\":[\"Path to Leilao\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]},{\"id\":2,\"name\":\"Leilao\",\"value\":[\"Path to Leilao\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]},{\"id\":2,\"name\":\"Leilao\",\"value\":[\"Path to Leilao\"]}]]}"
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 13,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.0.0.1.0.0.0",
@@ -408,9 +572,9 @@
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
-							"data": [1, 2],
-							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria", {
 									"path": [
 										{
 											"propertiesNames": ["categoria"],
@@ -423,9 +587,9 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}
+								}, "'View Leiloes'"
 							],
-							"names": ["label", "Nome", "Leilao"],
+							"names": ["label", "Nome", "Leilao", "Leiloes"],
 							"examples": [[
 									{
 										"id": 0,
@@ -439,6 +603,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								],[
 									{
@@ -453,6 +621,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								],[
 									{
@@ -467,6 +639,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								]
 							]
@@ -474,1118 +650,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 17,
-					"label": "",
-					"data": {
-						"currentWindow": "0.0.0.0.0.0.0.1",
-						"selectedOption": 0,
-						"selectedProperties": [],
-						"selectedOptions": [],
-						"scope": {
-							"show": "table",
-							"data": [1, 2],
-							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-									"path": [
-										{
-											"propertiesNames": ["categoria"],
-											"className": "Produto"
-										}, {
-											"propertiesNames": ["temProduto"],
-											"className": "Leilao"
-										}
-									],
-									"properties": [0, 0],
-									"mainclass": "Categoria",
-									"reverse": true
-								}
-							],
-							"names": ["label", "Nome", "Leilao"],
-							"examples": [[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["Audio"]
-									}, {
-										"id": 1,
-										"name": "Nome",
-										"value": ["Audio"]
-									}, {
-										"id": 2,
-										"name": "Leilao",
-										"value": ["Path to Leilao"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["Informatica"]
-									}, {
-										"id": 1,
-										"name": "Nome",
-										"value": ["Informatica"]
-									}, {
-										"id": 2,
-										"name": "Leilao",
-										"value": ["Path to Leilao"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["Cine e Foto"]
-									}, {
-										"id": 1,
-										"name": "Nome",
-										"value": ["Cine e Foto"]
-									}, {
-										"id": 2,
-										"name": "Leilao",
-										"value": ["Path to Leilao"]
-									}
-								]
-							]
-						}
-					},
-					"type": "Normal",
-					"children": [
-						{
-							"id": 18,
-							"label": "Relation",
-							"data": null,
-							"type": "Art",
-							"children": [
-								{
-									"id": 19,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0.1.0",
-										"selectedOption": "2",
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 2],
-											"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["label", "Nome", "Leilao"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 20,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0.1.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 2],
-											"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["label", "Nome", "Leilao"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 21,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0.1.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [0],
-										"scope": {
-											"show": "table",
-											"data": [1, 2],
-											"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["label", "Nome", "Leilao"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												]
-											]
-										},
-										"path": [
-											{
-												"key": 0,
-												"pathItems": [
-													{
-														"propertiesNames": ["categoria"],
-														"className": "Produto"
-													}, {
-														"propertiesNames": ["temProduto"],
-														"className": "Leilao"
-													}
-												],
-												"examples": ["leilao1 - temProduto:categoria - audio", "leilao2 - temProduto:categoria - audio", "leilao10 - temProduto:categoria - cine_e_foto", "leilao3 - temProduto:categoria - audio"],
-												"reverse": true
-											}
-										]
-									},
-									"type": "Normal"
-								}, {
-									"id": 22,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0.1.0.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [0, 0],
-										"scope": {
-											"show": "table",
-											"data": [1, 2, 3],
-											"type": ["ComputedAttribute", "ComputedAttribute", "Path", "Path"],
-											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}, {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["label", "Nome", "Leilao", "Leilao"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 23,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1",
-										"selectedOption": "1",
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 2, 3],
-											"type": ["ComputedAttribute", "ComputedAttribute", "Path", "Path"],
-											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}, {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["label", "Nome", "Leilao", "Leilao"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 24,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 2, 3],
-											"type": ["ComputedAttribute", "ComputedAttribute", "Path", "Path"],
-											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}, {
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}, {
-															"propertiesNames": ["temProduto"],
-															"className": "Leilao"
-														}
-													],
-													"properties": [0, 0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["label", "Nome", "Leilao", "Leilao"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 2,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}, {
-														"id": 3,
-														"name": "Leilao",
-														"value": ["Path to Leilao"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 25,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "details",
-											"data": [0, 1, 2, 3, 4, 5, 6, 7],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
-											"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 1"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 1"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/02/20"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/02/01"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["30.00 USPS Priority Mail International \nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide, novo"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["23"]
-													}, {
-														"id": 7,
-														"name": "Informacao do frete",
-														"value": ["No value"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 2"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 2"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/12/25"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/10/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["25"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["novo"]
-													}, {
-														"id": 6,
-														"name": "Informacao do frete",
-														"value": ["30.00 USPS Priority Mail International\nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide"]
-													}, {
-														"id": 7,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 10"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 10"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/09/10"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/04/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Informacao do frete",
-														"value": ["frete gratis"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}, {
-														"id": 7,
-														"name": "Estado do produto",
-														"value": ["No value"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 26,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "details",
-											"data": [1, 2, 4, 5, 6],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
-											"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 1"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 1"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/02/20"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/02/01"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["30.00 USPS Priority Mail International \nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide, novo"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["23"]
-													}, {
-														"id": 7,
-														"name": "Informacao do frete",
-														"value": ["No value"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 2"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 2"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/12/25"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/10/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["25"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["novo"]
-													}, {
-														"id": 6,
-														"name": "Informacao do frete",
-														"value": ["30.00 USPS Priority Mail International\nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide"]
-													}, {
-														"id": 7,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 10"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 10"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/09/10"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/04/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Informacao do frete",
-														"value": ["frete gratis"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}, {
-														"id": 7,
-														"name": "Estado do produto",
-														"value": ["No value"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 27,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1.0.1.0.0.0",
-										"selectedOption": "3",
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "details",
-											"data": [1, 2, 4, 5, 6],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
-											"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 1"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 1"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/02/20"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/02/01"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["30.00 USPS Priority Mail International \nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide, novo"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["23"]
-													}, {
-														"id": 7,
-														"name": "Informacao do frete",
-														"value": ["No value"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 2"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 2"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/12/25"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/10/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["25"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["novo"]
-													}, {
-														"id": 6,
-														"name": "Informacao do frete",
-														"value": ["30.00 USPS Priority Mail International\nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide"]
-													}, {
-														"id": 7,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 10"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 10"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/09/10"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/04/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Informacao do frete",
-														"value": ["frete gratis"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}, {
-														"id": 7,
-														"name": "Estado do produto",
-														"value": ["No value"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 28,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1.1",
-										"selectedOption": "1",
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "details",
-											"data": [1, 2, 4, 5, 6],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs:label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
-											"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 1"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 1"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/02/20"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/02/01"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["30.00 USPS Priority Mail International \nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide, novo"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["23"]
-													}, {
-														"id": 7,
-														"name": "Informacao do frete",
-														"value": ["No value"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 2"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 2"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/12/25"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/10/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["25"]
-													}, {
-														"id": 5,
-														"name": "Estado do produto",
-														"value": ["novo"]
-													}, {
-														"id": 6,
-														"name": "Informacao do frete",
-														"value": ["30.00 USPS Priority Mail International\nInternational items may be subject to customs processing and additional charges. \n \nItem location:\nPasadena, California, United States\n \nShips to:\nWorldwide"]
-													}, {
-														"id": 7,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["leilao 10"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["leilao 10"]
-													}, {
-														"id": 2,
-														"name": "Data de fim",
-														"value": ["2012/09/10"]
-													}, {
-														"id": 3,
-														"name": "Data de inicio",
-														"value": ["2012/04/04"]
-													}, {
-														"id": 4,
-														"name": "Diferenca minima",
-														"value": ["5"]
-													}, {
-														"id": 5,
-														"name": "Informacao do frete",
-														"value": ["frete gratis"]
-													}, {
-														"id": 6,
-														"name": "Minimo lance",
-														"value": ["45"]
-													}, {
-														"id": 7,
-														"name": "Estado do produto",
-														"value": ["No value"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}
-							]
-						}
-					]
-				}, {
-					"id": 29,
+					"id": 14,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.0.1",
@@ -1594,9 +659,9 @@
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
-							"data": [1, 2],
-							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria", {
 									"path": [
 										{
 											"propertiesNames": ["categoria"],
@@ -1609,9 +674,9 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}
+								}, "'View Leiloes'"
 							],
-							"names": ["label", "Nome", "Leilao"],
+							"names": ["label", "Nome", "Leilao", "Leiloes"],
 							"examples": [[
 									{
 										"id": 0,
@@ -1625,6 +690,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								],[
 									{
@@ -1639,6 +708,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								],[
 									{
@@ -1653,6 +726,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								]
 							]
@@ -1660,18 +737,18 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 30,
+					"id": 15,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.1.1.1",
-						"selectedOption": "0",
+						"selectedOption": 0,
 						"selectedProperties": [],
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
-							"data": [1, 2],
-							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
-							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs::label", "self.auction::nomeCategoria", {
 									"path": [
 										{
 											"propertiesNames": ["categoria"],
@@ -1684,9 +761,9 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}
+								}, "'View Leiloes'"
 							],
-							"names": ["label", "Nome", "Leilao"],
+							"names": ["label", "Nome", "Leilao", "Leiloes"],
 							"examples": [[
 									{
 										"id": 0,
@@ -1700,6 +777,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								],[
 									{
@@ -1714,6 +795,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								],[
 									{
@@ -1728,6 +813,10 @@
 										"id": 2,
 										"name": "Leilao",
 										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Leiloes",
+										"value": ["Computed Leiloes attribute"]
 									}
 								]
 							]
@@ -1737,7 +826,7 @@
 				}
 			]
 		}, {
-			"id": 31,
+			"id": 16,
 			"label": "New Landmark",
 			"data": null,
 			"type": "Art"
