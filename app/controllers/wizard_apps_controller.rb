@@ -787,9 +787,8 @@ class WizardAppsController < ApplicationController
           
           todo = window['todo']
           process_function(todo, step) unless todo.blank?
-          
-          
-    
+
+
           todo_index = step['selectedOption'].to_i
           unless window['options'].blank? or window['options'][todo_index].blank? or window['options'][todo_index]['todo'].blank? then
             process_function(window['options'][todo_index]['todo'], step)
