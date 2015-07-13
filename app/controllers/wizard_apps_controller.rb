@@ -98,6 +98,11 @@ class WizardAppsController < ApplicationController
     values = call_synth('contexts/create_api', {'context[context_name]' => params['name'],
        'context[context_title]' => params['title'], 'context[context_query]' => params['query']})
     status = values['status']
+    
+    if params['query'].include? 'context_param' then
+      function_params = {'name' => 'context_param', 'context_id' => values['context']}
+      create_parameter_for_context_wizard(function_params)
+    end
 
     print "LOG: values: #{values} \n" if @log_param
 
@@ -124,11 +129,12 @@ class WizardAppsController < ApplicationController
     print "LOG: begin: create_anchor_key \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param  
     
-    value = "#{params['parent_id']}.#{params['position']}"
+    key = "#{params['parent_id']}.#{params['selectedAttribute']}"
+    push_global_var(key, {})
     
-    print "LOG: end: create_anchor_key #{value}\n" if @log_name 
+    print "LOG: end: create_anchor_key #{key} \n" if @log_name 
     
-    return {:status => true, :result => {'key' => value}}
+    return {:status => true, :result => {'key' => key}}
   end
   
   def set_anchor_values(params)
@@ -152,7 +158,7 @@ class WizardAppsController < ApplicationController
     function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology']}
     
     attrs = params['scope']
-    selected = params['selectedAttribute'].to_i
+    selected = 0 #params['selectedAttribute'].to_i
     
     name = attrs['names'][selected]
     query = attrs['queries'][selected]
@@ -164,11 +170,11 @@ class WizardAppsController < ApplicationController
         function_params = {'path' => query['path'], 'reverse' => query['reverse'], 'ontology' => params['ontology'],
                        'properties' => query['properties'], 'mainclass' => query['mainclass']}
         
-        context_params = get_query_expression_from_path(function_params)
+        context_params = get_query_expression_from_path(function_params)[:result]
         
-        query = context_params[:query]
-        name = context_params[:context_name]
-        first_class = context_params[:first_class]
+        query = context_params['query']
+        name = context_params['context_name']
+        first_class = context_params['first_class']
         
         function_params = {'name' => name, 'title' => name, 'query' => query}
         values = create_context_wizard(function_params)[:result]
@@ -201,7 +207,7 @@ class WizardAppsController < ApplicationController
   end
   
   def create_attributes_for_index_wizard(params)
-    print "LOG: begin: create_computed_attributes_wizard \n" if @log_name 
+    print "LOG: begin: create_attributes_for_index_wizard \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param
     
     function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology']}
@@ -222,7 +228,6 @@ class WizardAppsController < ApplicationController
       function_params['query'] = queries[attr]
       
       if types[attr] == 'ComputedAttribute' then 
-          
         if attr_values.length > 0 then
           function_params['anchor_type'] = @global_var[key].first['anchor_type']
           function_params['target'] = @global_var[key].first['target']
@@ -246,9 +251,9 @@ class WizardAppsController < ApplicationController
   # params: 'parent', 'name', 'label_expression', 'target', 'target_node_expression'
   def create_anchor_attributes_for_index_wizard(params)
     print "LOG: begin: create_anchor_attributes_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param  
+    print "LOG: params: #{params} \n" if @log_param  or true
     
-    function_params = {'index_id' => params['parent'], 'name' => params['name'], 'label_expression' => params['label_expression'],
+    function_params = {'index_id' => params['index_id'], 'name' => params['name'], 'label_expression' => params['query'],
       'target' => params['target']}
            
     if params['anchor_type'] == "list"
@@ -419,7 +424,7 @@ class WizardAppsController < ApplicationController
   def create_index_anchor_attribute_for_index_wizard(params)
     
     print "LOG: begin: create_index_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param  
+    print "LOG: params: #{params} \n" if @log_param  or true
 
     index_position_key = "#{params['index_id']}_attribute"
 
@@ -589,7 +594,9 @@ class WizardAppsController < ApplicationController
     print "LOG: params: #{params} \n" if @log_param
    
     attrs = params['scope']
-    param = attrs['queries'][attrs['selectedPath'].to_i]
+    
+    index = attrs['selectedPath'].to_i
+    param = attrs['queries'][index]
     
     function_params = {'path' => param['path'], 'reverse' => param['reverse'], 'ontology' => params['ontology'],
                        'properties' => param['properties'], 'mainclass' => param['mainclass']}
@@ -767,7 +774,7 @@ class WizardAppsController < ApplicationController
   def pop_global_var_is_not_empty(param)
     print "LOG: begin: pop_global_var_is_not_empty #{param['key']} \n" if @log_name
     print "LOG: params: #{param} \n" if @log_param
-    result ='empty'
+    result = 'empty'
     if @global_var[param['key']].length > 1 then
       result = @global_var[param['key']].pop
     end
@@ -794,7 +801,7 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'app_test_3'
+    app_name = 'app_test_4'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
@@ -815,7 +822,7 @@ class WizardAppsController < ApplicationController
           windowId = step['currentWindow']
           window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
           
-          print "window: #{window['id']} \n"
+          print "window: #{window['id']} - #{step['selectedOption']}\n"
           #print "window: #{window} \n"
           #print "step #{step} \n"
           
@@ -823,7 +830,9 @@ class WizardAppsController < ApplicationController
           process_function(todo, step) unless todo.blank?
 
           todo_index = step['selectedOption'].to_i
+          
           unless window['options'].blank? or window['options'][todo_index].blank? or window['options'][todo_index]['todo'].blank? then
+            print ".............. option - #{todo_index} \n"
             process_function(window['options'][todo_index]['todo'], step)
           end
         end

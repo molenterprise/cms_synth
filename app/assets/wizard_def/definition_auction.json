@@ -28,32 +28,6 @@
 									"value": "Categoria."
 								}
 							]
-						}, {
-							"function_name": "create_context_wizard",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "query",
-									"value": "context_query"
-								}, {
-									"type": "global_var",
-									"name": "name",
-									"value": "context_name"
-								}, {
-									"type": "global_var",
-									"name": "title",
-									"value": "context_title"
-								}
-							],
-							"results": [
-								{
-									"name": "context",
-									"global_var": "context_id"
-								}, {
-									"name": "defaultIndex",
-									"global_var": "index_id"
-								}
-							]
 						}
 					]
 				}, {
@@ -318,23 +292,6 @@
 								{
 									"type": "constant",
 									"name": "landmark_type",
-									"value": "list"
-								}
-							]
-						}, {
-							"function_name": "set_anchor_values",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "anchor_att_id",
-									"value": "anchor_att_id"
-								}, {
-									"type": "global_var",
-									"name": "parent_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "anchor_type",
 									"value": "list"
 								}
 							]
@@ -906,6 +863,35 @@
 					"next": "0.0.0.0.0.0.1"
 				}
 			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "query",
+							"value": "context_query"
+						}, {
+							"type": "global_var",
+							"name": "name",
+							"value": "context_name"
+						}, {
+							"type": "global_var",
+							"name": "title",
+							"value": "context_title"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}
+			],
 			"details": [[[
 						{
 							"type": "text",
@@ -992,6 +978,52 @@
 					"key": 1,
 					"text": "more than one Leilao?",
 					"next": "0.0.0.0.1.0.1"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "query",
+							"value": "context_query"
+						}, {
+							"type": "global_var",
+							"name": "name",
+							"value": "context_name"
+						}, {
+							"type": "global_var",
+							"name": "title",
+							"value": "context_title"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "set_anchor_values",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "anchor_att_id",
+							"value": "anchor_att_id"
+						}, {
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "anchor_type",
+							"value": "list"
+						}
+					]
 				}
 			],
 			"details": [[[
@@ -1528,27 +1560,7 @@
 				}, {
 					"key": 1,
 					"text": "No",
-					"next": "0.0.0.0.0.0.0.1",
-					"todo": [
-						{
-							"function_name": "create_attributes_for_index_wizard",
-							"params": [
-								{
-									"type": "user_action",
-									"name": "scope",
-									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "index_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
-								}
-							]
-						}
-					]
+					"next": "0.0.0.0.0.0.0.1"
 				}
 			],
 			"details": [[
@@ -2688,25 +2700,43 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.0.1.1.1"
-				}
-			],
-			"todo": [
-				{
-					"function_name": "create_attributes_for_index_wizard",
-					"params": [
+					"next": "0.0.0.0.0.1.1.1",
+					"todo": [
 						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
+							"function_name": "create_attributes_for_index_wizard",
+							"params": [
+								{
+									"type": "user_action",
+									"name": "scope",
+									"value": "scope"
+								}, {
+									"type": "global_var",
+									"name": "index_id",
+									"value": "index_id"
+								}, {
+									"type": "constant",
+									"name": "ontology",
+									"value": "auction"
+								}
+							]
 						}, {
-							"type": "global_var",
-							"name": "index_id",
-							"value": "index_id"
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "index_id"
+								}
+							]
 						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "context_id"
+								}
+							]
 						}
 					]
 				}
@@ -2873,6 +2903,24 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "index_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "context_id"
 								}
 							]
 						}
@@ -3904,7 +3952,7 @@
 			],
 			"todo": [
 				{
-					"function_name": "create_query_attribute_wizard",
+					"function_name": "create_anchor_key",
 					"params": [
 						{
 							"type": "global_var",
@@ -3914,29 +3962,12 @@
 							"type": "user_action",
 							"name": "selectedAttribute",
 							"value": "selectedOption"
-						}, {
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
 						}
 					],
 					"results": [
 						{
 							"name": "key",
 							"global_var": "anchor_att_id"
-						}
-					]
-				}, {
-					"function_name": "set_current_contex_wizard",
-					"params": [
-						{
-							"type": "global_var",
-							"name": "anchor_att_id",
-							"value": "anchor_att_id"
 						}
 					]
 				}
@@ -5532,37 +5563,33 @@
 			"message": "Suggested path",
 			"next": "0.0.0.0.0.0.0.1.0.0.0.0.0",
 			"todo": [
+				{
+					"function_name": "get_query_expression_from_path_wizard",
+					"params": [
 						{
-							"function_name": "get_query_expression_from_path_wizard",
-							"params": [
-								{
-									"type": "user_action",
-									"name": "scope",
-									"value": "scope"
-								}, {
-									"type": "global_var",
-									"name": "selectedPath",
-									"value": "selectedPath"
-								}, {
-									"type": "constant",
-									"name": "ontology",
-									"value": "auction"
-								}
-							],
-							"results": [
-								{
-									"name": "query",
-									"global_var": "context_query"
-								}, {
-									"name": "context_name",
-									"global_var": "context_name"
-								}, {
-									"name": "first_class",
-									"global_var": "context_title"
-								}
-							]
+							"type": "user_action",
+							"name": "scope",
+							"value": "scope"
+						}, {
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
+						}
+					],
+					"results": [
+						{
+							"name": "query",
+							"global_var": "context_query"
+						}, {
+							"name": "context_name",
+							"global_var": "context_name"
+						}, {
+							"name": "first_class",
+							"global_var": "context_title"
 						}
 					]
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.0.0.1.0.0.1.0",
 			"title": "Select the relationships",
