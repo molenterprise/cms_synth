@@ -645,8 +645,9 @@ class WizardAppsController < ApplicationController
     function_params = {'path' => params['query']['path'], 'reverse' => params['query']['reverse'], 'ontology' => params['ontology'],
                        'properties' => params['query']['properties'], 'mainclass' => params['query']['mainclass']}
     context_params = get_query_expression_from_path(function_params)[:result]
+    
     query = context_params['query']
-    name = context_params['context_name']
+    name = params['name'].nil? ? context_params['context_name'] : params['name']
     first_class = context_params['first_class']
     
     index_key = "#{first_class}_for_#{params['mainclass']}_IndexAnchor" ## Esto esta de mas?
@@ -655,8 +656,10 @@ class WizardAppsController < ApplicationController
     function_params = {'name' => name, 'title' => name, 'query' => query}
     values = create_context_wizard(function_params)[:result]
     
+=begin    
     function_params = {'name' => 'context_param', 'context_id' => values['context']}
     create_parameter_for_context_wizard(function_params)
+=end
 
     function_params = {'name' => params['name'], 'index_id' => params['index_id'],
        'index_navigation_attribute_index' => values['defaultIndex']}
@@ -801,7 +804,7 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'app_test_4'
+    app_name = 'app_test_1'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
