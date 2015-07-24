@@ -197,23 +197,6 @@
 									"value": "list"
 								}
 							]
-						}, {
-							"function_name": "set_anchor_values",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "anchor_att_id",
-									"value": "anchor_att_id"
-								}, {
-									"type": "global_var",
-									"name": "parent_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "anchor_type",
-									"value": "list"
-								}
-							]
 						}
 					]
 				}, {
@@ -670,23 +653,6 @@
 									"value": "list"
 								}
 							]
-						}, {
-							"function_name": "set_anchor_values",
-							"params": [
-								{
-									"type": "global_var",
-									"name": "anchor_att_id",
-									"value": "anchor_att_id"
-								}, {
-									"type": "global_var",
-									"name": "parent_id",
-									"value": "index_id"
-								}, {
-									"type": "constant",
-									"name": "anchor_type",
-									"value": "list"
-								}
-							]
 						}
 					]
 				}, {
@@ -888,6 +854,23 @@
 						}, {
 							"name": "defaultIndex",
 							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "set_anchor_values",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "anchor_att_id",
+							"value": "anchor_att_id"
+						}, {
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "anchor_type",
+							"value": "list"
 						}
 					]
 				}
@@ -1376,6 +1359,52 @@
 					"key": 1,
 					"text": "more than one Lance?",
 					"next": "0.0.0.0.5.0.1"
+				}
+			],
+			"todo": [
+				{
+					"function_name": "create_context_wizard",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "query",
+							"value": "context_query"
+						}, {
+							"type": "global_var",
+							"name": "name",
+							"value": "context_name"
+						}, {
+							"type": "global_var",
+							"name": "title",
+							"value": "context_title"
+						}
+					],
+					"results": [
+						{
+							"name": "context",
+							"global_var": "context_id"
+						}, {
+							"name": "defaultIndex",
+							"global_var": "index_id"
+						}
+					]
+				}, {
+					"function_name": "set_anchor_values",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "anchor_att_id",
+							"value": "anchor_att_id"
+						}, {
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "index_id"
+						}, {
+							"type": "constant",
+							"name": "anchor_type",
+							"value": "list"
+						}
+					]
 				}
 			],
 			"details": [[[
@@ -3591,6 +3620,24 @@
 									"value": "auction"
 								}
 							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "index_id"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "context_id"
+								}
+							]
 						}
 					]
 				}
@@ -3927,6 +3974,30 @@
 					"next": "0.0.0.0.0.0.0.0.1.0.0.0"
 				}
 			]
+		}, 
+		{
+			"id": "0.0.0.0.0.0.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.0.0.0.1.0.0"
+				},
+				{
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Lance",
+					"next": "0.0.0.0.5.0.0.1.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.0.0.1.0",
 			"title": "Select where one should click to choose a(n) Categoria",
@@ -3947,7 +4018,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.0.1.0.0-H"
 				}
 			],
 			"todo": [
@@ -5758,7 +5829,35 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.1.0.0.1.0.0.4.0.0"
+			"next": "0.0.0.0.1.0.0.1.0.0.4.0.0",
+			"todo": [
+				{
+					"function_name": "get_query_expression_from_path_wizard",
+					"params": [
+						{
+							"type": "user_action",
+							"name": "scope",
+							"value": "scope"
+						}, {
+							"type": "constant",
+							"name": "ontology",
+							"value": "auction"
+						}
+					],
+					"results": [
+						{
+							"name": "query",
+							"global_var": "context_query"
+						}, {
+							"name": "context_name",
+							"global_var": "context_name"
+						}, {
+							"name": "first_class",
+							"global_var": "context_title"
+						}
+					]
+				}
+			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.0.0.0",
 			"type": "hidden",

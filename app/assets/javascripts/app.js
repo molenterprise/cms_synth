@@ -258,6 +258,8 @@
 				this.userSequence[this.userSequence.length - 1]['path'] = this.currentWindow.paths;
 			} else if (this.isType('hidden')) {
 				this.beforeExecuteHiddenControl();
+			} else if (this.isType('hiddenInitPath')) {
+				this.beforeExecuteHiddenInitPathControl();
 			} else if (this.isType('nodeName')) {
 				this.value = 'Categoria';
 			} else if (this.isType('selectNode')) {
@@ -267,10 +269,28 @@
 			}
 
 		};
-
+		
 		this.beforeExecuteHiddenControl = function() {
 			previous_step = this.userSequence[this.userSequence.length - 3];
 			_class = this.getWindow(previous_step.currentWindow).options[previous_step.selectedOption].text;
+			current_options = this.currentWindow.options;
+			for (var i = 0; i < current_options.length; i++) {
+				if (current_options[i].text == _class) {
+					this.selectWindow(current_options[i].next);
+					return;
+				}
+			}
+		};
+
+		this.beforeExecuteHiddenInitPathControl = function() {
+			previous_step = this.userSequence[this.userSequence.length - 1];
+			scope = previous_step.scope;
+			if(scope.type[previous_step.selectedOption] == "ComputedAttribute"){
+				_class = "Default";
+			}else{ //Path
+				path = scope.queries[previous_step.selectedOption].path;
+				_class = path[path.length - 1].className;
+			}
 			current_options = this.currentWindow.options;
 			for (var i = 0; i < current_options.length; i++) {
 				if (current_options[i].text == _class) {
