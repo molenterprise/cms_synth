@@ -212,6 +212,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -264,6 +268,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -335,6 +343,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -387,6 +399,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -458,6 +474,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -510,6 +530,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -581,6 +605,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -633,6 +661,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -704,6 +736,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -756,6 +792,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -827,6 +867,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -879,6 +923,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -950,6 +998,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "list"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -1002,6 +1054,10 @@
 									"type": "constant",
 									"name": "anchor_type",
 									"value": "details"
+								}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
 								}
 							]
 						}
@@ -1185,7 +1241,11 @@
 							"type": "constant",
 							"name": "anchor_type",
 							"value": "list"
-						}
+						}, {
+									"type": "global_var",
+									"name": "index",
+									"value": "index_id"
+								}
 					]
 				}
 			],
@@ -1319,6 +1379,10 @@
 							"type": "constant",
 							"name": "anchor_type",
 							"value": "list"
+						}, {
+							"type": "global_var",
+							"name": "index",
+							"value": "index_id"
 						}
 					]
 				}
@@ -2716,6 +2780,15 @@
 								{
 									"type": "constant",
 									"name": "key",
+									"value": "landmark_type"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
 									"value": "index_id"
 								}
 							]
@@ -2944,6 +3017,15 @@
 									"type": "constant",
 									"name": "ontology",
 									"value": "auction"
+								}
+							]
+						}, {
+							"function_name": "pop_global_var_is_not_empty",
+							"params": [
+								{
+									"type": "constant",
+									"name": "key",
+									"value": "landmark_type"
 								}
 							]
 						}, {

@@ -147,6 +147,7 @@ class WizardAppsController < ApplicationController
       value = @global_var[key][0]
       value['anchor_type'] = params['anchor_type']
       value['target'] = params['parent_id']
+      value['index'] = params['index']
     end
     return {:status => true, :result => value}
   end
@@ -243,6 +244,7 @@ class WizardAppsController < ApplicationController
           function_params['parameter_expression'] = 'self'
           function_params['target'] = @global_var[key].first['target']
           function_params['anchor_type'] = @global_var[key].first['anchor_type']
+          function_params['anchor_index'] = @global_var[key].first['index']
           function_params['update_attribute'] = true
         end
         create_index_and_index_attribute_for_index_wizard(function_params)
@@ -306,6 +308,7 @@ class WizardAppsController < ApplicationController
           function_params['parameter_expression'] = 'self'
           function_params['target'] = @global_var[key].first['target']
           function_params['anchor_type'] = @global_var[key].first['anchor_type']
+          function_params['anchor_index'] = @global_var[key].first['index']
           function_params['update_attribute'] = true
         end
         
@@ -596,8 +599,8 @@ class WizardAppsController < ApplicationController
   end
   
   def get_context_attr_wizard(params)
-    print "LOG: begin: get_context_attr_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: begin: get_context_attr_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
                                       
     p = URI.encode_www_form_component(params[:id])
 
@@ -726,6 +729,11 @@ class WizardAppsController < ApplicationController
         print "params['anchor_type'] == 'details' #{update_params}"
         update_context_anchor_attribute_for_index_wizard(update_params)
       end
+      
+      anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
+      anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      create_attribute_context_parameters_wizard(anchor_params)
+      
     end
     
     parameter_expression = params['parameter_expression'] || 'parameters[:context_param]'
@@ -780,6 +788,10 @@ class WizardAppsController < ApplicationController
       else
         update_context_anchor_attribute_for_index_wizard(update_params)
       end
+      
+      anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
+      anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      create_attribute_context_parameters_wizard(anchor_params)
     end
     
     parameter_expression = params['parameter_expression'] || 'parameters[:context_param]'
@@ -888,9 +900,9 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'app_test_4'
+    app_name = 'app_test_1'
 
-    #return 'Error: creating application' unless create_app_wizard(app_name)
+    return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
    
     stack = [{:children => app_user_definition['children'], :index => 0}]
