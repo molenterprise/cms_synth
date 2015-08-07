@@ -180,7 +180,7 @@
 			"id": "0.0.0.0.0-1",
 			"type": "nodeName",
 			"title": "Name",
-			"message": "",
+			"message": "HH",
 			"options": [
 				{
 					"key": 0,

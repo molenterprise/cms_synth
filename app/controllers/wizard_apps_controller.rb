@@ -73,7 +73,7 @@ class WizardAppsController < ApplicationController
   end
 
   def generate_wizard
-    uri = URI("http://localhost:3001/ontologies/wizard/#{params[:url]}")
+    uri = URI("http://localhost:3002/ontologies/wizard/#{params[:url]}")
     req = Net::HTTP.get(uri)
 
     render :json => req
