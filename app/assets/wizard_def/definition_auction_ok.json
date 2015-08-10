@@ -9,7 +9,6 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"next": "0.0.0.0.0-1",
 					"todo": [
 						{
 							"function_name": "save_value",
