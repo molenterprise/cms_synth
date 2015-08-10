@@ -52,8 +52,8 @@
 		me.Data = Data.getData();
 		$scope.me = me;
 
-		//$http.get('/def/definition_auction').success(function(data) {
-			$http.get('generate/http%3A%2F%2Fwww.semanticweb.org%2Fmilena%2Fontologies%2F2013%2F6%2Fauction').success(function(data) {
+		$http.get('/def/definition_auction').success(function(data) {
+		//	$http.get('generate/http%3A%2F%2Fwww.semanticweb.org%2Fmilena%2Fontologies%2F2013%2F6%2Fauction').success(function(data) {
 			me.wizard = data;
 
 			me.currentWindow = me.wizard.windows[0];
@@ -87,6 +87,11 @@
 				scope : JSON.parse(JSON.stringify(this.scope))
 			};
 			
+			if(this.value != undefined){
+				step.value = this.value;
+				this.value = undefined;
+			}
+			
 			this.scope.back = undefined;
 
 			this.userSequence.push(step);
@@ -106,6 +111,7 @@
 			this.solution.selectedProperties = step.selectedProperties;
 			this.solution.selectedOptions = step.selectedOptions;
 			this.scope = step.scope;
+			this.value = step.value;
 		};
 
 		this.changeWindow = function() {
@@ -261,7 +267,7 @@
 			} else if (this.isType('hiddenInitPath')) {
 				this.beforeExecuteHiddenInitPathControl();
 			} else if (this.isType('nodeName')) {
-				this.value = 'Categoria';
+				this.value = this.currentWindow.value;
 			} else if (this.isType('selectNode')) {
 				options = [];
 				this.getPlainTree(this.treeSequence, options, '0.0.0.0.0');
