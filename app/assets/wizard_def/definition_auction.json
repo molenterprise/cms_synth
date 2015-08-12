@@ -3111,7 +3111,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -3328,7 +3328,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -3529,7 +3529,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -3722,7 +3722,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -3907,7 +3907,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -4132,7 +4132,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -4325,7 +4325,7 @@
 			"options": [
 				{
 					"key": 0,
-					"next": "0.0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0-H"
 				}
 			]
 		}, {
@@ -4376,6 +4376,44 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.0.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.0.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.0.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.0.0.1.0.0",
 			"type": "select",
@@ -4430,6 +4468,44 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.1.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.1.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.1.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.1.0.1.0.0",
 			"type": "select",
@@ -4501,6 +4577,44 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.0.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.2.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.2.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.2.0.1.0.0",
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
@@ -4555,6 +4669,44 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.3.0.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.3.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.3.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.3.0.1.0.0",
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
@@ -4601,6 +4753,44 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.4.0.0.1.0.0"
 		}, {
+			"id": "0.0.0.0.4.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.4.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
+		}, {
 			"id": "0.0.0.0.4.0.1.0.0",
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
@@ -4638,6 +4828,44 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.5.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.5.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.5.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.5.0.1.0.0",
 			"type": "select",
@@ -4716,6 +4944,44 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.6.0.0.1.0.0"
+		}, {
+			"id": "0.0.0.0.6.0.1.0.0-H",
+			"type": "hiddenInitPath",
+			"options": [
+				{
+					"key": 0,
+					"text": "Default",
+					"next": "0.0.0.0.6.0.1.0.0"
+				}, {
+					"key": 1,
+					"text": "Categoria",
+					"next": "0.0.0.0.0.1.0.0"
+				}, {
+					"key": 2,
+					"text": "Leilao",
+					"next": "0.0.1.0.0.1.0.0"
+				}, {
+					"key": 3,
+					"text": "Produto",
+					"next": "0.0.2.0.0.1.0.0"
+				}, {
+					"key": 4,
+					"text": "Usuario",
+					"next": "0.0.3.0.0.1.0.0"
+				}, {
+					"key": 5,
+					"text": "Concorrente",
+					"next": "0.0.4.0.0.1.0.0"
+				}, {
+					"key": 6,
+					"text": "Lance",
+					"next": "0.0.5.0.0.1.0.0"
+				}, {
+					"key": 7,
+					"text": "Vendedor",
+					"next": "0.0.6.0.0.1.0.0"
+				}
+			]
 		}, {
 			"id": "0.0.0.0.6.0.1.0.0",
 			"type": "select",
@@ -8836,272 +9102,6 @@
 					"key": 6,
 					"text": "Vendedor",
 					"next": "0.0.0.0.6-1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.0.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.1.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.2.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.3.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.4.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.5.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.0.0.6.0.0-H",
-			"type": "hiddenInitPath",
-			"options": [
-				{
-					"key": 0,
-					"text": "Default",
-					"next": "0.0.0.0.6.0.0.1"
-				}, {
-					"key": 1,
-					"text": "Categoria",
-					"next": "0.0.0.0.0.0.0.1"
-				}, {
-					"key": 2,
-					"text": "Leilao",
-					"next": "0.0.0.0.1.0.0.1"
-				}, {
-					"key": 3,
-					"text": "Produto",
-					"next": "0.0.0.0.2.0.0.1"
-				}, {
-					"key": 4,
-					"text": "Usuario",
-					"next": "0.0.0.0.3.0.0.1"
-				}, {
-					"key": 5,
-					"text": "Concorrente",
-					"next": "0.0.0.0.4.0.0.1"
-				}, {
-					"key": 6,
-					"text": "Leilao",
-					"next": "0.0.0.0.5.0.0.1"
-				}, {
-					"key": 7,
-					"text": "Vendedor",
-					"next": "0.0.0.0.6.0.0.1"
 				}
 			]
 		}
