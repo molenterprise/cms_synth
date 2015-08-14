@@ -1235,7 +1235,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.0.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1306,7 +1306,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1377,7 +1377,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1448,7 +1448,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.3.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1519,7 +1519,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.4.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1590,7 +1590,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.5.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1661,7 +1661,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.6.0",
-			"title": "",
+			"title": "PUT TITLE 30",
 			"type": "infoWithOptions",
 			"scope": "new",
 			"scope_value": {
@@ -1768,7 +1768,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -1840,7 +1840,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.0.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Categoria Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -1943,7 +1943,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -2015,7 +2015,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Leilao Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -2118,7 +2118,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -2190,7 +2190,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Produto Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -2293,7 +2293,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -2365,7 +2365,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.3.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Usuario Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -2468,7 +2468,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -2540,7 +2540,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.4.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Concorrente Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -2643,7 +2643,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -2715,7 +2715,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.5.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Lance Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -2818,7 +2818,7 @@
 					"key": 1,
 					"text": "No",
 					"child": "End",
-					"next": "0.0.0.0.1.1.1",
+					"next": "0.0.0.0.1.1.1.1",
 					"todo": [
 						{
 							"function_name": "create_attributes_for_index_wizard",
@@ -2890,7 +2890,7 @@
 			]
 		}, {
 			"id": "0.0.0.0.6.1.1",
-			"title": "",
+			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Vendedor Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
@@ -4387,31 +4387,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -4479,31 +4479,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -4587,31 +4587,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -4679,31 +4679,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -4763,31 +4763,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -4839,31 +4839,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -4955,31 +4955,31 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"next": "0.0.0.0.0.1.0.0"
+					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"next": "0.0.1.0.0.1.0.0"
+					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"next": "0.0.2.0.0.1.0.0"
+					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
 					"text": "Usuario",
-					"next": "0.0.3.0.0.1.0.0"
+					"next": "0.0.0.0.3.0.1.0.0"
 				}, {
 					"key": 5,
 					"text": "Concorrente",
-					"next": "0.0.4.0.0.1.0.0"
+					"next": "0.0.0.0.4.0.1.0.0"
 				}, {
 					"key": 6,
 					"text": "Lance",
-					"next": "0.0.5.0.0.1.0.0"
+					"next": "0.0.0.0.5.0.1.0.0"
 				}, {
 					"key": 7,
 					"text": "Vendedor",
-					"next": "0.0.6.0.0.1.0.0"
+					"next": "0.0.0.0.6.0.1.0.0"
 				}
 			]
 		}, {
@@ -5027,35 +5027,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.0.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.0.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.0.0.1.0.0.0",
 			"title": "Select the path",
@@ -5079,35 +5051,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.0.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.0.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.0.1.1.0.0.0",
 			"title": "Select the path",
@@ -5131,35 +5075,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.1.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.1.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.1.0.1.0.0.0",
 			"title": "Select the path",
@@ -5195,35 +5111,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.1.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.1.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.0",
 			"title": "Select the path",
@@ -5259,35 +5147,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.2.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.2.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.0",
 			"title": "Select the path",
@@ -5311,35 +5171,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.2.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.2.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.2.1.1.0.0.0",
 			"title": "Select the path",
@@ -5363,35 +5195,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.3.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.3.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.3.0.1.0.0.0",
 			"title": "Select the path",
@@ -5409,35 +5213,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.3.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.3.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.3.1.1.0.0.0",
 			"title": "Select the path",
@@ -5455,35 +5231,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.4.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.4.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.4.0.1.0.0.0",
 			"title": "Select the path",
@@ -5495,35 +5243,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.4.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.4.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.4.1.1.0.0.0",
 			"title": "Select the path",
@@ -5535,35 +5255,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.5.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.5.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.5.0.1.0.0.0",
 			"title": "Select the path",
@@ -5605,35 +5297,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.5.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.5.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.5.1.1.0.0.0",
 			"title": "Select the path",
@@ -5675,35 +5339,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.6.0.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.6.0.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.6.0.1.0.0.0",
 			"title": "Select the path",
@@ -5721,35 +5357,7 @@
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
-			"next": "0.0.0.0.6.1.0.1.0.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "context_name",
-							"global_var": "context_name"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
+			"next": "0.0.0.0.6.1.0.1.0.0.0"
 		}, {
 			"id": "0.0.0.0.6.1.1.0.0.0",
 			"title": "Select the path",

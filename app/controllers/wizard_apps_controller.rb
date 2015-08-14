@@ -658,23 +658,29 @@ class WizardAppsController < ApplicationController
     path = params['path']
     x = 'x'
     properties_path = '';
-    index = 0      
+    query_class =  path.last['className']
     
-    reverse = params['reverse']
-    
-    if reverse
+    if params['reverse']
+      query_init = nil
+      query_end = 'context_param'
       path = path.reverse
+    else
+      query_init = 'context_param'
+      query_end = 'x'
     end
+    
+    index = 0  
     path.each{|item|      
-      properties_path = "#{properties_path}map{|#{x}| #{x}.#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}}.flatten."
+      properties_path = "#{properties_path}map{|#{x}| #{query_init || x}.#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}}.flatten."
       index += 1
+      query_init = nil
       x = (x[0].ord + 1).chr
     }
     
     properties_path.sub!("map", "")
     properties_path.sub!("}", "") #remove the first closing curly brace
     properties_path.sub!(".flatten", "")
-    query = "#{params['ontology'].upcase}::#{path.first['className']}.find_all.select#{properties_path}include? context_param}"
+    query = "#{params['ontology'].upcase}::#{query_class}.find_all.select#{properties_path}include? #{query_end}}"
     
     first_class = path.first['className']
     name = "#{first_class}_for_#{params['mainclass']}"
@@ -902,7 +908,7 @@ class WizardAppsController < ApplicationController
 
     app_name = 'app_test_1'
 
-    return 'Error: creating application' unless create_app_wizard(app_name)
+    #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
    
     stack = [{:children => app_user_definition['children'], :index => 0}]
