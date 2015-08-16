@@ -92,8 +92,8 @@ class WizardAppsController < ApplicationController
   end
 
   def create_context_wizard(params)
-    print "LOG: begin: create_context_wizard #{params['name']}\n" if @log_name
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: begin: create_context_wizard #{params['name']}\n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param 
 
     values = call_synth('contexts/create_api', {'context[context_name]' => params['name'],
        'context[context_title]' => params['title'], 'context[context_query]' => params['query']})
@@ -104,8 +104,8 @@ class WizardAppsController < ApplicationController
       create_parameter_for_context_wizard(function_params)
     end
 
-    print "LOG: values: #{values} \n" if @log_param
-    print "LOG: end: create_context_wizard #{params['name']} - #{values['context']} \n" if @log_name
+    print "LOG: values: #{values} \n" if @log_param 
+    print "LOG: end: create_context_wizard #{params['name']} - #{values['context']} \n" if @log_name 
     return {:status => status == 'successful', :result => values}
   end
 
@@ -139,7 +139,7 @@ class WizardAppsController < ApplicationController
   
   def set_anchor_values(params)
     print "LOG: begin: set_anchor_values #{params['anchor_att_id']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true 
+    print "LOG: params: #{params} \n" if @log_param  
     
     key = params['anchor_att_id']
     value = {}
@@ -192,7 +192,7 @@ class WizardAppsController < ApplicationController
   
   def set_current_contex_wizard(params)
     print "LOG: begin: set_current_contex_wizard #{params['anchor_att_id']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true 
+    print "LOG: params: #{params} \n" if @log_param  
     
     key = params['anchor_att_id']
     
@@ -271,7 +271,7 @@ class WizardAppsController < ApplicationController
   
   def create_attributes_for_detail_wizard(params) #isomorphic with create_attributes_for_index_wizard
     print "LOG: begin: create_attributes_for_detail_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: params: #{params} \n" if @log_param 
     
     function_params = {'in_context_class_id' => params['in_context_class_id'], 'ontology' => params['ontology']}
     attrs = params['scope']
@@ -362,7 +362,7 @@ class WizardAppsController < ApplicationController
   def create_computed_attribute_for_detail_wizard(params) #isomorphic with create_computed_attribute_for_index_wizard
     
     print "LOG: begin: create_computed_attribute_for_detail_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true 
+    print "LOG: params: #{params} \n" if @log_param  
 
     call_synth_without_result('in_context_classes/computed_attributes_post_data', {
         'parent' => params['in_context_class_id'],
@@ -375,8 +375,8 @@ class WizardAppsController < ApplicationController
 
   def create_index_attribute_for_index_wizard(params)
     
-    print "LOG: begin: create_index_attribute_for_index_wizard #{params['name']} \n" if @log_name or true
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: begin: create_index_attribute_for_index_wizard #{params['name']} \n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param 
 
     index_position_key = "#{params['index_id']}_attribute"
     index_position = params['index_position'] || @global_var[index_position_key][0] || 2
@@ -433,7 +433,7 @@ class WizardAppsController < ApplicationController
   def delete_context_anchor_attribute_for_index_wizard(params)
     
     print "LOG: begin: update_context_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: params: #{params} \n" if @log_param 
 
     call_synth_without_result('indexes/context_anchor_attributes_post_data', {
         'parent' => params['index_id'],
@@ -483,7 +483,7 @@ class WizardAppsController < ApplicationController
   def create_index_anchor_attribute_for_index_wizard(params)
     
     print "LOG: begin: create_index_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param  or true
+    print "LOG: params: #{params} \n" if @log_param  
 
     index_position_key = "#{params['index_id']}_attribute"
     index_position = params['index_position'] || @global_var[index_position_key][0] || 2
@@ -599,8 +599,8 @@ class WizardAppsController < ApplicationController
   end
   
   def get_context_attr_wizard(params)
-    print "LOG: begin: get_context_attr_wizard \n" if @log_name or true
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: begin: get_context_attr_wizard \n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param 
                                       
     p = URI.encode_www_form_component(params[:id])
 
@@ -709,7 +709,6 @@ class WizardAppsController < ApplicationController
     anchor_att = val['rows'][0]
     
     if params['update_attribute'] then
-      print "updating anchor\n"
       
       attr_values = anchor_att['cell'];
       update_params = {
@@ -726,7 +725,6 @@ class WizardAppsController < ApplicationController
         update_params['target'] = params['target']
         create_index_anchor_attribute_for_index_wizard(update_params)
       else
-        print "params['anchor_type'] == 'details' #{update_params}"
         update_context_anchor_attribute_for_index_wizard(update_params)
       end
       
@@ -871,7 +869,7 @@ class WizardAppsController < ApplicationController
   end
   
   def pop_global_var_is_not_empty(param)
-    print "LOG: begin: pop_global_var_is_not_empty #{param['key']} \n" if @log_name
+    print "LOG: begin: pop_global_var_is_not_empty #{param['key']} \n" if @log_name 
     print "LOG: params: #{param} \n" if @log_param
     result = 'empty'
     if @global_var[param['key']].length > 1 then
@@ -882,10 +880,10 @@ class WizardAppsController < ApplicationController
   end
 
   def pop_global_var(param)
-    print "LOG: begin: pop_global_var #{param['key']} \n" if @log_name
-    print "LOG: params: #{param} \n" if @log_param
+    print "LOG: begin: pop_global_var #{param['key']} \n" if @log_name 
+    print "LOG: params: #{param} \n" if @log_param 
     result = @global_var[param['key']].pop
-    print "LOG: end: pop_global_var \n" if @log_name
+    print "LOG: end: pop_global_var \n" if @log_name 
     return result
   end
 
@@ -902,7 +900,7 @@ class WizardAppsController < ApplicationController
 
     app_name = 'app_test_1'
 
-    return 'Error: creating application' unless create_app_wizard(app_name)
+    #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
    
     stack = [{:children => app_user_definition['children'], :index => 0}]
