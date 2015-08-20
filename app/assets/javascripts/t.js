@@ -119,7 +119,7 @@
 			config = {
 				"childrenName" : "children"
 			};
-			t.map(this, config, function(node, par) {
+			t.map(t, config, function(node, par) {
 				if (node.type == "Art")
 					return {
 						"id" : node.id,
@@ -128,6 +128,7 @@
 				return par;
 			});
 		};
+
 
 		// available functions
 		// ===================
