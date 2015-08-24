@@ -11,11 +11,10 @@
 			data-node-children="children">
 		</div>
 	</div>
-	
 	<div ng-controller="WizardController as step" class="media-body">
 		<!--  Wizard Header  -->
 		<header>
-			<h1 class="text-center">{{step.currentWindow.title}}</h1>
+			<h1 class="text-center">{{step.currentWindow.title ? step.currentWindow.title : 'Defining ' + step.currentArtNode.label}}</h1>
 		</header>
 		<!--  Products Container  -->
 		
@@ -126,6 +125,8 @@
 					<a class="btn btn-primary" ng-hide="step.userSequence.length == 0" ng-click="step.back()">Back</a>
 					<!-- <button ng-show="step.currentWindow.modal" class="btn btn-primary pull-right" type="button" ng-click="step.confirmDialog('Alert', step.currentWindow.modal);">Next</button>
 					<input ng-hide="step.currentWindow.modal" type="submit" class="btn btn-primary pull-right" value="Next" /> -->
+					<input type="submit" ng-show="step.currentWindow.options[0].hidden"
+					 class="btn btn-primary pull-right" ng-click="step.solution.selectedOption = 0" value="Pull & Next" />
 					<input type="submit" class="btn btn-primary pull-right" value="Next" />
 				</fieldset>
 			</form>
@@ -137,5 +138,6 @@
 	</div>
 
 </div>
+
 
 

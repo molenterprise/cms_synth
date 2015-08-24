@@ -125,6 +125,11 @@ class WizardAppsController < ApplicationController
     return {:status => true, :result => {}}
   end
   
+  def print_global_var(params)
+    print "LOG: print_global_var #{@global_var} \n" 
+    return {:status => true, :result => {}}
+  end
+  
   def create_anchor_key(params)
     print "LOG: begin: create_anchor_key \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param  
@@ -208,7 +213,7 @@ class WizardAppsController < ApplicationController
   end
   
   def create_attributes_for_index_wizard(params)
-    print "LOG: begin: create_attributes_for_index_wizard \n" if @log_name 
+    print "LOG: begin: create_attributes_for_index_wizard #{params['index_id']} \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param
     
     function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology']}
@@ -270,7 +275,7 @@ class WizardAppsController < ApplicationController
   end
   
   def create_attributes_for_detail_wizard(params) #isomorphic with create_attributes_for_index_wizard
-    print "LOG: begin: create_attributes_for_detail_wizard \n" if @log_name 
+    print "LOG: begin: create_attributes_for_detail_wizard #{params['in_context_class_id']} \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param 
     
     function_params = {'in_context_class_id' => params['in_context_class_id'], 'ontology' => params['ontology']}
@@ -410,7 +415,7 @@ class WizardAppsController < ApplicationController
   def create_context_anchor_attribute_for_index_wizard(params)
     
     print "LOG: begin: create_context_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param  
+    print "LOG: params: #{params} \n" if @log_param or true
 
     index_position_key = "#{params['index_id']}_attribute"
 
@@ -653,7 +658,7 @@ class WizardAppsController < ApplicationController
   
   def get_query_expression_from_path(params)
     print "LOG: begin: get_query_expression_from_path \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: params: #{params} \n" if @log_param or true
     
     path = params['path']
     x = 'x'
@@ -665,6 +670,7 @@ class WizardAppsController < ApplicationController
     if reverse
       path = path.reverse
     end
+    
     path.each{|item|      
       properties_path = "#{properties_path}map{|#{x}| #{x}.#{params['ontology']}::#{item['propertiesNames'][params['properties'][index]]}}.flatten."
       index += 1
@@ -870,7 +876,7 @@ class WizardAppsController < ApplicationController
   
   def pop_global_var_is_not_empty(param)
     print "LOG: begin: pop_global_var_is_not_empty #{param['key']} \n" if @log_name 
-    print "LOG: params: #{param} \n" if @log_param
+    print "LOG: params: #{param} - #{@global_var[param['key']]}\n" if @log_param or 
     result = 'empty'
     if @global_var[param['key']].length > 1 then
       result = @global_var[param['key']].pop
@@ -898,7 +904,7 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'app_test_1'
+    app_name = 'app_test_2'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
@@ -919,7 +925,7 @@ class WizardAppsController < ApplicationController
           windowId = step['currentWindow']
           window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
           
-          print "window: #{window['id']} - #{step['selectedOption']}\n"
+          print "window: #{current['id']} - #{window['id']} - #{step['selectedOption']}\n"
           #print "window: #{window} \n"
           #print "step #{step} \n"
           

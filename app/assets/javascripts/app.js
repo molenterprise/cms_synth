@@ -87,9 +87,9 @@
 				scope : JSON.parse(JSON.stringify(this.scope))
 			};
 			
-			if(this.value != undefined){
-				step.value = this.value;
-				this.value = undefined;
+			if(this.currentWindow.value != undefined){
+				step.value = this.currentWindow.value;
+				//this.value = undefined;
 			}
 			
 			this.scope.back = undefined;
@@ -262,12 +262,12 @@
 				this.beforeExecutePathsControl();
 			} else if (this.isType('path')) {
 				this.userSequence[this.userSequence.length - 1]['path'] = this.currentWindow.paths;
+				option = this.userSequence[this.userSequence.length - 1].selectedOption;
+				this.solution.selectedOptions = Array.apply(null, Array(this.currentWindow.paths[option].pathItems.length)).map(Number.prototype.valueOf,0);
 			} else if (this.isType('hidden')) {
 				this.beforeExecuteHiddenControl();
 			} else if (this.isType('hiddenInitPath')) {
 				this.beforeExecuteHiddenInitPathControl();
-			} else if (this.isType('nodeName')) {
-				this.value = this.currentWindow.value;
 			} else if (this.isType('selectNode')) {
 				options = [];
 				this.getPlainTree(this.treeSequence, options, '0.0.0.0.0');
@@ -394,7 +394,7 @@
 			}
 
 			if (this.isType('nodeName')) {
-				this.currentArtNode.label = this.value;
+				this.currentArtNode.label = this.currentWindow.value;
 			}
 
 			if (this.isType('path')) {
@@ -450,8 +450,7 @@
 		};
 
 		this.selectWindow = function(id) {
-
-			this.currentWindow = this.getWindow(id);
+			this.currentWindow = JSON.parse(JSON.stringify(this.getWindow(id)));
 		};
 
 		this.selectProperty = function(id, arr, canExec) {
@@ -477,7 +476,6 @@
 		this.getRelatedCollectionName = function(previousWindowInfo, canExec) {
 			if (canExec) {
 				if (previousWindowInfo) {
-					//console.log(previousWindowInfo);
 					collectionId = previousWindowInfo.selectedOption;
 					previousWindowId = previousWindowInfo.currentWindow;
 					return this.getWindow(previousWindowId).options[collectionId].text;
