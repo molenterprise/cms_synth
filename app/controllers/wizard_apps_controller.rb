@@ -237,6 +237,7 @@ class WizardAppsController < ApplicationController
         if attr_values.length > 0 then
           function_params['anchor_type'] = @global_var[key].first['anchor_type']
           function_params['target'] = @global_var[key].first['target']
+          function_params['anchor_index'] = @global_var[key].first['index']
           create_anchor_attributes_for_index_wizard(function_params) 
         else
           create_computed_attribute_for_index_wizard(function_params)
@@ -260,8 +261,8 @@ class WizardAppsController < ApplicationController
   
   # params: 'parent', 'name', 'label_expression', 'target', 'target_node_expression'
   def create_anchor_attributes_for_index_wizard(params)
-    print "LOG: begin: create_anchor_attributes_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: begin: create_anchor_attributes_for_index_wizard #{params['name']} \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
     
     function_params = {'index_id' => params['index_id'], 'name' => params['name'], 'label_expression' => params['query'],
       'target' => params['target']}
@@ -272,6 +273,11 @@ class WizardAppsController < ApplicationController
       function_params['target_node_expression'] = ''
       create_context_anchor_attribute_for_index_wizard(function_params)
     end
+    
+    anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
+    anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+    create_attribute_context_parameters_wizard(anchor_params)
+    
   end
   
   def create_attributes_for_detail_wizard(params) #isomorphic with create_attributes_for_index_wizard
@@ -343,11 +349,6 @@ class WizardAppsController < ApplicationController
       function_params['target_node_expression'] = params['target_node_expression']
       create_context_anchor_attribute_for_detail_wizard(function_params)
     end
-    
-    val = get_context_attr_wizard({:id => function_params['anchor_index']})[:result]
-    anchor_att = val['rows'][0]
-    
-    print "LOG: anchor_att #{anchor_att} - #{val}\n" if @log_param  or true
     
     anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
     anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
@@ -615,8 +616,8 @@ class WizardAppsController < ApplicationController
   end
   
   def get_context_attr_wizard(params)
-    print "LOG: begin: get_context_attr_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: begin: get_context_attr_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
                                       
     p = URI.encode_www_form_component(params[:id])
 
