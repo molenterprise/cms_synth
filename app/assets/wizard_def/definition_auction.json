@@ -9,7 +9,6 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1",
 					"todo": [
 						{
@@ -19,12 +18,10 @@
 									"type": "constant",
 									"name": "context_query",
 									"value": "AUCTION::Categoria.find_all"
-									"value": "AUCTION::Produto.find_all"
 								}, {
 									"type": "constant",
 									"name": "context_title",
 									"value": "Categoria."
-									"value": "Produto."
 								}
 							]
 						}
@@ -32,7 +29,6 @@
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1",
 					"todo": [
 						{
@@ -42,12 +38,10 @@
 									"type": "constant",
 									"name": "context_query",
 									"value": "AUCTION::Leilao.find_all"
-									"value": "AUCTION::Categoria.find_all"
 								}, {
 									"type": "constant",
 									"name": "context_title",
 									"value": "Leilao."
-									"value": "Categoria."
 								}
 							]
 						}
@@ -55,7 +49,6 @@
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1",
 					"todo": [
 						{
@@ -65,12 +58,10 @@
 									"type": "constant",
 									"name": "context_query",
 									"value": "AUCTION::Produto.find_all"
-									"value": "AUCTION::Leilao.find_all"
 								}, {
 									"type": "constant",
 									"name": "context_title",
 									"value": "Produto."
-									"value": "Leilao."
 								}
 							]
 						}
@@ -169,7 +160,6 @@
 				}
 			],
 			"value": "Categoria",
-			"value": "Produto",
 			"todo": [
 				{
 					"function_name": "save_value",
@@ -194,7 +184,6 @@
 				}
 			],
 			"value": "Leilao",
-			"value": "Categoria",
 			"todo": [
 				{
 					"function_name": "save_value",
@@ -219,7 +208,6 @@
 				}
 			],
 			"value": "Produto",
-			"value": "Leilao",
 			"todo": [
 				{
 					"function_name": "save_value",
@@ -334,12 +322,10 @@
 			"title": "What do you want to do?",
 			"message": "",
 			"pathName": "Categoria",
-			"pathName": "Produto",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Categoria(s) to be chosen",
-					"text": "Show a list of Produto(s) to be chosen",
 					"next": "0.0.0.0.0.0",
 					"todo": [
 						{
@@ -377,7 +363,6 @@
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Categoria",
-					"text": "Show the detail of a(n) Produto",
 					"next": "0.0.0.0.0.1",
 					"todo": [
 						{
@@ -396,7 +381,6 @@
 									"type": "constant",
 									"name": "class",
 									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
-									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
 								}, {
 									"type": "global_var",
 									"name": "context",
@@ -469,12 +453,10 @@
 			"title": "What do you want to do?",
 			"message": "",
 			"pathName": "Leilao",
-			"pathName": "Categoria",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Leilao(s) to be chosen",
-					"text": "Show a list of Categoria(s) to be chosen",
 					"next": "0.0.0.0.1.0",
 					"todo": [
 						{
@@ -512,7 +494,6 @@
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Leilao",
-					"text": "Show the detail of a(n) Categoria",
 					"next": "0.0.0.0.1.1",
 					"todo": [
 						{
@@ -531,7 +512,6 @@
 									"type": "constant",
 									"name": "class",
 									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
-									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Categoria"
 								}, {
 									"type": "global_var",
 									"name": "context",
@@ -597,8 +577,6 @@
 						}
 					]
 				}
-				},
-				{"function_name": "print_global_var"}
 			]
 		}, {
 			"id": "0.0.0.0.2",
@@ -606,12 +584,10 @@
 			"title": "What do you want to do?",
 			"message": "",
 			"pathName": "Produto",
-			"pathName": "Leilao",
 			"options": [
 				{
 					"key": 0,
 					"text": "Show a list of Produto(s) to be chosen",
-					"text": "Show a list of Leilao(s) to be chosen",
 					"next": "0.0.0.0.2.0",
 					"todo": [
 						{
@@ -649,7 +625,6 @@
 				}, {
 					"key": 1,
 					"text": "Show the detail of a(n) Produto",
-					"text": "Show the detail of a(n) Leilao",
 					"next": "0.0.0.0.2.1",
 					"todo": [
 						{
@@ -668,7 +643,6 @@
 									"type": "constant",
 									"name": "class",
 									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Produto"
-									"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Leilao"
 								}, {
 									"type": "global_var",
 									"name": "context",
@@ -1268,19 +1242,13 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeCategoria"],
+				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 				"names": ["label", "Nome"],
-				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
-				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
 			"example": "Categoria",
 			"message": "Categorias",
 			"messageOptions": "Do you want to show other attributes of an Categoria than those shown in the example?",
-			"example": "Produto",
-			"message": "Produtos",
-			"messageOptions": "Do you want to show other attributes of an Produto than those shown in the example?",
 			"options": [
 				{
 					"key": 0,
@@ -1296,46 +1264,35 @@
 					{
 						"type": "text",
 						"msg": "Audio"
-						"msg": "Home Theater LG HT806ST"
 					}
 				],[
 					{
 						"type": "text",
 						"msg": "Informatica"
-						"msg": "MP4 Player Philips SA3VBE04KX/78"
 					}
 				],[
 					{
 						"type": "text",
 						"msg": "Cine e Foto"
-						"msg": "MP4 Watch Play NewLink PM101"
 					}
 				]
 			]
 		}, {
 			"id": "0.0.0.0.0.1",
 			"title": "Categoria detail",
-			"title": "Produto detail",
 			"type": "yesNoDetail",
 			"pathName": "Categoria",
-			"pathName": "Produto",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
 				"data": [0, 1],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeCategoria"],
+				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 				"names": ["label", "Nome"],
-				"data": [0, 1, 2, 3, 4, 5],
-				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
-				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 				"examples": []
 			},
 			"example": "Categoria",
 			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
-			"example": "Produto",
-			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -1356,19 +1313,13 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeLeilao", "self.auction:dataFim", "self.auction:dataInicio", "self.auction:difMin", "self.auction:estadoProduto", "self.auction:lanceMin", "self.auction:infoFrete"],
+				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
 				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
-				"names": ["label", "Nome"],
 				"examples": []
 			},
 			"example": "Leilao",
 			"message": "Leilaos",
 			"messageOptions": "Do you want to show other attributes of an Leilao than those shown in the example?",
-			"example": "Categoria",
-			"message": "Categorias",
-			"messageOptions": "Do you want to show other attributes of an Categoria than those shown in the example?",
 			"options": [
 				{
 					"key": 0,
@@ -1384,46 +1335,35 @@
 					{
 						"type": "text",
 						"msg": "leilao 1"
-						"msg": "Audio"
 					}
 				],[
 					{
 						"type": "text",
 						"msg": "leilao 2"
-						"msg": "Informatica"
 					}
 				],[
 					{
 						"type": "text",
 						"msg": "leilao 10"
-						"msg": "Cine e Foto"
 					}
 				]
 			]
 		}, {
 			"id": "0.0.0.0.1.1",
 			"title": "Leilao detail",
-			"title": "Categoria detail",
 			"type": "yesNoDetail",
 			"pathName": "Leilao",
-			"pathName": "Categoria",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
 				"data": [0, 1, 2, 3, 4, 5, 6, 7],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeLeilao", "self.auction:dataFim", "self.auction:dataInicio", "self.auction:difMin", "self.auction:estadoProduto", "self.auction:lanceMin", "self.auction:infoFrete"],
+				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
 				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-				"data": [0, 1],
-				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
-				"names": ["label", "Nome"],
 				"examples": []
 			},
 			"example": "Leilao",
 			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
-			"example": "Categoria",
-			"messageOptions": "Do you want to show other attributes of a(n) Categoria in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -1444,19 +1384,13 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeProduto", "self.auction:dataCadastro", "self.auction:descricaoProduto", "self.auction:estaEmLeilao", "self.auction:quantidade"],
+				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
-				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
 			"example": "Produto",
 			"message": "Produtos",
 			"messageOptions": "Do you want to show other attributes of an Produto than those shown in the example?",
-			"example": "Leilao",
-			"message": "Leilaos",
-			"messageOptions": "Do you want to show other attributes of an Leilao than those shown in the example?",
 			"options": [
 				{
 					"key": 0,
@@ -1472,46 +1406,35 @@
 					{
 						"type": "text",
 						"msg": "Home Theater LG HT806ST"
-						"msg": "leilao 1"
 					}
 				],[
 					{
 						"type": "text",
 						"msg": "MP4 Player Philips SA3VBE04KX/78"
-						"msg": "leilao 2"
 					}
 				],[
 					{
 						"type": "text",
 						"msg": "MP4 Watch Play NewLink PM101"
-						"msg": "leilao 10"
 					}
 				]
 			]
 		}, {
 			"id": "0.0.0.0.2.1",
 			"title": "Produto detail",
-			"title": "Leilao detail",
 			"type": "yesNoDetail",
 			"pathName": "Produto",
-			"pathName": "Leilao",
 			"scope": "new",
 			"scope_value": {
 				"show": "details",
 				"data": [0, 1, 2, 3, 4, 5],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeProduto", "self.auction:dataCadastro", "self.auction:descricaoProduto", "self.auction:estaEmLeilao", "self.auction:quantidade"],
+				"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 				"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-				"data": [0, 1, 2, 3, 4, 5, 6, 7],
-				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs::label", "self.auction::nomeLeilao", "self.auction::dataFim", "self.auction::dataInicio", "self.auction::difMin", "self.auction::estadoProduto", "self.auction::lanceMin", "self.auction::infoFrete"],
-				"names": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 				"examples": []
 			},
 			"example": "Produto",
 			"messageOptions": "Do you want to show other attributes of a(n) Produto in the detail view?",
-			"example": "Leilao",
-			"messageOptions": "Do you want to show other attributes of a(n) Leilao in the detail view?",
 			"options": [
 				{
 					"key": 0,
@@ -1532,7 +1455,6 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeUsuario", "self.auction:email", "self.auction:dataMembroDesde", "self.auction:qualificacao"],
 				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
@@ -1578,7 +1500,6 @@
 				"show": "details",
 				"data": [0, 1, 2, 3, 4],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeUsuario", "self.auction:email", "self.auction:dataMembroDesde", "self.auction:qualificacao"],
 				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email", "self.auction::dataMembroDesde", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "email", "Membro desde", "Qualificacao"],
 				"examples": []
@@ -1605,7 +1526,6 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeUsuario", "self.auction:email"],
 				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email"],
 				"names": ["label", "Nome", "email"],
 				"examples": []
@@ -1651,7 +1571,6 @@
 				"show": "details",
 				"data": [0, 1, 2],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeUsuario", "self.auction:email"],
 				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::email"],
 				"names": ["label", "Nome", "email"],
 				"examples": []
@@ -1678,7 +1597,6 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.auction:timeStamp", "self.auction:valor"],
 				"queries": ["self.auction::timeStamp", "self.auction::valor"],
 				"names": ["timeStamp", "valor"],
 				"examples": []
@@ -1724,7 +1642,6 @@
 				"show": "details",
 				"data": [0, 1],
 				"type": ["ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.auction:timeStamp", "self.auction:valor"],
 				"queries": ["self.auction::timeStamp", "self.auction::valor"],
 				"names": ["timeStamp", "valor"],
 				"examples": []
@@ -1751,7 +1668,6 @@
 				"show": "table",
 				"data": [0],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeUsuario", "self.auction:dataMembroDesde", "self.auction:email", "self.auction:qualificacao"],
 				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
@@ -1797,7 +1713,6 @@
 				"show": "details",
 				"data": [0, 1, 2, 3, 4],
 				"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-				"queries": ["self.rdfs:label", "self.auction:nomeUsuario", "self.auction:dataMembroDesde", "self.auction:email", "self.auction:qualificacao"],
 				"queries": ["self.rdfs::label", "self.auction::nomeUsuario", "self.auction::dataMembroDesde", "self.auction::email", "self.auction::qualificacao"],
 				"names": ["label", "Nome", "Membro desde", "email", "Qualificacao"],
 				"examples": []
@@ -1820,17 +1735,14 @@
 			"title": "",
 			"type": "radio",
 			"message": "Which type of attributes you want to show in the Categoria list?",
-			"message": "Which type of attributes you want to show in the Produto list?",
 			"options": [
 				{
 					"key": 0,
 					"text": "Direct attributes of a(n) Categoria",
-					"text": "Direct attributes of a(n) Produto",
 					"next": "0.0.0.0.0.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Attributes of other classes related to Categoria",
-					"text": "Attributes of other classes related to Produto",
 					"next": "0.0.0.0.0.0.0.1"
 				}, {
 					"key": 2,
@@ -1844,10 +1756,8 @@
 			"type": "loop",
 			"message": "",
 			"message1": "Categoria List",
-			"message1": "Produto List",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Categoria",
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -1922,17 +1832,14 @@
 			"title": "",
 			"type": "radio",
 			"message": "Which type of attributes you want to show in the Categoria detail?",
-			"message": "Which type of attributes you want to show in the Produto detail?",
 			"options": [
 				{
 					"key": 0,
 					"text": "Direct attributes of a(n) Categoria",
-					"text": "Direct attributes of a(n) Produto",
 					"next": "0.0.0.0.0.1.0.0"
 				}, {
 					"key": 1,
 					"text": "Attributes of other classes related to Categoria",
-					"text": "Attributes of other classes related to Produto",
 					"next": "0.0.0.0.0.1.0.1"
 				}, {
 					"key": 2,
@@ -1945,10 +1852,8 @@
 			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Categoria Detail",
-			"message": "Produto Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Categoria",
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -2032,17 +1937,14 @@
 			"title": "",
 			"type": "radio",
 			"message": "Which type of attributes you want to show in the Leilao list?",
-			"message": "Which type of attributes you want to show in the Categoria list?",
 			"options": [
 				{
 					"key": 0,
 					"text": "Direct attributes of a(n) Leilao",
-					"text": "Direct attributes of a(n) Categoria",
 					"next": "0.0.0.0.1.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Attributes of other classes related to Leilao",
-					"text": "Attributes of other classes related to Categoria",
 					"next": "0.0.0.0.1.0.0.1"
 				}, {
 					"key": 2,
@@ -2056,10 +1958,8 @@
 			"type": "loop",
 			"message": "",
 			"message1": "Leilao List",
-			"message1": "Categoria List",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Leilao",
-			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -2134,17 +2034,14 @@
 			"title": "",
 			"type": "radio",
 			"message": "Which type of attributes you want to show in the Leilao detail?",
-			"message": "Which type of attributes you want to show in the Categoria detail?",
 			"options": [
 				{
 					"key": 0,
 					"text": "Direct attributes of a(n) Leilao",
-					"text": "Direct attributes of a(n) Categoria",
 					"next": "0.0.0.0.1.1.0.0"
 				}, {
 					"key": 1,
 					"text": "Attributes of other classes related to Leilao",
-					"text": "Attributes of other classes related to Categoria",
 					"next": "0.0.0.0.1.1.0.1"
 				}, {
 					"key": 2,
@@ -2157,10 +2054,8 @@
 			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Leilao Detail",
-			"message": "Categoria Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Leilao",
-			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -2244,17 +2139,14 @@
 			"title": "",
 			"type": "radio",
 			"message": "Which type of attributes you want to show in the Produto list?",
-			"message": "Which type of attributes you want to show in the Leilao list?",
 			"options": [
 				{
 					"key": 0,
 					"text": "Direct attributes of a(n) Produto",
-					"text": "Direct attributes of a(n) Leilao",
 					"next": "0.0.0.0.2.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Attributes of other classes related to Produto",
-					"text": "Attributes of other classes related to Leilao",
 					"next": "0.0.0.0.2.0.0.1"
 				}, {
 					"key": 2,
@@ -2268,10 +2160,8 @@
 			"type": "loop",
 			"message": "",
 			"message1": "Produto List",
-			"message1": "Leilao List",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Produto",
-			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -2346,17 +2236,14 @@
 			"title": "",
 			"type": "radio",
 			"message": "Which type of attributes you want to show in the Produto detail?",
-			"message": "Which type of attributes you want to show in the Leilao detail?",
 			"options": [
 				{
 					"key": 0,
 					"text": "Direct attributes of a(n) Produto",
-					"text": "Direct attributes of a(n) Leilao",
 					"next": "0.0.0.0.2.1.0.0"
 				}, {
 					"key": 1,
 					"text": "Attributes of other classes related to Produto",
-					"text": "Attributes of other classes related to Leilao",
 					"next": "0.0.0.0.2.1.0.1"
 				}, {
 					"key": 2,
@@ -2369,10 +2256,8 @@
 			"title": "PUT TITLE",
 			"type": "loop",
 			"message": "Produto Detail",
-			"message": "Leilao Detail",
 			"messageOptions": "Do you want to choose anything to navigate to other screen?",
 			"example": "Produto",
-			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -3262,15 +3147,11 @@
 		}, {
 			"id": "0.0.0.0.0.0.0.0",
 			"title": "Following this example which attributes you want to show in the Categoria list",
-			"title": "Following this example which attributes you want to show in the Produto list",
 			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Categoria properties",
 			"example": "Categoria",
 			"datatypeProperties": ["label", "Nome"],
-			"message": "Add Produto properties",
-			"example": "Produto",
-			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 			"options": [
 				{
 					"key": 0,
@@ -3284,18 +3165,14 @@
 			"type": "select",
 			"message": "Categoria's \t related collections",
 			"mainclass": "Categoria",
-			"message": "Produto's \t related collections",
-			"mainclass": "Produto",
 			"options": [
 				{
 					"key": 0,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.0.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.0.0.0.1.0"
 				}, {
 					"key": 2,
@@ -3310,7 +3187,6 @@
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Categoria",
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -3320,12 +3196,9 @@
 		}, {
 			"id": "0.0.0.0.0.0.1.0",
 			"title": "Select where one should click to choose a(n) Categoria",
-			"title": "Select where one should click to choose a(n) Produto",
 			"type": "attributeForChoosing",
 			"message": "Categorias",
 			"example": "Categoria",
-			"message": "Produtos",
-			"example": "Produto",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -3335,8 +3208,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -3368,15 +3239,11 @@
 		}, {
 			"id": "0.0.0.0.0.1.0.0",
 			"title": "Following this example which attributes you want to show in the Categoria detail",
-			"title": "Following this example which attributes you want to show in the Produto detail",
 			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Categoria properties",
 			"example": "Categoria",
 			"datatypeProperties": ["label", "Nome"],
-			"message": "Add Produto properties",
-			"example": "Produto",
-			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 			"options": [
 				{
 					"key": 0,
@@ -3390,18 +3257,14 @@
 			"type": "select",
 			"message": "Categoria's \t related collections",
 			"mainclass": "Categoria",
-			"message": "Produto's \t related collections",
-			"mainclass": "Produto",
 			"options": [
 				{
 					"key": 0,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.0.1.0.1.0"
 				}, {
 					"key": 1,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.0.1.0.1.0"
 				}, {
 					"key": 2,
@@ -3417,7 +3280,6 @@
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Categoria",
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -3427,14 +3289,9 @@
 		}, {
 			"id": "0.0.0.0.0.1.1.0",
 			"title": "Select where one should click to choose an Categoria",
-			"title": "Select where one should click to choose an Produto",
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Categoria Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Categoria",
-			"example": "Categoria",
-			"message": "Produto Detail",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -3444,7 +3301,7 @@
 				"names": [],
 				"examples": []
 			},
-			"example": "Produto",
+			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -3527,15 +3384,11 @@
 		}, {
 			"id": "0.0.0.0.1.0.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao list",
-			"title": "Following this example which attributes you want to show in the Categoria list",
 			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Leilao properties",
 			"example": "Leilao",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-			"message": "Add Categoria properties",
-			"example": "Categoria",
-			"datatypeProperties": ["label", "Nome"],
 			"options": [
 				{
 					"key": 0,
@@ -3549,8 +3402,6 @@
 			"type": "select",
 			"message": "Leilao's \t related collections",
 			"mainclass": "Leilao",
-			"message": "Categoria's \t related collections",
-			"mainclass": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -3559,7 +3410,6 @@
 				}, {
 					"key": 1,
 					"text": "Usuario",
-					"text": "Leilao",
 					"next": "0.0.0.0.1.0.0.1.0"
 				}, {
 					"key": 2,
@@ -3582,7 +3432,6 @@
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Leilao",
-			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -3592,12 +3441,9 @@
 		}, {
 			"id": "0.0.0.0.1.0.1.0",
 			"title": "Select where one should click to choose a(n) Leilao",
-			"title": "Select where one should click to choose a(n) Categoria",
 			"type": "attributeForChoosing",
 			"message": "Leilaos",
 			"example": "Leilao",
-			"message": "Categorias",
-			"example": "Categoria",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -3607,8 +3453,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Leilao",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -3640,15 +3484,11 @@
 		}, {
 			"id": "0.0.0.0.1.1.0.0",
 			"title": "Following this example which attributes you want to show in the Leilao detail",
-			"title": "Following this example which attributes you want to show in the Categoria detail",
 			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Leilao properties",
 			"example": "Leilao",
 			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
-			"message": "Add Categoria properties",
-			"example": "Categoria",
-			"datatypeProperties": ["label", "Nome"],
 			"options": [
 				{
 					"key": 0,
@@ -3662,8 +3502,6 @@
 			"type": "select",
 			"message": "Leilao's \t related collections",
 			"mainclass": "Leilao",
-			"message": "Categoria's \t related collections",
-			"mainclass": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -3672,7 +3510,6 @@
 				}, {
 					"key": 1,
 					"text": "Usuario",
-					"text": "Leilao",
 					"next": "0.0.0.0.1.1.0.1.0"
 				}, {
 					"key": 2,
@@ -3696,7 +3533,6 @@
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Leilao",
-			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
@@ -3706,14 +3542,9 @@
 		}, {
 			"id": "0.0.0.0.1.1.1.0",
 			"title": "Select where one should click to choose an Leilao",
-			"title": "Select where one should click to choose an Categoria",
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Leilao Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Leilao",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Leilao",
-			"example": "Leilao",
-			"message": "Categoria Detail",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -3723,7 +3554,7 @@
 				"names": [],
 				"examples": []
 			},
-			"example": "Categoria",
+			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -3806,15 +3637,11 @@
 		}, {
 			"id": "0.0.0.0.2.0.0.0",
 			"title": "Following this example which attributes you want to show in the Produto list",
-			"title": "Following this example which attributes you want to show in the Leilao list",
 			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Produto properties",
 			"example": "Produto",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-			"message": "Add Leilao properties",
-			"example": "Leilao",
-			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 			"options": [
 				{
 					"key": 0,
@@ -3828,29 +3655,17 @@
 			"type": "select",
 			"message": "Produto's \t related collections",
 			"mainclass": "Produto",
-			"message": "Leilao's \t related collections",
-			"mainclass": "Leilao",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.2.0.0.1.0"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Usuario",
 					"next": "0.0.0.0.2.0.0.1.0"
 				}, {
 					"key": 2,
-					"text": "Vendedor",
-					"next": "0.0.0.0.2.0.0.1.0"
-				}, {
-					"key": 3,
-					"text": "Categoria",
-					"next": "0.0.0.0.2.0.0.1.0"
-				}, {
-					"key": 4,
 					"text": "Lance",
 					"next": "0.0.0.0.2.0.0.1.0"
 				}
@@ -3862,7 +3677,6 @@
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Produto",
-			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -3872,12 +3686,9 @@
 		}, {
 			"id": "0.0.0.0.2.0.1.0",
 			"title": "Select where one should click to choose a(n) Produto",
-			"title": "Select where one should click to choose a(n) Leilao",
 			"type": "attributeForChoosing",
 			"message": "Produtos",
 			"example": "Produto",
-			"message": "Leilaos",
-			"example": "Leilao",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -3887,8 +3698,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Produto",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Produto",
 			"options": [
 				{
 					"key": 0,
@@ -3920,15 +3729,11 @@
 		}, {
 			"id": "0.0.0.0.2.1.0.0",
 			"title": "Following this example which attributes you want to show in the Produto detail",
-			"title": "Following this example which attributes you want to show in the Leilao detail",
 			"type": "checkbox",
 			"scope": "scope",
 			"message": "Add Produto properties",
 			"example": "Produto",
 			"datatypeProperties": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-			"message": "Add Leilao properties",
-			"example": "Leilao",
-			"datatypeProperties": ["label", "Nome", "Data de fim", "Data de inicio", "Diferenca minima", "Estado do produto", "Minimo lance", "Informacao do frete"],
 			"options": [
 				{
 					"key": 0,
@@ -3942,29 +3747,17 @@
 			"type": "select",
 			"message": "Produto's \t related collections",
 			"mainclass": "Produto",
-			"message": "Leilao's \t related collections",
-			"mainclass": "Leilao",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.2.1.0.1.0"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Usuario",
 					"next": "0.0.0.0.2.1.0.1.0"
 				}, {
 					"key": 2,
-					"text": "Vendedor",
-					"next": "0.0.0.0.2.1.0.1.0"
-				}, {
-					"key": 3,
-					"text": "Categoria",
-					"next": "0.0.0.0.2.1.0.1.0"
-				}, {
-					"key": 4,
 					"text": "Lance",
 					"next": "0.0.0.0.2.1.0.1.0"
 				}
@@ -3977,7 +3770,6 @@
 			"message": "New attribute",
 			"message1": "Selected properties",
 			"example": "Produto",
-			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
@@ -3987,14 +3779,9 @@
 		}, {
 			"id": "0.0.0.0.2.1.1.0",
 			"title": "Select where one should click to choose an Produto",
-			"title": "Select where one should click to choose an Leilao",
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Produto Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Produto",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Produto",
-			"example": "Produto",
-			"message": "Leilao Detail",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -4004,7 +3791,7 @@
 				"names": [],
 				"examples": []
 			},
-			"example": "Leilao",
+			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
@@ -4144,8 +3931,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Usuario",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Usuario",
 			"options": [
 				{
 					"key": 0,
@@ -4226,8 +4011,6 @@
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Usuario Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Usuario",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Usuario",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -4373,8 +4156,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Concorrente",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Concorrente",
 			"options": [
 				{
 					"key": 0,
@@ -4451,8 +4232,6 @@
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Concorrente Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Concorrente",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Concorrente",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -4618,8 +4397,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Lance",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Lance",
 			"options": [
 				{
 					"key": 0,
@@ -4716,8 +4493,6 @@
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Lance Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Lance",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Lance",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -4867,8 +4642,6 @@
 				"names": [],
 				"examples": []
 			},
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Vendedor",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Vendedor",
 			"options": [
 				{
 					"key": 0,
@@ -4949,8 +4722,6 @@
 			"type": "attributeForChoosing",
 			"needNextProcessing": true,
 			"message": "Vendedor Detail",
-			"originalModal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Vendedor",
-			"modal": "You clicked on the {0}. Do you want to use the {0} to choose a(n) Vendedor",
 			"scope": "new",
 			"scope_value": {
 				"show": "none",
@@ -5057,17 +4828,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5092,18 +4860,15 @@
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
 			"mainclass": "Categoria",
-			"mainclass": "Produto",
 			"message": "Class",
 			"options": [
 				{
 					"key": 0,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.0.0.1.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.0.0.1.0.0.1"
 				}, {
 					"key": 2,
@@ -5122,18 +4887,15 @@
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
 			"mainclass": "Categoria",
-			"mainclass": "Produto",
 			"message": "Class",
 			"options": [
 				{
 					"key": 0,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.0.1.1.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.0.1.1.0.0.1"
 				}, {
 					"key": 2,
@@ -5158,17 +4920,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5193,7 +4952,6 @@
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
 			"mainclass": "Leilao",
-			"mainclass": "Categoria",
 			"message": "Class",
 			"options": [
 				{
@@ -5203,12 +4961,10 @@
 				}, {
 					"key": 1,
 					"text": "Usuario",
-					"text": "Leilao",
 					"next": "0.0.0.0.1.0.1.0.0.1"
 				}, {
 					"key": 2,
 					"text": "Vendedor",
-					"text": "Lance",
 					"next": "0.0.0.0.1.0.1.0.0.2"
 				}, {
 					"key": 3,
@@ -5231,7 +4987,6 @@
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
 			"mainclass": "Leilao",
-			"mainclass": "Categoria",
 			"message": "Class",
 			"options": [
 				{
@@ -5241,12 +4996,10 @@
 				}, {
 					"key": 1,
 					"text": "Usuario",
-					"text": "Leilao",
 					"next": "0.0.0.0.1.1.1.0.0.1"
 				}, {
 					"key": 2,
 					"text": "Vendedor",
-					"text": "Lance",
 					"next": "0.0.0.0.1.1.1.0.0.2"
 				}, {
 					"key": 3,
@@ -5275,17 +5028,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5310,32 +5060,20 @@
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
 			"mainclass": "Produto",
-			"mainclass": "Leilao",
 			"message": "Class",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.2.0.1.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Usuario",
 					"next": "0.0.0.0.2.0.1.0.0.1"
 				}, {
 					"key": 2,
-					"text": "Vendedor",
-					"next": "0.0.0.0.2.0.1.0.0.2"
-				}, {
-					"key": 3,
-					"text": "Categoria",
-					"next": "0.0.0.0.2.0.1.0.0.3"
-				}, {
-					"key": 4,
 					"text": "Lance",
 					"next": "0.0.0.0.2.0.1.0.0.2"
-					"next": "0.0.0.0.2.0.1.0.0.4"
 				}
 			]
 		}, {
@@ -5349,32 +5087,20 @@
 			"type": "select",
 			"title": "What do you want to show from auction ontology?",
 			"mainclass": "Produto",
-			"mainclass": "Leilao",
 			"message": "Class",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.2.1.1.0.0.0"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Usuario",
 					"next": "0.0.0.0.2.1.1.0.0.1"
 				}, {
 					"key": 2,
-					"text": "Vendedor",
-					"next": "0.0.0.0.2.1.1.0.0.2"
-				}, {
-					"key": 3,
-					"text": "Categoria",
-					"next": "0.0.0.0.2.1.1.0.0.3"
-				}, {
-					"key": 4,
 					"text": "Lance",
 					"next": "0.0.0.0.2.1.1.0.0.2"
-					"next": "0.0.0.0.2.1.1.0.0.4"
 				}
 			]
 		}, {
@@ -5394,17 +5120,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5481,17 +5204,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5560,17 +5280,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5679,17 +5396,14 @@
 				}, {
 					"key": 1,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0.0.1.0.0"
 				}, {
 					"key": 2,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1.0.1.0.0"
 				}, {
 					"key": 3,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0"
 				}, {
 					"key": 4,
@@ -5894,18 +5608,6 @@
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.0.1.0.0.2.0"
 		}, {
-			"id": "0.0.0.0.2.0.1.0.0.3",
-			"title": "Select the path",
-			"type": "paths",
-			"message": "Suggested paths",
-			"next": "0.0.0.0.2.0.1.0.0.3.0"
-		}, {
-			"id": "0.0.0.0.2.0.1.0.0.4",
-			"title": "Select the path",
-			"type": "paths",
-			"message": "Suggested paths",
-			"next": "0.0.0.0.2.0.1.0.0.4.0"
-		}, {
 			"id": "0.0.0.0.2.1.0.1.0.0",
 			"title": "Select the relationships",
 			"type": "path",
@@ -5929,18 +5631,6 @@
 			"type": "paths",
 			"message": "Suggested paths",
 			"next": "0.0.0.0.2.1.1.0.0.2.0"
-		}, {
-			"id": "0.0.0.0.2.1.1.0.0.3",
-			"title": "Select the path",
-			"type": "paths",
-			"message": "Suggested paths",
-			"next": "0.0.0.0.2.1.1.0.0.3.0"
-		}, {
-			"id": "0.0.0.0.2.1.1.0.0.4",
-			"title": "Select the path",
-			"type": "paths",
-			"message": "Suggested paths",
-			"next": "0.0.0.0.2.1.1.0.0.4.0"
 		}, {
 			"id": "0.0.0.0.3.0.0.1.0.0",
 			"title": "Select the relationships",
@@ -6127,34 +5817,24 @@
 			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Categoria list? Which type?",
 			"example": "Categoria",
-			"message": "Do you want to show more attributes in the Produto list? Which type?",
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
-					"text": "Direct attributes of an Categoria",
 					"text": "No more",
 					"next": "0.0.0.0.0.0.1",
 					"hidden": true
 				}, {
 					"key": 1,
-					"text": "Direct attributes of an Produto",
+					"text": "Direct attributes of an Categoria",
 					"next": "0.0.0.0.0.0.0.0"
 				}, {
-					"key": 1,
-					"text": "Attributes of other classes related to Categoria",
 					"key": 2,
-					"text": "Attributes of other classes related to Produto",
+					"text": "Attributes of other classes related to Categoria",
 					"next": "0.0.0.0.0.0.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.0.0.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.0.0.1"
 				}
 			]
 		}, {
@@ -6256,34 +5936,24 @@
 			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Categoria detail? Which type?",
 			"example": "Categoria",
-			"message": "Do you want to show more attributes in the Produto detail? Which type?",
-			"example": "Produto",
 			"options": [
 				{
 					"key": 0,
-					"text": "Direct attributes of a(n) Categoria",
 					"text": "No more",
 					"next": "0.0.0.0.0.1.1",
 					"hidden": true
 				}, {
 					"key": 1,
-					"text": "Direct attributes of a(n) Produto",
+					"text": "Direct attributes of a(n) Categoria",
 					"next": "0.0.0.0.0.1.0.0"
 				}, {
-					"key": 1,
-					"text": "Attributes of other classes related to Categoria",
 					"key": 2,
-					"text": "Attributes of other classes related to Produto",
+					"text": "Attributes of other classes related to Categoria",
 					"next": "0.0.0.0.0.1.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.0.1.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.0.1.1"
 				}
 			]
 		}, {
@@ -6385,34 +6055,24 @@
 			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Leilao list? Which type?",
 			"example": "Leilao",
-			"message": "Do you want to show more attributes in the Categoria list? Which type?",
-			"example": "Categoria",
 			"options": [
 				{
 					"key": 0,
-					"text": "Direct attributes of an Leilao",
 					"text": "No more",
 					"next": "0.0.0.0.1.0.1",
 					"hidden": true
 				}, {
 					"key": 1,
-					"text": "Direct attributes of an Categoria",
+					"text": "Direct attributes of an Leilao",
 					"next": "0.0.0.0.1.0.0.0"
 				}, {
-					"key": 1,
-					"text": "Attributes of other classes related to Leilao",
 					"key": 2,
-					"text": "Attributes of other classes related to Categoria",
+					"text": "Attributes of other classes related to Leilao",
 					"next": "0.0.0.0.1.0.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.1.0.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.1.0.1"
 				}
 			]
 		}, {
@@ -6510,38 +6170,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.0.1.0.0.3.0",
-			"id": "0.0.0.0.1.1.0.1.0.0.0",
-			"title": "",
-			"type": "radioSelectedProperties",
-			"message": "Do you want to show more attributes in the Categoria detail? Which type?",
-			"example": "Categoria",
-			"options": [
-				{
-					"key": 0,
-					"text": "No more",
-					"next": "0.0.0.0.1.1.1",
-					"hidden": true
-				}, {
-					"key": 1,
-					"text": "Direct attributes of a(n) Categoria",
-					"next": "0.0.0.0.1.1.0.0"
-				}, {
-					"key": 2,
-					"text": "Attributes of other classes related to Categoria",
-					"next": "0.0.0.0.1.1.0.1"
-				}, {
-					"key": 3,
-					"text": "Computed Attributes",
-					"next": "0.0.0.0.1.1.0.2"
-				}
-			]
-		}, {
-			"id": "0.0.0.0.1.1.1.0.0.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.0.1.0.0.3.0.0",
-			"next": "0.0.0.0.1.1.1.0.0.0.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6569,12 +6201,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.0.1.0.0.4.0",
-			"id": "0.0.0.0.1.1.1.0.0.1.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.0.1.0.0.4.0.0",
-			"next": "0.0.0.0.1.1.1.0.0.1.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6602,79 +6232,36 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.0.1.0.0.0",
-			"id": "0.0.0.0.1.1.1.0.0.2.0",
-			"title": "Select the relationships",
-			"type": "path",
-			"message": "Suggested path",
-			"next": "0.0.0.0.1.1.1.0.0.2.0.0",
-			"todo": [
-				{
-					"function_name": "get_query_expression_from_path_wizard",
-					"params": [
-						{
-							"type": "user_action",
-							"name": "scope",
-							"value": "scope"
-						}, {
-							"type": "constant",
-							"name": "ontology",
-							"value": "auction"
-						}
-					],
-					"results": [
-						{
-							"name": "query",
-							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_title"
-						}
-					]
-				}
-			]
-		}, {
-			"id": "0.0.0.0.2.0.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Leilao detail? Which type?",
-			"message": "Do you want to show more attributes in the Leilao list? Which type?",
 			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
-					"text": "Direct attributes of a(n) Leilao",
-					"next": "0.0.0.0.1.1.0.0"
 					"text": "No more",
-					"next": "0.0.0.0.2.0.1",
+					"next": "0.0.0.0.1.1.1",
 					"hidden": true
 				}, {
 					"key": 1,
-					"text": "Attributes of other classes related to Leilao",
-					"next": "0.0.0.0.1.1.0.1"
-					"text": "Direct attributes of an Leilao",
-					"next": "0.0.0.0.2.0.0.0"
+					"text": "Direct attributes of a(n) Leilao",
+					"next": "0.0.0.0.1.1.0.0"
 				}, {
 					"key": 2,
-					"text": "Computed Attributes",
-					"next": "0.0.0.0.1.1.0.2"
 					"text": "Attributes of other classes related to Leilao",
-					"next": "0.0.0.0.2.0.0.1"
+					"next": "0.0.0.0.1.1.0.1"
 				}, {
 					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.1.1.1"
 					"text": "Computed Attributes",
-					"next": "0.0.0.0.2.0.0.2"
+					"next": "0.0.0.0.1.1.0.2"
 				}
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.0.0",
-			"id": "0.0.0.0.2.0.1.0.0.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.1.0.0.0.0.0",
-			"next": "0.0.0.0.2.0.1.0.0.0.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6702,12 +6289,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.1.0",
-			"id": "0.0.0.0.2.0.1.0.0.1.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.1.0.0.1.0.0",
-			"next": "0.0.0.0.2.0.1.0.0.1.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6735,12 +6320,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.2.0",
-			"id": "0.0.0.0.2.0.1.0.0.2.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.1.0.0.2.0.0",
-			"next": "0.0.0.0.2.0.1.0.0.2.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6768,12 +6351,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.3.0",
-			"id": "0.0.0.0.2.0.1.0.0.3.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.1.0.0.3.0.0",
-			"next": "0.0.0.0.2.0.1.0.0.3.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6801,12 +6382,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.4.0",
-			"id": "0.0.0.0.2.0.1.0.0.4.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.1.1.1.0.0.4.0.0",
-			"next": "0.0.0.0.2.0.1.0.0.4.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6834,49 +6413,36 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0.0.1.0.0.0",
-			"id": "0.0.0.0.2.1.0.1.0.0.0",
 			"title": "",
 			"type": "radioSelectedProperties",
 			"message": "Do you want to show more attributes in the Produto list? Which type?",
 			"example": "Produto",
-			"message": "Do you want to show more attributes in the Leilao detail? Which type?",
-			"example": "Leilao",
 			"options": [
 				{
 					"key": 0,
-					"text": "Direct attributes of an Produto",
-					"next": "0.0.0.0.2.0.0.0"
 					"text": "No more",
-					"next": "0.0.0.0.2.1.1",
+					"next": "0.0.0.0.2.0.1",
 					"hidden": true
 				}, {
 					"key": 1,
-					"text": "Attributes of other classes related to Produto",
-					"next": "0.0.0.0.2.0.0.1"
-					"text": "Direct attributes of a(n) Leilao",
-					"next": "0.0.0.0.2.1.0.0"
+					"text": "Direct attributes of an Produto",
+					"next": "0.0.0.0.2.0.0.0"
 				}, {
 					"key": 2,
-					"text": "Computed Attributes",
-					"next": "0.0.0.0.2.0.0.2"
-					"text": "Attributes of other classes related to Leilao",
-					"next": "0.0.0.0.2.1.0.1"
+					"text": "Attributes of other classes related to Produto",
+					"next": "0.0.0.0.2.0.0.1"
 				}, {
 					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.2.0.1"
 					"text": "Computed Attributes",
-					"next": "0.0.0.0.2.1.0.2"
+					"next": "0.0.0.0.2.0.0.2"
 				}
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.0.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.0.1.0.0.0.0.0",
-			"next": "0.0.0.0.2.1.1.0.0.0.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6904,12 +6470,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.1.0",
-			"id": "0.0.0.0.2.1.1.0.0.1.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.0.1.0.0.1.0.0",
-			"next": "0.0.0.0.2.1.1.0.0.1.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6937,12 +6501,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.2.0",
-			"id": "0.0.0.0.2.1.1.0.0.2.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.0.1.0.0.2.0.0",
-			"next": "0.0.0.0.2.1.1.0.0.2.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -6977,30 +6539,29 @@
 			"options": [
 				{
 					"key": 0,
+					"text": "No more",
+					"next": "0.0.0.0.2.1.1",
+					"hidden": true
+				}, {
+					"key": 1,
 					"text": "Direct attributes of a(n) Produto",
 					"next": "0.0.0.0.2.1.0.0"
 				}, {
-					"key": 1,
+					"key": 2,
 					"text": "Attributes of other classes related to Produto",
 					"next": "0.0.0.0.2.1.0.1"
 				}, {
-					"key": 2,
+					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.2.1.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.2.1.1"
 				}
 			]
 		}, {
 			"id": "0.0.0.0.2.1.1.0.0.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.3.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.1.1.0.0.0.0.0",
-			"next": "0.0.0.0.2.1.1.0.0.3.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -7028,12 +6589,10 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.1.1.0.0.1.0",
-			"id": "0.0.0.0.2.1.1.0.0.4.0",
 			"title": "Select the relationships",
 			"type": "path",
 			"message": "Suggested path",
 			"next": "0.0.0.0.2.1.1.0.0.1.0.0",
-			"next": "0.0.0.0.2.1.1.0.0.4.0.0",
 			"todo": [
 				{
 					"function_name": "get_query_expression_from_path_wizard",
@@ -7107,19 +6666,13 @@
 					"text": "Direct attributes of an Usuario",
 					"next": "0.0.0.0.3.0.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Usuario",
 					"next": "0.0.0.0.3.0.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.3.0.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.3.0.1"
 				}
 			]
 		}, {
@@ -7201,19 +6754,13 @@
 					"text": "Direct attributes of a(n) Usuario",
 					"next": "0.0.0.0.3.1.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Usuario",
 					"next": "0.0.0.0.3.1.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.3.1.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.3.1.1"
 				}
 			]
 		}, {
@@ -7295,19 +6842,13 @@
 					"text": "Direct attributes of an Concorrente",
 					"next": "0.0.0.0.4.0.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Concorrente",
 					"next": "0.0.0.0.4.0.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.4.0.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.4.0.1"
 				}
 			]
 		}, {
@@ -7358,19 +6899,13 @@
 					"text": "Direct attributes of a(n) Concorrente",
 					"next": "0.0.0.0.4.1.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Concorrente",
 					"next": "0.0.0.0.4.1.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.4.1.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.4.1.1"
 				}
 			]
 		}, {
@@ -7421,19 +6956,13 @@
 					"text": "Direct attributes of an Lance",
 					"next": "0.0.0.0.5.0.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Lance",
 					"next": "0.0.0.0.5.0.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.5.0.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.5.0.1"
 				}
 			]
 		}, {
@@ -7639,19 +7168,13 @@
 					"text": "Direct attributes of a(n) Lance",
 					"next": "0.0.0.0.5.1.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Lance",
 					"next": "0.0.0.0.5.1.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.5.1.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.5.1.1"
 				}
 			]
 		}, {
@@ -7857,19 +7380,13 @@
 					"text": "Direct attributes of an Vendedor",
 					"next": "0.0.0.0.6.0.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Vendedor",
 					"next": "0.0.0.0.6.0.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.6.0.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.6.0.1"
 				}
 			]
 		}, {
@@ -7951,19 +7468,13 @@
 					"text": "Direct attributes of a(n) Vendedor",
 					"next": "0.0.0.0.6.1.0.0"
 				}, {
-					"key": 1,
 					"key": 2,
 					"text": "Attributes of other classes related to Vendedor",
 					"next": "0.0.0.0.6.1.0.1"
 				}, {
-					"key": 2,
 					"key": 3,
 					"text": "Computed Attributes",
 					"next": "0.0.0.0.6.1.0.2"
-				}, {
-					"key": 3,
-					"text": "No more",
-					"next": "0.0.0.0.6.1.1"
 				}
 			]
 		}, {
@@ -8035,17 +7546,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8072,17 +7580,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8109,17 +7614,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8146,17 +7648,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8183,17 +7682,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8220,17 +7716,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8257,17 +7750,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8294,17 +7784,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8331,17 +7818,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8363,23 +7847,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.0.1.0.0.3.0.0",
-			"id": "0.0.0.0.1.1.1.0.0.0.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8401,23 +7881,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.0.1.0.0.4.0.0",
-			"id": "0.0.0.0.1.1.1.0.0.1.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8439,23 +7915,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.0.0.0",
-			"id": "0.0.0.0.1.1.1.0.0.2.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8477,23 +7949,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.1.0.0",
-			"id": "0.0.0.0.2.0.1.0.0.0.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8515,23 +7983,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.2.0.0",
-			"id": "0.0.0.0.2.0.1.0.0.1.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8553,23 +8017,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.3.0.0",
-			"id": "0.0.0.0.2.0.1.0.0.2.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8591,23 +8051,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.1.1.1.0.0.4.0.0",
-			"id": "0.0.0.0.2.0.1.0.0.3.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8629,23 +8085,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.0.0.0",
-			"id": "0.0.0.0.2.0.1.0.0.4.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8667,23 +8119,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.1.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.0.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8705,23 +8153,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.0.1.0.0.2.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.1.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8743,23 +8187,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.1.1.0.0.0.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.2.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8781,23 +8221,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.1.1.0.0.1.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.3.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8819,23 +8255,19 @@
 			]
 		}, {
 			"id": "0.0.0.0.2.1.1.0.0.2.0.0",
-			"id": "0.0.0.0.2.1.1.0.0.4.0.0",
 			"type": "hidden",
 			"options": [
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8862,17 +8294,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8899,17 +8328,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8936,17 +8362,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -8973,17 +8396,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9010,17 +8430,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9047,17 +8464,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9084,17 +8498,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9121,17 +8532,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9158,17 +8566,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9195,17 +8600,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9232,17 +8634,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9269,17 +8668,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9306,17 +8702,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9343,17 +8736,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9380,17 +8770,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9417,17 +8804,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9454,17 +8838,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9491,17 +8872,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9528,17 +8906,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9565,17 +8940,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9602,17 +8974,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9639,17 +9008,14 @@
 				{
 					"key": 0,
 					"text": "Categoria",
-					"text": "Produto",
 					"next": "0.0.0.0.0-1"
 				}, {
 					"key": 1,
 					"text": "Leilao",
-					"text": "Categoria",
 					"next": "0.0.0.0.1-1"
 				}, {
 					"key": 2,
 					"text": "Produto",
-					"text": "Leilao",
 					"next": "0.0.0.0.2-1"
 				}, {
 					"key": 3,
@@ -9672,86 +9038,6 @@
 		}
 	],
 	"data": {
-		"Produto": [[
-				{
-					"id": 0,
-					"name": "label",
-					"value": ["Home Theater LG HT806ST"]
-				}, {
-					"id": 1,
-					"name": "Nome",
-					"value": ["Home Theater LG HT806ST"]
-				}, {
-					"id": 2,
-					"name": "Data de cadastro",
-					"value": ["23/05/2013"]
-				}, {
-					"id": 3,
-					"name": "Descricao",
-					"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
-				}, {
-					"id": 4,
-					"name": "Esta em oferta",
-					"value": ["1"]
-				}, {
-					"id": 5,
-					"name": "Quantidade",
-					"value": ["2"]
-				}
-			],[
-				{
-					"id": 0,
-					"name": "label",
-					"value": ["MP4 Player Philips SA3VBE04KX/78"]
-				}, {
-					"id": 1,
-					"name": "Nome",
-					"value": ["MP4 Player Philips SA3VBE04KX/78"]
-				}, {
-					"id": 2,
-					"name": "Data de cadastro",
-					"value": ["12/03/2012"]
-				}, {
-					"id": 3,
-					"name": "Descricao",
-					"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
-				}, {
-					"id": 4,
-					"name": "Esta em oferta",
-					"value": ["1"]
-				}, {
-					"id": 5,
-					"name": "Quantidade",
-					"value": ["12"]
-				}
-			],[
-				{
-					"id": 0,
-					"name": "label",
-					"value": ["MP4 Watch Play NewLink PM101"]
-				}, {
-					"id": 1,
-					"name": "Nome",
-					"value": ["MP4 Watch Play NewLink PM101"]
-				}, {
-					"id": 2,
-					"name": "Data de cadastro",
-					"value": ["12/10/2012"]
-				}, {
-					"id": 3,
-					"name": "Descricao",
-					"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
-				}, {
-					"id": 4,
-					"name": "Esta em oferta",
-					"value": ["1"]
-				}, {
-					"id": 5,
-					"name": "Quantidade",
-					"value": ["23"]
-				}
-			]
-		],
 		"Categoria": [[
 				{
 					"id": 0,

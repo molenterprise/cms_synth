@@ -127,7 +127,7 @@ class RestApi < ApplicationController
   def call_synth_without_result(function, params)
     url = 'localhost'
     port = '3002'
-
+    
     uri = URI("http://#{url}:#{port}/#{function}")
     print "Calling #{uri}\n#{params} \n" if @log_name
     req = Net::HTTP.post_form(uri, params)
