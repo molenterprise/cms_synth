@@ -588,7 +588,7 @@
 				{
 					"key": 0,
 					"text": "Show a list of Produto(s) to be chosen",
-					"next": "0.0.0.0.2.0",
+					"next": "0.0.0.0.2.0", 
 					"todo": [
 						{
 							"function_name": "save_value",
@@ -5064,19 +5064,121 @@
 			"options": [
 				{
 					"key": 0,
+					"text": "Details of Produts",
+					"next": "0.0.0.0.2.0.1.0.0.0-N"
+				},
+				{
+					"key": 1,
 					"text": "Categoria",
 					"next": "0.0.0.0.2.0.1.0.0.0"
 				}, {
-					"key": 1,
+					"key": 2,
 					"text": "Leilao",
 					"next": "0.0.0.0.2.0.1.0.0.1"
 				}, {
-					"key": 2,
+					"key": 3,
 					"text": "Lance",
 					"next": "0.0.0.0.2.0.1.0.0.2"
 				}
 			]
 		}, {
+			"id": "0.0.0.0.2.0.1.0.0.0-N",
+			"type": "nodeName",
+			"title": "New navegational structure",
+			"message": "Name",
+			"options": [
+				{
+					"key": 0,
+					"next": "0.0.0.0.2.1"
+				}
+			],
+			"value": "Details of Products",
+			"todo": [
+				{
+					"function_name": "create_in_context_class_wizard",
+					"params": [
+						{
+							"type": "constant",
+							"name": "class",
+							"value": "http://www.semanticweb.org/milena/ontologies/2013/6/auction#Producto"
+						}, {
+							"type": "global_var",
+							"name": "context",
+							"value": "context_id"
+						}
+					],
+					"results": [
+						{
+							"name": "in_context_class",
+							"global_var": "in_context_class_id"
+						}
+					]
+				},
+				{
+					"function_name": "set_anchor_values",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "anchor_att_id",
+							"value": "anchor_att_id"
+						}, {
+							"type": "global_var",
+							"name": "parent_id",
+							"value": "context_id"
+						}, {
+							"type": "constant",
+							"name": "anchor_type",
+							"value": "details"
+						}, {
+							"type": "global_var",
+							"name": "index",
+							"value": "index_id"
+						}
+					]
+				},
+				{
+					"function_name": "save_value",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "index_id",
+							"value": "index_id"
+						}
+					]
+				},
+				{
+					"function_name": "save_value",
+					"params": [
+						{
+							"type": "global_var",
+							"name": "context_id",
+							"value": "context_id"
+						}
+					]
+				},
+				{
+					"function_name": "save_value",
+					"params": [
+						{
+							"type": "user_action",
+							"name": "context_name",
+							"value": "value"
+						}
+					]
+				},
+				{
+					"function_name": "save_value",
+					"params": [
+						{
+							"type": "constant",
+							"name": "landmark_type",
+							"value": "details"
+						}
+					]
+				}		
+			]
+		},
+		{
 			"id": "0.0.0.0.2.1.0.1.0",
 			"title": "Select the path",
 			"type": "paths",

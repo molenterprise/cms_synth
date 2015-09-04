@@ -282,7 +282,7 @@ class WizardAppsController < ApplicationController
   
   def create_attributes_for_detail_wizard(params) #isomorphic with create_attributes_for_index_wizard
     print "LOG: begin: create_attributes_for_detail_wizard #{params['in_context_class_id']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: params: #{params} \n" if @log_param or true
     
     function_params = {'in_context_class_id' => params['in_context_class_id'], 'ontology' => params['ontology']}
     attrs = params['scope']
@@ -630,7 +630,7 @@ class WizardAppsController < ApplicationController
 
   def create_parameter_for_context_wizard(params)
     print "LOG: begin: create_parameter_for_context_wizard #{params['name']}\n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: params: #{params} \n" if @log_param or true
     
     call_synth_without_result('contexts/context_parameters_post_data', {
           'parent' => params['context_id'],
@@ -640,8 +640,8 @@ class WizardAppsController < ApplicationController
   end
   
   def create_attribute_context_parameters_wizard(params)
-    print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: begin: create_attribute_context_parameters_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
     
     call_synth_without_result('indexes/navigation_attribute_context_parameters_post_data', {
           'parent_id' => params['index_id'],
