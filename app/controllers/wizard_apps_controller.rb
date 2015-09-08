@@ -272,11 +272,16 @@ class WizardAppsController < ApplicationController
     elsif params['anchor_type'] == "details"
       function_params['target_node_expression'] = ''
       create_context_anchor_attribute_for_index_wizard(function_params)
+    elsif params['anchor_type'] == "details from index"
+      function_params['target_node_expression'] = 'self'
+      create_context_anchor_attribute_for_index_wizard(function_params)
     end
     
-    anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
-    anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
-    create_attribute_context_parameters_wizard(anchor_params)
+    rows = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows']
+    rows.each{|row|
+      anchor_params = {'index_id' => row['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      create_attribute_context_parameters_wizard(anchor_params)
+    }
     
   end
   
