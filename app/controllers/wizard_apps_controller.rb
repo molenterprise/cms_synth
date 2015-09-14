@@ -125,6 +125,11 @@ class WizardAppsController < ApplicationController
     return {:status => true, :result => {}}
   end
   
+  def print_global_var(params)
+    print "LOG: print_global_var #{@global_var} \n" 
+    return {:status => true, :result => {}}
+  end
+  
   def create_anchor_key(params)
     print "LOG: begin: create_anchor_key \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param  
@@ -208,7 +213,7 @@ class WizardAppsController < ApplicationController
   end
   
   def create_attributes_for_index_wizard(params)
-    print "LOG: begin: create_attributes_for_index_wizard \n" if @log_name 
+    print "LOG: begin: create_attributes_for_index_wizard #{params['index_id']} \n" if @log_name 
     print "LOG: params: #{params} \n" if @log_param
     
     function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology']}
@@ -232,6 +237,7 @@ class WizardAppsController < ApplicationController
         if attr_values.length > 0 then
           function_params['anchor_type'] = @global_var[key].first['anchor_type']
           function_params['target'] = @global_var[key].first['target']
+          function_params['anchor_index'] = @global_var[key].first['index']
           create_anchor_attributes_for_index_wizard(function_params) 
         else
           create_computed_attribute_for_index_wizard(function_params)
@@ -255,8 +261,8 @@ class WizardAppsController < ApplicationController
   
   # params: 'parent', 'name', 'label_expression', 'target', 'target_node_expression'
   def create_anchor_attributes_for_index_wizard(params)
-    print "LOG: begin: create_anchor_attributes_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: begin: create_anchor_attributes_for_index_wizard #{params['name']} \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
     
     function_params = {'index_id' => params['index_id'], 'name' => params['name'], 'label_expression' => params['query'],
       'target' => params['target']}
@@ -264,14 +270,24 @@ class WizardAppsController < ApplicationController
     if params['anchor_type'] == "list"
       create_index_anchor_attribute_for_index_wizard(function_params)
     elsif params['anchor_type'] == "details"
+      function_params['target_node_expression'] = ''
+      create_context_anchor_attribute_for_index_wizard(function_params)
+    elsif params['anchor_type'] == "details from index"
       function_params['target_node_expression'] = 'self'
       create_context_anchor_attribute_for_index_wizard(function_params)
     end
+    
+    rows = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows']
+    rows.each{|row|
+      anchor_params = {'index_id' => row['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      create_attribute_context_parameters_wizard(anchor_params)
+    }
+    
   end
   
   def create_attributes_for_detail_wizard(params) #isomorphic with create_attributes_for_index_wizard
-    print "LOG: begin: create_attributes_for_detail_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: begin: create_attributes_for_detail_wizard #{params['in_context_class_id']} \n" if @log_name 
+    print "LOG: params: #{params} \n" if @log_param or true
     
     function_params = {'in_context_class_id' => params['in_context_class_id'], 'ontology' => params['ontology']}
     attrs = params['scope']
@@ -295,6 +311,7 @@ class WizardAppsController < ApplicationController
         if attr_values.length > 0 then
           function_params['anchor_type'] = @global_var[key].first['anchor_type']
           function_params['target'] = @global_var[key].first['target']
+          function_params['anchor_index'] = @global_var[key].first['index']
           create_anchor_attributes_for_detail_wizard(function_params) 
         else
           create_computed_attribute_for_detail_wizard(function_params)
@@ -324,8 +341,8 @@ class WizardAppsController < ApplicationController
   
   # params: 'parent', 'name', 'label_expression', 'target', 'target_node_expression'
   def create_anchor_attributes_for_detail_wizard(params)
-    print "LOG: begin: create_anchor_attributes_for_detail_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param  
+    print "LOG: begin: create_anchor_attributes_for_detail_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
     
     function_params = {'in_context_class_id' => params['parent'], 'name' => params['name'], 'label_expression' => params['label_expression']}
            
@@ -337,6 +354,11 @@ class WizardAppsController < ApplicationController
       function_params['target_node_expression'] = params['target_node_expression']
       create_context_anchor_attribute_for_detail_wizard(function_params)
     end
+    
+    anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
+    anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+    create_attribute_context_parameters_wizard(anchor_params)
+    
   end
   
   def create_computed_attribute_for_index_wizard(params)
@@ -409,8 +431,8 @@ class WizardAppsController < ApplicationController
   
   def create_context_anchor_attribute_for_index_wizard(params)
     
-    print "LOG: begin: create_context_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param  
+    print "LOG: begin: create_context_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
 
     index_position_key = "#{params['index_id']}_attribute"
 
@@ -420,7 +442,7 @@ class WizardAppsController < ApplicationController
         'parent' => params['index_id'],
         'navigation_attribute_name' => params['name'],
         'context_anchor_navigation_attribute_label_expression' => params['label_expression'],
-        'context_anchor_navigation_attribute_target_context' => params['target_context'],
+        'context_anchor_navigation_attribute_target_context' => params['target'],
         'context_anchor_navigation_attribute_target_node_expression' => params['target_node_expression'],
         'navigation_attribute_index_position' => index_position,
         'id' => '_empty'})
@@ -599,8 +621,8 @@ class WizardAppsController < ApplicationController
   end
   
   def get_context_attr_wizard(params)
-    print "LOG: begin: get_context_attr_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: begin: get_context_attr_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param  or true
                                       
     p = URI.encode_www_form_component(params[:id])
 
@@ -613,7 +635,7 @@ class WizardAppsController < ApplicationController
 
   def create_parameter_for_context_wizard(params)
     print "LOG: begin: create_parameter_for_context_wizard #{params['name']}\n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: params: #{params} \n" if @log_param or true
     
     call_synth_without_result('contexts/context_parameters_post_data', {
           'parent' => params['context_id'],
@@ -623,8 +645,8 @@ class WizardAppsController < ApplicationController
   end
   
   def create_attribute_context_parameters_wizard(params)
-    print "LOG: begin: create_parameter_for_context_wizard \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param 
+    print "LOG: begin: create_attribute_context_parameters_wizard \n" if @log_name or true
+    print "LOG: params: #{params} \n" if @log_param or true
     
     call_synth_without_result('indexes/navigation_attribute_context_parameters_post_data', {
           'parent_id' => params['index_id'],
@@ -653,7 +675,7 @@ class WizardAppsController < ApplicationController
   
   def get_query_expression_from_path(params)
     print "LOG: begin: get_query_expression_from_path \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: params: #{params} \n" if @log_param or true
     
     path = params['path']
     x = 'x'
@@ -876,7 +898,7 @@ class WizardAppsController < ApplicationController
   
   def pop_global_var_is_not_empty(param)
     print "LOG: begin: pop_global_var_is_not_empty #{param['key']} \n" if @log_name 
-    print "LOG: params: #{param} \n" if @log_param
+    print "LOG: params: #{param} - #{@global_var[param['key']]}\n" if @log_param or 
     result = 'empty'
     if @global_var[param['key']].length > 1 then
       result = @global_var[param['key']].pop
@@ -904,7 +926,7 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'app_test_1'
+    app_name = 'app_test_2'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
@@ -925,7 +947,7 @@ class WizardAppsController < ApplicationController
           windowId = step['currentWindow']
           window = app_wizard_definition['windows'].select{|windows_definition| windows_definition['id'] == windowId}.first
           
-          print "window: #{window['id']} - #{step['selectedOption']}\n"
+          print "window: #{current['id']} - #{window['id']} - #{step['selectedOption']}\n"
           #print "window: #{window} \n"
           #print "step #{step} \n"
           
@@ -996,7 +1018,7 @@ class WizardAppsController < ApplicationController
     port = '3002'
 
     uri = URI("http://#{url}:#{port}/#{function}")
-    print "call_synth_without_result #{uri}\n#{params} \n" if @log_mga_param
+    print "call_synth_without_result #{uri}\n#{params} \n" if @log_mga_param or true
     req = Net::HTTP.post_form(uri, params)
 
     return req
