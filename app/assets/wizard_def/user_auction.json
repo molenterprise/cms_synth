@@ -2,7 +2,7 @@
 	"children": [
 		{
 			"id": 0,
-			"label": "Categorias",
+			"label": "Categoria",
 			"data": null,
 			"type": "Art",
 			"children": [
@@ -32,7 +32,7 @@
 							"data": [],
 							"examples": []
 						},
-						"value": "Categorias"
+						"value": "Categoria"
 					},
 					"type": "Normal"
 				}, {
@@ -500,7 +500,7 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}, "'View'"
+								}, "'go to products'"
 							],
 							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"examples": [[
@@ -588,7 +588,7 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}, "'View'"
+								}, "'go to products'"
 							],
 							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"examples": [[
@@ -675,7 +675,7 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}, "'View'"
+								}, "'go to products'"
 							],
 							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"examples": [[
@@ -740,7 +740,7 @@
 					"children": [
 						{
 							"id": 15,
-							"label": "Produto Leiloado",
+							"label": "Produtos por leilao",
 							"data": null,
 							"type": "Art",
 							"children": [
@@ -769,7 +769,7 @@
 													"properties": [0, 0],
 													"mainclass": "Categoria",
 													"reverse": true
-												}, "'View'"
+												}, "'go to products'"
 											],
 											"names": ["label", "Nome", "Leilao", "Produtos"],
 											"examples": [[
@@ -1005,7 +1005,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 21,
+									"id": 20,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2-1",
@@ -1063,11 +1063,11 @@
 												]
 											]
 										},
-										"value": "Produto Leiloado"
+										"value": "Produtos por leilao"
 									},
 									"type": "Normal"
 								}, {
-									"id": 23,
+									"id": 21,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2",
@@ -1128,7 +1128,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 24,
+									"id": 22,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.1",
@@ -1189,7 +1189,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 25,
+									"id": 23,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.1.0",
@@ -1286,7 +1286,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 26,
+									"id": 24,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.1.0.0",
@@ -1295,7 +1295,7 @@
 										"selectedOptions": [],
 										"scope": {
 											"show": "details",
-											"data": [1, 2, 4],
+											"data": [0, 1, 2, 3, 4, 5],
 											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
 											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -1383,7 +1383,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 27,
+									"id": 25,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.1.0.1.0.0.0",
@@ -1392,7 +1392,7 @@
 										"selectedOptions": [],
 										"scope": {
 											"show": "details",
-											"data": [1, 2, 4],
+											"data": [0, 1, 2, 3, 4, 5],
 											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
 											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -1480,7 +1480,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 28,
+									"id": 26,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.1.1",
@@ -1489,7 +1489,7 @@
 										"selectedOptions": [],
 										"scope": {
 											"show": "details",
-											"data": [1, 2, 4],
+											"data": [0, 1, 2, 3, 4, 5],
 											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
 											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
@@ -1581,7 +1581,7 @@
 						}
 					]
 				}, {
-					"id": 29,
+					"id": 27,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.1",
@@ -1605,7 +1605,7 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}, "'View'"
+								}, "'go to products'"
 							],
 							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"examples": [[
@@ -1669,13 +1669,13 @@
 					"type": "Normal",
 					"children": [
 						{
-							"id": 30,
-							"label": "Produtos",
+							"id": 28,
+							"label": "Produto por categoria",
 							"data": null,
 							"type": "Art",
 							"children": [
 								{
-									"id": 31,
+									"id": 29,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.0.0.1.0",
@@ -1699,7 +1699,7 @@
 													"properties": [0, 0],
 													"mainclass": "Categoria",
 													"reverse": true
-												}, "'View'"
+												}, "'go to products'"
 											],
 											"names": ["label", "Nome", "Leilao", "Produtos"],
 											"examples": [[
@@ -1762,7 +1762,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 32,
+									"id": 30,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.0.0.1.0.0",
@@ -1811,7 +1811,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 33,
+									"id": 31,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.0.0.1.0.0.1",
@@ -1873,7 +1873,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 34,
+									"id": 32,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.0.0.1.0.0.1.0",
@@ -1935,7 +1935,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 35,
+									"id": 33,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2-1",
@@ -1993,11 +1993,11 @@
 												]
 											]
 										},
-										"value": "Produtos"
+										"value": "Produto por categoria"
 									},
 									"type": "Normal"
 								}, {
-									"id": 36,
+									"id": 34,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2",
@@ -2058,7 +2058,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 37,
+									"id": 35,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.0",
@@ -2119,7 +2119,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 38,
+									"id": 36,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.0.0",
@@ -2216,7 +2216,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 39,
+									"id": 37,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.0.0.0",
@@ -2313,7 +2313,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 40,
+									"id": 38,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.0.0.1.0.0.0",
@@ -2410,7 +2410,7 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 41,
+									"id": 39,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.2.0.1",
@@ -2511,7 +2511,7 @@
 						}
 					]
 				}, {
-					"id": 42,
+					"id": 40,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.0.0.1",
@@ -2535,7 +2535,7 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}, "'View'"
+								}, "'go to products'"
 							],
 							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"examples": [[
@@ -2598,7 +2598,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 43,
+					"id": 41,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.1.1.1.1",
@@ -2622,7 +2622,7 @@
 									"properties": [0, 0],
 									"mainclass": "Categoria",
 									"reverse": true
-								}, "'View'"
+								}, "'go to products'"
 							],
 							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"examples": [[
@@ -2687,7 +2687,7 @@
 				}
 			]
 		}, {
-			"id": 44,
+			"id": 42,
 			"label": "New Landmark",
 			"data": null,
 			"type": "Art"

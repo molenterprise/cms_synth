@@ -6,7 +6,8 @@
 		    <thead>
 		        <tr>
 		           <th ng-repeat="prop in step.scope.data">
-		           		<input type="text" value="{{step.scope.examples[0][prop].name}}">
+		           		<input type="text" value="{{step.scope.examples[0][prop].name + ' ' + step.scope.wizardType[prop]}}">
+		           		<!-- <input type="text" value="{{step.scope.examples[0][prop].name}}"> -->
 		           </th>
 		        </tr>
 		    </thead>
