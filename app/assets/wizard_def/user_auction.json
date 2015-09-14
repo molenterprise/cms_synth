@@ -2,6 +2,7 @@
 	"children": [
 		{
 			"id": 0,
+			"label": "Categorias",
 			"label": "Categoria",
 			"data": null,
 			"type": "Art",
@@ -11,6 +12,7 @@
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0",
+						"selectedOption": 0,
 						"selectedOption": 1,
 						"selectedProperties": [],
 						"selectedOptions": [0, 0, 0, 0, 0, 0],
@@ -24,6 +26,7 @@
 					"id": 2,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0-1",
 						"currentWindow": "0.0.0.0.1-1",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -32,6 +35,7 @@
 							"data": [],
 							"examples": []
 						},
+						"value": "Categorias"
 						"value": "Categoria"
 					},
 					"type": "Normal"
@@ -39,6 +43,7 @@
 					"id": 3,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0",
 						"currentWindow": "0.0.0.0.1",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -53,6 +58,7 @@
 					"id": 4,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0.0",
 						"currentWindow": "0.0.0.0.1.0",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -67,6 +73,7 @@
 					"id": 5,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0.0.0",
 						"currentWindow": "0.0.0.0.1.0.0",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -75,6 +82,7 @@
 							"show": "table",
 							"data": [0],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
 							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
@@ -116,6 +124,7 @@
 					"id": 6,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.0",
 						"currentWindow": "0.0.0.0.1.0.0.0",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -124,6 +133,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
 							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
@@ -165,6 +175,8 @@
 					"id": 7,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1.0.0.0",
+						"selectedOption": "1",
 						"currentWindow": "0.0.0.0.1.0.0.1.0.0.0",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -173,6 +185,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
 							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
@@ -214,6 +227,7 @@
 					"id": 8,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1",
 						"currentWindow": "0.0.0.0.1.0.1",
 						"selectedOption": 0,
 						"selectedProperties": [],
@@ -222,6 +236,7 @@
 							"show": "table",
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
 							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
 							"examples": [[
@@ -258,28 +273,1021 @@
 							]
 						}
 					},
+					"type": "Normal"
+				}, {
+					"id": 9,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [0],
+						"scope": {
+							"show": "table",
+							"data": [1],
+							"type": ["ComputedAttribute", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria"],
+							"names": ["label", "Nome"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}
+								]
+							]
+						},
+						"path": [
+							{
+								"key": 0,
+								"pathItems": [
+									{
+										"propertiesNames": ["categoria"],
+										"className": "Produto"
+									}, {
+										"propertiesNames": ["temProduto"],
+										"className": "Leilao"
+									}
+								],
+								"examples": ["leilao1 - temProduto:categoria - audio", "leilao2 - temProduto:categoria - audio", "leilao10 - temProduto:categoria - cine_e_foto", "leilao3 - temProduto:categoria - audio"],
+								"reverse": true
+							}
+						]
+					},
+					"type": "Normal"
+				}, {
+					"id": 10,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1.0.0",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [0, 0],
+						"scope": {
+							"show": "table",
+							"data": [1, 2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							],
+							"back": "{\"show\":\"table\",\"data\":[1],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\"],\"queries\":[\"self.rdfs:label\",\"self.auction::nomeCategoria\"],\"names\":[\"label\",\"Nome\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"05W\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"05X\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]}]]}"
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 11,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1.0.0.0",
+						"selectedOption": "2",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}
+							],
+							"names": ["label", "Nome", "Leilao"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 12,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.2",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View'"
+							],
+							"names": ["label", "Nome", "Leilao", "Produtos"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								]
+							],
+							"back": "{\"show\":\"table\",\"data\":[1,2],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\",\"Path\"],\"queries\":[\"self.rdfs:label\",\"self.auction::nomeCategoria\",{\"path\":[{\"propertiesNames\":[\"categoria\"],\"className\":\"Produto\"},{\"propertiesNames\":[\"temProduto\"],\"className\":\"Leilao\"}],\"properties\":[0,0],\"mainclass\":\"Categoria\",\"reverse\":true}],\"names\":[\"label\",\"Nome\",\"Leilao\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"05W\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"05X\"},{\"id\":2,\"name\":\"Leilao\",\"value\":[\"Path to Leilao\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]},{\"id\":2,\"name\":\"Leilao\",\"value\":[\"Path to Leilao\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]},{\"id\":2,\"name\":\"Leilao\",\"value\":[\"Path to Leilao\"]}]]}"
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 13,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.0.1.0.0.0",
+						"selectedOption": "3",
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View'"
+							],
+							"names": ["label", "Nome", "Leilao", "Produtos"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal"
+				}, {
+					"id": 14,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.1",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View'"
+							],
+							"names": ["label", "Nome", "Leilao", "Produtos"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								]
+							]
+						}
+					},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 					"type": "Normal",
 					"children": [
 						{
+							"id": 15,
+							"label": "Produto Leiloado",
 							"id": 9,
 							"label": "Produtos",
 							"data": null,
 							"type": "Art",
 							"children": [
 								{
+									"id": 16,
 									"id": 10,
 									"label": "",
 									"data": {
+										"currentWindow": "0.0.0.0.0.0.1.0",
+										"selectedOption": "2",
 										"currentWindow": "0.0.0.0.1.0.1.0",
 										"selectedOption": 1,
 										"selectedProperties": [],
 										"selectedOptions": [],
 										"scope": {
 											"show": "table",
+											"data": [1, 2, 3],
+											"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+													"path": [
+														{
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
+														}, {
+															"propertiesNames": ["temProduto"],
+															"className": "Leilao"
+														}
+													],
+													"properties": [0, 0],
+													"mainclass": "Categoria",
+													"reverse": true
+												}, "'View'"
+											],
+											"names": ["label", "Nome", "Leilao", "Produtos"],
 											"data": [1],
 											"type": ["ComputedAttribute", "ComputedAttribute"],
 											"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 											"names": ["label", "Nome"],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 											"examples": [[
 													{
 														"id": 0,
@@ -289,6 +1297,14 @@
 														"id": 1,
 														"name": "Nome",
 														"value": ["Audio"]
+													}, {
+														"id": 2,
+														"name": "Leilao",
+														"value": ["Path to Leilao"]
+													}, {
+														"id": 3,
+														"name": "Produtos",
+														"value": ["Computed Produtos attribute"]
 													}
 												],[
 													{
@@ -299,6 +1315,14 @@
 														"id": 1,
 														"name": "Nome",
 														"value": ["Informatica"]
+													}, {
+														"id": 2,
+														"name": "Leilao",
+														"value": ["Path to Leilao"]
+													}, {
+														"id": 3,
+														"name": "Produtos",
+														"value": ["Computed Produtos attribute"]
 													}
 												],[
 													{
@@ -309,6 +1333,14 @@
 														"id": 1,
 														"name": "Nome",
 														"value": ["Cine e Foto"]
+													}, {
+														"id": 2,
+														"name": "Leilao",
+														"value": ["Path to Leilao"]
+													}, {
+														"id": 3,
+														"name": "Produtos",
+														"value": ["Computed Produtos attribute"]
 													}
 												]
 											]
@@ -316,6 +1348,7 @@
 									},
 									"type": "Normal"
 								}, {
+									"id": 17,
 									"id": 11,
 									"label": "",
 									"data": {
@@ -365,10 +1398,1006 @@
 									},
 									"type": "Normal"
 								}, {
+									"id": 18,
 									"id": 12,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.1.0.1.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [0],
+										"scope": {
+											"show": "none",
+											"data": [],
+											"type": [],
+											"queries": [],
+											"names": [],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										},
+										"path": [
+											{
+												"key": 0,
+												"pathItems": [
+													{
+														"propertiesNames": ["temProduto"],
+														"propertiesNames": ["categoria"],
+														"className": "Produto"
+													}
+												],
+												"examples": ["leilao1 - temProduto - MP4_Watch_Play_NewLink_PM101", "leilao2 - temProduto - MP4_Watch_Play_NewLink_PM101", "leilao10 - temProduto - produto1", "leilao3 - temProduto - Home_Theater_LG_HT806ST"],
+												"reverse": false
+												"examples": ["MP4_Watch_Play_NewLink_PM101 - categoria - audio", "produto1 - categoria - cine_e_foto", "Home_Theater_LG_HT806ST - categoria - audio", "78 - categoria - audio", "Monitor_LCD_LED_Samsung_23_S23B550V_Widescreen - categoria - informatica"],
+												"reverse": true
+											}
+										]
+									},
+									"type": "Normal"
+								}, {
+									"id": 19,
+									"id": 13,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.0.1.0.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [0],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["temProduto"],
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Leilao",
+													"reverse": false
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											],
+											"back": "{\"show\":\"none\",\"data\":[],\"type\":[],\"queries\":[],\"names\":[],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"05W\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"05X\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]}]]}"
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 21,
+									"id": 14,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2-1",
+										"currentWindow": "0.0.0.0.0-1",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["temProduto"],
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Leilao",
+													"reverse": false
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										},
+										"value": "Produto Leiloado"
+										"value": "Produtos"
+									},
+									"type": "Normal"
+								}, {
+									"id": 23,
+									"id": 15,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2",
+										"selectedOption": "1",
+										"currentWindow": "0.0.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["temProduto"],
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Leilao",
+													"reverse": false
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 24,
+									"id": 16,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.1",
+										"currentWindow": "0.0.0.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["temProduto"],
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Leilao",
+													"reverse": false
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 25,
+									"id": 17,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.1.0",
+										"currentWindow": "0.0.0.0.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [0, 1, 2, 3, 4, 5],
+											"show": "table",
+											"data": [0],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 26,
+									"id": 18,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.1.0.0",
+										"currentWindow": "0.0.0.0.0.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 4],
+											"show": "table",
+											"data": [1, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 27,
+									"id": 19,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.1.0.1.0.0.0",
+										"selectedOption": "3",
+										"currentWindow": "0.0.0.0.0.0.0.1.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 4],
+											"show": "table",
+											"data": [1, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 28,
+									"id": 20,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.1.1",
+										"selectedOption": "1",
+										"currentWindow": "0.0.0.0.0.0.1",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 4],
+											"show": "table",
+											"data": [1, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}
+							]
+						}
+					]
+				}, {
+					"id": 29,
+					"label": "",
+					"data": {
+						"currentWindow": "0.0.0.0.0.0.1",
+						"selectedOption": 0,
+						"selectedProperties": [],
+						"selectedOptions": [],
+						"scope": {
+							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+									"type": "Normal",
+									"children": [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View'"
+							],
+							"names": ["label", "Nome", "Leilao", "Produtos"],
+							"examples": [[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Audio"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Informatica"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								],[
+									{
+										"id": 0,
+										"name": "label",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 1,
+										"name": "Nome",
+										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
+									}
+								]
+							]
+						}
+					},
+					"type": "Normal",
+					"children": [
+						{
+							"id": 30,
+							"label": "Produtos",
+							"data": null,
+							"type": "Art",
+							"children": [
+								{
+									"id": 31,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.0.0.1.0",
+										"selectedOption": "3",
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "table",
+											"data": [1, 2, 3],
+											"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+													"path": [
+														{
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
+														}, {
+															"propertiesNames": ["temProduto"],
+															"className": "Leilao"
+														}
+													],
+													"properties": [0, 0],
+													"mainclass": "Categoria",
+													"reverse": true
+												}, "'View'"
+											],
+											"names": ["label", "Nome", "Leilao", "Produtos"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}, {
+														"id": 2,
+														"name": "Leilao",
+														"value": ["Path to Leilao"]
+													}, {
+														"id": 3,
+														"name": "Produtos",
+														"value": ["Computed Produtos attribute"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}, {
+														"id": 2,
+														"name": "Leilao",
+														"value": ["Path to Leilao"]
+													}, {
+														"id": 3,
+														"name": "Produtos",
+														"value": ["Computed Produtos attribute"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 2,
+														"name": "Leilao",
+														"value": ["Path to Leilao"]
+													}, {
+														"id": 3,
+														"name": "Produtos",
+														"value": ["Computed Produtos attribute"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 32,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.0.0.1.0.0",
+										"selectedOption": 1,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [],
+											"type": [],
+											"queries": [],
+											"names": [],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 33,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.0.0.1.0.0.1",
 										"selectedOption": 0,
 										"selectedProperties": [],
 										"selectedOptions": [0],
@@ -427,10 +2456,10 @@
 									},
 									"type": "Normal"
 								}, {
-									"id": 13,
+									"id": 34,
 									"label": "",
 									"data": {
-										"currentWindow": "0.0.0.0.1.0.1.0.0.0.0",
+										"currentWindow": "0.0.0.0.0.0.1.0.0.1.0",
 										"selectedOption": 0,
 										"selectedProperties": [],
 										"selectedOptions": [0],
@@ -439,635 +2468,301 @@
 											"data": [0],
 											"type": ["Path"],
 											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["Produto"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}
-												]
-											],
-											"back": "{\"show\":\"none\",\"data\":[],\"type\":[],\"queries\":[],\"names\":[],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"05W\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"05X\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]}]]}"
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 14,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0-1",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["Produto"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}
-												]
-											]
-										},
-										"value": "Produtos"
-									},
-									"type": "Normal"
-								}, {
-									"id": 15,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["Produto"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 16,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["categoria"],
-															"className": "Produto"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Categoria",
-													"reverse": true
-												}
-											],
-											"names": ["Produto"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Audio"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Audio"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Informatica"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Informatica"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Cine e Foto"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Cine e Foto"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 17,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [0],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
-											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["23/05/2013"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["2"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/03/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["12"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/10/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["23"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 18,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 5],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
-											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["23/05/2013"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["2"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/03/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["12"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/10/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["23"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 19,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.0.1.0.0.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 5],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
-											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["23/05/2013"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["2"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/03/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["12"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/10/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["23"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 20,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.0.0.1",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "table",
-											"data": [1, 5],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
-											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["Home Theater LG HT806ST"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["23/05/2013"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["2"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Player Philips SA3VBE04KX/78"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/03/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["12"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 1,
-														"name": "Nome",
-														"value": ["MP4 Watch Play NewLink PM101"]
-													}, {
-														"id": 2,
-														"name": "Data de cadastro",
-														"value": ["12/10/2012"]
-													}, {
-														"id": 3,
-														"name": "Descricao",
-														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
-													}, {
-														"id": 4,
-														"name": "Esta em oferta",
-														"value": ["1"]
-													}, {
-														"id": 5,
-														"name": "Quantidade",
-														"value": ["23"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal",
-									"children": [
-										{
 											"id": 21,
 											"label": "Details of the Produto",
 											"data": null,
 											"type": "Art",
 											"children": [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 												{
+													"path": [
+														{
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
 													"id": 22,
 													"label": "",
 													"data": {
@@ -1162,6 +2857,67 @@
 																]
 															]
 														}
+													],
+													"properties": [0],
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											],
+											"back": "{\"show\":\"none\",\"data\":[],\"type\":[],\"queries\":[],\"names\":[],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Audio\"],\"$$hashKey\":\"05W\"},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Audio\"],\"$$hashKey\":\"05X\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Informatica\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Informatica\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Cine e Foto\"]},{\"id\":1,\"name\":\"Nome\",\"value\":[\"Cine e Foto\"]}]]}"
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 35,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2-1",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
 													},
 													"type": "Normal"
 												}, {
@@ -1259,6 +3015,67 @@
 																]
 															]
 														}
+													],
+													"properties": [0],
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										},
+										"value": "Produtos"
+									},
+									"type": "Normal"
+								}, {
+									"id": 36,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
 													},
 													"type": "Normal"
 												}, {
@@ -1454,6 +3271,66 @@
 																]
 															]
 														}
+													],
+													"properties": [0],
+													"mainclass": "Categoria",
+													"reverse": true
+												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 37,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [0],
+											"type": ["Path"],
+											"queries": [
+												{
+													"path": [
+														{
+															"propertiesNames": ["categoria"],
+															"className": "Produto"
 													},
 													"type": "Normal"
 												}, {
@@ -1551,6 +3428,10 @@
 																]
 															]
 														}
+													],
+													"properties": [0],
+													"mainclass": "Categoria",
+													"reverse": true
 													},
 													"type": "Normal"
 												}, {
@@ -1845,21 +3726,642 @@
 													},
 													"type": "Normal"
 												}
+											],
+											"names": ["Produto"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Audio"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Audio"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Informatica"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Informatica"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Cine e Foto"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Cine e Foto"]
+													}
+												]
 											]
 										}
+									},
+									"type": "Normal"
 									]
 								}, {
+									"id": 38,
 									"id": 30,
 									"label": "",
 									"data": {
+										"currentWindow": "0.0.0.0.2.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "table",
+											"data": [0],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 39,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "table",
+											"data": [1, 3],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 40,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.0.0.1.0.0.0",
+										"selectedOption": "3",
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "table",
+											"data": [1, 3],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
+											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["Home Theater LG HT806ST"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["23/05/2013"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["Nada como um equipamento completo e potente o suficiente para garantir a qualidade de entretenimento ideal na sua casa. Pois o LG HT806ST e justamente o caso para quem busca um home theater capaz de agradar a todos. Com 850W RMS de potencia, ele e perfeito para transformar sua casa em uma verdadeira sala de cinema e ainda animar todas as suas festas. A tecnologia Bass Blast potencializa os sons graves de modo impressionante, enquanto o recurso Virtual Sound Matrix simula os efeitos de um sistema 10.1 canais. Alem do design elegante e que se encaixa em qualquer ambiente, o aparelho conta com elementos bastante praticos, como a funcao Ripping, que possibilita gravar qualquer CD diretamente para um pendrive. O karaoke tambem e destaque do produto e promete horas de animacao com sua familia e amigos."]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["2"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Player Philips SA3VBE04KX/78"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/03/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Player Philips SA3VBE04KX/78 4GB GoGear Vibe c/ Tela 1,8 e Radio FM - Preto \nTenha em maos um MP4 Player que faz de tudo, desde poder ouvir musicas em formato MP3 ou sua programacao preferida no radio FM, ate assistir videos de filmes, shows ou clipes.i\nO modelo SA3VBE possui tela de 4,6 centimetros (1,8 polegadas) e ideal para ver seus videos e ate navegar por seus menus sem dificuldades. Ele ainda vem fones emborrachados evitando que machuquem seus ouvidos.\nSeu armazenamento permite guardar centena de musicas no formato MP3, tornando assim seu dispositivo movel em um verdadeiro centro de entretenimento. E se pensa que a transferencia de musicas do seu pc/notebook para o MP4 Player e demorada, engana-se Em apenas cinco minutos e possivel transferir ate trinta musicas de uma vez, sem perda de tempo"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["12"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 1,
+														"name": "Nome",
+														"value": ["MP4 Watch Play NewLink PM101"]
+													}, {
+														"id": 2,
+														"name": "Data de cadastro",
+														"value": ["12/10/2012"]
+													}, {
+														"id": 3,
+														"name": "Descricao",
+														"value": ["MP4 Watch Play NewLink PM101 Prata com Pulseira Relogio Preta, Radio FM, Gravador de Audio e Slot para Cartao"]
+													}, {
+														"id": 4,
+														"name": "Esta em oferta",
+														"value": ["1"]
+													}, {
+														"id": 5,
+														"name": "Quantidade",
+														"value": ["23"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 41,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.2.0.1",
 										"currentWindow": "0.0.0.0.0.0.1",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 										"selectedOption": "1",
 										"selectedProperties": [],
 										"selectedOptions": [],
 										"scope": {
 											"show": "table",
+											"data": [1, 3],
 											"data": [1, 5],
 											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"queries": ["self.rdfs:label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 											"queries": ["self.rdfs::label", "self.auction::nomeProduto", "self.auction::dataCadastro", "self.auction::descricaoProduto", "self.auction::estaEmLeilao", "self.auction::quantidade"],
 											"names": ["label", "Nome", "Data de cadastro", "Descricao", "Esta em oferta", "Quantidade"],
 											"examples": [[
@@ -1950,19 +4452,53 @@
 						}
 					]
 				}, {
+					"id": 42,
 					"id": 31,
 					"label": "",
 					"data": {
+						"currentWindow": "0.0.0.0.0.0.1",
 						"currentWindow": "0.0.0.0.1.0.1",
 						"selectedOption": "1",
 						"selectedProperties": [],
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View'"
+							],
+							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
 							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 							"examples": [[
 									{
 										"id": 0,
@@ -1972,6 +4508,14 @@
 										"id": 1,
 										"name": "Nome",
 										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
 									}
 								],[
 									{
@@ -1982,6 +4526,14 @@
 										"id": 1,
 										"name": "Nome",
 										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
 									}
 								],[
 									{
@@ -1992,6 +4544,14 @@
 										"id": 1,
 										"name": "Nome",
 										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
 									}
 								]
 							]
@@ -1999,6 +4559,7 @@
 					},
 					"type": "Normal"
 				}, {
+					"id": 43,
 					"id": 32,
 					"label": "",
 					"data": {
@@ -2008,10 +4569,42 @@
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
+							"data": [1, 2, 3],
+							"type": ["ComputedAttribute", "ComputedAttribute", "Path", "ComputedAttribute"],
+							"queries": ["self.rdfs:label", "self.auction::nomeCategoria", {
+									"path": [
+										{
+											"propertiesNames": ["categoria"],
+											"className": "Produto"
+										}, {
+											"propertiesNames": ["temProduto"],
+											"className": "Leilao"
+										}
+									],
+									"properties": [0, 0],
+									"mainclass": "Categoria",
+									"reverse": true
+								}, "'View'"
+							],
+							"names": ["label", "Nome", "Leilao", "Produtos"],
 							"data": [1],
 							"type": ["ComputedAttribute", "ComputedAttribute"],
 							"queries": ["self.rdfs::label", "self.auction::nomeCategoria"],
 							"names": ["label", "Nome"],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 							"examples": [[
 									{
 										"id": 0,
@@ -2021,6 +4614,14 @@
 										"id": 1,
 										"name": "Nome",
 										"value": ["Audio"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
 									}
 								],[
 									{
@@ -2031,6 +4632,14 @@
 										"id": 1,
 										"name": "Nome",
 										"value": ["Informatica"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
 									}
 								],[
 									{
@@ -2041,6 +4650,14 @@
 										"id": 1,
 										"name": "Nome",
 										"value": ["Cine e Foto"]
+									}, {
+										"id": 2,
+										"name": "Leilao",
+										"value": ["Path to Leilao"]
+									}, {
+										"id": 3,
+										"name": "Produtos",
+										"value": ["Computed Produtos attribute"]
 									}
 								]
 							]
@@ -2050,6 +4667,7 @@
 				}
 			]
 		}, {
+			"id": 44,
 			"id": 33,
 			"label": "New Landmark",
 			"data": null,

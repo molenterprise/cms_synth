@@ -119,7 +119,6 @@
 
 			if (this.currentWindow.scope != undefined && this.solution.selectedProperties.length > 0)
 				this.scope.data = this.scope.data.concat(this.solution.selectedProperties);
-
 			step = this.saveCurrentValues();
 
 			nextValue = this.solution.selectedOption < this.currentWindow.options.length ? this.solution.selectedOption : 0;
@@ -389,6 +388,7 @@
 
 				this.scope.data.push(this.scope.examples[0].length - 1);
 				this.scope.type.push("ComputedAttribute");
+				this.scope.wizardType.push("ComputedAttribute");
 				this.scope.names.push(temp);
 				this.scope.queries.push(this.computedAttr_query);
 			}
@@ -416,6 +416,7 @@
 				
 				this.scope.data.push(this.scope.names.length);
 				this.scope.type.push("Path");
+				this.scope.wizardType.push("Path");
 				this.scope.names.push(className);
 				this.scope.queries.push({
 					"path" : items,
