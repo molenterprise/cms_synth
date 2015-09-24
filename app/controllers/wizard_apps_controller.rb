@@ -150,9 +150,7 @@ class WizardAppsController < ApplicationController
     value = {}
     if !key.nil? then
       value = @global_var[key][0]
-      value['anchor_type'] = params['anchor_type']
-      value['target'] = params['parent_id']
-      value['index'] = params['index']
+      value.merge! params
     end
     return {:status => true, :result => value}
   end
@@ -281,7 +279,7 @@ class WizardAppsController < ApplicationController
       
       if types[attr] == 'ComputedAttribute' then 
         if attr_values.length > 0 then
-          function_params = function_params.merge attr_values.first
+          function_params.merge! attr_values.first
           create_anchor_attributes_for_index_wizard(function_params) 
         else
           create_computed_attribute_for_index_wizard(function_params)
@@ -291,7 +289,7 @@ class WizardAppsController < ApplicationController
         if attr_values['target'].nil? == 0 then
           function_params['update_attribute'] = false
         else
-          function_params = function_params.merge attr_values
+          function_params.merge! attr_values
           function_params['parameter_expression'] = 'self'
           function_params['update_attribute'] = true
         end
@@ -349,7 +347,7 @@ class WizardAppsController < ApplicationController
       
       if types[attr] == 'ComputedAttribute' then
         if attr_values.length > 0 then
-          function_params = function_params.merge attr_values.first
+          function_params.merge! attr_values.first
           create_anchor_attributes_for_detail_wizard(function_params) 
         else
           create_computed_attribute_for_detail_wizard(function_params)
@@ -359,7 +357,7 @@ class WizardAppsController < ApplicationController
         if attr_values['target'].nil? == 0 then
           function_params['update_attribute'] = false
         else
-          function_params = function_params.merge attr_values
+          function_params.merge! attr_values
           function_params['parameter_expression'] = 'self'
           function_params['update_attribute'] = true
         end
@@ -789,7 +787,7 @@ class WizardAppsController < ApplicationController
   # key params: ontology, mainClass, path, properties, in_context_class_id, position, reverse
   def create_index_attribute_for_detail_wizard(params) #isomorphic with create_index_and_index_attribute_for_index_wizard
     print "LOG: begin: create_index_and_index_attribute_for_detail_wizard #{params['name']} \n" if @log_name
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: params: #{params} \n" 
 
     name = params['name'] || context_params['context_name']
 
@@ -990,7 +988,7 @@ class WizardAppsController < ApplicationController
     port = '3002'
 
     uri = URI("http://#{url}:#{port}/#{function}")
-    print "call_get_synth #{uri}\n#{params} \n" if @log_mga_param
+    print "call_get_synth #{uri}\n#{params} \n" if @log_mga_param or true
     uri.query = URI.encode_www_form(params)
     print "URI = #{uri.to_s}" if @log_mga_param
     

@@ -3026,7 +3026,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3148,7 +3148,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3296,7 +3296,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3418,7 +3418,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3566,7 +3566,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3688,7 +3688,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3836,7 +3836,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
@@ -3958,7 +3958,7 @@
 							"value": "details from index"
 						}, {
 							"type": "global_var",
-							"name": "index",
+							"name": "anchor_index",
 							"value": "index_id"
 						}
 					]
