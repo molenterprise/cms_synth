@@ -354,6 +354,7 @@ class WizardAppsController < ApplicationController
         end
       elsif types[attr] == 'Path' then
         attr_values = attr_values.first
+        print "PARAM: #{attr_values} \n"
         if attr_values['target'].nil? == 0 then
           function_params['update_attribute'] = false
         else
@@ -501,7 +502,7 @@ class WizardAppsController < ApplicationController
   def update_context_anchor_attribute_for_index_wizard(params)
     
     print "LOG: begin: update_context_anchor_attribute_for_index_wizard #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: params: #{params} \n" 
 
     call_synth_without_result('indexes/context_anchor_attributes_post_data', {
         'parent' => params['index_id'],
