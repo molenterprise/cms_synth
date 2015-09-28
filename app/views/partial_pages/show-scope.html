@@ -5,7 +5,8 @@
 		    <thead>
 		        <tr>
 		           <th ng-repeat="prop in step.scope.data track by $index">
-		           		<input type="text" value="{{step.scope.examples[0][prop].name + ' ' + step.scope.wizardType[prop]}}">
+		           		<input type="text" ng-model="step.scope.names[prop]">
+		           		({{step.scope.wizardType[prop]}})
 		           		<!-- <input type="text" value="{{step.scope.examples[0][prop].name}}"> -->
 		           </th>
 		        </tr>
@@ -23,8 +24,9 @@
 		<h3>Selected Properties</h3>
 		<div class="list-group" >
 			<div ng-repeat="prop in step.scope.data track by $index" >
-				<b class="list-group-item-without-border halign col-md-3">
-					{{step.scope.examples[0][prop].name}}:
+				<b class="list-group-item-without-border halign" style="padding:2px 5px">
+					<input type="text" ng-model="step.scope.names[prop]" style="width:100px">
+					({{step.scope.wizardType[prop]}})
 				</b>
 				<div class="list-group-item-without-border halign">
 					<div ng-repeat="value in step.scope.examples[0][prop].value track by $index">

@@ -1,11 +1,11 @@
 <div ng-show="step.scope.data.length > 0">
 	<div class="list-group" >
-		<div ng-repeat="prop in step.scope.data" >
+		<div ng-repeat="prop in step.scope.data track by $index" >
 			<b class="list-group-item-without-border halign col-md-3">
 				{{step.scope.examples[0][prop].name}}:
 			</b>
 			<div class="list-group-item-without-border halign">
-				<div ng-repeat="value in step.scope.examples[0][prop].value">
+				<div ng-repeat="value in step.scope.examples[0][prop].value track by $index">
 					{{value}}
 				</div>
 			</div>
