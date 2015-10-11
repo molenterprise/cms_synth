@@ -416,7 +416,9 @@
 				
 				this.scope.data.push(this.scope.names.length);
 				this.scope.type.push("Path");
-				this.scope.wizardType.push("Path");
+				if (this.scope.wizardType != undefined) 
+					this.scope.wizardType.push("Path");
+				
 				this.scope.names.push(className);
 				this.scope.queries.push({
 					"path" : items,

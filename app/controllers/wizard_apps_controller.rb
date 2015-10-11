@@ -103,9 +103,12 @@ class WizardAppsController < ApplicationController
       function_params = {'name' => 'context_param', 'context_id' => values['context']}
       create_parameter_for_context_wizard(function_params)
     end
+    
+    set_navigational_struct params['name'], values['context'], values['defaultIndex'], nil
 
     print "LOG: values: #{values} \n" if @log_param 
-    print "LOG: end: create_context_wizard #{params['name']} - #{values['context']} \n" if @log_name 
+    print "LOG: end: create_context_wizard " if @log_name 
+    pretty_print params['name'], nil, 1 if @log_name
     return {:status => status == 'successful', :result => values}
   end
 
@@ -195,20 +198,17 @@ class WizardAppsController < ApplicationController
   
   def put_context_wizard(params)
     print "LOG: begin: put_context_wizard #{params['anchor_att_id']} \n" if @log_name
-    print "LOG: params: #{params} \n" if @log_param or true
-    print "LOG: @global_var: #{@global_var} \n" if @log_param or true
+    print "LOG: params: #{params} \n" if @log_param
+    print "LOG: @global_var: #{@global_var} \n" if @log_param
     
     key = params['anchor_att_id']
     
-    print "key #{key} \n"
     if !key.nil? then
       value = @global_var[key].first
       if value.has_key? 'current_context'
-        print "Atributo detalle \n"
         push_global_var('context_id', value['current_context'])
         push_global_var('index_id', value['current_index'])
       else
-        print "Estructura detalle \n"
         push_global_var('context_id', @global_var['context_id'].last)
         push_global_var('index_id', @global_var['index_id'].last)
       end
@@ -217,7 +217,8 @@ class WizardAppsController < ApplicationController
   end
   
   def create_indexes_attributes_wizard(params)
-    print "LOG: begin: create_indexes_attributes_wizard #{params['parent']} \n" if @log_name 
+    print "LOG: begin: create_indexes_attributes_wizard " if @log_name
+    pretty_print nil, params['parent'], 1 if @log_name 
     print "LOG: params: #{params} \n" if @log_param
     
     temp = @global_var["#{params['parent']}.indexers attributes}"]
@@ -250,7 +251,7 @@ class WizardAppsController < ApplicationController
   
   def create_index_from_attribute(params)
     print "LOG: begin: create_index_from_attribute \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: params: #{params} \n" if @log_param 
     
     function_params = {'path' => params['query']['path'], 'reverse' => params['query']['reverse'], 'ontology' => params['ontology'],
                        'properties' => params['query']['properties'], 'mainclass' => params['query']['mainclass']}
@@ -265,7 +266,8 @@ class WizardAppsController < ApplicationController
 
 
   def create_attributes_for_index_wizard(params)
-    print "LOG: begin: create_attributes_for_index_wizard #{params['index_id']} \n" if @log_name 
+    print "LOG: begin: create_attributes_for_index_wizard " if @log_name 
+    pretty_print nil, params['index_id'], 1 if @log_name
     print "LOG: params: #{params} \n #{@global_var}" if @log_param 
     
     attrs = params['scope']
@@ -281,7 +283,8 @@ class WizardAppsController < ApplicationController
       attr_values = @global_var["#{params['index_id']}.#{attr}"]
       
       function_params = {'index_id' => params['index_id'], 'ontology' => params['ontology'], 'query' => queries[attr], 'name' => names[attr], 
-        'position' => i + 1}
+        'position' => i + 1, 
+        'parameter_expression' => @global_var['index_id'].length > 1 ? 'parameters[:context_param]' : 'self'}
       
       if types[attr] == 'ComputedAttribute' then 
         if attr_values.length > 0 then
@@ -293,7 +296,7 @@ class WizardAppsController < ApplicationController
       elsif types[attr] == 'Path' then
         attr_values = attr_values.first
         function_params.merge! attr_values
-        if attr_values['target'].nil? == 0 then
+        if attr_values['target'].nil? then
           function_params['update_attribute'] = false
         else
           function_params['parameter_expression'] = 'self'
@@ -305,7 +308,6 @@ class WizardAppsController < ApplicationController
     return {:status => true, :result => {}}
   end
   
-  # params: 'parent', 'name', 'label_expression', 'target', 'target_node_expression'
   def create_anchor_attributes_for_index_wizard(params)
     print "LOG: begin: create_anchor_attributes_for_index_wizard #{params['name']} \n" if @log_name
     print "LOG: params: #{params} \n" if @log_param 
@@ -325,7 +327,7 @@ class WizardAppsController < ApplicationController
     
     rows = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows']
     rows.each{|row|
-      anchor_params = {'index_id' => row['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      anchor_params = {'index_id' => row['id'], 'name' => 'context_param', 'expression' => params['parameter_expression']}
       create_attribute_context_parameters_wizard(anchor_params)
     }
     
@@ -506,7 +508,7 @@ class WizardAppsController < ApplicationController
   def update_context_anchor_attribute_for_index_wizard(params)
     
     print "LOG: begin: update_context_anchor_attribute_for_index_wizard #{params['index_id']} - #{params['name']} \n" if @log_name 
-    print "LOG: params: #{params} \n" if @log_param or true
+    print "LOG: params: #{params} \n" if @log_param 
 
     call_synth_without_result('indexes/context_anchor_attributes_post_data', {
         'parent' => params['index_id'],
@@ -631,29 +633,20 @@ class WizardAppsController < ApplicationController
   end
   
   def create_in_context_class_wizard(params)
-
-    print "LOG: begin: create_in_context_class_wizard #{params['context']}\n" if @log_name
+    print "LOG: begin: create_in_context_class_wizard " if @log_name
+    pretty_print nil, params['context'], 1 if @log_name
     print "LOG: params: #{params} \n" if @log_param
 
     values = call_synth('in_context_classes/create_api', {'in_context_class[in_context_class_class]' => params['class'],
        'in_context_class[in_context_class_context]' => params['context']})
 
-    print "LOG: values: #{values} \n" if @log_param
-    
-    print "LOG: end create_in_context_class_wizard #{params['context']} - #{values['in_context_class']} \n" if @log_name
+    set_navigational_struct nil, params['context'], nil, values["in_context_class"]    
+    print "LOG: end create_in_context_class_wizard " if @log_name
+    pretty_print nil, values["in_context_class"], (1 | 8) if @log_name
     
     return {:status => false} unless values['status'] == 'successful'
 
     return {:status => true, :result => values}
-  end
-  
-  def create_parameter_for_context
-    values = call_synth_without_result('contexts/context_parameters_post_data', {
-          'parent' => 'http://base#0d5eee20-ad33-11e4-9b50-001d92e8bb43',
-          'context_parameter_name' => 'context_param',
-         'id' => '_empty'})
-
-    render :json => {:all_values => values }
   end
   
   def get_context_attr_wizard(params)
@@ -777,8 +770,12 @@ class WizardAppsController < ApplicationController
         update_context_anchor_attribute_for_index_wizard(update_params)
       end
       
+      if params['anchor_type'] == 'details from index' then
+        params['parameter_expression'] = 'self'
+      end
+      
       anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
-      anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => params['parameter_expression']}
       create_attribute_context_parameters_wizard(anchor_params)
       
     end
@@ -830,7 +827,7 @@ class WizardAppsController < ApplicationController
       end
       
       anchor = get_context_attr_wizard({:id => params['anchor_index']})[:result]['rows'][0]
-      anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => 'parameters[:context_param]'}
+      anchor_params = {'index_id' => anchor['id'], 'name' => 'context_param', 'expression' => params['parameter_expression']}
       create_attribute_context_parameters_wizard(anchor_params)
     end
 
@@ -909,12 +906,12 @@ class WizardAppsController < ApplicationController
     print "LOG: begin: push_global_var \n" if @log_mga_name
     print "LOG: #{key} - #{value}\n" if @log_mga_param
     @global_var[key].push(value)
-    print "LOG: end: push_global_var #{@global_var[key]} \n" if @log_mga_name or key.index "context_id"
+    print "LOG: end: push_global_var #{@global_var[key]} \n" if @log_mga_name
   end
   
   def pop_global_var_is_not_empty(param)
     print "LOG: begin: pop_global_var_is_not_empty #{param['key']} \n" if @log_name 
-    print "LOG: params: #{param} - #{@global_var[param['key']]} \n" if @log_param 
+    print "LOG: params: #{param} - #{@global_var[param['key']]} \n" if @log_param
     result = 'empty'
     if @global_var[param['key']].length > 1 then
       result = @global_var[param['key']].pop
@@ -942,7 +939,7 @@ class WizardAppsController < ApplicationController
     @log_mga_name = false
     @log_mga_param = false
 
-    app_name = 'EventAutomaticApp'
+    app_name = 'EAApp'
 
     #return 'Error: creating application' unless create_app_wizard(app_name)
     return 'Error: activating application' unless activate_app_wizard(app_name)
@@ -1038,5 +1035,48 @@ class WizardAppsController < ApplicationController
     req = Net::HTTP.post_form(uri, params)
 
     return req
+  end
+  
+  def pretty_print(name, id, flags = 15)
+    nav = @global_var[:navigational_struct]
+    flag = false
+    nav.select{|struct| 
+      struct[:name] == name or 
+        (!id.nil? and 
+          (struct[:context] == id or struct[:index] == id or struct[:in_context_class] == id))
+    }.each{ |struct|
+      flag = true
+      print "|#{struct[:name]} " if flags & 1 == 1
+      print "C: #{struct[:context]} " if !struct[:context].nil? and flags & 2 == 2  
+      print "I: #{struct[:index]} " if !struct[:index].nil? and flags & 4 == 4 
+      print "IC: #{struct[:in_context_class]}" if !struct[:in_context_class].nil? and flags & 8 == 8
+      print "|\n" 
+    }
+    print "\n" unless flag
+  end
+  
+  def set_navigational_struct(name, context, index, in_context_class)
+    nav = @global_var[:navigational_struct]
+    item = nav.select{|struct| 
+      (struct[:name] == name) or 
+      (struct[:context] == context and !context.nil?) or 
+      (struct[:index] == index and !index.nil?) or 
+      (struct[:in_context_class] == in_context_class and !in_context_class.nil?)
+    }
+    if item.length > 1 then
+      print "Warning: There are {item.length} navigational structs with the same values"
+      return
+    end
+    if item.empty? then
+      item = {}
+      nav.push item 
+    else
+      item = item.first
+    end
+    item[:name] = name unless name.nil?
+    item[:context] = context unless context.nil?
+    item[:index] = index unless index.nil?
+    item[:in_context_class] = in_context_class unless in_context_class.nil?
+    return item 
   end
 end

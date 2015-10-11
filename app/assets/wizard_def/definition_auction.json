@@ -4189,9 +4189,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4220,9 +4217,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4251,9 +4245,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4308,9 +4299,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4339,9 +4327,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4370,9 +4355,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4427,9 +4409,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4458,9 +4437,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4489,9 +4465,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4546,9 +4519,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4577,9 +4547,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4608,9 +4575,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4665,9 +4629,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4696,9 +4657,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4727,9 +4685,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4784,9 +4739,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4815,9 +4767,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4846,9 +4795,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4903,9 +4849,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4934,9 +4877,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -4965,9 +4905,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -5022,9 +4959,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -5053,9 +4987,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}
@@ -5084,9 +5015,6 @@
 						{
 							"name": "query",
 							"global_var": "context_query"
-						}, {
-							"name": "first_class",
-							"global_var": "context_name"
 						}
 					]
 				}

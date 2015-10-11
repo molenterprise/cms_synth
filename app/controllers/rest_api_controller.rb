@@ -8,6 +8,15 @@ class RestApi < ApplicationController
 
     render :json => req
   end
+  
+   def create_parameter_for_context
+    values = call_synth_without_result('contexts/context_parameters_post_data', {
+          'parent' => 'http://base#0d5eee20-ad33-11e4-9b50-001d92e8bb43',
+          'context_parameter_name' => 'context_param',
+         'id' => '_empty'})
+
+    render :json => {:all_values => values }
+  end
 
   def create_app
     values = call_synth("applications/create_api", {'name' => 'App_test'})
