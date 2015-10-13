@@ -2,7 +2,7 @@
 	"children": [
 		{
 			"id": 0,
-			"label": "publicacoes",
+			"label": "Publicacoes",
 			"data": null,
 			"type": "Art",
 			"children": [
@@ -32,7 +32,7 @@
 							"data": [],
 							"examples": []
 						},
-						"value": "publicacoes"
+						"value": "Publicacoes"
 					},
 					"type": "Normal"
 				}, {
@@ -240,92 +240,6 @@
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.1.0.0.1.0.0.0",
-						"selectedOption": "2",
-						"selectedProperties": [],
-						"selectedOptions": [],
-						"scope": {
-							"show": "table",
-							"data": [4],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
-							"names": ["label", "Abstract", "Month", "Year", "Title"],
-							"examples": [[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Demo Search Engine for Products"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}
-								]
-							]
-						}
-					},
-					"type": "Normal"
-				}, {
-					"id": 8,
-					"label": "",
-					"data": {
-						"currentWindow": "0.0.0.0.1.0.0.1",
 						"selectedOption": 0,
 						"selectedProperties": [],
 						"selectedOptions": [],
@@ -405,328 +319,10 @@
 								]
 							]
 						}
-					},
-					"type": "Normal"
-				}, {
-					"id": 9,
-					"label": "",
-					"data": {
-						"currentWindow": "0.0.0.0.1.0.0.1.0",
-						"selectedOption": 0,
-						"selectedProperties": [],
-						"selectedOptions": [0],
-						"scope": {
-							"show": "table",
-							"data": [4],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
-							"names": ["label", "Abstract", "Month", "Year", "Title"],
-							"examples": [[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Demo Search Engine for Products"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}
-								]
-							]
-						},
-						"path": [
-							{
-								"key": 0,
-								"pathItems": [
-									{
-										"propertiesNames": ["made"],
-										"className": "Person"
-									}
-								],
-								"examples": ["A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Achille_Fokoue", "A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Abraham_Bagherjeiran", "A_User-Tunable_Approach - made - Brandyn_White", "A_User-Tunable_Approach - made - Ozgur_Ulusoy", "A_User-Tunable_Approach - made - Dhruv_Mahajan", "Adapting_a_Map_Query_Interface - made - Achille_Fokoue", "Adapting_a_Map_Query_Interface - made - Abraham_Bagherjeiran", "Adapting_a_Map_Query_Interface - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Abraham_Bagherjeiran", "A_Demo_Search_Engine_for_Products - made - Brandyn_White", "A_Demo_Search_Engine_for_Products - made - Ozgur_Ulusoy", "A_Demo_Search_Engine_for_Products - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Ziv_Bar-Yossef", "Accelerating_Instant_Question - made - Achille_Fokoue", "Accelerating_Instant_Question - made - Ziv_Bar-Yossef"],
-								"reverse": false
-							}
-						]
 					},
 					"type": "Normal"
 				}, {
 					"id": 10,
-					"label": "",
-					"data": {
-						"currentWindow": "0.0.0.0.1.0.0.1.0.0",
-						"selectedOption": 0,
-						"selectedProperties": [],
-						"selectedOptions": [0],
-						"scope": {
-							"show": "table",
-							"data": [4, 5],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
-									"path": [
-										{
-											"propertiesNames": ["made"],
-											"className": "Person"
-										}
-									],
-									"properties": [0],
-									"mainclass": "Document",
-									"reverse": false
-								}
-							],
-							"names": ["label", "Abstract", "Month", "Year", "Title", "Person"],
-							"examples": [[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
-									}
-								]
-							],
-							"back": "{\"show\":\"table\",\"data\":[4],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\"],\"wizardType\":[\"Direct attribute\",\"Direct attribute\",\"Direct attribute\",\"Direct attribute\",\"Direct attribute\"],\"queries\":[\"self.eventpuc::label\",\"self.eventpuc::abstract\",\"self.eventpuc::month\",\"self.eventpuc::year\",\"self.eventpuc::title\"],\"names\":[\"label\",\"Abstract\",\"Month\",\"Year\",\"Title\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"A Tool for Fast Indexing and Querying of Graphs\"],\"$$hashKey\":\"04K\"},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre...\"],\"$$hashKey\":\"04L\"},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"],\"$$hashKey\":\"04M\"},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"],\"$$hashKey\":\"04N\"},{\"id\":4,\"name\":\"Title\",\"value\":[\"A Tool for Fast Indexing and Querying of Graphs\"],\"$$hashKey\":\"04O\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"A Demo Search Engine for Products\"]},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p...\"]},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"]},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"]},{\"id\":4,\"name\":\"Title\",\"value\":[\"A Demo Search Engine for Products\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"A User-Tunable Approach to Marketplace Search\"]},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc...\"]},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"]},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"]},{\"id\":4,\"name\":\"Title\",\"value\":[\"A User-Tunable Approach to Marketplace Search\"]}]]}"
-						}
-					},
-					"type": "Normal"
-				}, {
-					"id": 11,
-					"label": "",
-					"data": {
-						"currentWindow": "0.0.0.0.1.0.0.1.0.0.0",
-						"selectedOption": 0,
-						"selectedProperties": [],
-						"selectedOptions": [],
-						"scope": {
-							"show": "table",
-							"data": [4, 5],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
-									"path": [
-										{
-											"propertiesNames": ["made"],
-											"className": "Person"
-										}
-									],
-									"properties": [0],
-									"mainclass": "Document",
-									"reverse": false
-								}
-							],
-							"names": ["label", "Abstract", "Month", "Year", "Title", "Autores"],
-							"examples": [[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
-									}
-								],[
-									{
-										"id": 0,
-										"name": "label",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 1,
-										"name": "Abstract",
-										"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-									}, {
-										"id": 2,
-										"name": "Month",
-										"value": ["March/April"]
-									}, {
-										"id": 3,
-										"name": "Year",
-										"value": ["2011"]
-									}, {
-										"id": 4,
-										"name": "Title",
-										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
-									}
-								]
-							]
-						}
-					},
-					"type": "Normal"
-				}, {
-					"id": 12,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.1.0.1",
@@ -735,22 +331,11 @@
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
-							"data": [4, 5],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
-									"path": [
-										{
-											"propertiesNames": ["made"],
-											"className": "Person"
-										}
-									],
-									"properties": [0],
-									"mainclass": "Document",
-									"reverse": false
-								}
-							],
-							"names": ["label", "Abstract", "Month", "Year", "Title", "Autores"],
+							"data": [4],
+							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+							"names": ["label", "Abstract", "Month", "Year", "Title"],
 							"examples": [[
 									{
 										"id": 0,
@@ -772,10 +357,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								],[
 									{
@@ -798,10 +379,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								],[
 									{
@@ -824,10 +401,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								]
 							]
@@ -836,37 +409,26 @@
 					"type": "Normal",
 					"children": [
 						{
-							"id": 13,
-							"label": "Documentos",
+							"id": 11,
+							"label": "Publicacao",
 							"data": null,
 							"type": "Art",
 							"children": [
 								{
-									"id": 14,
+									"id": 12,
 									"label": "",
 									"data": {
 										"currentWindow": "0.0.0.0.1.0.1.0",
-										"selectedOption": "5",
+										"selectedOption": 4,
 										"selectedProperties": [],
 										"selectedOptions": [],
 										"scope": {
 											"show": "table",
-											"data": [4, 5],
-											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
-											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
-											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
-													"path": [
-														{
-															"propertiesNames": ["made"],
-															"className": "Person"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Document",
-													"reverse": false
-												}
-											],
-											"names": ["label", "Abstract", "Month", "Year", "Title", "Autores"],
+											"data": [4],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+											"names": ["label", "Abstract", "Month", "Year", "Title"],
 											"examples": [[
 													{
 														"id": 0,
@@ -888,10 +450,6 @@
 														"id": 4,
 														"name": "Title",
 														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}, {
-														"id": 5,
-														"name": "Person",
-														"value": ["Path to Person"]
 													}
 												],[
 													{
@@ -914,10 +472,6 @@
 														"id": 4,
 														"name": "Title",
 														"value": ["A Demo Search Engine for Products"]
-													}, {
-														"id": 5,
-														"name": "Person",
-														"value": ["Path to Person"]
 													}
 												],[
 													{
@@ -940,10 +494,6 @@
 														"id": 4,
 														"name": "Title",
 														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}, {
-														"id": 5,
-														"name": "Person",
-														"value": ["Path to Person"]
 													}
 												]
 											]
@@ -951,11 +501,184 @@
 									},
 									"type": "Normal"
 								}, {
+									"id": 13,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.0.1.0.0",
+										"selectedOption": 3,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [],
+											"type": [],
+											"wizardType": [],
+											"queries": [],
+											"names": [],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 14,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.0.1.0-N",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "none",
+											"data": [],
+											"type": [],
+											"wizardType": [],
+											"queries": [],
+											"names": [],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}
+												]
+											]
+										},
+										"value": "Publicacao"
+									},
+									"type": "Normal"
+								}, {
 									"id": 15,
 									"label": "",
 									"data": {
-										"currentWindow": "0.0.0.0.3.0.1.0.0",
-										"selectedOption": 2,
+										"currentWindow": "0.0.0.0.1.1",
+										"selectedOption": 0,
 										"selectedProperties": [],
 										"selectedOptions": [],
 										"scope": {
@@ -1040,501 +763,8 @@
 									"id": 16,
 									"label": "",
 									"data": {
-										"currentWindow": "0.0.0.0.3.0.1.0.0.2",
+										"currentWindow": "0.0.0.0.1.1.0",
 										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [0],
-										"scope": {
-											"show": "none",
-											"data": [],
-											"type": [],
-											"wizardType": [],
-											"queries": [],
-											"names": [],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Demo Search Engine for Products"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Demo Search Engine for Products"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}
-												]
-											]
-										},
-										"path": [
-											{
-												"key": 0,
-												"pathItems": [
-													{
-														"propertiesNames": ["made"],
-														"className": "Document"
-													}
-												],
-												"examples": ["A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Achille_Fokoue", "A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Abraham_Bagherjeiran", "A_User-Tunable_Approach - made - Brandyn_White", "A_User-Tunable_Approach - made - Ozgur_Ulusoy", "A_User-Tunable_Approach - made - Dhruv_Mahajan", "Adapting_a_Map_Query_Interface - made - Achille_Fokoue", "Adapting_a_Map_Query_Interface - made - Abraham_Bagherjeiran", "Adapting_a_Map_Query_Interface - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Abraham_Bagherjeiran", "A_Demo_Search_Engine_for_Products - made - Brandyn_White", "A_Demo_Search_Engine_for_Products - made - Ozgur_Ulusoy", "A_Demo_Search_Engine_for_Products - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Ziv_Bar-Yossef", "Accelerating_Instant_Question - made - Achille_Fokoue", "Accelerating_Instant_Question - made - Ziv_Bar-Yossef"],
-												"reverse": true
-											}
-										]
-									},
-									"type": "Normal"
-								}, {
-									"id": 17,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.3.0.1.0.0.2.0",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [0],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"wizardType": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["made"],
-															"className": "Document"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Person",
-													"reverse": true
-												}
-											],
-											"names": ["Document"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Demo Search Engine for Products"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Demo Search Engine for Products"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}
-												]
-											],
-											"back": "{\"show\":\"none\",\"data\":[],\"type\":[],\"wizardType\":[],\"queries\":[],\"names\":[],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"A Tool for Fast Indexing and Querying of Graphs\"],\"$$hashKey\":\"04K\"},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre...\"],\"$$hashKey\":\"04L\"},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"],\"$$hashKey\":\"04M\"},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"],\"$$hashKey\":\"04N\"},{\"id\":4,\"name\":\"Title\",\"value\":[\"A Tool for Fast Indexing and Querying of Graphs\"],\"$$hashKey\":\"04O\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"A Demo Search Engine for Products\"]},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p...\"]},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"]},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"]},{\"id\":4,\"name\":\"Title\",\"value\":[\"A Demo Search Engine for Products\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"A User-Tunable Approach to Marketplace Search\"]},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc...\"]},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"]},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"]},{\"id\":4,\"name\":\"Title\",\"value\":[\"A User-Tunable Approach to Marketplace Search\"]}]]}"
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 18,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1-1",
-										"selectedOption": 0,
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"wizardType": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["made"],
-															"className": "Document"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Person",
-													"reverse": true
-												}
-											],
-											"names": ["Document"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Demo Search Engine for Products"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Demo Search Engine for Products"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}
-												]
-											]
-										},
-										"value": "Documentos"
-									},
-									"type": "Normal"
-								}, {
-									"id": 19,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1",
-										"selectedOption": "1",
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"wizardType": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["made"],
-															"className": "Document"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Person",
-													"reverse": true
-												}
-											],
-											"names": ["Document"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Demo Search Engine for Products"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Demo Search Engine for Products"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 20,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1",
-										"selectedOption": "1",
-										"selectedProperties": [],
-										"selectedOptions": [],
-										"scope": {
-											"show": "none",
-											"data": [0],
-											"type": ["Path"],
-											"wizardType": ["Path"],
-											"queries": [
-												{
-													"path": [
-														{
-															"propertiesNames": ["made"],
-															"className": "Document"
-														}
-													],
-													"properties": [0],
-													"mainclass": "Person",
-													"reverse": true
-												}
-											],
-											"names": ["Document"],
-											"examples": [[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A Demo Search Engine for Products"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A Demo Search Engine for Products"]
-													}
-												],[
-													{
-														"id": 0,
-														"name": "label",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}, {
-														"id": 1,
-														"name": "Abstract",
-														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
-													}, {
-														"id": 2,
-														"name": "Month",
-														"value": ["March/April"]
-													}, {
-														"id": 3,
-														"name": "Year",
-														"value": ["2011"]
-													}, {
-														"id": 4,
-														"name": "Title",
-														"value": ["A User-Tunable Approach to Marketplace Search"]
-													}
-												]
-											]
-										}
-									},
-									"type": "Normal"
-								}, {
-									"id": 21,
-									"label": "",
-									"data": {
-										"currentWindow": "0.0.0.0.1.1.1",
-										"selectedOption": "1",
 										"selectedProperties": [],
 										"selectedOptions": [],
 										"scope": {
@@ -1615,12 +845,2470 @@
 										}
 									},
 									"type": "Normal"
+								}, {
+									"id": 17,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+											"names": ["label", "Abstract", "Month", "Year", "Title"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 18,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.0.1.0.0.0",
+										"selectedOption": "2",
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+											"names": ["label", "Abstract", "Month", "Year", "Title"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 19,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.0.1",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+											"names": ["label", "Abstract", "Month", "Year", "Title"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 20,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.0.1.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [0],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+											"names": ["label", "Abstract", "Month", "Year", "Title"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}
+												]
+											]
+										},
+										"path": [
+											{
+												"key": 0,
+												"pathItems": [
+													{
+														"propertiesNames": ["made"],
+														"className": "Person"
+													}
+												],
+												"examples": ["A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Achille_Fokoue", "A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Abraham_Bagherjeiran", "A_User-Tunable_Approach - made - Brandyn_White", "A_User-Tunable_Approach - made - Ozgur_Ulusoy", "A_User-Tunable_Approach - made - Dhruv_Mahajan", "Adapting_a_Map_Query_Interface - made - Achille_Fokoue", "Adapting_a_Map_Query_Interface - made - Abraham_Bagherjeiran", "Adapting_a_Map_Query_Interface - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Abraham_Bagherjeiran", "A_Demo_Search_Engine_for_Products - made - Brandyn_White", "A_Demo_Search_Engine_for_Products - made - Ozgur_Ulusoy", "A_Demo_Search_Engine_for_Products - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Ziv_Bar-Yossef", "Accelerating_Instant_Question - made - Achille_Fokoue", "Accelerating_Instant_Question - made - Ziv_Bar-Yossef"],
+												"reverse": false
+											}
+										]
+									},
+									"type": "Normal"
+								}, {
+									"id": 21,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.0.1.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [0],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
+													"path": [
+														{
+															"propertiesNames": ["made"],
+															"className": "Person"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Document",
+													"reverse": false
+												}
+											],
+											"names": ["label", "Abstract", "Month", "Year", "Title", "Person"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												]
+											],
+											"back": "{\"show\":\"details\",\"data\":[1,2,3,4],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\"],\"wizardType\":[\"Direct attribute\",\"Direct attribute\",\"Direct attribute\",\"Direct attribute\",\"Direct attribute\"],\"queries\":[\"self.eventpuc::label\",\"self.eventpuc::abstract\",\"self.eventpuc::month\",\"self.eventpuc::year\",\"self.eventpuc::title\"],\"names\":[\"label\",\"Abstract\",\"Month\",\"Year\",\"Title\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"A Tool for Fast Indexing and Querying of Graphs\"],\"$$hashKey\":\"04K\"},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre...\"],\"$$hashKey\":\"04L\"},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"],\"$$hashKey\":\"04M\"},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"],\"$$hashKey\":\"04N\"},{\"id\":4,\"name\":\"Title\",\"value\":[\"A Tool for Fast Indexing and Querying of Graphs\"],\"$$hashKey\":\"04O\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"A Demo Search Engine for Products\"]},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p...\"]},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"]},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"]},{\"id\":4,\"name\":\"Title\",\"value\":[\"A Demo Search Engine for Products\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"A User-Tunable Approach to Marketplace Search\"]},{\"id\":1,\"name\":\"Abstract\",\"value\":[\"The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc...\"]},{\"id\":2,\"name\":\"Month\",\"value\":[\"March/April\"]},{\"id\":3,\"name\":\"Year\",\"value\":[\"2011\"]},{\"id\":4,\"name\":\"Title\",\"value\":[\"A User-Tunable Approach to Marketplace Search\"]}]]}"
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 23,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.0.1.0.0.0",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
+													"path": [
+														{
+															"propertiesNames": ["made"],
+															"className": "Person"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Document",
+													"reverse": false
+												}
+											],
+											"names": ["label", "Abstract", "Month", "Year", "Title", "Autor"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
+								}, {
+									"id": 24,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.1",
+										"selectedOption": 0,
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
+													"path": [
+														{
+															"propertiesNames": ["made"],
+															"className": "Person"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Document",
+													"reverse": false
+												}
+											],
+											"names": ["label", "Abstract", "Month", "Year", "Title", "Autor"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal",
+									"children": [
+										{
+											"id": 25,
+											"label": "Autor",
+											"data": null,
+											"type": "Art",
+											"children": [
+												{
+													"id": 26,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.1.1.1.0",
+														"selectedOption": "5",
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [1, 2, 3, 4, 5],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
+																	"path": [
+																		{
+																			"propertiesNames": ["made"],
+																			"className": "Person"
+																		}
+																	],
+																	"properties": [0],
+																	"mainclass": "Document",
+																	"reverse": false
+																}
+															],
+															"names": ["label", "Abstract", "Month", "Year", "Title", "Autor"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}, {
+																		"id": 5,
+																		"name": "Person",
+																		"value": ["Path to Person"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Demo Search Engine for Products"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Demo Search Engine for Products"]
+																	}, {
+																		"id": 5,
+																		"name": "Person",
+																		"value": ["Path to Person"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}, {
+																		"id": 5,
+																		"name": "Person",
+																		"value": ["Path to Person"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 27,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.0.1.0.0",
+														"selectedOption": 3,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "none",
+															"data": [],
+															"type": [],
+															"queries": [],
+															"names": [],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Demo Search Engine for Products"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Demo Search Engine for Products"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 28,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.0.1.0-N",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "none",
+															"data": [],
+															"type": [],
+															"queries": [],
+															"names": [],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Demo Search Engine for Products"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Demo Search Engine for Products"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}
+																]
+															]
+														},
+														"value": "Autor"
+													},
+													"type": "Normal"
+												}, {
+													"id": 29,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "none",
+															"data": [],
+															"type": [],
+															"queries": [],
+															"names": [],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A Demo Search Engine for Products"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A Demo Search Engine for Products"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}, {
+																		"id": 1,
+																		"name": "Abstract",
+																		"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																	}, {
+																		"id": 2,
+																		"name": "Month",
+																		"value": ["March/April"]
+																	}, {
+																		"id": 3,
+																		"name": "Year",
+																		"value": ["2011"]
+																	}, {
+																		"id": 4,
+																		"name": "Title",
+																		"value": ["A User-Tunable Approach to Marketplace Search"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 30,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [0, 1, 2],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name"],
+															"names": ["label", "mbox_sha1sum", "Name"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 31,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0.0",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [2],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name"],
+															"names": ["label", "mbox_sha1sum", "Name"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 32,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0.1.0.0.0",
+														"selectedOption": "2",
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [2],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name"],
+															"names": ["label", "mbox_sha1sum", "Name"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 33,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0.1",
+														"selectedOption": 2,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [2],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name"],
+															"names": ["label", "mbox_sha1sum", "Name"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 34,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0.1.0",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [0],
+														"scope": {
+															"show": "details",
+															"data": [2],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name"],
+															"names": ["label", "mbox_sha1sum", "Name"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}
+																]
+															]
+														},
+														"path": [
+															{
+																"key": 0,
+																"pathItems": [
+																	{
+																		"propertiesNames": ["made"],
+																		"className": "Document"
+																	}
+																],
+																"examples": ["A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Achille_Fokoue", "A_Tool_for_Fast_Indexing_and_Querying_of_Graphs - made - Abraham_Bagherjeiran", "A_User-Tunable_Approach - made - Brandyn_White", "A_User-Tunable_Approach - made - Ozgur_Ulusoy", "A_User-Tunable_Approach - made - Dhruv_Mahajan", "Adapting_a_Map_Query_Interface - made - Achille_Fokoue", "Adapting_a_Map_Query_Interface - made - Abraham_Bagherjeiran", "Adapting_a_Map_Query_Interface - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Abraham_Bagherjeiran", "A_Demo_Search_Engine_for_Products - made - Brandyn_White", "A_Demo_Search_Engine_for_Products - made - Ozgur_Ulusoy", "A_Demo_Search_Engine_for_Products - made - Abhinav_Mishra", "A_Demo_Search_Engine_for_Products - made - Ziv_Bar-Yossef", "Accelerating_Instant_Question - made - Achille_Fokoue", "Accelerating_Instant_Question - made - Ziv_Bar-Yossef"],
+																"reverse": true
+															}
+														]
+													},
+													"type": "Normal"
+												}, {
+													"id": 35,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0.1.0.0",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [0],
+														"scope": {
+															"show": "details",
+															"data": [2, 3],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name", {
+																	"path": [
+																		{
+																			"propertiesNames": ["made"],
+																			"className": "Document"
+																		}
+																	],
+																	"properties": [0],
+																	"mainclass": "Person",
+																	"reverse": true
+																}
+															],
+															"names": ["label", "mbox_sha1sum", "Name", "Document"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																]
+															],
+															"back": "{\"show\":\"details\",\"data\":[2],\"type\":[\"ComputedAttribute\",\"ComputedAttribute\",\"ComputedAttribute\"],\"wizardType\":[\"Direct attribute\",\"Direct attribute\",\"Direct attribute\"],\"queries\":[\"self.eventpuc::label\",\"self.eventpuc::mbox_sha1sum\",\"self.eventpuc::name\"],\"names\":[\"label\",\"mbox_sha1sum\",\"Name\"],\"examples\":[[{\"id\":0,\"name\":\"label\",\"value\":[\"Achille Fokoue\"],\"$$hashKey\":\"1BS\"},{\"id\":1,\"name\":\"mbox_sha1sum\",\"value\":[\"e3523c8a8f912fbe497ddfc49eb91074645c0954\"],\"$$hashKey\":\"1BT\"},{\"id\":2,\"name\":\"Name\",\"value\":[\"Achille Fokoue\"],\"$$hashKey\":\"1BU\"}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Abraham Bagherjeiran\"]},{\"id\":1,\"name\":\"mbox_sha1sum\",\"value\":[\"1d072b315554893ddf08263bfd757fde0013f551\"]},{\"id\":2,\"name\":\"Name\",\"value\":[\"Abraham Bagherjeiran\"]}],[{\"id\":0,\"name\":\"label\",\"value\":[\"Amit Madaan\"]},{\"id\":1,\"name\":\"mbox_sha1sum\",\"value\":[\"1e8f8ebe70240c409356cdbe24ffefa92f5e43ef\"]},{\"id\":2,\"name\":\"Name\",\"value\":[\"Amit Madaan\"]}]]}"
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 36,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.0.1.0.0.0",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [2, 3],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name", {
+																	"path": [
+																		{
+																			"propertiesNames": ["made"],
+																			"className": "Document"
+																		}
+																	],
+																	"properties": [0],
+																	"mainclass": "Person",
+																	"reverse": true
+																}
+															],
+															"names": ["label", "mbox_sha1sum", "Name", "Document"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}, {
+													"id": 37,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.1",
+														"selectedOption": 0,
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [2, 3],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name", {
+																	"path": [
+																		{
+																			"propertiesNames": ["made"],
+																			"className": "Document"
+																		}
+																	],
+																	"properties": [0],
+																	"mainclass": "Person",
+																	"reverse": true
+																}
+															],
+															"names": ["label", "mbox_sha1sum", "Name", "Document"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal",
+													"children": [
+														{
+															"id": 38,
+															"label": "Document",
+															"data": null,
+															"type": "Art",
+															"children": [
+																{
+																	"id": 39,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.3.1.1.0",
+																		"selectedOption": "3",
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "details",
+																			"data": [2, 3],
+																			"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+																			"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+																			"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name", {
+																					"path": [
+																						{
+																							"propertiesNames": ["made"],
+																							"className": "Document"
+																						}
+																					],
+																					"properties": [0],
+																					"mainclass": "Person",
+																					"reverse": true
+																				}
+																			],
+																			"names": ["label", "mbox_sha1sum", "Name", "Document"],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Achille Fokoue"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Achille Fokoue"]
+																					}, {
+																						"id": 3,
+																						"name": "Document",
+																						"value": ["Path to Document"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Abraham Bagherjeiran"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Abraham Bagherjeiran"]
+																					}, {
+																						"id": 3,
+																						"name": "Document",
+																						"value": ["Path to Document"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Amit Madaan"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Amit Madaan"]
+																					}, {
+																						"id": 3,
+																						"name": "Document",
+																						"value": ["Path to Document"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 40,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.0.1.0.0",
+																		"selectedOption": 3,
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "none",
+																			"data": [],
+																			"type": [],
+																			"queries": [],
+																			"names": [],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Achille Fokoue"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Achille Fokoue"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Abraham Bagherjeiran"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Abraham Bagherjeiran"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Amit Madaan"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Amit Madaan"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 41,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.0.1.0-N",
+																		"selectedOption": 0,
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "none",
+																			"data": [],
+																			"type": [],
+																			"queries": [],
+																			"names": [],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Achille Fokoue"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Achille Fokoue"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Abraham Bagherjeiran"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Abraham Bagherjeiran"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Amit Madaan"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Amit Madaan"]
+																					}
+																				]
+																			]
+																		},
+																		"value": "Document"
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 42,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.1",
+																		"selectedOption": 0,
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "none",
+																			"data": [],
+																			"type": [],
+																			"queries": [],
+																			"names": [],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Achille Fokoue"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Achille Fokoue"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Abraham Bagherjeiran"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Abraham Bagherjeiran"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["Amit Madaan"]
+																					}, {
+																						"id": 1,
+																						"name": "mbox_sha1sum",
+																						"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																					}, {
+																						"id": 2,
+																						"name": "Name",
+																						"value": ["Amit Madaan"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 43,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.1.0",
+																		"selectedOption": 0,
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "details",
+																			"data": [0, 1, 2, 3, 4],
+																			"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+																			"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+																			"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+																			"names": ["label", "Abstract", "Month", "Year", "Title"],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Demo Search Engine for Products"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Demo Search Engine for Products"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 44,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.1.0.0",
+																		"selectedOption": 0,
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "details",
+																			"data": [1, 3, 4],
+																			"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+																			"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+																			"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+																			"names": ["label", "Abstract", "Month", "Year", "Title"],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Demo Search Engine for Products"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Demo Search Engine for Products"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 45,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.1.0.1.0.0.0",
+																		"selectedOption": 0,
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "details",
+																			"data": [1, 3, 4],
+																			"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+																			"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+																			"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+																			"names": ["label", "Abstract", "Month", "Year", "Title"],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Demo Search Engine for Products"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Demo Search Engine for Products"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}, {
+																	"id": 46,
+																	"label": "",
+																	"data": {
+																		"currentWindow": "0.0.0.0.1.1.1",
+																		"selectedOption": "1",
+																		"selectedProperties": [],
+																		"selectedOptions": [],
+																		"scope": {
+																			"show": "details",
+																			"data": [1, 3, 4],
+																			"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+																			"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+																			"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+																			"names": ["label", "Abstract", "Month", "Year", "Title"],
+																			"examples": [[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A Demo Search Engine for Products"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A Demo Search Engine for Products"]
+																					}
+																				],[
+																					{
+																						"id": 0,
+																						"name": "label",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}, {
+																						"id": 1,
+																						"name": "Abstract",
+																						"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+																					}, {
+																						"id": 2,
+																						"name": "Month",
+																						"value": ["March/April"]
+																					}, {
+																						"id": 3,
+																						"name": "Year",
+																						"value": ["2011"]
+																					}, {
+																						"id": 4,
+																						"name": "Title",
+																						"value": ["A User-Tunable Approach to Marketplace Search"]
+																					}
+																				]
+																			]
+																		}
+																	},
+																	"type": "Normal"
+																}
+															]
+														}
+													]
+												}, {
+													"id": 47,
+													"label": "",
+													"data": {
+														"currentWindow": "0.0.0.0.3.1.1",
+														"selectedOption": "1",
+														"selectedProperties": [],
+														"selectedOptions": [],
+														"scope": {
+															"show": "details",
+															"data": [2, 3],
+															"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+															"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+															"queries": ["self.eventpuc::label", "self.eventpuc::mbox_sha1sum", "self.eventpuc::name", {
+																	"path": [
+																		{
+																			"propertiesNames": ["made"],
+																			"className": "Document"
+																		}
+																	],
+																	"properties": [0],
+																	"mainclass": "Person",
+																	"reverse": true
+																}
+															],
+															"names": ["label", "mbox_sha1sum", "Name", "Document"],
+															"examples": [[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["e3523c8a8f912fbe497ddfc49eb91074645c0954"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Achille Fokoue"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1d072b315554893ddf08263bfd757fde0013f551"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Abraham Bagherjeiran"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																],[
+																	{
+																		"id": 0,
+																		"name": "label",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 1,
+																		"name": "mbox_sha1sum",
+																		"value": ["1e8f8ebe70240c409356cdbe24ffefa92f5e43ef"]
+																	}, {
+																		"id": 2,
+																		"name": "Name",
+																		"value": ["Amit Madaan"]
+																	}, {
+																		"id": 3,
+																		"name": "Document",
+																		"value": ["Path to Document"]
+																	}
+																]
+															]
+														}
+													},
+													"type": "Normal"
+												}
+											]
+										}
+									]
+								}, {
+									"id": 48,
+									"label": "",
+									"data": {
+										"currentWindow": "0.0.0.0.1.1.1",
+										"selectedOption": "1",
+										"selectedProperties": [],
+										"selectedOptions": [],
+										"scope": {
+											"show": "details",
+											"data": [1, 2, 3, 4, 5],
+											"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
+											"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
+											"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
+													"path": [
+														{
+															"propertiesNames": ["made"],
+															"className": "Person"
+														}
+													],
+													"properties": [0],
+													"mainclass": "Document",
+													"reverse": false
+												}
+											],
+											"names": ["label", "Abstract", "Month", "Year", "Title", "Autor"],
+											"examples": [[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["We present a tool called GiS for indexing and querying a large database of labeled, undirected graphs. Such graphs can model chemical compounds, repre..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Tool for Fast Indexing and Querying of Graphs"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["Most product search engines today build on models of relevance devised for information retrieval. However, the decision mechanism that underlies the p..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A Demo Search Engine for Products"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												],[
+													{
+														"id": 0,
+														"name": "label",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 1,
+														"name": "Abstract",
+														"value": ["The notion of relevance is key to the performance of search engines as they interpret the user queries and respond with matching results. Online searc..."]
+													}, {
+														"id": 2,
+														"name": "Month",
+														"value": ["March/April"]
+													}, {
+														"id": 3,
+														"name": "Year",
+														"value": ["2011"]
+													}, {
+														"id": 4,
+														"name": "Title",
+														"value": ["A User-Tunable Approach to Marketplace Search"]
+													}, {
+														"id": 5,
+														"name": "Person",
+														"value": ["Path to Person"]
+													}
+												]
+											]
+										}
+									},
+									"type": "Normal"
 								}
 							]
 						}
 					]
 				}, {
-					"id": 22,
+					"id": 49,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.1.0.1",
@@ -1629,22 +3317,11 @@
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
-							"data": [4, 5],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
-									"path": [
-										{
-											"propertiesNames": ["made"],
-											"className": "Person"
-										}
-									],
-									"properties": [0],
-									"mainclass": "Document",
-									"reverse": false
-								}
-							],
-							"names": ["label", "Abstract", "Month", "Year", "Title", "Autores"],
+							"data": [4],
+							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+							"names": ["label", "Abstract", "Month", "Year", "Title"],
 							"examples": [[
 									{
 										"id": 0,
@@ -1666,10 +3343,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								],[
 									{
@@ -1692,10 +3365,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								],[
 									{
@@ -1718,10 +3387,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								]
 							]
@@ -1729,7 +3394,7 @@
 					},
 					"type": "Normal"
 				}, {
-					"id": 23,
+					"id": 50,
 					"label": "",
 					"data": {
 						"currentWindow": "0.0.0.0.1.1.1.1",
@@ -1738,22 +3403,11 @@
 						"selectedOptions": [],
 						"scope": {
 							"show": "table",
-							"data": [4, 5],
-							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "Path"],
-							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Path"],
-							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title", {
-									"path": [
-										{
-											"propertiesNames": ["made"],
-											"className": "Person"
-										}
-									],
-									"properties": [0],
-									"mainclass": "Document",
-									"reverse": false
-								}
-							],
-							"names": ["label", "Abstract", "Month", "Year", "Title", "Autores"],
+							"data": [4],
+							"type": ["ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute", "ComputedAttribute"],
+							"wizardType": ["Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute", "Direct attribute"],
+							"queries": ["self.eventpuc::label", "self.eventpuc::abstract", "self.eventpuc::month", "self.eventpuc::year", "self.eventpuc::title"],
+							"names": ["label", "Abstract", "Month", "Year", "Title"],
 							"examples": [[
 									{
 										"id": 0,
@@ -1775,10 +3429,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A Tool for Fast Indexing and Querying of Graphs"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								],[
 									{
@@ -1801,10 +3451,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A Demo Search Engine for Products"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								],[
 									{
@@ -1827,10 +3473,6 @@
 										"id": 4,
 										"name": "Title",
 										"value": ["A User-Tunable Approach to Marketplace Search"]
-									}, {
-										"id": 5,
-										"name": "Person",
-										"value": ["Path to Person"]
 									}
 								]
 							]
@@ -1840,7 +3482,7 @@
 				}
 			]
 		}, {
-			"id": 24,
+			"id": 51,
 			"label": "New Landmark",
 			"data": null,
 			"type": "Art"
